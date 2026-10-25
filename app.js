@@ -453,10 +453,9 @@
     var easter = isEaster(current);
     // Regina Caeli replaces the Angelus in the Easter season.
     var show = prayers.filter(function (p) { return p.id === (easter ? 'regina-caeli' : 'angelus') || (p.id !== 'angelus' && p.id !== 'regina-caeli'); });
-    show.forEach(function (p, i) {
+    show.forEach(function (p) {
       var d = el('details', 'prayer');
       d.id = 'prayer-' + p.id;
-      if (i === 0) d.open = true;
       d.appendChild(el('summary', null, p.title));
       if (p.id === 'regina-caeli') d.appendChild(el('span', 'season-tag', 'Easter season'));
       if (p.link_only) {

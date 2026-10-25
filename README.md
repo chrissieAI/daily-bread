@@ -80,17 +80,21 @@ Media slug), then run `python3 tools/fetch-saints.py` and read every printed exc
 
 ## Prayers
 
-The header "Prayers" button opens a full-screen list:
+The header "Prayers" button opens a full-screen list of prayer titles; tap one to expand it.
+Everything comes from USCCB's own prayer pages (usccb.org/prayers/...):
 
-- Angelus: link only. The card has a "Pray the Angelus at USCCB" button that opens
-  https://www.usccb.org/prayers/angelus in a new tab; no Angelus text is stored in the app.
-- Regina Caeli: copied word for word from https://www.usccb.org/prayers/regina-caeli
-  (line breaks, V./R. markers and punctuation kept), with a "Source: USCCB" link. It is
-  shown instead of the Angelus during romcal's Easter season (Easter Sunday through Pentecost).
+- Copied word for word (line breaks, V./R. markers, punctuation kept), each with a
+  "Source: USCCB" link, because the page carries no restrictive notice:
+  Regina Caeli, Our Father, Apostles' Creed, Nicene Creed.
+- Link only ("Pray the X at USCCB" button, no text stored), because the page restricts
+  copying: Angelus ("... © 2007 USCCB. All rights reserved.") and Act of Contrition
+  (cites the *Order of Penance*).
 
-The liturgical day card has a small shortcut: "Pray the Angelus at USCCB" (opens usccb.org)
-or, in the Easter season, "Pray the Regina Caeli" (opens the in-app text).
+The Regina Caeli is shown instead of the Angelus during romcal's Easter season (Easter
+Sunday through Pentecost). The liturgical-day shortcut ("Pray the Angelus at USCCB" /
+"Pray the Regina Caeli") sits below the parish card.
 
-Data: `data/prayers.json` (source URLs, date copied). Rebuild with
-`python3 tools/fetch-prayers.py`; verify the stored Regina Caeli against a fresh fetch with
+Data: `data/prayers.json` (source URLs, date copied). The list of prayers and whether each
+is text or link lives in `PRAYERS` in `tools/fetch-prayers.py`. Rebuild with
+`python3 tools/fetch-prayers.py`; verify stored text against a fresh fetch with
 `python3 tools/fetch-prayers.py --check`.
