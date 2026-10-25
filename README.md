@@ -128,5 +128,5 @@ Data: `data/deepdive.json` (groups → items → links, each link with its URL a
 `python3 tools/verify-deepdive.py` (each URL must return 200 and contain its phrase; exits 1 on any
 failure). Update `checked` after a passing run.
 
-The header pills sit on their own row under the brand; on screens too narrow to fit them they
+The header pills (Favorites, Prayers, Deep Dive) sit on their own row under the brand. There is no separate "My Parish" pill: it only jumped to the parish card, which is always at the bottom of the Today page (`#parish` still works as a link). On screens too narrow to fit them, the pills
 scroll sideways instead of wrapping.

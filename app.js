@@ -579,7 +579,7 @@
     show(todayISO());
   });
   window.addEventListener('hashchange', function () {
-    if (location.hash === '#parish') return;
+    if (location.hash === '#parish') return; // old bookmarks/links to the parish card anchor
     show(isoFromHash() || current || todayISO());
   });
   document.addEventListener('keydown', function (e) {
