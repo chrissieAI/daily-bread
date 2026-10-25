@@ -1,0 +1,81 @@
+{
+ "name": "Our Lady of Guadalupe",
+ "location_label": "Buckingham, PA",
+ "website": "https://www.olguadalupe.org/",
+ "source_url": "https://www.olguadalupe.org/",
+ "checked": "2026-10-24",
+ "note": "Times copied word for word from the parish website's Mass schedule (home page). Always confirm on the parish site.",
+ "address_lines": [
+  "5194 Cold Spring Creamery Road",
+  "Doylestown, PA 18902"
+ ],
+ "maps_url": "https://www.google.com/maps/search/?api=1&query=Our+Lady+of+Guadalupe+Church%2C+5194+Cold+Spring+Creamery+Road%2C+Doylestown%2C+PA+18902",
+ "phone_display": "(267) 247-5374",
+ "phone_tel": "+12672475374",
+ "sections": [
+  {
+   "heading": "Weekly Mass Times:",
+   "lines": [
+    {
+     "text": "Saturday - 5:00 p.m. (Vigil)",
+     "days": [
+      6
+     ]
+    },
+    {
+     "text": "Sunday - 9:00 (livestreamed) & 11:00 a.m.",
+     "days": [
+      0
+     ]
+    },
+    {
+     "text": "Tuesday through Saturday 8:00 a.m.",
+     "days": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "text": "Rosary: 7:30 a.m."
+    },
+    {
+     "text": "(St. Juan Diego Chapel, OLG Church)"
+    }
+   ]
+  },
+  {
+   "heading": "Holy Days Mass Times:",
+   "lines": [
+    {
+     "text": "8:00 a.m., 12:00 noon and 7:00 p.m.",
+     "holy_day": true
+    }
+   ]
+  },
+  {
+   "heading": "Confessions:",
+   "lines": [
+    {
+     "text": "Half hour before each weekend Mass, until 10 minutes before Mass begins.",
+     "days": [
+      6,
+      0
+     ]
+    },
+    {
+     "text": "Anytime by appointment"
+    }
+   ]
+  }
+ ],
+ "bulletin": {
+  "listing_url": "https://www.olguadalupe.org/bulletin",
+  "latest_date": "2026-10-25",
+  "latest_label": "October 25, 2026",
+  "latest_url": "https://www.olguadalupe.org/_files/ugd/adaef9_3c06eb547d0249ec9d3751121ff16cc3.pdf",
+  "checked": "2026-10-24"
+ }
+}

@@ -20,6 +20,12 @@ Live site: https://chrissieai.github.io/daily-bread/
   reviewed positively by [Formation Reimagined](https://formationreimagined.org/movie/) (Family
   Movie Night; USCCB ratings as listed there) and [Decent Films](https://decentfilms.com/)
   (Steven D. Greydanus). No review text, synopses or images are copied.
+- `data/parish.json` — "My Parish": Our Lady of Guadalupe (Buckingham/Doylestown, PA) address, phone and
+  Mass/Confession times copied word for word from https://www.olguadalupe.org/ (with the date checked),
+  plus the latest bulletin link.
+- `tools/fetch-bulletin.py` — finds the newest dated bulletin PDF on https://www.olguadalupe.org/bulletin
+  and saves only its date + URL to `data/parish.json`. Rerun weekly, then commit and push. If the saved
+  bulletin is more than a week old, the app's button falls back to the parish bulletin page.
 - `tools/verify-movies.py` — re-checks every review link (HTTP 200 + title match).
 
 ## Content rule

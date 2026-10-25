@@ -49,6 +49,22 @@ header{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .mv dt{color:var(--mu);font:600 13px/1.9 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-transform:uppercase;letter-spacing:.05em}
 .mv dd{margin:0}
 .review{display:inline-block;text-decoration:none;font:700 17px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);border:2px solid var(--accent-ink);border-radius:12px;padding:10px 16px}
+.hdr-r{display:flex;gap:6px}
+a.today-link{text-decoration:none}
+#parish[hidden]{display:none}
+#parish h2{font-size:22px;margin:0 0 6px}
+.pline{margin:4px 0;font-size:17px}
+.pline a{color:var(--accent-ink)}
+.ptimes h3{font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-transform:uppercase;letter-spacing:.05em;margin:14px 0 4px}
+.ptimes ul{list-style:none;margin:0;padding:0}
+.ptimes li{padding:5px 8px;margin:0 -8px;border-radius:8px;font-size:17px}
+.ptimes li.hl{background:color-mix(in srgb,var(--accent) 14%,#fff);font-weight:600}
+.ptimes li .tag{display:inline-block;margin-left:6px;font:700 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:#fff;background:var(--accent-ink);border-radius:999px;padding:2px 7px;vertical-align:2px}
+.cta.small{font-size:18px;padding:14px 16px;margin:16px 0 8px}
+.plinks{margin:6px 0;text-align:center;font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.plinks a{color:var(--accent-ink)}
+.pnote{margin:10px 0 0;color:var(--mu);font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+html{scroll-behavior:smooth}
 footer{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);margin-top:24px;text-align:center}
 footer a{color:inherit}
 #err{display:none;color:#8a1c1c;font-size:15px}
@@ -59,7 +75,10 @@ footer a{color:inherit}
   <div class="band" aria-hidden="true"></div>
   <header>
     <span class="brand">Daily Bread</span>
-    <button class="today-link" id="todayBtn" hidden>Back to today</button>
+    <span class="hdr-r">
+      <button class="today-link" id="todayBtn" hidden>Back to today</button>
+      <a class="today-link" href="#parish" id="parishJump">My Parish</a>
+    </span>
   </header>
 
   <div class="datebar">
@@ -99,6 +118,20 @@ footer a{color:inherit}
       <dt>Source</dt><dd id="movieSource"></dd>
     </dl>
     <a class="review" id="movieLink" href="#" target="_blank" rel="noopener">Read the review &#8599;</a>
+  </section>
+
+  <section class="card" id="parish" hidden>
+    <p class="label">My Parish</p>
+    <h2 id="parishName"></h2>
+    <p class="pline"><a id="parishMap" href="#" target="_blank" rel="noopener"></a></p>
+    <p class="pline"><a id="parishTel" href="#"></a></p>
+    <div id="parishTimes"></div>
+    <a class="cta small" id="bulletinBtn" href="#" target="_blank" rel="noopener">This week's bulletin</a>
+    <p class="plinks">
+      <a id="bulletinAll" href="#" target="_blank" rel="noopener">All bulletins</a> ·
+      <a id="parishSite" href="#" target="_blank" rel="noopener">Parish website</a>
+    </p>
+    <p class="pnote" id="parishNote"></p>
   </section>
 
   <footer>

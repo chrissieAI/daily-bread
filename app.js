@@ -20,6 +20,8 @@
   var calCache = {};
   var readings = null;
   var movies = null;
+  var parish = null;
+  var dayInfo = {};
 
   function todayISO() {
     var p = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' })
@@ -75,9 +77,12 @@
     document.querySelector('#readings .label').textContent = dd === 0 ? "Today's reading references" : 'Reading references';
     renderReadings(iso);
     renderMovie(iso);
+    renderParish(iso);
     getCal(+iso.slice(0, 4)).then(function (cal) {
       if (current !== iso) return;
       renderDay(cal[iso] || []);
+      dayInfo[iso] = cal[iso] || [];
+      renderParish(iso);
     }).catch(function (e) {
       $('err').style.display = 'block';
       $('err').textContent = 'Could not compute the liturgical calendar for this date.';
@@ -162,6 +167,68 @@
     card.hidden = false;
   }
 
+  function isHolyDay(iso) {
+    // Weekday holy days of obligation in the USA (romcal flag), excluding Sundays,
+    // Christmas (parishes post a separate schedule) and the US rule that lifts the
+    // obligation for Jan 1, Aug 15 and Nov 1 when they fall on a Saturday or Monday.
+    var days = dayInfo[iso];
+    if (!days) return false;
+    var dow = new Date(iso + 'T12:00:00Z').getUTCDay();
+    if (dow === 0) return false;
+    return days.some(function (d) {
+      if (!d.isHolyDayOfObligation) return false;
+      if (d.id === 'nativity_of_the_lord') return false;
+      var md = iso.slice(5);
+      if ((md === '01-01' || md === '08-15' || md === '11-01') && (dow === 6 || dow === 1)) return false;
+      return true;
+    });
+  }
+
+  function renderParish(iso) {
+    var card = $('parish');
+    if (!parish || !parish.name) { card.hidden = true; return; }
+    var dow = new Date(iso + 'T12:00:00Z').getUTCDay();
+    var holy = isHolyDay(iso);
+    var tagText = iso === todayISO() ? 'Today' : new Date(iso + 'T12:00:00Z').toLocaleDateString('en-US', { timeZone: 'UTC', weekday: 'short' });
+    $('parishName').textContent = parish.name + (parish.location_label ? ', ' + parish.location_label : '');
+    $('parishMap').textContent = parish.address_lines.join(', ');
+    $('parishMap').href = parish.maps_url;
+    $('parishTel').textContent = parish.phone_display;
+    $('parishTel').href = 'tel:' + parish.phone_tel;
+    var box = $('parishTimes');
+    box.className = 'ptimes';
+    box.textContent = '';
+    parish.sections.forEach(function (sec) {
+      box.appendChild(el('h3', null, sec.heading.replace(/:$/, '')));
+      var ul = el('ul');
+      sec.lines.forEach(function (ln) {
+        var li = el('li', null, ln.text);
+        var hit = (ln.days && ln.days.indexOf(dow) !== -1 && !(holy && sec.heading.indexOf('Weekly') === 0 && dow !== 0 && dow !== 6)) || (ln.holy_day && holy);
+        if (hit) { li.className = 'hl'; li.appendChild(el('span', 'tag', ln.holy_day ? 'Holy day' : tagText)); }
+        ul.appendChild(li);
+      });
+      box.appendChild(ul);
+    });
+    var b = parish.bulletin || {};
+    var btn = $('bulletinBtn');
+    // Use the dated PDF only if it is for this week (dated within 7 days before
+    // or after the shown date); otherwise open the parish's bulletin page.
+    var fresh = b.latest_url && b.latest_date && Math.abs(diffDays(b.latest_date, iso)) <= 7 && diffDays(b.latest_date, todayISO()) >= -7;
+    btn.href = fresh ? b.latest_url : b.listing_url;
+    btn.textContent = fresh ? "This week's bulletin" : "This week's bulletin (parish bulletin page)";
+    $('bulletinAll').href = b.listing_url;
+    $('parishSite').href = parish.website;
+    $('parishNote').textContent = 'Times from the parish website, checked ' +
+      new Date(parish.checked + 'T12:00:00Z').toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }) +
+      ' \u2014 always confirm on the parish site.' + (b.latest_label && fresh ? ' Bulletin: ' + b.latest_label + '.' : '');
+    card.hidden = false;
+  }
+
+  fetch('data/parish.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) { parish = data || {}; if (current) renderParish(current); });
+
   fetch('data/movies.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : {}; })
     .catch(function () { return {}; })
@@ -178,7 +245,10 @@
     history.replaceState(null, '', location.pathname + location.search);
     show(todayISO());
   });
-  window.addEventListener('hashchange', function () { show(isoFromHash() || todayISO()); });
+  window.addEventListener('hashchange', function () {
+    if (location.hash === '#parish') return;
+    show(isoFromHash() || current || todayISO());
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') $('prev').click();
     if (e.key === 'ArrowRight') $('next').click();
