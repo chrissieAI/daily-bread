@@ -1,0 +1,249 @@
+{
+ "note": "Saint of the day picks. ce = Catholic Encyclopedia entry (New Advent page id, or a full Wikisource URL where New Advent has no transcription). para/skip choose where the word-for-word excerpt starts. fm = Franciscan Media saint-of-the-day slug (omit if none).",
+ "days": {
+  "2026-10-24": {
+   "name": "Saint Anthony Mary Claret, Bishop",
+   "ce": "16026a",
+   "fm": "saint-anthony-mary-claret"
+  },
+  "2026-10-28": {
+   "name": "Saints Simon and Jude, Apostles",
+   "ce": "13796b",
+   "fm": "saints-simon-and-jude"
+  },
+  "2026-11-03": {
+   "name": "Saint Martin de Porres, Religious",
+   "fm": "saint-martin-de-porres"
+  },
+  "2026-11-04": {
+   "name": "Saint Charles Borromeo, Bishop",
+   "ce": "03619a",
+   "fm": "saint-charles-borromeo"
+  },
+  "2026-11-10": {
+   "name": "Saint Leo the Great, Pope and Doctor of the Church",
+   "ce": "09154b",
+   "para": 1,
+   "fm": "saint-leo-the-great"
+  },
+  "2026-11-11": {
+   "name": "Saint Martin of Tours, Bishop",
+   "ce": "09732b",
+   "fm": "saint-martin-of-tours"
+  },
+  "2026-11-12": {
+   "name": "Saint Josaphat, Bishop and Martyr",
+   "ce": "08503b",
+   "fm": "saint-josaphat"
+  },
+  "2026-11-13": {
+   "name": "Saint Frances Xavier Cabrini, Virgin",
+   "fm": "saint-frances-xavier-cabrini"
+  },
+  "2026-11-16": {
+   "name": "Saint Margaret of Scotland",
+   "also": [
+    "Saint Gertrude, Virgin"
+   ],
+   "ce": "09655c",
+   "fm": "saint-margaret-of-scotland"
+  },
+  "2026-11-17": {
+   "name": "Saint Elizabeth of Hungary, Religious",
+   "ce": "05389a",
+   "fm": "saint-elizabeth-of-hungary"
+  },
+  "2026-11-18": {
+   "name": "Saint Rose Philippine Duchesne, Virgin",
+   "also": [
+    "The Dedication of the Basilicas of Saints Peter and Paul, Apostles"
+   ],
+   "ce": "05182a",
+   "fm": "saint-rose-philippine-duchesne"
+  },
+  "2026-11-23": {
+   "name": "Saint Clement I, Pope and Martyr",
+   "also": [
+    "Saint Columban, Abbot",
+    "Blessed Miguel Agustín Pro, Priest and Martyr"
+   ],
+   "ce": "04012c",
+   "fm": "saint-clement"
+  },
+  "2026-11-24": {
+   "name": "Saint Andrew Dũng-Lạc, Priest, and Companions, Martyrs",
+   "fm": "saint-andrew-dung-lac-and-companions"
+  },
+  "2026-11-25": {
+   "name": "Saint Catherine of Alexandria, Virgin and Martyr",
+   "ce": "03445a",
+   "fm": "saint-catherine-of-alexandria"
+  },
+  "2026-11-30": {
+   "name": "Saint Andrew, Apostle",
+   "ce": "01471a",
+   "para": 1,
+   "fm": "saint-andrew"
+  },
+  "2026-12-03": {
+   "name": "Saint Francis Xavier, Priest",
+   "ce": "06233b",
+   "fm": "saint-francis-xavier"
+  },
+  "2026-12-04": {
+   "name": "Saint John Damascene, Priest and Doctor of the Church",
+   "ce": "08459b",
+   "fm": "saint-john-damascene"
+  },
+  "2026-12-07": {
+   "name": "Saint Ambrose, Bishop and Doctor of the Church",
+   "ce": "01383c",
+   "fm": "saint-ambrose"
+  },
+  "2026-12-09": {
+   "name": "Saint Juan Diego Cuauhtlatoatzin",
+   "fm": "saint-juan-diego"
+  },
+  "2026-12-11": {
+   "name": "Saint Damasus I, Pope",
+   "ce": "04613a",
+   "fm": "saint-damasus-i"
+  },
+  "2026-12-14": {
+   "name": "Saint John of the Cross, Priest and Doctor of the Church",
+   "ce": "08480a",
+   "fm": "saint-john-of-the-cross"
+  },
+  "2026-12-21": {
+   "name": "Saint Peter Canisius, Priest and Doctor of the Church",
+   "ce": "11756c",
+   "fm": "saint-peter-canisius"
+  },
+  "2026-12-23": {
+   "name": "Saint John of Kanty, Priest",
+   "ce": "08451b",
+   "fm": "saint-john-of-kanty"
+  },
+  "2026-12-26": {
+   "name": "Saint Stephen, the First Martyr",
+   "ce": "14286b",
+   "fm": "saint-stephen"
+  },
+  "2026-12-28": {
+   "name": "The Holy Innocents, Martyrs",
+   "fm": "holy-innocents"
+  },
+  "2026-12-29": {
+   "name": "Saint Thomas Becket, Bishop and Martyr",
+   "ce": "14676a",
+   "fm": "saint-thomas-becket"
+  },
+  "2026-12-31": {
+   "name": "Saint Sylvester I, Pope",
+   "ce": "14370a",
+   "fm": "saint-sylvester-i"
+  },
+  "2027-01-02": {
+   "name": "Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church",
+   "ce": "02330b",
+   "fm": "saint-basil-the-great",
+   "fm2": "saint-gregory-nazianzen"
+  },
+  "2027-01-04": {
+   "name": "Saint Elizabeth Ann Seton, Religious",
+   "ce": "13739a",
+   "fm": "saint-elizabeth-ann-seton"
+  },
+  "2027-01-05": {
+   "name": "Saint John Neumann, Bishop",
+   "ce": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Ven._John_Nepomucene_Neumann",
+   "fm": "saint-john-neumann"
+  },
+  "2027-01-06": {
+   "name": "Saint André Bessette, Religious",
+   "fm": "saint-andre-bessette"
+  },
+  "2027-01-07": {
+   "name": "Saint Raymond of Penyafort, Priest",
+   "ce": "12671c",
+   "fm": "saint-raymond-of-penafort"
+  },
+  "2027-01-13": {
+   "name": "Saint Hilary, Bishop and Doctor of the Church",
+   "ce": "07349b",
+   "fm": "saint-hilary-of-poitiers"
+  },
+  "2027-01-20": {
+   "name": "Saint Fabian, Pope and Martyr",
+   "also": [
+    "Saint Sebastian, Martyr"
+   ],
+   "ce": "05742d",
+   "fm": "saint-fabian"
+  },
+  "2027-01-21": {
+   "name": "Saint Agnes, Virgin and Martyr",
+   "ce": "01214a",
+   "fm": "saint-agnes"
+  },
+  "2027-01-23": {
+   "name": "Saint Vincent, Deacon and Martyr",
+   "also": [
+    "Saint Marianne Cope, Virgin"
+   ],
+   "ce": "15434b",
+   "fm": "saint-vincent-of-zaragossa"
+  },
+  "2027-01-25": {
+   "name": "The Conversion of Saint Paul the Apostle",
+   "ce": "11567b",
+   "fm": "conversion-of-saint-paul",
+   "para": 15
+  },
+  "2027-01-26": {
+   "name": "Saints Timothy and Titus, Bishops",
+   "fm": "saints-timothy-and-titus"
+  },
+  "2027-01-27": {
+   "name": "Saint Angela Merici, Virgin",
+   "ce": "01481a",
+   "fm": "saint-angela-merici"
+  },
+  "2027-01-28": {
+   "name": "Saint Thomas Aquinas, Priest and Doctor of the Church",
+   "ce": "14663b",
+   "fm": "saint-thomas-aquinas"
+  },
+  "2027-02-03": {
+   "name": "Saint Blaise, Bishop and Martyr",
+   "also": [
+    "Saint Ansgar, Bishop"
+   ],
+   "ce": "02592a",
+   "fm": "saint-blaise"
+  },
+  "2027-02-05": {
+   "name": "Saint Agatha, Virgin and Martyr",
+   "ce": "01203c",
+   "fm": "saint-agatha"
+  },
+  "2027-02-06": {
+   "name": "Saint Paul Miki and Companions, Martyrs",
+   "fm": "saint-paul-miki-and-companions"
+  },
+  "2027-02-08": {
+   "name": "Saint Jerome Emiliani",
+   "also": [
+    "Saint Josephine Bakhita, Virgin"
+   ],
+   "ce": "08343a",
+   "fm": "saint-jerome-emiliani"
+  },
+  "2027-02-17": {
+   "name": "The Seven Holy Founders of the Servite Order",
+   "ce": "13736a",
+   "fm": "seven-founders-of-the-servite-order",
+   "para": 2
+  }
+ }
+}

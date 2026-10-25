@@ -76,6 +76,10 @@ a.today-link{text-decoration:none}
 .chosen{margin:10px 0 0;font:600 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .excerpt{margin:12px 0 0;padding:10px 12px;border-left:3px solid var(--bd);background:#fff;border-radius:0 10px 10px 0;font-size:16px}
 .excerpt p{margin:0}
+.saint-also{margin:6px 0 0;font:600 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+#saint .excerpt p+p{margin-top:8px}
+#saint .excerpt .cr a{color:var(--accent-ink)}
+.fm-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:14px}
 .excerpt .cr{display:block;margin-top:6px;font:12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .museum{margin-top:14px}
 .overlay{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column}
@@ -131,6 +135,17 @@ footer a{color:inherit}
     </div>
     <ul id="optional"></ul>
     <p id="err"></p>
+  </section>
+
+  <section class="card" id="saint" hidden>
+    <p class="label">Saint of the day</p>
+    <h2 id="saintName"></h2>
+    <p class="saint-also" id="saintAlso" hidden></p>
+    <div class="excerpt" id="saintExcerpt" hidden>
+      <div id="saintText"></div>
+      <span class="cr">From the Catholic Encyclopedia (1913) &middot; <a id="saintCe" href="#" target="_blank" rel="noopener"></a></span>
+    </div>
+    <div class="fm-links" id="saintFm"></div>
   </section>
 
   <section class="card" id="art" hidden>
@@ -190,7 +205,10 @@ footer a{color:inherit}
     (Family Movie Night) and <a href="https://decentfilms.com/" target="_blank" rel="noopener">Decent Films</a>
     (Steven D. Greydanus); reviews open on their sites.<br>
     Art: public-domain works from museum open-access programs (The Met, Art Institute of Chicago,
-    Cleveland Museum of Art). Descriptions are quoted from the museum and credited where shown.
+    Cleveland Museum of Art). Descriptions are quoted from the museum and credited where shown.<br>
+    Saints: short word-for-word excerpts from the public-domain Catholic Encyclopedia (1913), linked to
+    <a href="https://www.newadvent.org/cathen/" target="_blank" rel="noopener">New Advent</a>
+    (or Wikisource); <a href="https://www.franciscanmedia.org/saint-of-the-day/" target="_blank" rel="noopener">Franciscan Media</a> is linked only.
   </footer>
 </div>
 

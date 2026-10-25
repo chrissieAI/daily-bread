@@ -79,6 +79,7 @@
     renderMovie(iso);
     renderParish(iso);
     if (typeof renderArt === 'function' && art) renderArt(iso);
+    if (saints) renderSaint(iso);
     getCal(+iso.slice(0, 4)).then(function (cal) {
       if (current !== iso) return;
       renderDay(cal[iso] || []);
@@ -378,6 +379,41 @@
     .then(function (r) { return r.ok ? r.json() : {}; })
     .catch(function () { return {}; })
     .then(function (data) { art = data || {}; if (current) renderArt(current); });
+
+  var saints = null;
+  function renderSaint(iso) {
+    var card = $('saint');
+    var d = saints && saints[iso];
+    if (!d) { card.hidden = true; return; }
+    card.hidden = false;
+    document.querySelector('#saint .label').textContent = diffDays(iso, todayISO()) === 0 ? 'Saint of the day' : 'Saint of this day';
+    $('saintName').textContent = d.name;
+    var also = $('saintAlso');
+    if (d.also && d.also.length) { also.hidden = false; also.textContent = 'Also today: ' + d.also.join('; '); }
+    else also.hidden = true;
+    var ex = $('saintExcerpt'), box = $('saintText');
+    box.textContent = '';
+    if (d.excerpt && d.excerpt.length) {
+      ex.hidden = false;
+      d.excerpt.forEach(function (t) { var p = el('p'); p.textContent = t; box.appendChild(p); });
+      var a = $('saintCe');
+      a.href = d.ce_url;
+      a.textContent = (d.ce_title || 'Read the entry') + ' \u2197';
+    } else ex.hidden = true;
+    var fm = $('saintFm');
+    fm.textContent = '';
+    (d.fm || []).forEach(function (l, i, arr) {
+      var a = el('a');
+      a.className = 'review';
+      a.href = l.url; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = (arr.length > 1 ? 'Read more at Franciscan Media: ' + l.title : 'Read more at Franciscan Media') + ' \u2197';
+      fm.appendChild(a);
+    });
+  }
+  fetch('data/saints.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) { saints = (data && data.days) || {}; if (current) renderSaint(current); });
 
   $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
   $('next').addEventListener('click', function () { location.hash = addDays(current, 1); });

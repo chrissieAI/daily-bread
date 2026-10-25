@@ -57,3 +57,23 @@ git add readings.json && git commit -m "Refresh reading references" && git push
 ```
 
 The "Read at USCCB" button works for any date even when `readings.json` has no entry.
+
+## Saint of the day
+
+The "Saint of the day" card (below the liturgical day) shows the day's saint from
+romcal (US calendar): the celebration itself on saint feasts/memorials, or the first
+optional memorial on weekdays, with any others listed under "Also today". It is hidden
+on Sundays, ferial weekdays, and non-saint celebrations (Christ the King, Christmas,
+Marian feasts, etc.).
+
+- **Excerpt**: a short word-for-word passage (whole sentences, ~60-120 words) from the
+  start of the saint's entry in the public-domain *Catholic Encyclopedia* (1913), via the
+  [New Advent](https://www.newadvent.org/cathen/) transcription (Wikisource for
+  St. John Neumann, which New Advent lacks), credited and linked to the entry. Nothing is
+  paraphrased or added. Saints with no 1913 entry (e.g. Cabrini, Juan Diego) get no excerpt.
+- **Franciscan Media**: link only ("Read more at Franciscan Media"); each URL is checked
+  for HTTP 200 and a page title naming the saint, otherwise the link is dropped.
+
+Data: `data/saints.json`. To rebuild or extend: edit `tools/saints-picks.json`
+(date -> name, CE entry id or Wikisource URL, optional starting paragraph, Franciscan
+Media slug), then run `python3 tools/fetch-saints.py` and read every printed excerpt.
