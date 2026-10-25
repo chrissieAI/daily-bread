@@ -77,3 +77,20 @@ Marian feasts, etc.).
 Data: `data/saints.json`. To rebuild or extend: edit `tools/saints-picks.json`
 (date -> name, CE entry id or Wikisource URL, optional starting paragraph, Franciscan
 Media slug), then run `python3 tools/fetch-saints.py` and read every printed excerpt.
+
+## Prayers
+
+The header "Prayers" button opens a full-screen list of prayers copied word for word from
+USCCB's own prayer pages (line breaks, V./R. markers and punctuation kept; the page's
+small-print notice is shown too), each with a "Source: USCCB" link:
+
+- Angelus: https://www.usccb.org/prayers/angelus
+- Regina Caeli: https://www.usccb.org/prayers/regina-caeli (shown instead of the
+  Angelus during romcal's Easter season, Easter Sunday through Pentecost)
+
+The liturgical day card has a small "Pray the Angelus" / "Pray the Regina Caeli" shortcut.
+Grace before/after meals is not included: USCCB has no prayer page for it.
+
+Data: `data/prayers.json` (with source URLs and the date copied). Rebuild with
+`python3 tools/fetch-prayers.py`; verify against a fresh fetch with
+`python3 tools/fetch-prayers.py --check`.

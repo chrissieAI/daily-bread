@@ -85,6 +85,8 @@
       renderDay(cal[iso] || []);
       dayInfo[iso] = cal[iso] || [];
       renderParish(iso);
+      renderPrayShort(iso);
+      if (!$('prayers').hidden) renderPrayers();
     }).catch(function (e) {
       $('err').style.display = 'block';
       $('err').textContent = 'Could not compute the liturgical calendar for this date.';
@@ -415,6 +417,74 @@
     .catch(function () { return {}; })
     .then(function (data) { saints = (data && data.days) || {}; if (current) renderSaint(current); });
 
+  var prayers = null;
+  function isEaster(iso) {
+    var days = dayInfo[iso];
+    return !!(days && days[0] && (days[0].seasons || []).indexOf('EASTER_TIME') >= 0);
+  }
+  function prayerById(id) {
+    return prayers && prayers.filter(function (p) { return p.id === id; })[0];
+  }
+  function marianId(iso) { return isEaster(iso) ? 'regina-caeli' : 'angelus'; }
+  function segs(parent, list) {
+    list.forEach(function (sg) {
+      var n = sg.b ? el('strong', null, sg.t) : sg.i ? el('em', null, sg.t) : document.createTextNode(sg.t);
+      parent.appendChild(n);
+    });
+  }
+  function renderPrayers() {
+    var box = $('prayList');
+    if (!prayers || !current) return;
+    box.textContent = '';
+    var easter = isEaster(current);
+    // Regina Caeli replaces the Angelus in the Easter season.
+    var show = prayers.filter(function (p) { return p.id === (easter ? 'regina-caeli' : 'angelus') || (p.id !== 'angelus' && p.id !== 'regina-caeli'); });
+    show.forEach(function (p, i) {
+      var d = el('details', 'prayer');
+      d.id = 'prayer-' + p.id;
+      if (i === 0) d.open = true;
+      d.appendChild(el('summary', null, p.title));
+      if (p.id === 'regina-caeli') d.appendChild(el('span', 'season-tag', 'Easter season'));
+      var tx = el('div', 'ptext');
+      p.paragraphs.forEach(function (para) {
+        var pe = el('p');
+        para.forEach(function (line) { var ln = el('span', 'ln'); segs(ln, line); pe.appendChild(ln); });
+        tx.appendChild(pe);
+      });
+      d.appendChild(tx);
+      if (p.notice) { var nt = el('p', 'pnotice'); segs(nt, p.notice); d.appendChild(nt); }
+      var a = el('a', 'psrc', 'Source: USCCB \u2197');
+      a.href = p.source_url; a.target = '_blank'; a.rel = 'noopener';
+      d.appendChild(a);
+      box.appendChild(d);
+    });
+  }
+  function renderPrayShort(iso) {
+    var b = $('prayShort');
+    var p = prayerById(marianId(iso));
+    if (!p || !dayInfo[iso]) { b.hidden = true; return; }
+    b.hidden = false;
+    b.textContent = 'Pray the ' + p.title + ' \u203A';
+  }
+  function openPrayers(focusId) {
+    renderPrayers();
+    $('prayers').hidden = false;
+    document.body.style.overflow = 'hidden';
+    $('prayers').scrollTop = 0;
+    if (focusId) { var d = $('prayer-' + focusId); if (d) d.open = true; }
+  }
+  function closePrayers() {
+    $('prayers').hidden = true;
+    document.body.style.overflow = '';
+  }
+  $('prayBtn').addEventListener('click', function () { openPrayers(); });
+  $('prayShort').addEventListener('click', function () { openPrayers(marianId(current)); });
+  $('prayClose').addEventListener('click', closePrayers);
+  fetch('data/prayers.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) { prayers = (data && data.prayers) || []; if (current) renderPrayShort(current); });
+
   $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
   $('next').addEventListener('click', function () { location.hash = addDays(current, 1); });
   $('todayBtn').addEventListener('click', function () {
@@ -426,8 +496,8 @@
     show(isoFromHash() || current || todayISO());
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); return; }
-    if (!$('lightbox').hidden || !$('favs').hidden) return;
+    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); else if (!$('prayers').hidden) closePrayers(); return; }
+    if (!$('lightbox').hidden || !$('favs').hidden || !$('prayers').hidden) return;
     if (e.key === 'ArrowLeft') $('prev').click();
     if (e.key === 'ArrowRight') $('next').click();
   });
