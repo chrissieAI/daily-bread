@@ -511,6 +511,67 @@
     .catch(function () { return {}; })
     .then(function (data) { prayers = (data && data.prayers) || []; if (current) renderPrayShort(current); });
 
+  // Deep Dive: links out only; no text from the works is stored.
+  var deepdive = null;
+  function ddLink(cls, ln) {
+    var a = el('a', cls, ln.label + ' \u2197');
+    a.href = ln.url; a.target = '_blank'; a.rel = 'noopener';
+    return a;
+  }
+  function renderDeepDive() {
+    var box = $('ddList');
+    if (!deepdive) return;
+    box.textContent = '';
+    $('ddIntro').textContent = deepdive.intro || '';
+    deepdive.groups.forEach(function (g) {
+      var sec = el('section', 'dd-group');
+      sec.id = 'dd-' + g.id;
+      sec.appendChild(el('h3', null, g.title));
+      if (g.note) sec.appendChild(el('p', 'dd-gnote', g.note));
+      g.items.forEach(function (it) {
+        var c = el('article', 'dd-item');
+        c.id = 'dd-' + it.id;
+        c.appendChild(el('h4', null, it.title));
+        c.appendChild(el('p', 'dd-by', it.author));
+        c.appendChild(el('p', 'dd-line', it.line));
+        var parts = it.links.filter(function (l) { return l.kind === 'part'; });
+        it.links.forEach(function (l) { if (l.kind === 'primary') c.appendChild(ddLink('review dd-primary', l)); });
+        if (parts.length) {
+          if (it.links_heading) c.appendChild(el('p', 'dd-ph', it.links_heading));
+          var row = el('div', 'dd-parts');
+          parts.forEach(function (l) { row.appendChild(ddLink('dd-part', l)); });
+          c.appendChild(row);
+        }
+        it.links.forEach(function (l) {
+          if (l.kind === 'secondary') c.appendChild(ddLink('dd-sec', l));
+        });
+        sec.appendChild(c);
+      });
+      box.appendChild(sec);
+    });
+    var d = deepdive.checked ? new Date(deepdive.checked + 'T12:00:00') : null;
+    $('ddChecked').textContent = d ? 'Links checked ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.' : '';
+  }
+  function openDeepDive() {
+    $('deepdive').hidden = false;
+    document.body.style.overflow = 'hidden';
+    $('deepdive').scrollTop = 0;
+    if (deepdive) { renderDeepDive(); return; }
+    fetch('data/deepdive.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (data) {
+        if (data && data.groups) { deepdive = data; renderDeepDive(); }
+        else $('ddList').textContent = 'Couldn\u2019t load the Deep Dive list. Check your connection and try again.';
+      });
+  }
+  function closeDeepDive() {
+    $('deepdive').hidden = true;
+    document.body.style.overflow = '';
+  }
+  $('ddBtn').addEventListener('click', openDeepDive);
+  $('ddClose').addEventListener('click', closeDeepDive);
+
   $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
   $('next').addEventListener('click', function () { location.hash = addDays(current, 1); });
   $('todayBtn').addEventListener('click', function () {
@@ -522,8 +583,8 @@
     show(isoFromHash() || current || todayISO());
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); else if (!$('prayers').hidden) closePrayers(); return; }
-    if (!$('lightbox').hidden || !$('favs').hidden || !$('prayers').hidden) return;
+    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); else if (!$('prayers').hidden) closePrayers(); else if (!$('deepdive').hidden) closeDeepDive(); return; }
+    if (!$('lightbox').hidden || !$('favs').hidden || !$('prayers').hidden || !$('deepdive').hidden) return;
     if (e.key === 'ArrowLeft') $('prev').click();
     if (e.key === 'ArrowRight') $('next').click();
   });

@@ -1,0 +1,390 @@
+{
+ "intro": "Free full texts of the early Church Fathers and great saints. Links open on other sites.",
+ "checked": "2026-10-25",
+ "groups": [
+  {
+   "id": "apostles",
+   "title": "Linked to the Apostles",
+   "note": "Writers traditionally linked to the apostles or their disciples.",
+   "items": [
+    {
+     "id": "1-clement",
+     "title": "1 Clement",
+     "author": "Clement of Rome",
+     "line": "Letter to the church at Corinth, c. 96. Clement is traditionally said to have known Peter and Paul. New Advent: tr. John Keith (Ante-Nicene Fathers, vol. 9).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/1010.htm",
+       "expect": "Letter to the Corinthians (Clement)",
+       "kind": "primary"
+      },
+      {
+       "label": "Also at Early Christian Writings",
+       "url": "https://www.earlychristianwritings.com/text/1clement-lightfoot.html",
+       "expect": "First Clement",
+       "kind": "secondary"
+      }
+     ]
+    },
+    {
+     "id": "ignatius",
+     "title": "Seven Letters",
+     "author": "Ignatius of Antioch",
+     "line": "Letters, c. 107–110, traditionally said to have been written on his way to martyrdom in Rome. New Advent: tr. Alexander Roberts and James Donaldson (Ante-Nicene Fathers, vol. 1).",
+     "links_heading": "Read at New Advent:",
+     "links": [
+      {
+       "label": "Ephesians",
+       "url": "https://www.newadvent.org/fathers/0104.htm",
+       "expect": "Epistle to the Ephesians",
+       "kind": "part"
+      },
+      {
+       "label": "Magnesians",
+       "url": "https://www.newadvent.org/fathers/0105.htm",
+       "expect": "Epistle to the Magnesians",
+       "kind": "part"
+      },
+      {
+       "label": "Trallians",
+       "url": "https://www.newadvent.org/fathers/0106.htm",
+       "expect": "Epistle to the Trallians",
+       "kind": "part"
+      },
+      {
+       "label": "Romans",
+       "url": "https://www.newadvent.org/fathers/0107.htm",
+       "expect": "Epistle to the Romans",
+       "kind": "part"
+      },
+      {
+       "label": "Philadelphians",
+       "url": "https://www.newadvent.org/fathers/0108.htm",
+       "expect": "Epistle to the Philadelphians",
+       "kind": "part"
+      },
+      {
+       "label": "Smyrnaeans",
+       "url": "https://www.newadvent.org/fathers/0109.htm",
+       "expect": "Epistle to the Smyrnaeans",
+       "kind": "part"
+      },
+      {
+       "label": "To Polycarp",
+       "url": "https://www.newadvent.org/fathers/0110.htm",
+       "expect": "Epistle to St. Polycarp",
+       "kind": "part"
+      },
+      {
+       "label": "Also at Early Christian Writings",
+       "url": "https://www.earlychristianwritings.com/ignatius.html",
+       "expect": "Ignatius of Antioch",
+       "kind": "secondary"
+      }
+     ]
+    },
+    {
+     "id": "polycarp",
+     "title": "Letter to the Philippians",
+     "author": "Polycarp of Smyrna",
+     "line": "Letter, c. 110–140. According to Irenaeus, Polycarp was a disciple of St. John. New Advent: tr. Alexander Roberts and James Donaldson (Ante-Nicene Fathers, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0136.htm",
+       "expect": "Epistle to the Philippians (Polycarp)",
+       "kind": "primary"
+      },
+      {
+       "label": "Also at Early Christian Writings",
+       "url": "https://www.earlychristianwritings.com/text/polycarp-lightfoot.html",
+       "expect": "Polycarp to the Philippians",
+       "kind": "secondary"
+      }
+     ]
+    },
+    {
+     "id": "martyrdom-polycarp",
+     "title": "The Martyrdom of Polycarp",
+     "author": "The Church of Smyrna",
+     "line": "Letter of the church of Smyrna describing his death, c. 155. New Advent: tr. Alexander Roberts and James Donaldson (Ante-Nicene Fathers, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0102.htm",
+       "expect": "Martyrdom of Polycarp",
+       "kind": "primary"
+      },
+      {
+       "label": "Also at Early Christian Writings",
+       "url": "https://www.earlychristianwritings.com/text/martyrdompolycarp-lightfoot.html",
+       "expect": "The Martyrdom of Polycarp",
+       "kind": "secondary"
+      }
+     ]
+    },
+    {
+     "id": "papias",
+     "title": "Fragments",
+     "author": "Papias of Hierapolis",
+     "line": "Fragments, c. 115–140, of a collection of oral traditions about the apostles. New Advent: tr. Alexander Roberts and James Donaldson (Ante-Nicene Fathers, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0125.htm",
+       "expect": "Fragments of Papias",
+       "kind": "primary"
+      },
+      {
+       "label": "Also at Early Christian Writings",
+       "url": "https://www.earlychristianwritings.com/text/papias.html",
+       "expect": "Papias",
+       "kind": "secondary"
+      }
+     ]
+    },
+    {
+     "id": "quadratus",
+     "title": "Fragment of his Apology",
+     "author": "Quadratus of Athens",
+     "line": "Fragment of an apology, c. 124–125, surviving in Eusebius, Church History IV.3 (chapter 3 on the New Advent page). New Advent: tr. Arthur Cushman McGiffert (Nicene and Post-Nicene Fathers, second series, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/250104.htm",
+       "expect": "Quadratus",
+       "kind": "primary"
+      },
+      {
+       "label": "Also at Early Christian Writings",
+       "url": "https://www.earlychristianwritings.com/text/quadratus.html",
+       "expect": "Quadratus of Athens",
+       "kind": "secondary"
+      }
+     ]
+    },
+    {
+     "id": "didache",
+     "title": "The Didache",
+     "author": "Anonymous",
+     "line": "Early church manual, late 1st century. New Advent: tr. M.B. Riddle (Ante-Nicene Fathers, vol. 7).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0714.htm",
+       "expect": "The Didache",
+       "kind": "primary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fathers",
+   "title": "Early Church Fathers",
+   "items": [
+    {
+     "id": "diognetus",
+     "title": "Letter to Diognetus",
+     "author": "Anonymous",
+     "line": "Anonymous letter, 2nd century. New Advent: tr. Alexander Roberts and James Donaldson (Ante-Nicene Fathers, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0101.htm",
+       "expect": "Epistle to Diognetus",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "justin-first-apology",
+     "title": "First Apology",
+     "author": "St. Justin Martyr",
+     "line": "Apology addressed to Emperor Antoninus Pius, c. 155. New Advent: tr. Marcus Dods and George Reith (Ante-Nicene Fathers, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0126.htm",
+       "expect": "The First Apology (St. Justin Martyr)",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "irenaeus",
+     "title": "Against Heresies",
+     "author": "St. Irenaeus",
+     "line": "Treatise in five books, c. 180. New Advent: tr. Alexander Roberts and William Rambaut (Ante-Nicene Fathers, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/0103.htm",
+       "expect": "Against Heresies (St. Irenaeus)",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "augustine-confessions",
+     "title": "Confessions",
+     "author": "St. Augustine",
+     "line": "Autobiography in thirteen books, c. 397–400. New Advent: tr. J.G. Pilkington (Nicene and Post-Nicene Fathers, first series, vol. 1).",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/fathers/1101.htm",
+       "expect": "Confessions (St. Augustine)",
+       "kind": "primary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "doctors",
+   "title": "Doctors and Saints",
+   "items": [
+    {
+     "id": "summa",
+     "title": "Summa Theologiae",
+     "author": "St. Thomas Aquinas",
+     "line": "Theological work in three parts, 1265–74. New Advent: second and revised edition, 1920, tr. Fathers of the English Dominican Province.",
+     "links": [
+      {
+       "label": "Read at New Advent",
+       "url": "https://www.newadvent.org/summa/",
+       "expect": "Summa Theolog",
+       "kind": "primary"
+      },
+      {
+       "label": "On the Eucharist",
+       "url": "https://www.newadvent.org/summa/4073.htm",
+       "expect": "The sacrament of the Eucharist",
+       "kind": "part"
+      }
+     ]
+    },
+    {
+     "id": "catherine-dialogue",
+     "title": "The Dialogue",
+     "author": "St. Catherine of Siena",
+     "line": "Written 1377–78. Tr. Algar Thorold, 1907 (CCEL).",
+     "links": [
+      {
+       "label": "Read at CCEL",
+       "url": "https://ccel.org/ccel/catherine/dialog",
+       "expect": "Catherine of Siena",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "teresa-life",
+     "title": "Life",
+     "author": "St. Teresa of Ávila",
+     "line": "Autobiography, 1565. Tr. David Lewis (Project Gutenberg).",
+     "links": [
+      {
+       "label": "Read at Project Gutenberg",
+       "url": "https://www.gutenberg.org/ebooks/8120",
+       "expect": "The Life of St. Teresa of Jesus",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "teresa-castle",
+     "title": "Interior Castle",
+     "author": "St. Teresa of Ávila",
+     "line": "Written 1577. Tr. Benedictines of Stanbrook, 1921 (CCEL).",
+     "links": [
+      {
+       "label": "Read at CCEL",
+       "url": "https://ccel.org/ccel/teresa/castle2",
+       "expect": "Interior Castle",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "john-ascent",
+     "title": "Ascent of Mount Carmel",
+     "author": "St. John of the Cross",
+     "line": "Treatise, c. 1580s (CCEL edition).",
+     "links": [
+      {
+       "label": "Read at CCEL",
+       "url": "https://ccel.org/ccel/john_cross/ascent",
+       "expect": "Ascent of Mount Carmel",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "john-dark-night",
+     "title": "Dark Night of the Soul",
+     "author": "St. John of the Cross",
+     "line": "Treatise, c. 1580s (CCEL edition).",
+     "links": [
+      {
+       "label": "Read at CCEL",
+       "url": "https://ccel.org/ccel/john_cross/dark_night",
+       "expect": "Dark Night of the Soul",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "devout-life",
+     "title": "Introduction to the Devout Life",
+     "author": "St. Francis de Sales",
+     "line": "Book of spiritual instruction, 1609 (CCEL edition).",
+     "links": [
+      {
+       "label": "Read at CCEL",
+       "url": "https://ccel.org/ccel/desales/devout_life",
+       "expect": "Introduction to the Devout Life",
+       "kind": "primary"
+      }
+     ]
+    },
+    {
+     "id": "story-of-a-soul",
+     "title": "Story of a Soul",
+     "author": "St. Thérèse of Lisieux",
+     "line": "Autobiography, written 1895–97. Tr. T.N. Taylor, 1912 (Project Gutenberg).",
+     "links": [
+      {
+       "label": "Read at Project Gutenberg",
+       "url": "https://www.gutenberg.org/ebooks/16772",
+       "expect": "The Story of a Soul",
+       "kind": "primary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "classics",
+   "title": "Spiritual Classics",
+   "items": [
+    {
+     "id": "imitation",
+     "title": "The Imitation of Christ",
+     "author": "Thomas à Kempis",
+     "line": "Devotional work in four books, c. 1418–27, traditionally attributed to Thomas à Kempis. Tr. William Benham (Project Gutenberg).",
+     "links": [
+      {
+       "label": "Read at Project Gutenberg",
+       "url": "https://www.gutenberg.org/ebooks/1653",
+       "expect": "The Imitation of Christ",
+       "kind": "primary"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

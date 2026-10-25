@@ -27,6 +27,7 @@ Live site: https://chrissieai.github.io/daily-bread/
   and saves only its date + URL to `data/parish.json`. Rerun weekly, then commit and push. If the saved
   bulletin is more than a week old, the app's button falls back to the parish bulletin page.
 - `tools/verify-movies.py` — re-checks every review link (HTTP 200 + title match).
+- `data/deepdive.json` + `tools/verify-deepdive.py` — "Deep Dive" reading list (links only) and its link checker; see below.
 - `art/YYYY-MM-DD.jpg` (+ `art/thumbs/`) and `data/art.json` — "Art for today": one public-domain
   artwork per day, matched to the day's feast/saint or Gospel. Images and captions come from museum
   open-access programs: The Met (CC0), Art Institute of Chicago (images/data CC0; `description`
@@ -104,3 +105,28 @@ Data: `data/prayers.json`. The list (order, text/extract/link) is `PRAYERS` in
 `tools/fetch-prayers.py`. Rebuild with `python3 tools/fetch-prayers.py`; verify stored text
 against a fresh fetch (and that each link still shows its prayer) with
 `python3 tools/fetch-prayers.py --check`.
+
+## Deep Dive
+
+The header "Deep Dive" pill opens a full-screen reading list of free full texts by the early
+Church Fathers and great saints. **Links out only**: no text from any work is stored in the app.
+Each entry has a title, author, and one factual line (approximate date, kind of work,
+translator/edition as stated on the linked page). Traditions are hedged ("traditionally said to…",
+"according to Irenaeus…"). All links open in a new tab.
+
+- Primary button: the New Advent copy when New Advent has it ("Read at New Advent ↗"); otherwise
+  CCEL ("Read at CCEL ↗") or Project Gutenberg ("Read at Project Gutenberg ↗", `/ebooks/NNNN`
+  landing pages only).
+- Secondary link "Also at Early Christian Writings ↗" for 1 Clement, Ignatius, Polycarp, the
+  Martyrdom of Polycarp, Papias and Quadratus.
+- Ignatius' seven letters are shown as seven small New Advent links; the Summa has an extra
+  "On the Eucharist" link (III, Q. 73).
+- Groups: Linked to the Apostles · Early Church Fathers · Doctors and Saints · Spiritual Classics.
+
+Data: `data/deepdive.json` (groups → items → links, each link with its URL and an `expect` phrase;
+`checked` is the date the list was last verified). Check every link with
+`python3 tools/verify-deepdive.py` (each URL must return 200 and contain its phrase; exits 1 on any
+failure). Update `checked` after a passing run.
+
+The header pills sit on their own row under the brand; on screens too narrow to fit them they
+scroll sideways instead of wrapping.
