@@ -110,7 +110,8 @@ def gospel_for(readings, iso):
     day = (readings.get("days") or {}).get(iso) or {}
     for m in day.get("masses") or []:
         for r in m.get("readings") or []:
-            if "gospel" in (r.get("heading") or "").lower() and r.get("citation"):
+            h = (r.get("heading") or "").lower()
+            if h.startswith("gospel") and "verse" not in h and r.get("citation"):
                 return r["citation"]
     return None
 

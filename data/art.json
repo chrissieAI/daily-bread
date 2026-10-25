@@ -1856,7 +1856,7 @@
    "height": 1200,
    "match": "theme",
    "chosen_for": "Ash Wednesday",
-   "gospel": "Psalm 95:8"
+   "gospel": "Matthew 6:1-6, 16-18"
   },
   "2027-02-11": {
    "source": "met:459087",
@@ -1872,7 +1872,7 @@
    "width": 868,
    "height": 1200,
    "match": "gospel",
-   "gospel": "Matthew 4:17"
+   "gospel": "Luke 9:22-25"
   },
   "2027-02-12": {
    "source": "met:435760",
@@ -1889,7 +1889,7 @@
    "height": 1200,
    "match": "theme",
    "chosen_for": "Friday after Ash Wednesday",
-   "gospel": "See Amos 5:14"
+   "gospel": "Matthew 9:14-15"
   },
   "2027-02-13": {
    "source": "met:436643",
@@ -1905,7 +1905,7 @@
    "width": 1200,
    "height": 890,
    "match": "gospel",
-   "gospel": "Ezekiel 33:11"
+   "gospel": "Luke 5:27-32"
   },
   "2027-02-14": {
    "source": "met:471907",
@@ -1921,7 +1921,7 @@
    "width": 1200,
    "height": 723,
    "match": "gospel",
-   "gospel": "Matthew 4:4b"
+   "gospel": "Mark 1:12-15"
   },
   "2027-02-15": {
    "source": "met:436794",
@@ -1937,7 +1937,7 @@
    "width": 929,
    "height": 1200,
    "match": "gospel",
-   "gospel": "2 Corinthians 6:2b"
+   "gospel": "Matthew 25:31-46"
   },
   "2027-02-16": {
    "source": "met:670706",
@@ -1953,7 +1953,7 @@
    "width": 906,
    "height": 1200,
    "match": "partial",
-   "gospel": "Matthew 4:4b"
+   "gospel": "Matthew 6:7-15"
   },
   "2027-02-17": {
    "source": "aic:94125",
@@ -1970,7 +1970,7 @@
    "height": 1200,
    "match": "feast",
    "chosen_for": "The Seven Holy Founders of the Servite Order",
-   "gospel": "Joel 2:12-13"
+   "gospel": "Luke 11:29-32"
   },
   "2027-02-18": {
    "source": "met:340826",
@@ -1986,7 +1986,7 @@
    "width": 1200,
    "height": 836,
    "match": "partial",
-   "gospel": "Psalm 51:12a, 14a"
+   "gospel": "Matthew 7:7-12"
   },
   "2027-02-19": {
    "source": "aic:80577",
@@ -2002,7 +2002,7 @@
    "width": 1200,
    "height": 1014,
    "match": "gospel",
-   "gospel": "Ezekiel 18:31"
+   "gospel": "Matthew 5:20-26"
   },
   "2027-02-20": {
    "source": "met:340163",
@@ -2018,7 +2018,7 @@
    "width": 1200,
    "height": 972,
    "match": "partial",
-   "gospel": "2 Corinthians 6:2b"
+   "gospel": "Matthew 5:43-48"
   }
  }
 }
