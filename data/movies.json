@@ -90,15 +90,15 @@
   },
   {
    "week_start": "2026-12-13",
-   "title": "Going My Way",
-   "year": 1944,
+   "title": "Holiday Inn",
+   "year": 1942,
    "type": "movie",
-   "rating": "USCCB — A-I",
-   "rating_kind": "USCCB rating as listed by Formation Reimagined",
-   "source": "Formation Reimagined",
-   "review_url": "https://formationreimagined.org/movie/going-my-way/",
-   "year_source": "Not stated on the Formation Reimagined page; well-known release year",
-   "liturgical_note": "Advent"
+   "rating": "Artistic/Entertainment Value: 3 of 4 stars · Moral/Spiritual Value: 0 · Age Appropriateness: Kids & Up*",
+   "rating_kind": "Decent Films ratings (Steven D. Greydanus)",
+   "source": "Decent Films",
+   "review_url": "https://decentfilms.com/reviews/holidayinn",
+   "year_source": "Decent Films review title",
+   "liturgical_note": "Advent; the week before Christmas week (Bing Crosby)"
   },
   {
    "week_start": "2026-12-20",
@@ -443,14 +443,15 @@
   },
   {
    "week_start": "2027-07-11",
-   "title": "Field of Dreams",
-   "year": 1989,
+   "title": "Going My Way",
+   "year": 1944,
    "type": "movie",
-   "rating": "USCCB rating: A-II",
+   "rating": "USCCB — A-I",
    "rating_kind": "USCCB rating as listed by Formation Reimagined",
    "source": "Formation Reimagined",
-   "review_url": "https://formationreimagined.org/movie/field-of-dreams/",
-   "year_source": "Not stated on the Formation Reimagined page; well-known release year"
+   "review_url": "https://formationreimagined.org/movie/going-my-way/",
+   "year_source": "Not stated on the Formation Reimagined page; well-known release year",
+   "liturgical_note": "Bing Crosby (spread out from The Bells of St. Mary’s)"
   },
   {
    "week_start": "2027-07-18",
@@ -523,14 +524,15 @@
   },
   {
    "week_start": "2027-08-29",
-   "title": "Letters to God",
-   "year": 2010,
+   "title": "A Connecticut Yankee in King Arthur's Court",
+   "year": 1949,
    "type": "movie",
-   "rating": "Rated PG",
-   "rating_kind": "MPAA rating as listed by Formation Reimagined (no USCCB rating on page)",
+   "rating": "USCCB rating: A-I",
+   "rating_kind": "USCCB rating as listed by Formation Reimagined",
    "source": "Formation Reimagined",
-   "review_url": "https://formationreimagined.org/movie/letters-to-god/",
-   "year_source": "Not stated on the Formation Reimagined page; well-known release year"
+   "review_url": "https://formationreimagined.org/movie/a-connecticut-yankee-in-king-arthurs-court/",
+   "year_source": "Not stated on the Formation Reimagined page; well-known release year",
+   "liturgical_note": "Bing Crosby"
   },
   {
    "week_start": "2027-09-05",
