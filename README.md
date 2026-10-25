@@ -81,20 +81,26 @@ Media slug), then run `python3 tools/fetch-saints.py` and read every printed exc
 ## Prayers
 
 The header "Prayers" button opens a full-screen list of prayer titles; tap one to expand it.
-Everything comes from USCCB's own prayer pages (usccb.org/prayers/...):
+Each prayer is either copied word for word (line breaks, V./R. markers, punctuation kept,
+with a source link and the date copied) or, where the source restricts copying, shown as a
+link card with no text stored:
 
-- Copied word for word (line breaks, V./R. markers, punctuation kept), each with a
-  "Source: USCCB" link, because the page carries no restrictive notice:
-  Regina Caeli, Our Father, Hail Mary, Apostles' Creed, Nicene Creed, Hail, Holy Queen.
-- Link only ("Pray the X at USCCB" button, no text stored), because the page restricts
-  copying: Angelus ("... © 2007 USCCB. All rights reserved.") and Act of Contrition
-  (cites the *Order of Penance*).
+| Prayer | How | Source / deciding notice |
+|---|---|---|
+| Angelus (Regina Caeli in Easter season) | link | usccb.org/prayers/angelus: "Excerpted from Catholic Household Blessings and Prayers ... All rights reserved." |
+| Regina Caeli | text | usccb.org/prayers/regina-caeli (site footer only) |
+| Our Father, Hail Mary, Apostles' Creed, Nicene Creed | text | their usccb.org/prayers pages (site footer only) |
+| Act of Contrition | link | usccb.org/prayers/act-contrition cites the *Order of Penance* |
+| Act of Spiritual Communion | link | USCCB *Catechism for Adults* p. 562 (no USCCB prayer page) |
+| Hail, Holy Queen | text | usccb.org/prayers/hail-holy-queen-salve-regina (site footer only) |
+| Prayer of St. Michael | link | Archdiocese of Toronto page: "©2020 Archdiocese of Toronto. All rights reserved." |
+| Prayer of St. Francis | text (extract) | only the St. Francis prayer from usccb.org/prayers/prayer-new-year |
 
-The Regina Caeli is shown instead of the Angelus during romcal's Easter season (Easter
-Sunday through Pentecost). The liturgical-day shortcut ("Pray the Angelus at USCCB" /
-"Pray the Regina Caeli") sits below the parish card.
+The Regina Caeli replaces the Angelus during romcal's Easter season (Easter Sunday through
+Pentecost). The shortcut below the parish card reads "Pray the Angelus at USCCB" or, in the
+Easter season, "Pray the Regina Caeli".
 
-Data: `data/prayers.json` (source URLs, date copied). The list of prayers and whether each
-is text or link lives in `PRAYERS` in `tools/fetch-prayers.py`. Rebuild with
-`python3 tools/fetch-prayers.py`; verify stored text against a fresh fetch with
+Data: `data/prayers.json`. The list (order, text/extract/link) is `PRAYERS` in
+`tools/fetch-prayers.py`. Rebuild with `python3 tools/fetch-prayers.py`; verify stored text
+against a fresh fetch (and that each link still shows its prayer) with
 `python3 tools/fetch-prayers.py --check`.

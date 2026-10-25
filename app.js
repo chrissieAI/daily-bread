@@ -459,7 +459,7 @@
       d.appendChild(el('summary', null, p.title));
       if (p.id === 'regina-caeli') d.appendChild(el('span', 'season-tag', 'Easter season'));
       if (p.link_only) {
-        var lb = el('a', 'review plink', 'Pray the ' + p.title + ' at USCCB \u2197');
+        var lb = el('a', 'review plink', (p.button || 'Pray the ' + p.title + ' at USCCB') + ' \u2197');
         lb.href = p.source_url; lb.target = '_blank'; lb.rel = 'noopener';
         d.appendChild(lb);
         d.appendChild(el('p', 'pnotice plabel', p.label || ''));
@@ -474,6 +474,7 @@
       });
       d.appendChild(tx);
       if (p.notice) { var nt = el('p', 'pnotice'); segs(nt, p.notice); d.appendChild(nt); }
+      if (p.note) d.appendChild(el('p', 'pnotice psrcnote', p.note));
       var a = el('a', 'psrc', 'Source: USCCB \u2197');
       a.href = p.source_url; a.target = '_blank'; a.rel = 'noopener';
       d.appendChild(a);

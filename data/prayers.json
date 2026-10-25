@@ -521,6 +521,13 @@
    "source_url": "https://www.usccb.org/prayers/act-contrition"
   },
   {
+   "id": "spiritual-communion",
+   "title": "Act of Spiritual Communion",
+   "link_only": true,
+   "label": "Opens usccb.org (Catechism for Adults)",
+   "source_url": "https://www.usccb.org/sites/default/files/flipbooks/uscca/files/assets/basic-html/page-562.html"
+  },
+  {
    "id": "hail-holy-queen-salve-regina",
    "title": "Hail, Holy Queen (The Salve Regina)",
    "source_url": "https://www.usccb.org/prayers/hail-holy-queen-salve-regina",
@@ -589,6 +596,112 @@
      ]
     ]
    ]
+  },
+  {
+   "id": "st-michael",
+   "title": "Prayer of St. Michael",
+   "link_only": true,
+   "label": "Opens archtoronto.org",
+   "source_url": "https://www.archtoronto.org/en/offices-and-ministries/sub-sites/feast-of-stmichael/home/prayer-of-st.-michael/",
+   "button": "Pray the St. Michael prayer at the Archdiocese of Toronto"
+  },
+  {
+   "id": "st-francis",
+   "title": "Prayer of St. Francis",
+   "source_url": "https://www.usccb.org/prayers/prayer-new-year",
+   "copied": "2026-10-25",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Lord, make me an instrument of your peace:"
+      }
+     ],
+     [
+      {
+       "t": "where there is hatred, let me sow love;"
+      }
+     ],
+     [
+      {
+       "t": "where there is injury, pardon;"
+      }
+     ],
+     [
+      {
+       "t": "where there is doubt, faith;"
+      }
+     ],
+     [
+      {
+       "t": "where there is despair, hope;"
+      }
+     ],
+     [
+      {
+       "t": "where there is darkness, light;"
+      }
+     ],
+     [
+      {
+       "t": "where there is sadness, joy."
+      }
+     ],
+     [
+      {
+       "t": "O divine Master, grant that I may not so much seek"
+      }
+     ],
+     [
+      {
+       "t": "to be consoled as to console,"
+      }
+     ],
+     [
+      {
+       "t": "to be understood as to understand,"
+      }
+     ],
+     [
+      {
+       "t": "to be loved as to love."
+      }
+     ],
+     [
+      {
+       "t": "For it is in giving that we receive,"
+      }
+     ],
+     [
+      {
+       "t": "it is in pardoning that we are pardoned,"
+      }
+     ],
+     [
+      {
+       "t": "it is in dying that we are born to eternal life."
+      }
+     ],
+     [
+      {
+       "t": "R/.",
+       "b": true
+      },
+      {
+       "t": " Amen."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "—Attributed to St. Francis of Assisi",
+       "i": true
+      }
+     ]
+    ]
+   ],
+   "note": "From USCCB’s Prayer for the New Year"
   }
  ]
 }
