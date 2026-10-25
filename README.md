@@ -15,6 +15,12 @@ Live site: https://chrissieai.github.io/daily-bread/
 - `readings.json` — reading headings + citations only (e.g. "Gospel — Matthew 22:34-40")
   and the USCCB day title, scraped from bible.usccb.org page headings.
 - `tools/fetch-references.py` — refreshes `readings.json` (Python 3 stdlib only).
+- `data/movies.json` — "Movie of the week" (weeks start Sunday): title, year, type, rating exactly
+  as the source states it, source name and review URL. Picks come only from films featured or
+  reviewed positively by [Formation Reimagined](https://formationreimagined.org/movie/) (Family
+  Movie Night; USCCB ratings as listed there) and [Decent Films](https://decentfilms.com/)
+  (Steven D. Greydanus). No review text, synopses or images are copied.
+- `tools/verify-movies.py` — re-checks every review link (HTTP 200 + title match).
 
 ## Content rule
 

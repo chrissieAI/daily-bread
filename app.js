@@ -19,6 +19,7 @@
   var romcal = new Romcal.Romcal({ localizedCalendar: UnitedStates_En });
   var calCache = {};
   var readings = null;
+  var movies = null;
 
   function todayISO() {
     var p = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' })
@@ -73,6 +74,7 @@
     cta.firstChild.nodeValue = (dd === 0 ? "Read today's readings at USCCB" : 'Read this day\u2019s readings at USCCB') + '\n';
     document.querySelector('#readings .label').textContent = dd === 0 ? "Today's reading references" : 'Reading references';
     renderReadings(iso);
+    renderMovie(iso);
     getCal(+iso.slice(0, 4)).then(function (cal) {
       if (current !== iso) return;
       renderDay(cal[iso] || []);
@@ -138,6 +140,32 @@
       if (m.readings && m.readings.length) body.appendChild(refsList(m.readings));
     });
   }
+
+  function weekStart(iso) {
+    var d = new Date(iso + 'T12:00:00Z');
+    return addDays(iso, -d.getUTCDay());
+  }
+
+  function renderMovie(iso) {
+    var card = $('movie');
+    var ws = weekStart(iso);
+    var m = movies && movies.weeks && movies.weeks.filter(function (w) { return w.week_start === ws; })[0];
+    if (!m) { card.hidden = true; return; }
+    $('movieWeek').textContent = 'Week of ' + new Date(ws + 'T12:00:00Z').toLocaleDateString('en-US',
+      { timeZone: 'UTC', month: 'long', day: 'numeric' }) + (m.type === 'show' ? ' \u00b7 Show' : '');
+    var t = $('movieTitle');
+    t.textContent = m.title + ' ';
+    if (m.year) t.appendChild(el('span', 'yr', '(' + m.year + ')'));
+    $('movieRating').textContent = m.rating;
+    $('movieSource').textContent = m.source;
+    $('movieLink').href = m.review_url;
+    card.hidden = false;
+  }
+
+  fetch('data/movies.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) { movies = data || {}; if (current) renderMovie(current); });
 
   fetch('readings.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : {}; })

@@ -41,6 +41,14 @@ header{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .refs .h{color:var(--mu);font-size:16px}
 .refs .c{font-weight:600;text-align:right}
 .note{color:var(--mu);font-size:16px;margin:0}
+#movie[hidden]{display:none}
+#movie .week{font:500 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);margin:0 0 6px}
+#movie h2{font-size:22px;line-height:1.3;margin:0 0 10px}
+#movie h2 .yr{font-weight:400;color:var(--mu)}
+.mv{margin:0 0 14px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:16px}
+.mv dt{color:var(--mu);font:600 13px/1.9 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;text-transform:uppercase;letter-spacing:.05em}
+.mv dd{margin:0}
+.review{display:inline-block;text-decoration:none;font:700 17px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);border:2px solid var(--accent-ink);border-radius:12px;padding:10px 16px}
 footer{font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);margin-top:24px;text-align:center}
 footer a{color:inherit}
 #err{display:none;color:#8a1c1c;font-size:15px}
@@ -82,11 +90,25 @@ footer a{color:inherit}
     <div id="refsBody"><p class="note">Loading…</p></div>
   </section>
 
+  <section class="card" id="movie" hidden>
+    <p class="label">Movie of the week</p>
+    <p class="week" id="movieWeek"></p>
+    <h2 id="movieTitle"></h2>
+    <dl class="mv">
+      <dt>Rating</dt><dd id="movieRating"></dd>
+      <dt>Source</dt><dd id="movieSource"></dd>
+    </dl>
+    <a class="review" id="movieLink" href="#" target="_blank" rel="noopener">Read the review &#8599;</a>
+  </section>
+
   <footer>
     Readings © USCCB — references only here; the button opens
     <a href="https://bible.usccb.org/bible/readings/" target="_blank" rel="noopener">bible.usccb.org</a>.<br>
     Liturgical calendar: <a href="https://github.com/romcal/romcal" target="_blank" rel="noopener">romcal</a>
-    (MIT) with the United States calendar.
+    (MIT) with the United States calendar.<br>
+    Movie picks from <a href="https://formationreimagined.org/movie/" target="_blank" rel="noopener">Formation Reimagined</a>
+    (Family Movie Night) and <a href="https://decentfilms.com/" target="_blank" rel="noopener">Decent Films</a>
+    (Steven D. Greydanus); reviews open on their sites.
   </footer>
 </div>
 
