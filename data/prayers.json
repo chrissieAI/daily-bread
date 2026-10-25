@@ -165,6 +165,58 @@
    ]
   },
   {
+   "id": "hail-mary",
+   "title": "Hail Mary",
+   "source_url": "https://www.usccb.org/prayers/hail-mary",
+   "copied": "2026-10-25",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Hail, Mary, full of grace,"
+      }
+     ],
+     [
+      {
+       "t": "the Lord is with thee."
+      }
+     ],
+     [
+      {
+       "t": "Blessed art thou among women"
+      }
+     ],
+     [
+      {
+       "t": "and blessed is the fruit of thy womb, Jesus."
+      }
+     ],
+     [
+      {
+       "t": "Holy Mary, Mother of God,"
+      }
+     ],
+     [
+      {
+       "t": "pray for us sinners,"
+      }
+     ],
+     [
+      {
+       "t": "now and at the hour of our death."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Amen."
+      }
+     ]
+    ]
+   ]
+  },
+  {
    "id": "apostles-creed",
    "title": "Apostles' Creed",
    "source_url": "https://www.usccb.org/prayers/apostles-creed",
@@ -467,6 +519,76 @@
    "link_only": true,
    "label": "Opens usccb.org",
    "source_url": "https://www.usccb.org/prayers/act-contrition"
+  },
+  {
+   "id": "hail-holy-queen-salve-regina",
+   "title": "Hail, Holy Queen (The Salve Regina)",
+   "source_url": "https://www.usccb.org/prayers/hail-holy-queen-salve-regina",
+   "copied": "2026-10-25",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Hail, Holy Queen, Mother of Mercy,"
+      }
+     ],
+     [
+      {
+       "t": "our life, our sweetness and our hope."
+      }
+     ],
+     [
+      {
+       "t": "To thee do we cry, "
+      }
+     ],
+     [
+      {
+       "t": "poor banished children of Eve."
+      }
+     ],
+     [
+      {
+       "t": "To thee do we send up our sighs,"
+      }
+     ],
+     [
+      {
+       "t": "mourning and weeping in this valley of tears."
+      }
+     ],
+     [
+      {
+       "t": "Turn then, most gracious advocate,"
+      }
+     ],
+     [
+      {
+       "t": "thine eyes of mercy toward us,"
+      }
+     ],
+     [
+      {
+       "t": "and after this our exile"
+      }
+     ],
+     [
+      {
+       "t": "show unto us the blessed fruit of thy womb, Jesus."
+      }
+     ],
+     [
+      {
+       "t": "O clement, O loving,"
+      }
+     ],
+     [
+      {
+       "t": "O sweet Virgin Mary."
+      }
+     ]
+    ]
+   ]
   }
  ]
 }

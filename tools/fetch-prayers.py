@@ -12,7 +12,7 @@ one-line label and the USCCB URL; the app shows a button to that page.
   python3 tools/fetch-prayers.py           # fetch and write data/prayers.json
   python3 tools/fetch-prayers.py --check   # re-fetch and diff against the stored file
 """
-import datetime, difflib, html, json, os, re, sys, urllib.request
+import datetime, difflib, html, json, os, re, sys, time, urllib.error, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'prayers.json')
@@ -25,14 +25,23 @@ PRAYERS = [
     ('link', 'angelus', 'Angelus', 'Opens usccb.org', 'https://www.usccb.org/prayers/angelus'),
     ('text', 'regina-caeli', 'https://www.usccb.org/prayers/regina-caeli'),
     ('text', 'our-father', 'https://www.usccb.org/prayers/our-father'),
+    ('text', 'hail-mary', 'https://www.usccb.org/prayers/hail-mary'),
     ('text', 'apostles-creed', 'https://www.usccb.org/prayers/apostles-creed'),
     ('text', 'nicene-creed', 'https://www.usccb.org/prayers/nicene-creed'),
     # cites "*From the Order of Penance, nos. 45 and 92." (ICEL ritual book)
     ('link', 'act-contrition', 'Act of Contrition', 'Opens usccb.org', 'https://www.usccb.org/prayers/act-contrition'),
+    ('text', 'hail-holy-queen-salve-regina', 'https://www.usccb.org/prayers/hail-holy-queen-salve-regina'),
 ]
 
 def fetch(url):
-    return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read().decode('utf-8')
+    # usccb.org's firewall returns 403 to rapid requests: go slowly and retry.
+    for attempt in range(4):
+        time.sleep(2 + 8 * attempt)
+        try:
+            return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read().decode('utf-8')
+        except urllib.error.HTTPError as e:
+            if e.code != 403 or attempt == 3:
+                raise
 
 def segments(fragment):
     """Inline HTML -> [{"t": text, "b"?: bold, "i"?: italic}] (text unescaped, tags dropped).

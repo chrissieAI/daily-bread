@@ -85,7 +85,7 @@ Everything comes from USCCB's own prayer pages (usccb.org/prayers/...):
 
 - Copied word for word (line breaks, V./R. markers, punctuation kept), each with a
   "Source: USCCB" link, because the page carries no restrictive notice:
-  Regina Caeli, Our Father, Apostles' Creed, Nicene Creed.
+  Regina Caeli, Our Father, Hail Mary, Apostles' Creed, Nicene Creed, Hail, Holy Queen.
 - Link only ("Pray the X at USCCB" button, no text stored), because the page restricts
   copying: Angelus ("... © 2007 USCCB. All rights reserved.") and Act of Contrition
   (cites the *Order of Penance*).
