@@ -1,0 +1,585 @@
+{
+ "note": "One artwork per day. match: feast (feast/saint of the day), gospel (scene from the day's Gospel), partial (related to the Gospel but not the exact scene), theme (liturgical day/season), general (no close match found; a general image of Christ). Gospel citations come from readings.json.",
+ "days": {
+  "2026-10-24": {
+   "source": "met:437061",
+   "match": "general"
+  },
+  "2026-10-25": {
+   "source": "met:335452",
+   "match": "gospel"
+  },
+  "2026-10-26": {
+   "source": "cma:147383",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-10-27": {
+   "source": "met:382267",
+   "match": "gospel"
+  },
+  "2026-10-28": {
+   "source": "met:359657",
+   "match": "feast",
+   "chosen_for": "Saints Simon and Jude, Apostles"
+  },
+  "2026-10-29": {
+   "source": "met:360075",
+   "match": "partial"
+  },
+  "2026-10-30": {
+   "source": "aic:81976",
+   "match": "general",
+   "excerpt_sentences": 2
+  },
+  "2026-10-31": {
+   "source": "met:382276",
+   "match": "partial"
+  },
+  "2026-11-01": {
+   "source": "met:436512",
+   "match": "feast",
+   "chosen_for": "All Saints"
+  },
+  "2026-11-02": {
+   "source": "met:437542",
+   "match": "feast",
+   "chosen_for": "All Souls' Day"
+  },
+  "2026-11-03": {
+   "source": "met:670723",
+   "match": "gospel"
+  },
+  "2026-11-04": {
+   "source": "met:337588",
+   "match": "feast",
+   "chosen_for": "Saint Charles Borromeo"
+  },
+  "2026-11-05": {
+   "source": "met:382277",
+   "match": "gospel"
+  },
+  "2026-11-06": {
+   "source": "met:670719",
+   "match": "partial"
+  },
+  "2026-11-07": {
+   "source": "met:439327",
+   "match": "general"
+  },
+  "2026-11-08": {
+   "source": "met:340853",
+   "match": "gospel"
+  },
+  "2026-11-09": {
+   "source": "aic:48139",
+   "match": "feast",
+   "chosen_for": "The Dedication of the Lateran Basilica",
+   "excerpt_sentences": 2
+  },
+  "2026-11-10": {
+   "source": "met:630971",
+   "match": "feast",
+   "chosen_for": "Saint Leo the Great"
+  },
+  "2026-11-11": {
+   "source": "aic:67362",
+   "match": "feast",
+   "chosen_for": "Saint Martin of Tours",
+   "excerpt_sentences": 2
+  },
+  "2026-11-12": {
+   "source": "met:437649",
+   "match": "general"
+  },
+  "2026-11-13": {
+   "source": "aic:90522",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-11-14": {
+   "source": "met:382280",
+   "match": "gospel"
+  },
+  "2026-11-15": {
+   "source": "met:436243",
+   "match": "general"
+  },
+  "2026-11-16": {
+   "source": "met:436572",
+   "match": "gospel"
+  },
+  "2026-11-17": {
+   "source": "cma:146084",
+   "match": "feast",
+   "chosen_for": "Saint Elizabeth of Hungary",
+   "excerpt_sentences": 2
+  },
+  "2026-11-18": {
+   "source": "met:442491",
+   "match": "feast",
+   "chosen_for": "Dedication of the Basilicas of Saints Peter and Paul"
+  },
+  "2026-11-19": {
+   "source": "met:364540",
+   "match": "partial"
+  },
+  "2026-11-20": {
+   "source": "aic:48992",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-11-21": {
+   "source": "cma:136189",
+   "match": "feast",
+   "chosen_for": "The Presentation of the Blessed Virgin Mary",
+   "excerpt_sentences": 1
+  },
+  "2026-11-22": {
+   "source": "met:436282",
+   "match": "feast",
+   "chosen_for": "Christ the King"
+  },
+  "2026-11-23": {
+   "source": "met:338517",
+   "match": "feast",
+   "chosen_for": "Saint Clement I, Pope and Martyr"
+  },
+  "2026-11-24": {
+   "source": "met:468423",
+   "match": "partial"
+  },
+  "2026-11-25": {
+   "source": "met:436908",
+   "match": "feast",
+   "chosen_for": "Saint Catherine of Alexandria"
+  },
+  "2026-11-26": {
+   "source": "met:816100",
+   "match": "feast",
+   "chosen_for": "Thanksgiving Day",
+   "gospel": "Luke 17:11-19"
+  },
+  "2026-11-27": {
+   "source": "cma:127248",
+   "match": "general",
+   "excerpt_sentences": 2
+  },
+  "2026-11-28": {
+   "source": "cma:124137",
+   "match": "gospel",
+   "excerpt_sentences": 1
+  },
+  "2026-11-29": {
+   "source": "cma:127572",
+   "match": "theme",
+   "chosen_for": "First Sunday of Advent",
+   "excerpt_sentences": 1
+  },
+  "2026-11-30": {
+   "source": "cma:148758",
+   "match": "feast",
+   "chosen_for": "Saint Andrew, Apostle",
+   "excerpt_sentences": 2
+  },
+  "2026-12-01": {
+   "source": "met:437698",
+   "match": "general"
+  },
+  "2026-12-02": {
+   "source": "met:437821",
+   "match": "gospel"
+  },
+  "2026-12-03": {
+   "source": "aic:49436",
+   "match": "feast",
+   "chosen_for": "Saint Francis Xavier",
+   "excerpt_sentences": 2
+  },
+  "2026-12-04": {
+   "source": "met:670696",
+   "match": "gospel"
+  },
+  "2026-12-05": {
+   "source": "met:350018",
+   "match": "gospel"
+  },
+  "2026-12-06": {
+   "source": "met:438824",
+   "match": "gospel"
+  },
+  "2026-12-07": {
+   "source": "cma:144588",
+   "match": "feast",
+   "chosen_for": "Saint Ambrose",
+   "excerpt_sentences": 2
+  },
+  "2026-12-08": {
+   "source": "cma:135659",
+   "match": "feast",
+   "chosen_for": "The Immaculate Conception",
+   "excerpt_sentences": 2
+  },
+  "2026-12-09": {
+   "source": "met:736591",
+   "match": "feast",
+   "chosen_for": "Saint Juan Diego"
+  },
+  "2026-12-10": {
+   "source": "met:436445",
+   "match": "feast",
+   "chosen_for": "Our Lady of Loreto"
+  },
+  "2026-12-11": {
+   "source": "met:419586",
+   "match": "feast",
+   "chosen_for": "Saint Damasus I, Pope"
+  },
+  "2026-12-12": {
+   "source": "met:635401",
+   "match": "feast",
+   "chosen_for": "Our Lady of Guadalupe"
+  },
+  "2026-12-13": {
+   "source": "met:436568",
+   "match": "gospel"
+  },
+  "2026-12-14": {
+   "source": "met:337511",
+   "match": "feast",
+   "chosen_for": "Saint John of the Cross"
+  },
+  "2026-12-15": {
+   "source": "met:432116",
+   "match": "gospel"
+  },
+  "2026-12-16": {
+   "source": "aic:16162",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-12-17": {
+   "source": "cma:126808",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-12-18": {
+   "source": "cma:105920",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-12-19": {
+   "source": "met:435671",
+   "match": "gospel"
+  },
+  "2026-12-20": {
+   "source": "met:459055",
+   "match": "gospel"
+  },
+  "2026-12-21": {
+   "source": "cma:130650",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-12-22": {
+   "source": "met:830329",
+   "match": "gospel"
+  },
+  "2026-12-23": {
+   "source": "cma:148301",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-12-24": {
+   "source": "cma:124090",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2026-12-25": {
+   "source": "cma:135311",
+   "match": "feast",
+   "chosen_for": "The Nativity of the Lord",
+   "excerpt_sentences": 2,
+   "gospel": "Luke 2:1-14 (Mass during the Night)"
+  },
+  "2026-12-26": {
+   "source": "aic:7579",
+   "match": "feast",
+   "chosen_for": "Saint Stephen, the First Martyr",
+   "excerpt_sentences": 2
+  },
+  "2026-12-27": {
+   "source": "cma:150389",
+   "match": "feast",
+   "chosen_for": "The Holy Family",
+   "excerpt_sentences": 2
+  },
+  "2026-12-28": {
+   "source": "met:437606",
+   "match": "feast",
+   "chosen_for": "The Holy Innocents"
+  },
+  "2026-12-29": {
+   "source": "aic:80905",
+   "match": "feast",
+   "chosen_for": "Saint Thomas Becket",
+   "excerpt_sentences": 2
+  },
+  "2026-12-30": {
+   "source": "met:437298",
+   "match": "gospel"
+  },
+  "2026-12-31": {
+   "source": "met:436705",
+   "match": "gospel"
+  },
+  "2027-01-01": {
+   "source": "aic:80530",
+   "match": "feast",
+   "chosen_for": "Mary, the Holy Mother of God",
+   "excerpt_sentences": 2
+  },
+  "2027-01-02": {
+   "source": "met:439120",
+   "match": "feast",
+   "chosen_for": "Saints Basil the Great and Gregory Nazianzen"
+  },
+  "2027-01-03": {
+   "source": "cma:128389",
+   "match": "feast",
+   "chosen_for": "The Epiphany of the Lord",
+   "excerpt_sentences": 1
+  },
+  "2027-01-04": {
+   "source": "cma:135295",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-05": {
+   "source": "aic:81015",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-06": {
+   "source": "cma:165549",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-07": {
+   "source": "met:438169",
+   "match": "general"
+  },
+  "2027-01-08": {
+   "source": "cma:108352",
+   "match": "gospel",
+   "excerpt_sentences": 1
+  },
+  "2027-01-09": {
+   "source": "aic:6831",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-10": {
+   "source": "aic:16197",
+   "match": "feast",
+   "chosen_for": "The Baptism of the Lord",
+   "excerpt_sentences": 1
+  },
+  "2027-01-11": {
+   "source": "cma:120296",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-12": {
+   "source": "cma:160828",
+   "match": "gospel",
+   "excerpt_sentences": 0
+  },
+  "2027-01-13": {
+   "source": "met:343309",
+   "match": "feast",
+   "chosen_for": "Saint Hilary"
+  },
+  "2027-01-14": {
+   "source": "met:432109",
+   "match": "gospel"
+  },
+  "2027-01-15": {
+   "source": "met:399222",
+   "match": "gospel"
+  },
+  "2027-01-16": {
+   "source": "met:712946",
+   "match": "gospel"
+  },
+  "2027-01-17": {
+   "source": "aic:11392",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-18": {
+   "source": "aic:95678",
+   "match": "general",
+   "excerpt_sentences": 2
+  },
+  "2027-01-19": {
+   "source": "aic:84675",
+   "match": "partial",
+   "excerpt_sentences": 2
+  },
+  "2027-01-20": {
+   "source": "met:435734",
+   "match": "feast",
+   "chosen_for": "Saint Sebastian"
+  },
+  "2027-01-21": {
+   "source": "cma:105009",
+   "match": "feast",
+   "chosen_for": "Saint Agnes",
+   "excerpt_sentences": 2
+  },
+  "2027-01-22": {
+   "source": "cma:163650",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-23": {
+   "source": "met:435847",
+   "match": "feast",
+   "chosen_for": "Saint Vincent, Deacon and Martyr"
+  },
+  "2027-01-24": {
+   "source": "met:366631",
+   "match": "gospel"
+  },
+  "2027-01-25": {
+   "source": "met:436562",
+   "match": "feast",
+   "chosen_for": "The Conversion of Saint Paul"
+  },
+  "2027-01-26": {
+   "source": "aic:68512",
+   "match": "feast",
+   "chosen_for": "Saints Timothy and Titus",
+   "excerpt_sentences": 2
+  },
+  "2027-01-27": {
+   "source": "cma:170488",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-01-28": {
+   "source": "met:435617",
+   "match": "feast",
+   "chosen_for": "Saint Thomas Aquinas"
+  },
+  "2027-01-29": {
+   "source": "aic:49846",
+   "match": "partial",
+   "excerpt_sentences": 2
+  },
+  "2027-01-30": {
+   "source": "met:436176",
+   "match": "gospel"
+  },
+  "2027-01-31": {
+   "source": "met:340790",
+   "match": "gospel"
+  },
+  "2027-02-01": {
+   "source": "met:670700",
+   "match": "gospel"
+  },
+  "2027-02-02": {
+   "source": "cma:131365",
+   "match": "feast",
+   "chosen_for": "The Presentation of the Lord",
+   "excerpt_sentences": 2
+  },
+  "2027-02-03": {
+   "source": "aic:111444",
+   "match": "feast",
+   "chosen_for": "Saint Blaise",
+   "excerpt_sentences": 2
+  },
+  "2027-02-04": {
+   "source": "aic:229129",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-02-05": {
+   "source": "aic:35229",
+   "match": "feast",
+   "chosen_for": "Saint Agatha",
+   "excerpt_sentences": 2
+  },
+  "2027-02-06": {
+   "source": "cma:155241",
+   "match": "feast",
+   "chosen_for": "Saint Paul Miki and Companions",
+   "excerpt_sentences": 2
+  },
+  "2027-02-07": {
+   "source": "met:436199",
+   "match": "gospel"
+  },
+  "2027-02-08": {
+   "source": "met:815743",
+   "match": "gospel"
+  },
+  "2027-02-09": {
+   "source": "aic:80576",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-02-10": {
+   "source": "met:436839",
+   "match": "theme",
+   "chosen_for": "Ash Wednesday"
+  },
+  "2027-02-11": {
+   "source": "met:459087",
+   "match": "gospel"
+  },
+  "2027-02-12": {
+   "source": "met:435760",
+   "match": "theme",
+   "chosen_for": "Friday after Ash Wednesday"
+  },
+  "2027-02-13": {
+   "source": "met:436643",
+   "match": "gospel"
+  },
+  "2027-02-14": {
+   "source": "met:471907",
+   "match": "gospel"
+  },
+  "2027-02-15": {
+   "source": "met:436794",
+   "match": "gospel"
+  },
+  "2027-02-16": {
+   "source": "met:670706",
+   "match": "partial"
+  },
+  "2027-02-17": {
+   "source": "aic:94125",
+   "match": "feast",
+   "chosen_for": "The Seven Holy Founders of the Servite Order",
+   "excerpt_sentences": 2
+  },
+  "2027-02-18": {
+   "source": "met:340826",
+   "match": "partial"
+  },
+  "2027-02-19": {
+   "source": "aic:80577",
+   "match": "gospel",
+   "excerpt_sentences": 2
+  },
+  "2027-02-20": {
+   "source": "met:340163",
+   "match": "partial"
+  }
+ }
+}

@@ -27,6 +27,18 @@ Live site: https://chrissieai.github.io/daily-bread/
   and saves only its date + URL to `data/parish.json`. Rerun weekly, then commit and push. If the saved
   bulletin is more than a week old, the app's button falls back to the parish bulletin page.
 - `tools/verify-movies.py` — re-checks every review link (HTTP 200 + title match).
+- `art/YYYY-MM-DD.jpg` (+ `art/thumbs/`) and `data/art.json` — "Art for today": one public-domain
+  artwork per day, matched to the day's feast/saint or Gospel. Images and captions come from museum
+  open-access programs: The Met (CC0), Art Institute of Chicago (images/data CC0; `description`
+  CC BY 4.0) and Cleveland Museum of Art (CC0). Captions are museum metadata only; the optional
+  1–2 sentence excerpt is quoted word for word from the museum (AIC or Cleveland) and credited.
+  `match` in `data/art.json` says how each pick relates to the day: `feast`, `gospel`, `partial`
+  (related to the Gospel but not the exact scene), `theme` (liturgical day/season) or `general`
+  (no close match found; a general image of Christ, shown with the Gospel citation only).
+  Favorites are stored only in the browser (`localStorage`).
+- `tools/art-picks.json` + `tools/fetch-art.py` — the chosen object per day, and the script that re-reads
+  each museum API, refuses anything not marked public domain/CC0, downloads and resizes the image
+  (1200px long side) and writes `data/art.json`. Add days to the picks file and rerun to extend.
 
 ## Content rule
 

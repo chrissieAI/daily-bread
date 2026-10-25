@@ -78,6 +78,7 @@
     renderReadings(iso);
     renderMovie(iso);
     renderParish(iso);
+    if (typeof renderArt === 'function' && art) renderArt(iso);
     getCal(+iso.slice(0, 4)).then(function (cal) {
       if (current !== iso) return;
       renderDay(cal[iso] || []);
@@ -239,6 +240,145 @@
     .catch(function () { return {}; })
     .then(function (data) { readings = data || {}; if (current) renderReadings(current); });
 
+
+  // ---- Art for today ----
+  var art = null;
+  var FAV_KEY = 'dailyBread.artFavorites';
+  function getFavs() {
+    try { var v = JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); return Array.isArray(v) ? v : []; }
+    catch (e) { return []; }
+  }
+  function setFavs(list) { try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {} }
+  function isFav(iso) { return getFavs().indexOf(iso) >= 0; }
+  function toggleFav(iso) {
+    var f = getFavs(), i = f.indexOf(iso);
+    if (i >= 0) f.splice(i, 1); else f.unshift(iso);
+    setFavs(f);
+    return i < 0;
+  }
+  function artFor(iso) { return art && art.days && art.days[iso]; }
+  function capText(a) {
+    var line1 = [a.artist, a.date].filter(Boolean).join(', ');
+    return [line1, a.medium, a.museum].filter(Boolean);
+  }
+  function fillCap(node, a) {
+    node.textContent = '';
+    capText(a).forEach(function (t, i) {
+      if (i) node.appendChild(document.createElement('br'));
+      node.appendChild(el('span', i ? 'mu' : '', t));
+    });
+  }
+  function chosenText(a) {
+    if (a.match === 'gospel' && a.gospel) return 'Chosen for the Gospel: ' + a.gospel;
+    var parts = [];
+    if (a.chosen_for) parts.push('Chosen for: ' + a.chosen_for);
+    if (a.gospel) parts.push('Gospel: ' + a.gospel);
+    return parts.join(' \u00b7 ');
+  }
+  function setHeart(btn, on) {
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.innerHTML = on ? '&#9829;' : '&#9825;';
+    btn.setAttribute('aria-label', on ? 'Remove from favorites' : 'Save to favorites');
+  }
+  function renderArt(iso) {
+    var a = artFor(iso), card = $('art');
+    if (!a) { card.hidden = true; return; }
+    card.hidden = false;
+    var img = $('artImg');
+    img.src = a.image;
+    img.alt = a.title + (a.artist ? ', ' + a.artist : '');
+    if (a.width && a.height) { img.width = a.width; img.height = a.height; }
+    $('artTitle').textContent = a.title;
+    fillCap($('artCap'), a);
+    $('artChosen').textContent = chosenText(a);
+    var ex = $('artExcerpt');
+    if (a.excerpt) {
+      ex.hidden = false;
+      $('artExcerptText').textContent = '\u201c' + a.excerpt + '\u201d';
+      $('artExcerptCr').textContent = a.excerpt_credit || '';
+    } else ex.hidden = true;
+    $('artLink').href = a.object_url;
+    document.querySelector('#art .label').textContent = diffDays(iso, todayISO()) === 0 ? 'Art for today' : 'Art for this day';
+    setHeart($('artHeart'), isFav(iso));
+  }
+  function openLightbox(src, alt) {
+    $('lbImg').src = src; $('lbImg').alt = alt || '';
+    $('lightbox').hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    $('lightbox').hidden = true;
+    if ($('favs').hidden) document.body.style.overflow = '';
+  }
+  var favSel = null;
+  function renderFavs() {
+    var list = getFavs().filter(function (d) { return artFor(d); });
+    var grid = $('favGrid');
+    grid.textContent = '';
+    $('favEmpty').hidden = list.length > 0;
+    list.forEach(function (d) {
+      var a = artFor(d);
+      var b = el('button');
+      b.setAttribute('aria-label', a.title + ' (' + prettyDate(d) + ')');
+      var im = el('img');
+      im.src = a.thumb || a.image; im.alt = ''; im.loading = 'lazy';
+      b.appendChild(im);
+      b.addEventListener('click', function () { showFavDetail(d); });
+      grid.appendChild(b);
+    });
+    if (favSel && list.indexOf(favSel) < 0 && !$('favDetail').hidden) {
+      // keep detail visible so it can be re-hearted
+    }
+  }
+  function showFavDetail(d) {
+    favSel = d;
+    var a = artFor(d);
+    $('favDetail').hidden = false;
+    $('fdImg').src = a.image; $('fdImg').alt = a.title;
+    $('fdTitle').textContent = a.title;
+    fillCap($('fdCap'), a);
+    $('fdChosen').textContent = prettyDate(d) + ' \u00b7 ' + chosenText(a);
+    $('fdDay').href = '#' + d;
+    $('fdLink').href = a.object_url;
+    setHeart($('fdHeart'), isFav(d));
+    $('favDetail').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  function openFavs() {
+    favSel = null;
+    $('favDetail').hidden = true;
+    renderFavs();
+    $('favs').hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeFavs() {
+    $('favs').hidden = true;
+    document.body.style.overflow = '';
+  }
+  $('artOpen').addEventListener('click', function () {
+    var a = artFor(current); if (a) openLightbox(a.image, a.title);
+  });
+  $('fdImg').addEventListener('click', function () {
+    var a = artFor(favSel); if (a) openLightbox(a.image, a.title);
+  });
+  $('lightbox').addEventListener('click', closeLightbox);
+  $('artHeart').addEventListener('click', function () {
+    if (!artFor(current)) return;
+    setHeart($('artHeart'), toggleFav(current));
+  });
+  $('fdHeart').addEventListener('click', function () {
+    if (!favSel) return;
+    setHeart($('fdHeart'), toggleFav(favSel));
+    renderFavs();
+    if (favSel === current) setHeart($('artHeart'), isFav(current));
+  });
+  $('favBtn').addEventListener('click', openFavs);
+  $('favClose').addEventListener('click', closeFavs);
+  $('fdDay').addEventListener('click', function () { closeFavs(); });
+  fetch('data/art.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) { art = data || {}; if (current) renderArt(current); });
+
   $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
   $('next').addEventListener('click', function () { location.hash = addDays(current, 1); });
   $('todayBtn').addEventListener('click', function () {
@@ -250,6 +390,8 @@
     show(isoFromHash() || current || todayISO());
   });
   document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); return; }
+    if (!$('lightbox').hidden || !$('favs').hidden) return;
     if (e.key === 'ArrowLeft') $('prev').click();
     if (e.key === 'ArrowRight') $('next').click();
   });
