@@ -445,6 +445,14 @@
       if (i === 0) d.open = true;
       d.appendChild(el('summary', null, p.title));
       if (p.id === 'regina-caeli') d.appendChild(el('span', 'season-tag', 'Easter season'));
+      if (p.link_only) {
+        var lb = el('a', 'review plink', 'Pray the ' + p.title + ' at USCCB \u2197');
+        lb.href = p.source_url; lb.target = '_blank'; lb.rel = 'noopener';
+        d.appendChild(lb);
+        d.appendChild(el('p', 'pnotice plabel', p.label || ''));
+        box.appendChild(d);
+        return;
+      }
       var tx = el('div', 'ptext');
       p.paragraphs.forEach(function (para) {
         var pe = el('p');
@@ -464,7 +472,7 @@
     var p = prayerById(marianId(iso));
     if (!p || !dayInfo[iso]) { b.hidden = true; return; }
     b.hidden = false;
-    b.textContent = 'Pray the ' + p.title + ' \u203A';
+    b.textContent = 'Pray the ' + p.title + (p.link_only ? ' at USCCB' : '') + ' \u203A';
   }
   function openPrayers(focusId) {
     renderPrayers();
@@ -478,7 +486,11 @@
     document.body.style.overflow = '';
   }
   $('prayBtn').addEventListener('click', function () { openPrayers(); });
-  $('prayShort').addEventListener('click', function () { openPrayers(marianId(current)); });
+  $('prayShort').addEventListener('click', function () {
+    var p = prayerById(marianId(current));
+    if (p && p.link_only) window.open(p.source_url, '_blank', 'noopener');
+    else openPrayers(marianId(current));
+  });
   $('prayClose').addEventListener('click', closePrayers);
   fetch('data/prayers.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : {}; })

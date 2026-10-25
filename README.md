@@ -80,17 +80,17 @@ Media slug), then run `python3 tools/fetch-saints.py` and read every printed exc
 
 ## Prayers
 
-The header "Prayers" button opens a full-screen list of prayers copied word for word from
-USCCB's own prayer pages (line breaks, V./R. markers and punctuation kept; the page's
-small-print notice is shown too), each with a "Source: USCCB" link:
+The header "Prayers" button opens a full-screen list:
 
-- Angelus: https://www.usccb.org/prayers/angelus
-- Regina Caeli: https://www.usccb.org/prayers/regina-caeli (shown instead of the
-  Angelus during romcal's Easter season, Easter Sunday through Pentecost)
+- Angelus: link only. The card has a "Pray the Angelus at USCCB" button that opens
+  https://www.usccb.org/prayers/angelus in a new tab; no Angelus text is stored in the app.
+- Regina Caeli: copied word for word from https://www.usccb.org/prayers/regina-caeli
+  (line breaks, V./R. markers and punctuation kept), with a "Source: USCCB" link. It is
+  shown instead of the Angelus during romcal's Easter season (Easter Sunday through Pentecost).
 
-The liturgical day card has a small "Pray the Angelus" / "Pray the Regina Caeli" shortcut.
-Grace before/after meals is not included: USCCB has no prayer page for it.
+The liturgical day card has a small shortcut: "Pray the Angelus at USCCB" (opens usccb.org)
+or, in the Easter season, "Pray the Regina Caeli" (opens the in-app text).
 
-Data: `data/prayers.json` (with source URLs and the date copied). Rebuild with
-`python3 tools/fetch-prayers.py`; verify against a fresh fetch with
+Data: `data/prayers.json` (source URLs, date copied). Rebuild with
+`python3 tools/fetch-prayers.py`; verify the stored Regina Caeli against a fresh fetch with
 `python3 tools/fetch-prayers.py --check`.

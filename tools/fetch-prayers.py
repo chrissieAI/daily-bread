@@ -3,8 +3,11 @@
 
 The text is parsed straight out of each usccb.org page (nothing is typed by
 hand): paragraphs, line breaks, bold markers such as "V/." and "R/.", and
-punctuation are kept exactly. A small-print notice on the page (e.g. the
-copyright line) is stored as `notice` and shown with the prayer.
+punctuation are kept exactly. A small-print notice on the page is stored
+as `notice` and shown with the prayer.
+
+Link-only prayers (LINKS) store no text at all -- just the title, a
+one-line label and the USCCB URL; the app shows a button to that page.
 
   python3 tools/fetch-prayers.py           # fetch and write data/prayers.json
   python3 tools/fetch-prayers.py --check   # re-fetch and diff against the stored file
@@ -15,9 +18,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'prayers.json')
 UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
       'Accept': 'text/html'}
-PRAYERS = [
-    ('angelus', 'https://www.usccb.org/prayers/angelus'),
+PRAYERS = [  # text copied into the app
     ('regina-caeli', 'https://www.usccb.org/prayers/regina-caeli'),
+]
+LINKS = [  # link only: (id, title, label, url) -- no text stored
+    ('angelus', 'Angelus', 'Opens usccb.org', 'https://www.usccb.org/prayers/angelus'),
 ]
 
 def fetch(url):
@@ -59,6 +64,13 @@ def main():
     check = '--check' in sys.argv
     stored = json.load(open(OUT, encoding='utf-8')) if check else None
     out, bad = {'source': 'United States Conference of Catholic Bishops, usccb.org prayer pages', 'prayers': []}, 0
+    for pid, title, label, url in LINKS:
+        out['prayers'].append({'id': pid, 'title': title, 'link_only': True, 'label': label, 'source_url': url})
+        if check:
+            s = next(p for p in stored['prayers'] if p['id'] == pid)
+            ok = s.get('link_only') and 'paragraphs' not in s and 'notice' not in s and s['source_url'] == url
+            print(('LINK  ' if ok else 'DIFF  ') + pid, url)
+            bad += 0 if ok else 1
     for pid, url in PRAYERS:
         title, paras, notice = parse(fetch(url))
         if check:
