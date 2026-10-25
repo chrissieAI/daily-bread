@@ -103,7 +103,8 @@ a.today-link{text-decoration:none}
 .prayer .plink{margin:4px 18px 0}
 .prayer .plabel{margin:8px 18px 18px}
 .prayer .psrc{display:inline-block;margin:10px 18px 18px;font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
-.pray-short{display:inline-block;margin-top:12px;font:600 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);background:none;border:1px solid var(--bd);border-radius:999px;padding:7px 14px;cursor:pointer}
+.pray-row{margin:0 0 16px;text-align:center}
+.pray-short{display:inline-block;margin-top:0;font:600 15px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);background:none;border:1px solid var(--bd);border-radius:999px;padding:7px 14px;cursor:pointer}
 .hdr-r{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
 #favs{background:var(--bg);overflow:auto}
 #favs .inner{max-width:560px;width:100%;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) 16px 28px}
@@ -153,19 +154,17 @@ footer a{color:inherit}
       <span class="chip" id="colorChip"><span id="swatches"></span><span id="color"></span></span>
     </div>
     <ul id="optional"></ul>
-    <button class="pray-short" id="prayShort" hidden>Pray the Angelus &#8250;</button>
     <p id="err"></p>
   </section>
 
-  <section class="card" id="saint" hidden>
-    <p class="label">Saint of the day</p>
-    <h2 id="saintName"></h2>
-    <p class="saint-also" id="saintAlso" hidden></p>
-    <div class="excerpt" id="saintExcerpt" hidden>
-      <div id="saintText"></div>
-      <span class="cr">From the Catholic Encyclopedia (1913) &middot; <a id="saintCe" href="#" target="_blank" rel="noopener"></a></span>
-    </div>
-    <div class="fm-links" id="saintFm"></div>
+  <a class="cta" id="usccb" href="https://bible.usccb.org/bible/readings/" target="_blank" rel="noopener">
+    Read today's readings at USCCB
+    <small>Opens bible.usccb.org</small>
+  </a>
+
+  <section class="card" id="readings">
+    <p class="label">Today's reading references</p>
+    <div id="refsBody"><p class="note">Loading…</p></div>
   </section>
 
   <section class="card" id="art" hidden>
@@ -181,14 +180,15 @@ footer a{color:inherit}
     <a class="review museum" id="artLink" href="#" target="_blank" rel="noopener">See it at the museum &#8599;</a>
   </section>
 
-  <a class="cta" id="usccb" href="https://bible.usccb.org/bible/readings/" target="_blank" rel="noopener">
-    Read today's readings at USCCB
-    <small>Opens bible.usccb.org</small>
-  </a>
-
-  <section class="card" id="readings">
-    <p class="label">Today's reading references</p>
-    <div id="refsBody"><p class="note">Loading…</p></div>
+  <section class="card" id="saint" hidden>
+    <p class="label">Saint of the day</p>
+    <h2 id="saintName"></h2>
+    <p class="saint-also" id="saintAlso" hidden></p>
+    <div class="excerpt" id="saintExcerpt" hidden>
+      <div id="saintText"></div>
+      <span class="cr">From the Catholic Encyclopedia (1913) &middot; <a id="saintCe" href="#" target="_blank" rel="noopener"></a></span>
+    </div>
+    <div class="fm-links" id="saintFm"></div>
   </section>
 
   <section class="card" id="movie" hidden>
@@ -215,6 +215,10 @@ footer a{color:inherit}
     </p>
     <p class="pnote" id="parishNote"></p>
   </section>
+
+  <div class="pray-row" id="prayRow">
+    <button class="pray-short" id="prayShort" hidden>Pray the Angelus &#8250;</button>
+  </div>
 
   <footer>
     Readings © USCCB — references only here; the button opens
@@ -264,6 +268,6 @@ footer a{color:inherit}
 </div>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=20261025a"></script>
 </body>
 </html>

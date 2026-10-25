@@ -155,13 +155,27 @@
     return addDays(iso, -d.getUTCDay());
   }
 
+  // The week's pick (weeks start on Sunday). Before the first listed week show the
+  // first (upcoming) pick; after the last week keep showing the last one.
+  function moviePick(ws) {
+    var list = (movies && movies.weeks || []).slice().sort(function (a, b) { return a.week_start < b.week_start ? -1 : 1; });
+    if (!list.length) return null;
+    var hit = list.filter(function (w) { return w.week_start === ws; })[0];
+    if (hit) return hit;
+    if (ws < list[0].week_start) return list[0];
+    var prev = list.filter(function (w) { return w.week_start <= ws; });
+    return prev[prev.length - 1];
+  }
+
   function renderMovie(iso) {
     var card = $('movie');
     var ws = weekStart(iso);
-    var m = movies && movies.weeks && movies.weeks.filter(function (w) { return w.week_start === ws; })[0];
+    var m = moviePick(ws);
     if (!m) { card.hidden = true; return; }
-    $('movieWeek').textContent = 'Week of ' + new Date(ws + 'T12:00:00Z').toLocaleDateString('en-US',
-      { timeZone: 'UTC', month: 'long', day: 'numeric' }) + (m.type === 'show' ? ' \u00b7 Show' : '');
+    var when = new Date(m.week_start + 'T12:00:00Z').toLocaleDateString('en-US',
+      { timeZone: 'UTC', month: 'long', day: 'numeric' });
+    $('movieWeek').textContent = (m.week_start > ws ? 'Coming up: week of ' : 'Week of ') + when +
+      (m.type === 'show' ? ' \u00b7 Show' : '');
     var t = $('movieTitle');
     t.textContent = m.title + ' ';
     if (m.year) t.appendChild(el('span', 'yr', '(' + m.year + ')'));
