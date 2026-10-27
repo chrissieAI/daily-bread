@@ -594,6 +594,15 @@
         var meta = el('div', 'dd-meta');
         if (it.date) meta.appendChild(el('span', 'dd-date', it.date));
         if (it.category) meta.appendChild(el('span', 'dd-cat', it.category));
+        if (it.caution) {
+          var caut = document.createElement('details');
+          caut.className = 'dd-caution';
+          var csum = document.createElement('summary');
+          csum.textContent = 'ⓘ Read with care';
+          caut.appendChild(csum);
+          caut.appendChild(el('p', 'dd-caution-body', it.caution));
+          meta.appendChild(caut);
+        }
         if (meta.childNodes.length) c.appendChild(meta);
         c.appendChild(el('p', 'dd-line', it.line));
         if (it.flag) c.appendChild(el('p', 'dd-flag', it.flag));

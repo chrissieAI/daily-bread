@@ -1,5 +1,5 @@
 {
- "intro": "A chronological library of free English texts from the earliest Christian centuries onward. Links open on other sites. Category key: New Testament (link only); Saint / Church Father; Other early Christian; Disputed / noncanonical; Non-Christian witness.",
+ "intro": "A chronological library of free English texts from the earliest Christian centuries onward. Links open on other sites. Category key: New Testament (link only); Saint / Church Father; Other early Christian; Disputed / noncanonical; Non-Christian witness. A \"Read with care\" tag marks the few writings with a caution worth knowing; tap it to see why.",
  "checked": "2026-10-27",
  "groups": [
   {
@@ -807,7 +807,7 @@
      "author": "Tertullian",
      "date": "c. 197",
      "category": "Other early Christian",
-     "line": "Latin apology defending Christian life against Roman charges. New Advent: Ante-Nicene Fathers translation. Tertullian later joined the Montanists.",
+     "line": "Latin apology defending Christian life against Roman charges. New Advent: Ante-Nicene Fathers translation.",
      "links": [
       {
        "label": "Read at New Advent",
@@ -815,7 +815,8 @@
        "expect": "Apology",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Tertullian later joined the Montanists, a movement the Church rejected; this work is generally dated before that break and is still widely quoted by Catholics."
     },
     {
      "id": "tertullian-prescription",
@@ -831,7 +832,8 @@
        "expect": "Prescription",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Tertullian later joined the Montanists, a movement the Church rejected; this work is generally dated before that break and is still widely quoted by Catholics."
     },
     {
      "id": "tertullian-baptism",
@@ -847,7 +849,8 @@
        "expect": "On Baptism",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Tertullian later joined the Montanists, a movement the Church rejected; this work is generally dated before that break and is still widely quoted by Catholics."
     },
     {
      "id": "minucius-felix",
@@ -887,7 +890,7 @@
      "author": "Origen",
      "date": "c. 225",
      "category": "Other early Christian",
-     "line": "Early systematic theology. Origen is an influential theologian; some of his ideas were later condemned, and he is not a canonized saint. New Advent index to the books (Ante-Nicene Fathers).",
+     "line": "Early systematic theology. New Advent index to the books (Ante-Nicene Fathers).",
      "links": [
       {
        "label": "Index at New Advent",
@@ -895,7 +898,8 @@
        "expect": "De Principiis",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Origen was hugely influential, but some of his ideas were later condemned and he was never named a saint; this book is where those ideas appear most."
     },
     {
      "id": "didascalia",
@@ -919,7 +923,7 @@
      "author": "Origen",
      "date": "c. 248",
      "category": "Other early Christian",
-     "line": "Reply that preserves much of the pagan critic Celsus. Origen is not a canonized saint; some ideas were later condemned. New Advent index to the books (Ante-Nicene Fathers).",
+     "line": "Reply that preserves much of the pagan critic Celsus. New Advent index to the books (Ante-Nicene Fathers).",
      "links": [
       {
        "label": "Index at New Advent",
@@ -927,7 +931,8 @@
        "expect": "Contra Celsum",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Origen was hugely influential, but some of his ideas were later condemned and he was never named a saint."
     },
     {
      "id": "cyprian-unity",
@@ -1001,7 +1006,7 @@
      "author": "Eusebius of Caesarea",
      "date": "c. 312–324",
      "category": "Other early Christian",
-     "line": "Documentary church history (including canon notes in HE 3.25 and the Pascha dispute in HE 5.23–25). Eusebius is a historian, not a canonized saint in the West. New Advent index to the ten books (tr. McGiffert, NPNF 2.1).",
+     "line": "Documentary church history (including canon notes in HE 3.25 and the Pascha dispute in HE 5.23–25). New Advent index to the ten books (tr. McGiffert, NPNF 2.1).",
      "links": [
       {
        "label": "Index at New Advent",
@@ -1009,7 +1014,8 @@
        "expect": "Church History",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Eusebius is the key early Church historian, but he is not a saint in the West and for a time sympathized with Arius before accepting the Creed at Nicaea."
     },
     {
      "id": "nicaea-325",
@@ -1069,7 +1075,7 @@
      "author": "Eusebius of Caesarea",
      "date": "c. 337–339",
      "category": "Other early Christian",
-     "line": "Narrative of imperial church building and policy. Eusebius is not a canonized saint in the West. New Advent index to the books (NPNF 2.1).",
+     "line": "Narrative of imperial church building and policy. New Advent index to the books (NPNF 2.1).",
      "links": [
       {
        "label": "Index at New Advent",
@@ -1077,7 +1083,8 @@
        "expect": "Life of Constantine",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Eusebius is the key early Church historian, but he is not a saint in the West and for a time sympathized with Arius before accepting the Creed at Nicaea."
     },
     {
      "id": "eusebius-he10",
@@ -1093,7 +1100,8 @@
        "expect": "Church History",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "Eusebius is the key early Church historian, but he is not a saint in the West and for a time sympathized with Arius before accepting the Creed at Nicaea."
     },
     {
      "id": "cyril-mystagogical",
@@ -1182,7 +1190,8 @@
        "expect": "Apostolic Constitutions",
        "kind": "primary"
       }
-     ]
+     ],
+     "caution": "A late compilation; an Eastern council in 692 warned it had been altered by heretics, so it is valued as a record of liturgy, not as an authority."
     },
     {
      "id": "constantinople-381",

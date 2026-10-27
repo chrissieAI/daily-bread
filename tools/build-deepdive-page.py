@@ -54,6 +54,12 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
 .dd-meta{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0;align-items:center}
 .dd-date{font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .dd-cat{font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);background:rgba(46,125,50,.08);border:1px solid var(--bd);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.dd-caution{margin:0;max-width:100%}
+.dd-caution[open]{flex:1 1 100%}
+.dd-caution summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:3px;font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#8a6a2f;background:rgba(184,134,11,.1);border:1px solid rgba(184,134,11,.35);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.dd-caution summary::-webkit-details-marker{display:none}
+.dd-caution summary::marker{content:""}
+.dd-caution-body{margin:6px 0 0;padding:8px 10px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);background:rgba(184,134,11,.07);border:1px solid rgba(184,134,11,.28);border-radius:8px}
 .dd-line{margin:6px 0 8px;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .dd-flag{margin:0 0 10px;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);font-style:italic}
 .dd-item .review{font-size:15px;padding:8px 12px}
@@ -153,12 +159,17 @@ def render(data):
             w('    <article class="dd-item" id="dd-%s">' % e(it['id']))
             w('      <h3>%s</h3>' % e(it['title']))
             w('      <p class="dd-by">%s</p>' % e(it['author']))
-            if it.get('date') or it.get('category'):
+            if it.get('date') or it.get('category') or it.get('caution'):
                 w('      <div class="dd-meta">')
                 if it.get('date'):
                     w('        <span class="dd-date">%s</span>' % e(it['date']))
                 if it.get('category'):
                     w('        <span class="dd-cat">%s</span>' % e(it['category']))
+                if it.get('caution'):
+                    w('        <details class="dd-caution">')
+                    w('          <summary>ⓘ Read with care</summary>')
+                    w('          <p class="dd-caution-body">%s</p>' % e(it['caution']))
+                    w('        </details>')
                 w('      </div>')
             w('      <p class="dd-line">%s</p>' % e(it['line']))
             if it.get('flag'):

@@ -156,6 +156,13 @@ header{flex-wrap:wrap;row-gap:10px}
 .dd-meta{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0;align-items:center}
 .dd-date{font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .dd-cat{font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);background:rgba(46,125,50,.08);border:1px solid var(--bd);border-radius:999px;padding:2px 8px;white-space:nowrap}
+
+.dd-caution{margin:0;max-width:100%}
+.dd-caution[open]{flex:1 1 100%}
+.dd-caution summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:3px;font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#8a6a2f;background:rgba(184,134,11,.1);border:1px solid rgba(184,134,11,.35);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.dd-caution summary::-webkit-details-marker{display:none}
+.dd-caution summary::marker{content:""}
+.dd-caution-body{margin:6px 0 0;padding:8px 10px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);background:rgba(184,134,11,.07);border:1px solid rgba(184,134,11,.28);border-radius:8px}
 .dd-line{margin:6px 0 8px;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .dd-flag{margin:0 0 10px;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);font-style:italic}
 .dd-item .review{font-size:15px;padding:8px 12px}
@@ -317,6 +324,6 @@ header{flex-wrap:wrap;row-gap:10px}
 </div>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js?v=20261027b"></script>
+<script src="app.js?v=20261027c"></script>
 </body>
 </html>

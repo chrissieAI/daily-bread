@@ -112,7 +112,8 @@ The header "Deep Dive" pill opens a full-screen chronological library of free En
 the earliest Christian centuries onward (plus selective later milestones). **Links out only**: no
 text from any work is stored in the app. Each entry has a title, author, approximate `date`,
 category tag, one factual line (kind of document, who/when, why it matters historically,
-translator/edition), an optional uncertainty `flag`, and links. Traditions are hedged
+translator/edition), an optional uncertainty `flag`, an optional `caution` (shown as a quiet
+"Read with care" tag you can expand), and links. Traditions are hedged
 ("traditionally said to…", "according to Eusebius…"). All links open in a new tab.
 
 Category tags: New Testament (link only) · Saint / Church Father · Other early Christian ·
@@ -138,8 +139,8 @@ stay as secondaries where kept. Ignatius' seven letters are small New Advent par
 mystagogical lectures 19–23 and similar multi-part works use part pills.
 
 Data: `data/deepdive.json` (groups → items → links, each link with its URL and an `expect` phrase;
-`checked` is the date the list was last verified). Item fields include `date`, `category`, and
-optional `flag`. Group fields include `questions`, `note`, and `evidence` (`shows` / `infer` /
+`checked` is the date the list was last verified). Item fields include `date`, `category`, optional `flag`, and optional `caution` (one plain
+sentence; the UI shows it behind a "Read with care" tag). Group fields include `questions`, `note`, and `evidence` (`shows` / `infer` /
 `unknown`).
 
 The same list is also published as a plain, no-JavaScript page at `deep-dive/index.html`
