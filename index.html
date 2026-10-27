@@ -132,17 +132,32 @@ header{flex-wrap:wrap;row-gap:10px}
 .hdr-r .today-link{flex:none;white-space:nowrap}
 .hdr-r a.today-link{display:inline-block;text-decoration:none;text-align:center;padding-top:6.5px;padding-bottom:5.5px} /* <a> pill: text sits 0.5px higher than in a <button>; nudge to match */
 @media (max-width:420px){.hdr-r .today-link{padding:6px 10px}}
-/* Deep Dive (links out only) */
+/* Deep Dive (links out only) — chronological library */
 #deepdive{background:var(--bg);overflow:auto}
 #deepdive .inner{max-width:560px;width:100%;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) 16px 40px}
 #deepdive .ov-close{position:static;border:1px solid var(--bd);background:var(--card)}
 .dd-intro{margin:8px 0 4px;font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
-.dd-group h3{font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-transform:uppercase;letter-spacing:.08em;margin:22px 0 2px}
-.dd-gnote{margin:2px 0 0;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-jump{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.dd-chip{font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;border:1px solid var(--bd);background:#fff;border-radius:999px;padding:5px 10px;white-space:nowrap}
+.dd-group{scroll-margin-top:12px}
+.dd-group h3{font:700 16px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--tx);text-transform:none;letter-spacing:0;margin:26px 0 6px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+.dd-questions{margin:4px 0 8px;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-questions summary{cursor:pointer;font-weight:600;color:var(--accent-ink);list-style-position:outside}
+.dd-qlist{margin:6px 0 0;padding-left:18px}
+.dd-qlist li{margin:2px 0}
+.dd-gnote{margin:4px 0 0;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-evidence{margin:8px 0 4px;padding:10px 12px;background:rgba(46,125,50,.06);border:1px solid var(--bd);border-radius:10px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-evidence p{margin:0 0 6px}
+.dd-evidence p:last-child{margin:0}
+.dd-evidence strong{color:var(--tx);font-weight:700}
 .dd-item{margin-top:10px;background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--accent);border-radius:14px;padding:12px 16px 14px}
 .dd-item h4{margin:0;font:700 20px/1.25 Georgia,"Times New Roman",serif}
 .dd-by{margin:2px 0 0;font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
-.dd-line{margin:6px 0 10px;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-meta{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0;align-items:center}
+.dd-date{font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-cat{font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);background:rgba(46,125,50,.08);border:1px solid var(--bd);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.dd-line{margin:6px 0 8px;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-flag{margin:0 0 10px;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);font-style:italic}
 .dd-item .review{font-size:15px;padding:8px 12px}
 .dd-ph{margin:0 0 6px;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
 .dd-parts{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 4px}
@@ -302,6 +317,6 @@ header{flex-wrap:wrap;row-gap:10px}
 </div>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js?v=20261027a"></script>
+<script src="app.js?v=20261027b"></script>
 </body>
 </html>

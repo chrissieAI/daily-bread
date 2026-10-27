@@ -523,17 +523,80 @@
     if (!deepdive) return;
     box.textContent = '';
     $('ddIntro').textContent = deepdive.intro || '';
+
+    // Period jump chips
+    if (deepdive.groups && deepdive.groups.length) {
+      var jump = el('nav', 'dd-jump');
+      jump.setAttribute('aria-label', 'Jump to period');
+      deepdive.groups.forEach(function (g) {
+        var a = el('a', 'dd-chip', g.title.split('·')[0].trim());
+        a.href = '#dd-' + g.id;
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var t = document.getElementById('dd-' + g.id);
+          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        jump.appendChild(a);
+      });
+      box.appendChild(jump);
+    }
+
     deepdive.groups.forEach(function (g) {
       var sec = el('section', 'dd-group');
       sec.id = 'dd-' + g.id;
       sec.appendChild(el('h3', null, g.title));
+
+      if (g.questions && g.questions.length) {
+        var det = document.createElement('details');
+        det.className = 'dd-questions';
+        var sum = document.createElement('summary');
+        sum.textContent = 'Guiding questions';
+        det.appendChild(sum);
+        var ul = el('ul', 'dd-qlist');
+        g.questions.forEach(function (q) {
+          ul.appendChild(el('li', null, q));
+        });
+        det.appendChild(ul);
+        sec.appendChild(det);
+      }
+
       if (g.note) sec.appendChild(el('p', 'dd-gnote', g.note));
+
+      if (g.evidence) {
+        var ev = el('div', 'dd-evidence');
+        if (g.evidence.shows) {
+          var p1 = el('p', null, '');
+          p1.appendChild(el('strong', null, 'Evidence shows: '));
+          p1.appendChild(document.createTextNode(g.evidence.shows));
+          ev.appendChild(p1);
+        }
+        if (g.evidence.infer) {
+          var p2 = el('p', null, '');
+          p2.appendChild(el('strong', null, 'Historians infer: '));
+          p2.appendChild(document.createTextNode(g.evidence.infer));
+          ev.appendChild(p2);
+        }
+        if (g.evidence.unknown) {
+          var p3 = el('p', null, '');
+          p3.appendChild(el('strong', null, 'Still unknown: '));
+          p3.appendChild(document.createTextNode(g.evidence.unknown));
+          ev.appendChild(p3);
+        }
+        sec.appendChild(ev);
+      }
+
       g.items.forEach(function (it) {
         var c = el('article', 'dd-item');
         c.id = 'dd-' + it.id;
         c.appendChild(el('h4', null, it.title));
-        c.appendChild(el('p', 'dd-by', it.author));
+        var by = el('p', 'dd-by', it.author);
+        c.appendChild(by);
+        var meta = el('div', 'dd-meta');
+        if (it.date) meta.appendChild(el('span', 'dd-date', it.date));
+        if (it.category) meta.appendChild(el('span', 'dd-cat', it.category));
+        if (meta.childNodes.length) c.appendChild(meta);
         c.appendChild(el('p', 'dd-line', it.line));
+        if (it.flag) c.appendChild(el('p', 'dd-flag', it.flag));
         var parts = it.links.filter(function (l) { return l.kind === 'part'; });
         it.links.forEach(function (l) { if (l.kind === 'primary') c.appendChild(ddLink('review dd-primary', l)); });
         if (parts.length) {
@@ -552,6 +615,7 @@
     var d = deepdive.checked ? new Date(deepdive.checked + 'T12:00:00') : null;
     $('ddChecked').textContent = d ? 'Links checked ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.' : '';
   }
+
   function openDeepDive() {
     $('deepdive').hidden = false;
     document.body.style.overflow = 'hidden';

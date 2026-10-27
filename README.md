@@ -108,23 +108,39 @@ against a fresh fetch (and that each link still shows its prayer) with
 
 ## Deep Dive
 
-The header "Deep Dive" pill opens a full-screen reading list of free full texts by the early
-Church Fathers and great saints. **Links out only**: no text from any work is stored in the app.
-Each entry has a title, author, and one factual line (approximate date, kind of work,
-translator/edition as stated on the linked page). Traditions are hedged ("traditionally said to…",
-"according to Irenaeus…"). All links open in a new tab.
+The header "Deep Dive" pill opens a full-screen chronological library of free English texts from
+the earliest Christian centuries onward (plus selective later milestones). **Links out only**: no
+text from any work is stored in the app. Each entry has a title, author, approximate `date`,
+category tag, one factual line (kind of document, who/when, why it matters historically,
+translator/edition), an optional uncertainty `flag`, and links. Traditions are hedged
+("traditionally said to…", "according to Eusebius…"). All links open in a new tab.
 
-- Primary button: the New Advent copy when New Advent has it ("Read at New Advent ↗"); otherwise
-  CCEL ("Read at CCEL ↗") or Project Gutenberg ("Read at Project Gutenberg ↗", `/ebooks/NNNN`
-  landing pages only).
-- Secondary link "Also at Early Christian Writings ↗" for 1 Clement, Ignatius, Polycarp, the
-  Martyrdom of Polycarp, Papias and Quadratus.
-- Ignatius' seven letters are shown as seven small New Advent links; the Summa has an extra
-  "On the Eucharist" link (III, Q. 73).
-- Groups: Linked to the Apostles · Early Church Fathers · Doctors and Saints · Spiritual Classics.
+Category tags: New Testament (link only) · Saint / Church Father · Other early Christian ·
+Disputed / noncanonical · Non-Christian witness.
+
+Periods (ordered by approximate date within each):
+
+- AD 30–70 · Earliest years
+- AD 70–150 · After the apostles
+- AD 150–325 · Developing Church
+- AD 325–1000 · After Constantine
+- AD 1000–present · Medieval Church onward
+
+Each period has compact guiding questions (collapsible), a short factual bridge note, and a
+three-part "Evidence shows / Historians infer / Still unknown" note. A jump row of period chips
+scrolls to each section.
+
+Link priority: New Advent primary where it has the work (indexes labeled as indexes; fragments
+labeled as fragments); then vatican.va; then USCCB Bible chapter pages for NT only; then CCEL,
+Early Christian Writings, Fordham/Perseus/LacusCurtius/Penelope, tertullian.org, Kerux,
+papalencyclicals.net, and Gutenberg `/ebooks/NNNN` landing pages. Early Christian Writings links
+stay as secondaries where kept. Ignatius' seven letters are small New Advent part links; Cyril's
+mystagogical lectures 19–23 and similar multi-part works use part pills.
 
 Data: `data/deepdive.json` (groups → items → links, each link with its URL and an `expect` phrase;
-`checked` is the date the list was last verified).
+`checked` is the date the list was last verified). Item fields include `date`, `category`, and
+optional `flag`. Group fields include `questions`, `note`, and `evidence` (`shows` / `infer` /
+`unknown`).
 
 The same list is also published as a plain, no-JavaScript page at `deep-dive/index.html`
 (<https://chrissieai.github.io/daily-bread/deep-dive/>) so search engines, AI readers and browsers
