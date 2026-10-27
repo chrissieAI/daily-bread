@@ -130,6 +130,7 @@ header{flex-wrap:wrap;row-gap:10px}
 .hdr-r{order:3;flex:1 0 100%;display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .hdr-r::-webkit-scrollbar{display:none}
 .hdr-r .today-link{flex:none;white-space:nowrap}
+.hdr-r a.today-link{display:inline-block;text-decoration:none;text-align:center;padding-top:6.5px;padding-bottom:5.5px} /* <a> pill: text sits 0.5px higher than in a <button>; nudge to match */
 @media (max-width:420px){.hdr-r .today-link{padding:6px 10px}}
 /* Deep Dive (links out only) */
 #deepdive{background:var(--bg);overflow:auto}
@@ -160,7 +161,7 @@ header{flex-wrap:wrap;row-gap:10px}
     <nav class="hdr-r" aria-label="Sections">
       <button class="today-link" id="favBtn" aria-haspopup="dialog">&#9829; Favorites</button>
       <button class="today-link" id="prayBtn" aria-haspopup="dialog">Prayers</button>
-      <button class="today-link" id="ddBtn" aria-haspopup="dialog">Deep Dive</button>
+      <a class="today-link" id="ddBtn" href="deep-dive/" aria-haspopup="dialog">Deep Dive</a>
     </nav>
   </header>
 
@@ -301,6 +302,6 @@ header{flex-wrap:wrap;row-gap:10px}
 </div>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js?v=20261025f"></script>
+<script src="app.js?v=20261027a"></script>
 </body>
 </html>

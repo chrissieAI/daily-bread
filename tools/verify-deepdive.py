@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Check every Deep Dive link in data/deepdive.json: it must load (HTTP 200) and
-contain its expected phrase. Links only; nothing is copied from the pages.
-Usage: python3 tools/verify-deepdive.py   (exit code 1 if any link fails)"""
-import html, json, os, re, sys, time, urllib.request
+"""Check the Deep Dive: deep-dive/index.html must match what tools/build-deepdive-page.py
+builds from data/deepdive.json, and every link must load (HTTP 200) and contain its expected
+phrase. Links only; nothing is copied from the pages.
+Usage: python3 tools/verify-deepdive.py             (exit code 1 if the page is stale or any link fails)
+       python3 tools/verify-deepdive.py --offline   (only the page freshness check; no network)"""
+import html, importlib.util, json, os, re, sys, time, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UA = {'User-Agent': 'Mozilla/5.0 (DailyBread link check)'}
@@ -19,9 +21,21 @@ def fetch(url):
     raise err
 
 
+def page_is_fresh():
+    spec = importlib.util.spec_from_file_location('build_deepdive_page', os.path.join(ROOT, 'tools', 'build-deepdive-page.py'))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.is_fresh()
+
+
 def main():
+    fresh = page_is_fresh()
+    print('%s  deep-dive/index.html %s' % (('OK  ', 'matches data/deepdive.json') if fresh else
+          ('FAIL', 'is out of date: run python3 tools/build-deepdive-page.py')))
+    if '--offline' in sys.argv[1:]:
+        sys.exit(0 if fresh else 1)
     data = json.load(open(os.path.join(ROOT, 'data', 'deepdive.json'), encoding='utf-8'))
-    bad = 0
+    bad = 0 if fresh else 1
     n = 0
     for g in data['groups']:
         for it in g['items']:

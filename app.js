@@ -569,7 +569,16 @@
     $('deepdive').hidden = true;
     document.body.style.overflow = '';
   }
-  $('ddBtn').addEventListener('click', openDeepDive);
+  // ddBtn is a real link to the static page (deep-dive/) for crawlers and no-JS readers;
+  // with JS, a plain click opens the overlay instead. Modified clicks (new tab etc.) still follow the link.
+  $('ddBtn').addEventListener('click', function (e) {
+    if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    openDeepDive();
+  });
+  $('ddBtn').addEventListener('keydown', function (e) {
+    if (e.key === ' ') { e.preventDefault(); openDeepDive(); } // Space works like it did on the old <button>
+  });
   $('ddClose').addEventListener('click', closeDeepDive);
 
   $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
