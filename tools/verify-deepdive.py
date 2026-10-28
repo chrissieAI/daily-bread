@@ -63,9 +63,10 @@ def main():
         for it in g.get('items') or []:
             mw = it.get('meanwhile') or {}
             if mw.get('source'): srcs.add(mw['source'])
-    for f in data.get('fun_overlaps') or []:
-        for u in (f.get('sources') or ([f['source']] if f.get('source') else [])):
-            srcs.add(u)
+    for g in data['groups']:
+        for f in g.get('fun_overlaps') or []:
+            for u in (f.get('sources') or ([f['source']] if f.get('source') else [])):
+                srcs.add(u)
     print('Checking %d distinct Meanwhile/fun source URLs...' % len(srcs))
     src_bad = 0
     src_warn = 0

@@ -59,14 +59,14 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
 .dd-item .dd-parts{margin-top:8px}
 .dd-sec{display:table;margin-top:10px;font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
 
-.dd-fun{margin:10px 0 6px;padding:8px 12px;background:rgba(46,125,50,.05);border:1px solid var(--bd);border-radius:10px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
-.dd-fun summary{cursor:pointer;font-weight:600;color:var(--accent-ink)}
-.dd-fun-list{margin:8px 0 0;padding:0;list-style:none}
-.dd-fun-list li{margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--bd)}
-.dd-fun-list li:last-child{margin:0;padding:0;border:0}
+.dd-fun-in-strip{margin:8px 0 6px;padding:0}
+.dd-fun-label{margin:0 0 6px;font:700 12px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);letter-spacing:.02em}
+.dd-fun-card{margin:0 0 6px;padding:8px 10px;background:rgba(46,125,50,.07);border:1px solid rgba(46,125,50,.2);border-radius:10px}
+.dd-fun-card:last-child{margin-bottom:8px}
+.dd-fun-card-top{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:0 0 3px}
 .dd-fun-title{font:700 13px/1.35 Georgia,"Times New Roman",serif;color:var(--tx)}
-.dd-fun-detail{margin:3px 0 0;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
-.dd-fun-srcs{margin:3px 0 0;font:11px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.dd-fun-detail{margin:0;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-fun-srcs{margin:4px 0 0;font:11px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 .dd-fun-srcs a{color:var(--accent-ink);text-decoration:none}
 .dd-meanwhile{margin:8px 0 6px;padding:6px 10px 8px;background:rgba(46,125,50,.04);border:1px solid var(--bd);border-radius:10px;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);max-width:100%;overflow:hidden}
 .dd-meanwhile summary{cursor:pointer;font-weight:600;color:var(--accent-ink)}
@@ -94,86 +94,6 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
   <main>
   <h1>Deep Dive</h1>
   <p class="dd-intro">A chronological library of free English texts from the earliest Christian centuries onward. Links open on other sites. Category key: New Testament (link only); Saint / Church Father; Other early Christian; Disputed / noncanonical; Non-Christian witness. A &quot;Read with care&quot; tag marks the few writings with a caution worth knowing; tap it to see why.</p>
-  <details class="dd-fun" id="dd-fun-overlaps">
-    <summary>Fun overlaps</summary>
-    <ul class="dd-fun-list">
-      <li>
-        <span class="dd-fun-title">1066 still sits on today’s British throne</span>
-        <p class="dd-fun-detail">William wins at Hastings (1066). From his granddaughter Matilda’s son Henry II onward, every English (then British) monarch descends from William — including Charles III.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Battle-of-Hastings/39483" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/house-of-Normandy/56145" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/students/article/kings-and-queens-of-Britain-at-a-glance/626780" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Teresa of Ávila and Elizabeth I</span>
-        <p class="dd-fun-detail">Teresa’s Life (1565) and Interior Castle (1577) fall squarely in Elizabeth I’s reign (1558–1603) — rival Catholic and Protestant worlds, same decades.</p>
-        <p class="dd-fun-srcs"><a href="https://www.britannica.com/biography/Saint-Teresa-of-Avila" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/kids/article/Elizabeth-I/353094" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Shakespeare and Galileo, born the year before Teresa’s Life</span>
-        <p class="dd-fun-detail">Shakespeare baptized 1564; Galileo born 1564 — the year before Teresa’s Life (1565). Both alive through Quo Primum, Interior Castle, and John of the Cross’s 1580s works.</p>
-        <p class="dd-fun-srcs"><a href="https://www.britannica.com/biography/William-Shakespeare" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Galileo-Galilei" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Saint-Teresa-of-Avila" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Devout Life while Jamestown and Pocahontas’s world open</span>
-        <p class="dd-fun-detail">Francis de Sales’s Introduction to the Devout Life (1609) lands two years after Jamestown (1607), in the Pocahontas era — and the same years Galileo is turning his telescope on the sky.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Jamestown-Colony/43322" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Galileo-Galilei" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Lateran IV and Magna Carta — same year</span>
-        <p class="dd-fun-detail">Fourth Lateran Council canons and Magna Carta are both dated 1215.</p>
-        <p class="dd-fun-srcs"><a href="https://www.britannica.com/topic/Magna-Carta" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Chalcedon and Attila — same year</span>
-        <p class="dd-fun-detail">Council of Chalcedon (451) is the same year a Roman–Visigoth force checked Attila at the Catalaunian Plains.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Attila/11178" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Pompeii dies, Colosseum opens — within a year</span>
-        <p class="dd-fun-detail">Vesuvius buries Pompeii in 79; Titus inaugurates the Colosseum with games in 80 — both just after the apostles’ generation.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Joan of Arc’s lifetime overlaps The Imitation of Christ</span>
-        <p class="dd-fun-detail">Joan of Arc (c. 1412–1431) is alive across the window usually given for The Imitation of Christ (c. 1418–27).</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/students/article/Joan-of-Arc/275162" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Cahokia a mega-city while Aquinas writes the Summa</span>
-        <p class="dd-fun-detail">Cahokia near today’s St. Louis flourished c. 950–1350 (up to ~20,000 people) — still a major centre when Aquinas wrote the Summa (1265–74) and when Lateran IV met (1215).</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Cahokia-Mounds/345190" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/St-Thomas-Aquinas/108661" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Mansa Musa’s gold hajj before Catherine of Siena</span>
-        <p class="dd-fun-detail">Mansa Musa’s spectacular pilgrimage (1324) is only about fifty years before Catherine’s Dialogue (1377–78).</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/M%C5%ABs%C4%81-I-of-Mali/54392" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/St-Catherine-of-Siena/21816" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Augustine writing while Maya Classic cities rose</span>
-        <p class="dd-fun-detail">Confessions (c. 397–400) and City of God (413–426) overlap the Maya Classic Period (c. 250–900), when Tikal and other cities flourished.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/students/article/Maya/275746" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Thérèse’s 1890s — baseball already America’s pastime</span> <span class="dd-legend" title="Legend — not verified history">legend</span>
-        <p class="dd-fun-detail">By Story of a Soul (1895–97), baseball was established in the U.S. The Abner Doubleday “invented it in 1839” story is legend, not history.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/history-of-baseball/638761" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/Abner-Doubleday/31022" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Culloden (Outlander) sits between two Deep Dive books</span>
-        <p class="dd-fun-detail">No Deep Dive writing is from 1746, but Culloden — the last Jacobite battle — falls in the long gap between Introduction to the Devout Life (1609) and Story of a Soul (1895–97).</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Battle-of-Culloden/28156" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Cai Lun’s paper and Ignatius/Trajan</span>
-        <p class="dd-fun-detail">Around Ignatius’s letters (c. 107–110) and Pliny–Trajan (c. 112), Cai Lun was at the Eastern Han court; he reported improved papermaking c. 105.</p>
-        <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Cai-Lun/73578" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Trajan" target="_blank" rel="noopener">source</a></p>
-      </li>
-      <li>
-        <span class="dd-fun-title">Benedict’s Rule and the Arthur legend-setting</span> <span class="dd-legend" title="Legend — not verified history">legend</span>
-        <p class="dd-fun-detail">Benedict’s Rule (c. 530) falls in the post-Roman British centuries where later Arthurian legends are set — Arthur himself is legend, not verified history.</p>
-        <p class="dd-fun-srcs"><a href="https://www.britannica.com/topic/Arthurian-legend" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a></p>
-      </li>
-    </ul>
-  </details>
   <nav class="dd-jump" aria-label="Jump to period">
     <a class="dd-chip" href="#dd-p30-70">AD 30–70</a>
     <a class="dd-chip" href="#dd-p70-150">AD 70–150</a>
@@ -414,6 +334,23 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
     <p class="dd-gnote">This is the densest surviving Christian letter-and-manual layer after the New Testament. Many texts traditionally linked to the apostles belong here.</p>
     <details class="dd-meanwhile">
       <summary>Meanwhile in the world</summary>
+      <div class="dd-fun-in-strip">
+        <p class="dd-fun-label">✦ Fun overlaps</p>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Pompeii dies, Colosseum opens — within a year</span>
+          </div>
+          <p class="dd-fun-detail">Vesuvius buries Pompeii in 79; Titus inaugurates the Colosseum with games in 80 — both just after the apostles’ generation.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Cai Lun’s paper and Ignatius/Trajan</span>
+          </div>
+          <p class="dd-fun-detail">Around Ignatius’s letters (c. 107–110) and Pliny–Trajan (c. 112), Cai Lun was at the Eastern Han court; he reported improved papermaking c. 105.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Cai-Lun/73578" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Trajan" target="_blank" rel="noopener">source</a></p>
+        </div>
+      </div>
       <div class="dd-meanwhile-scroll">
         <div class="dd-meanwhile-card">
           <div class="dd-meanwhile-top">
@@ -1105,6 +1042,31 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
     <p class="dd-gnote">Selective coverage. Favor documents that show practice (Egeria, Cyril&#x27;s mystagogical lectures, Apostolic Constitutions 8, monastic rules) and the great Christological and creedal councils, plus II Nicaea on images.</p>
     <details class="dd-meanwhile">
       <summary>Meanwhile in the world</summary>
+      <div class="dd-fun-in-strip">
+        <p class="dd-fun-label">✦ Fun overlaps</p>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Chalcedon and Attila — same year</span>
+          </div>
+          <p class="dd-fun-detail">Council of Chalcedon (451) is the same year a Roman–Visigoth force checked Attila at the Catalaunian Plains.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Attila/11178" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Augustine writing while Maya Classic cities rose</span>
+          </div>
+          <p class="dd-fun-detail">Confessions (c. 397–400) and City of God (413–426) overlap the Maya Classic Period (c. 250–900), when Tikal and other cities flourished.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/students/article/Maya/275746" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Benedict’s Rule and the Arthur legend-setting</span>
+            <span class="dd-legend" title="Legend — not verified history">legend</span>
+          </div>
+          <p class="dd-fun-detail">Benedict’s Rule (c. 530) falls in the post-Roman British centuries where later Arthurian legends are set — Arthur himself is legend, not verified history.</p>
+          <p class="dd-fun-srcs"><a href="https://www.britannica.com/topic/Arthurian-legend" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a></p>
+        </div>
+      </div>
       <div class="dd-meanwhile-scroll">
         <div class="dd-meanwhile-card">
           <div class="dd-meanwhile-top">
@@ -1122,25 +1084,10 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
         </div>
         <div class="dd-meanwhile-card">
           <div class="dd-meanwhile-top">
-            <span class="dd-meanwhile-date">451</span>
-          </div>
-          <p class="dd-meanwhile-text">Gaul: Attila checked at the Catalaunian Plains the same year as Chalcedon — the Hun from every barbarian epic.</p>
-          <a class="dd-meanwhile-src" href="https://kids.britannica.com/scholars/article/Attila/11178" target="_blank" rel="noopener">source</a>
-        </div>
-        <div class="dd-meanwhile-card">
-          <div class="dd-meanwhile-top">
             <span class="dd-meanwhile-date">476</span>
           </div>
           <p class="dd-meanwhile-text">West: Odoacer deposes Romulus Augustulus — conventional end of the Western Roman Empire.</p>
           <a class="dd-meanwhile-src" href="https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837" target="_blank" rel="noopener">source</a>
-        </div>
-        <div class="dd-meanwhile-card">
-          <div class="dd-meanwhile-top">
-            <span class="dd-meanwhile-date">c. 5th–6th c.</span>
-            <span class="dd-legend" title="Legend — not verified history">legend</span>
-          </div>
-          <p class="dd-meanwhile-text">Britain: later Arthurian legends are set in this post-Roman age — legend, not verified history.</p>
-          <a class="dd-meanwhile-src" href="https://www.britannica.com/topic/Arthurian-legend" target="_blank" rel="noopener">source</a>
         </div>
         <div class="dd-meanwhile-card">
           <div class="dd-meanwhile-top">
@@ -1426,14 +1373,81 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
     <p class="dd-gnote">Selective milestones: a short spine of Mass and doctrine documents alongside spiritual classics. These establish official teaching at dated moments; they do not by themselves prove day-to-day parish practice.</p>
     <details class="dd-meanwhile">
       <summary>Meanwhile in the world</summary>
-      <div class="dd-meanwhile-scroll">
-        <div class="dd-meanwhile-card">
-          <div class="dd-meanwhile-top">
-            <span class="dd-meanwhile-date">1066</span>
+      <div class="dd-fun-in-strip">
+        <p class="dd-fun-label">✦ Fun overlaps</p>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">1066 still sits on today’s British throne</span>
           </div>
-          <p class="dd-meanwhile-text">England: William of Normandy wins at Hastings; from his line (via Matilda → Henry II) every later English/British monarch descends — including Charles III.</p>
-          <a class="dd-meanwhile-src" href="https://kids.britannica.com/scholars/article/Battle-of-Hastings/39483" target="_blank" rel="noopener">source</a>
+          <p class="dd-fun-detail">William wins at Hastings (1066). From his granddaughter Matilda’s son Henry II onward, every English (then British) monarch descends from William — including Charles III.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Battle-of-Hastings/39483" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/house-of-Normandy/56145" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/students/article/kings-and-queens-of-Britain-at-a-glance/626780" target="_blank" rel="noopener">source</a></p>
         </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Teresa of Ávila and Elizabeth I</span>
+          </div>
+          <p class="dd-fun-detail">Teresa’s Life (1565) and Interior Castle (1577) fall squarely in Elizabeth I’s reign (1558–1603) — rival Catholic and Protestant worlds, same decades.</p>
+          <p class="dd-fun-srcs"><a href="https://www.britannica.com/biography/Saint-Teresa-of-Avila" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/kids/article/Elizabeth-I/353094" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Shakespeare and Galileo, born the year before Teresa’s Life</span>
+          </div>
+          <p class="dd-fun-detail">Shakespeare baptized 1564; Galileo born 1564 — the year before Teresa’s Life (1565). Both alive through Quo Primum, Interior Castle, and John of the Cross’s 1580s works.</p>
+          <p class="dd-fun-srcs"><a href="https://www.britannica.com/biography/William-Shakespeare" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Galileo-Galilei" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Saint-Teresa-of-Avila" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Devout Life while Jamestown and Pocahontas’s world open</span>
+          </div>
+          <p class="dd-fun-detail">Francis de Sales’s Introduction to the Devout Life (1609) lands two years after Jamestown (1607), in the Pocahontas era — and the same years Galileo is turning his telescope on the sky.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Jamestown-Colony/43322" target="_blank" rel="noopener">source</a> · <a href="https://www.britannica.com/biography/Galileo-Galilei" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Lateran IV and Magna Carta — same year</span>
+          </div>
+          <p class="dd-fun-detail">Fourth Lateran Council canons and Magna Carta are both dated 1215.</p>
+          <p class="dd-fun-srcs"><a href="https://www.britannica.com/topic/Magna-Carta" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Joan of Arc’s lifetime overlaps The Imitation of Christ</span>
+          </div>
+          <p class="dd-fun-detail">Joan of Arc (c. 1412–1431) is alive across the window usually given for The Imitation of Christ (c. 1418–27).</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/students/article/Joan-of-Arc/275162" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Cahokia a mega-city while Aquinas writes the Summa</span>
+          </div>
+          <p class="dd-fun-detail">Cahokia near today’s St. Louis flourished c. 950–1350 (up to ~20,000 people) — still a major centre when Aquinas wrote the Summa (1265–74) and when Lateran IV met (1215).</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Cahokia-Mounds/345190" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/St-Thomas-Aquinas/108661" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Mansa Musa’s gold hajj before Catherine of Siena</span>
+          </div>
+          <p class="dd-fun-detail">Mansa Musa’s spectacular pilgrimage (1324) is only about fifty years before Catherine’s Dialogue (1377–78).</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/M%C5%ABs%C4%81-I-of-Mali/54392" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/St-Catherine-of-Siena/21816" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Thérèse’s 1890s — baseball already America’s pastime</span>
+            <span class="dd-legend" title="Legend — not verified history">legend</span>
+          </div>
+          <p class="dd-fun-detail">By Story of a Soul (1895–97), baseball was established in the U.S. The Abner Doubleday “invented it in 1839” story is legend, not history.</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/history-of-baseball/638761" target="_blank" rel="noopener">source</a> · <a href="https://kids.britannica.com/scholars/article/Abner-Doubleday/31022" target="_blank" rel="noopener">source</a></p>
+        </div>
+        <div class="dd-fun-card">
+          <div class="dd-fun-card-top">
+            <span class="dd-fun-title">Culloden (Outlander) sits between two Deep Dive books</span>
+          </div>
+          <p class="dd-fun-detail">No Deep Dive writing is from 1746, but Culloden — the last Jacobite battle — falls in the long gap between Introduction to the Devout Life (1609) and Story of a Soul (1895–97).</p>
+          <p class="dd-fun-srcs"><a href="https://kids.britannica.com/scholars/article/Battle-of-Culloden/28156" target="_blank" rel="noopener">source</a></p>
+        </div>
+      </div>
+      <div class="dd-meanwhile-scroll">
         <div class="dd-meanwhile-card">
           <div class="dd-meanwhile-top">
             <span class="dd-meanwhile-date">c. 950–1350</span>

@@ -306,7 +306,8 @@
      "text": "Mexico: Teotihuacán growing into a major city — pyramids rising while Nero rules Rome.",
      "source": "https://kids.britannica.com/scholars/article/Teotihuac%C3%A1n/71727"
     }
-   ]
+   ],
+   "fun_overlaps": []
   },
   {
    "id": "p70-150",
@@ -709,6 +710,23 @@
      "date": "c. 1–200",
      "text": "Mexico: Teotihuacán rising — pyramids of the Sun and Moon taking shape.",
      "source": "https://kids.britannica.com/scholars/article/Teotihuac%C3%A1n/71727"
+    }
+   ],
+   "fun_overlaps": [
+    {
+     "title": "Pompeii dies, Colosseum opens — within a year",
+     "detail": "Vesuvius buries Pompeii in 79; Titus inaugurates the Colosseum with games in 80 — both just after the apostles’ generation.",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
+     ]
+    },
+    {
+     "title": "Cai Lun’s paper and Ignatius/Trajan",
+     "detail": "Around Ignatius’s letters (c. 107–110) and Pliny–Trajan (c. 112), Cai Lun was at the Eastern Han court; he reported improved papermaking c. 105.",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Cai-Lun/73578",
+      "https://www.britannica.com/biography/Trajan"
+     ]
     }
    ]
   },
@@ -1381,7 +1399,8 @@
      "text": "Nicaea: First Council of Nicaea under Constantine.",
      "source": "https://kids.britannica.com/scholars/article/Edict-of-Milan/52646"
     }
-   ]
+   ],
+   "fun_overlaps": []
   },
   {
    "id": "p325-1000",
@@ -1823,20 +1842,9 @@
      "source": "https://kids.britannica.com/students/article/Maya/275746"
     },
     {
-     "date": "451",
-     "text": "Gaul: Attila checked at the Catalaunian Plains the same year as Chalcedon — the Hun from every barbarian epic.",
-     "source": "https://kids.britannica.com/scholars/article/Attila/11178"
-    },
-    {
      "date": "476",
      "text": "West: Odoacer deposes Romulus Augustulus — conventional end of the Western Roman Empire.",
      "source": "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
-    },
-    {
-     "date": "c. 5th–6th c.",
-     "text": "Britain: later Arthurian legends are set in this post-Roman age — legend, not verified history.",
-     "source": "https://www.britannica.com/topic/Arthurian-legend",
-     "legend": true
     },
     {
      "date": "527–565",
@@ -1862,6 +1870,32 @@
      "date": "622",
      "text": "Arabia: Hijrah — Muhammad migrates from Mecca to Medina; start of the Muslim era.",
      "source": "https://kids.britannica.com/scholars/article/Hijrah/39809"
+    }
+   ],
+   "fun_overlaps": [
+    {
+     "title": "Chalcedon and Attila — same year",
+     "detail": "Council of Chalcedon (451) is the same year a Roman–Visigoth force checked Attila at the Catalaunian Plains.",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Attila/11178",
+      "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
+     ]
+    },
+    {
+     "title": "Augustine writing while Maya Classic cities rose",
+     "detail": "Confessions (c. 397–400) and City of God (413–426) overlap the Maya Classic Period (c. 250–900), when Tikal and other cities flourished.",
+     "sources": [
+      "https://kids.britannica.com/students/article/Maya/275746"
+     ]
+    },
+    {
+     "title": "Benedict’s Rule and the Arthur legend-setting",
+     "detail": "Benedict’s Rule (c. 530) falls in the post-Roman British centuries where later Arthurian legends are set — Arthur himself is legend, not verified history.",
+     "sources": [
+      "https://www.britannica.com/topic/Arthurian-legend",
+      "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
+     ],
+     "legend": true
     }
    ]
   },
@@ -2172,11 +2206,6 @@
    ],
    "meanwhile": [
     {
-     "date": "1066",
-     "text": "England: William of Normandy wins at Hastings; from his line (via Matilda → Henry II) every later English/British monarch descends — including Charles III.",
-     "source": "https://kids.britannica.com/scholars/article/Battle-of-Hastings/39483"
-    },
-    {
      "date": "c. 950–1350",
      "text": "North America: Cahokia (near today’s St. Louis) flourishes — up to ~20,000 people; largest city north of Mexico before Europeans. (Pre-contact Cherokee politics are mostly unknown from written sources.)",
      "source": "https://kids.britannica.com/scholars/article/Cahokia-Mounds/345190"
@@ -2221,128 +2250,89 @@
      "text": "Virginia: Jamestown founded 1607; Pocahontas era. Scotland: Culloden 1746 ends the Jacobite rising (Outlander territory) — between Devout Life and Story of a Soul.",
      "source": "https://kids.britannica.com/scholars/article/Jamestown-Colony/43322"
     }
-   ]
-  }
- ],
- "fun_overlaps": [
-  {
-   "title": "1066 still sits on today’s British throne",
-   "detail": "William wins at Hastings (1066). From his granddaughter Matilda’s son Henry II onward, every English (then British) monarch descends from William — including Charles III.",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Battle-of-Hastings/39483",
-    "https://kids.britannica.com/scholars/article/house-of-Normandy/56145",
-    "https://kids.britannica.com/students/article/kings-and-queens-of-Britain-at-a-glance/626780"
-   ]
-  },
-  {
-   "title": "Teresa of Ávila and Elizabeth I",
-   "detail": "Teresa’s Life (1565) and Interior Castle (1577) fall squarely in Elizabeth I’s reign (1558–1603) — rival Catholic and Protestant worlds, same decades.",
-   "sources": [
-    "https://www.britannica.com/biography/Saint-Teresa-of-Avila",
-    "https://kids.britannica.com/kids/article/Elizabeth-I/353094"
-   ]
-  },
-  {
-   "title": "Shakespeare and Galileo, born the year before Teresa’s Life",
-   "detail": "Shakespeare baptized 1564; Galileo born 1564 — the year before Teresa’s Life (1565). Both alive through Quo Primum, Interior Castle, and John of the Cross’s 1580s works.",
-   "sources": [
-    "https://www.britannica.com/biography/William-Shakespeare",
-    "https://www.britannica.com/biography/Galileo-Galilei",
-    "https://www.britannica.com/biography/Saint-Teresa-of-Avila"
-   ]
-  },
-  {
-   "title": "Devout Life while Jamestown and Pocahontas’s world open",
-   "detail": "Francis de Sales’s Introduction to the Devout Life (1609) lands two years after Jamestown (1607), in the Pocahontas era — and the same years Galileo is turning his telescope on the sky.",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Jamestown-Colony/43322",
-    "https://www.britannica.com/biography/Galileo-Galilei"
-   ]
-  },
-  {
-   "title": "Lateran IV and Magna Carta — same year",
-   "detail": "Fourth Lateran Council canons and Magna Carta are both dated 1215.",
-   "sources": [
-    "https://www.britannica.com/topic/Magna-Carta"
-   ]
-  },
-  {
-   "title": "Chalcedon and Attila — same year",
-   "detail": "Council of Chalcedon (451) is the same year a Roman–Visigoth force checked Attila at the Catalaunian Plains.",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Attila/11178",
-    "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
-   ]
-  },
-  {
-   "title": "Pompeii dies, Colosseum opens — within a year",
-   "detail": "Vesuvius buries Pompeii in 79; Titus inaugurates the Colosseum with games in 80 — both just after the apostles’ generation.",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
-   ]
-  },
-  {
-   "title": "Joan of Arc’s lifetime overlaps The Imitation of Christ",
-   "detail": "Joan of Arc (c. 1412–1431) is alive across the window usually given for The Imitation of Christ (c. 1418–27).",
-   "sources": [
-    "https://kids.britannica.com/students/article/Joan-of-Arc/275162"
-   ]
-  },
-  {
-   "title": "Cahokia a mega-city while Aquinas writes the Summa",
-   "detail": "Cahokia near today’s St. Louis flourished c. 950–1350 (up to ~20,000 people) — still a major centre when Aquinas wrote the Summa (1265–74) and when Lateran IV met (1215).",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Cahokia-Mounds/345190",
-    "https://kids.britannica.com/scholars/article/St-Thomas-Aquinas/108661"
-   ]
-  },
-  {
-   "title": "Mansa Musa’s gold hajj before Catherine of Siena",
-   "detail": "Mansa Musa’s spectacular pilgrimage (1324) is only about fifty years before Catherine’s Dialogue (1377–78).",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/M%C5%ABs%C4%81-I-of-Mali/54392",
-    "https://kids.britannica.com/scholars/article/St-Catherine-of-Siena/21816"
-   ]
-  },
-  {
-   "title": "Augustine writing while Maya Classic cities rose",
-   "detail": "Confessions (c. 397–400) and City of God (413–426) overlap the Maya Classic Period (c. 250–900), when Tikal and other cities flourished.",
-   "sources": [
-    "https://kids.britannica.com/students/article/Maya/275746"
-   ]
-  },
-  {
-   "title": "Thérèse’s 1890s — baseball already America’s pastime",
-   "detail": "By Story of a Soul (1895–97), baseball was established in the U.S. The Abner Doubleday “invented it in 1839” story is legend, not history.",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/history-of-baseball/638761",
-    "https://kids.britannica.com/scholars/article/Abner-Doubleday/31022"
    ],
-   "legend": true
-  },
-  {
-   "title": "Culloden (Outlander) sits between two Deep Dive books",
-   "detail": "No Deep Dive writing is from 1746, but Culloden — the last Jacobite battle — falls in the long gap between Introduction to the Devout Life (1609) and Story of a Soul (1895–97).",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Battle-of-Culloden/28156"
+   "fun_overlaps": [
+    {
+     "title": "1066 still sits on today’s British throne",
+     "detail": "William wins at Hastings (1066). From his granddaughter Matilda’s son Henry II onward, every English (then British) monarch descends from William — including Charles III.",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Battle-of-Hastings/39483",
+      "https://kids.britannica.com/scholars/article/house-of-Normandy/56145",
+      "https://kids.britannica.com/students/article/kings-and-queens-of-Britain-at-a-glance/626780"
+     ]
+    },
+    {
+     "title": "Teresa of Ávila and Elizabeth I",
+     "detail": "Teresa’s Life (1565) and Interior Castle (1577) fall squarely in Elizabeth I’s reign (1558–1603) — rival Catholic and Protestant worlds, same decades.",
+     "sources": [
+      "https://www.britannica.com/biography/Saint-Teresa-of-Avila",
+      "https://kids.britannica.com/kids/article/Elizabeth-I/353094"
+     ]
+    },
+    {
+     "title": "Shakespeare and Galileo, born the year before Teresa’s Life",
+     "detail": "Shakespeare baptized 1564; Galileo born 1564 — the year before Teresa’s Life (1565). Both alive through Quo Primum, Interior Castle, and John of the Cross’s 1580s works.",
+     "sources": [
+      "https://www.britannica.com/biography/William-Shakespeare",
+      "https://www.britannica.com/biography/Galileo-Galilei",
+      "https://www.britannica.com/biography/Saint-Teresa-of-Avila"
+     ]
+    },
+    {
+     "title": "Devout Life while Jamestown and Pocahontas’s world open",
+     "detail": "Francis de Sales’s Introduction to the Devout Life (1609) lands two years after Jamestown (1607), in the Pocahontas era — and the same years Galileo is turning his telescope on the sky.",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Jamestown-Colony/43322",
+      "https://www.britannica.com/biography/Galileo-Galilei"
+     ]
+    },
+    {
+     "title": "Lateran IV and Magna Carta — same year",
+     "detail": "Fourth Lateran Council canons and Magna Carta are both dated 1215.",
+     "sources": [
+      "https://www.britannica.com/topic/Magna-Carta"
+     ]
+    },
+    {
+     "title": "Joan of Arc’s lifetime overlaps The Imitation of Christ",
+     "detail": "Joan of Arc (c. 1412–1431) is alive across the window usually given for The Imitation of Christ (c. 1418–27).",
+     "sources": [
+      "https://kids.britannica.com/students/article/Joan-of-Arc/275162"
+     ]
+    },
+    {
+     "title": "Cahokia a mega-city while Aquinas writes the Summa",
+     "detail": "Cahokia near today’s St. Louis flourished c. 950–1350 (up to ~20,000 people) — still a major centre when Aquinas wrote the Summa (1265–74) and when Lateran IV met (1215).",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Cahokia-Mounds/345190",
+      "https://kids.britannica.com/scholars/article/St-Thomas-Aquinas/108661"
+     ]
+    },
+    {
+     "title": "Mansa Musa’s gold hajj before Catherine of Siena",
+     "detail": "Mansa Musa’s spectacular pilgrimage (1324) is only about fifty years before Catherine’s Dialogue (1377–78).",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/M%C5%ABs%C4%81-I-of-Mali/54392",
+      "https://kids.britannica.com/scholars/article/St-Catherine-of-Siena/21816"
+     ]
+    },
+    {
+     "title": "Thérèse’s 1890s — baseball already America’s pastime",
+     "detail": "By Story of a Soul (1895–97), baseball was established in the U.S. The Abner Doubleday “invented it in 1839” story is legend, not history.",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/history-of-baseball/638761",
+      "https://kids.britannica.com/scholars/article/Abner-Doubleday/31022"
+     ],
+     "legend": true
+    },
+    {
+     "title": "Culloden (Outlander) sits between two Deep Dive books",
+     "detail": "No Deep Dive writing is from 1746, but Culloden — the last Jacobite battle — falls in the long gap between Introduction to the Devout Life (1609) and Story of a Soul (1895–97).",
+     "sources": [
+      "https://kids.britannica.com/scholars/article/Battle-of-Culloden/28156"
+     ]
+    }
    ]
-  },
-  {
-   "title": "Cai Lun’s paper and Ignatius/Trajan",
-   "detail": "Around Ignatius’s letters (c. 107–110) and Pliny–Trajan (c. 112), Cai Lun was at the Eastern Han court; he reported improved papermaking c. 105.",
-   "sources": [
-    "https://kids.britannica.com/scholars/article/Cai-Lun/73578",
-    "https://www.britannica.com/biography/Trajan"
-   ]
-  },
-  {
-   "title": "Benedict’s Rule and the Arthur legend-setting",
-   "detail": "Benedict’s Rule (c. 530) falls in the post-Roman British centuries where later Arthurian legends are set — Arthur himself is legend, not verified history.",
-   "sources": [
-    "https://www.britannica.com/topic/Arthurian-legend",
-    "https://kids.britannica.com/scholars/article/Timeline-of-the-Roman-Empire/650837"
-   ],
-   "legend": true
   }
  ]
 }
