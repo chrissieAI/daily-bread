@@ -200,6 +200,26 @@ header{flex-wrap:wrap;row-gap:10px}
 .dd-checked{margin:22px 0 0;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-align:center}
 
 /* Archaeology Finds (own overlay) + shared card styles */
+/* In-app back pill after cross-links (history-aware) */
+.ov-back{
+  display:inline-flex;align-items:center;gap:4px;max-width:calc(100% - 8px);
+  margin:0 0 10px;padding:6px 12px;
+  font:600 13px/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--accent-ink);background:var(--card);
+  border:1px solid var(--bd);border-radius:999px;
+  cursor:pointer;text-align:left;-webkit-tap-highlight-color:transparent;
+  box-shadow:0 1px 4px rgba(42,36,32,.06);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.ov-back[hidden],.ov-back-wrap[hidden]{display:none!important}
+.ov-back-wrap{
+  position:sticky;top:0;z-index:5;
+  background:var(--bg);
+  padding:2px 0 8px;margin:0 0 2px;
+  border-bottom:1px solid transparent;
+}
+.ov-back-wrap:not([hidden]){border-bottom-color:var(--bd)}
+
 #archaeology{background:var(--bg);overflow:auto}
 #archaeology .inner{max-width:560px;width:100%;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) 16px 40px}
 #archaeology .ov-close{position:static;border:1px solid var(--bd);background:var(--card)}
@@ -377,6 +397,7 @@ header{flex-wrap:wrap;row-gap:10px}
 <div class="overlay" id="deepdive" hidden role="dialog" aria-label="Historic Writings">
   <div class="inner">
     <div class="fav-head"><h2 id="ddTitle">Historic Writings</h2><button class="ov-close" id="ddClose" aria-label="Close">&times;</button></div>
+    <div class="ov-back-wrap" id="ddBackWrap" hidden><button type="button" class="ov-back" id="ddBack"></button></div>
     <p class="dd-intro" id="ddIntro"></p>
     <div id="ddList"></div>
     <p class="dd-checked" id="ddChecked"></p>
@@ -385,6 +406,7 @@ header{flex-wrap:wrap;row-gap:10px}
 <div class="overlay" id="archaeology" hidden role="dialog" aria-label="Archaeology Finds">
   <div class="inner">
     <div class="fav-head"><h2 id="archTitle">Archaeology Finds</h2><button class="ov-close" id="archClose" aria-label="Close">&times;</button></div>
+    <div class="ov-back-wrap" id="archBackWrap" hidden><button type="button" class="ov-back" id="archBack"></button></div>
     <p class="dd-intro" id="archIntro"></p>
     <div id="archList"></div>
     <p class="dd-checked" id="archChecked"></p>
@@ -393,6 +415,6 @@ header{flex-wrap:wrap;row-gap:10px}
 <button type="button" class="dd-top" id="ddTop" hidden aria-label="Back to top">↑</button>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js?v=20261027i"></script>
+<script src="app.js?v=20261027j"></script>
 </body>
 </html>

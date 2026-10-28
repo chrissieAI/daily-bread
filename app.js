@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261027i';
+  var APP_VERSION = '20261027j';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -47,6 +47,7 @@
       .catch(function () { /* offline / blocked — ignore */ });
   }
   try { window.DB_checkAppUpdate = checkAppUpdate; } catch (e) {}
+  // Overlay nav hooks filled in after overlays are defined.
   checkAppUpdate();
   document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'visible') checkAppUpdate();
@@ -768,10 +769,10 @@
         wl.addEventListener('click', function (e) {
           if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
           e.preventDefault();
-          closeArchaeology();
-          openDeepDive(function () {
-            var t = document.getElementById(target);
-            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          var fromLabel = it.name || ARCH_LABEL;
+          navigateOverlay('deepdive', {
+            anchor: target,
+            back: snapshotBack('archaeology', 'disc-' + it.id, fromLabel)
           });
         });
         card.appendChild(wl);
@@ -893,14 +894,11 @@
           jump.addEventListener('click', function (e) {
             if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
             e.preventDefault();
-            closeDeepDive();
-            openArchaeology(function () {
-              var t = document.getElementById('disc-' + first.id);
-              if (t) {
-                var det = t.querySelector('.dd-disc-ev');
-                if (det) det.open = true;
-                t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
+            var fromLabel = (it.author && it.title) ? (it.author + ', ' + it.title) : (it.title || DD_LABEL);
+            navigateOverlay('archaeology', {
+              anchor: 'disc-' + first.id,
+              openEvidence: true,
+              back: snapshotBack('deepdive', 'dd-' + it.id, fromLabel)
             });
           });
           c.appendChild(jump);
@@ -1011,46 +1009,179 @@
   ddRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
   if (archRoot) archRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
 
-  function openDeepDive(after) {
-    if (archRoot && !archRoot.hidden) closeArchaeology();
-    ddRoot.hidden = false;
-    document.body.style.overflow = 'hidden';
-    ddRoot.scrollTop = 0;
-    updateDdTopBtn();
-    function done() {
-      if (deepdive) renderDeepDive();
-      else $('ddList').textContent = 'Couldn\u2019t load the Historic Writings list. Check your connection and try again.';
-      // leftbehind needs discovery for cross-links
-      updateDdTopBtn();
-      if (typeof after === 'function') setTimeout(after, 40);
-    }
-    Promise.all([ensureDeepDive(), ensureDiscovery()]).then(done);
+  // --- History-aware overlay navigation (browser back + in-app Back pill) ---
+  var applyingHistory = false;
+  var pendingBack = null; // {overlay,anchor,label,scroll} while showing a destination
+
+  function histState() {
+    try { return history.state && history.state.db ? history.state : null; } catch (e) { return null; }
   }
-  function closeDeepDive() {
-    ddRoot.hidden = true;
-    if (!archRoot || archRoot.hidden) document.body.style.overflow = '';
-    updateDdTopBtn();
+  function ensureHomeHist() {
+    var st = histState();
+    if (st) return;
+    try {
+      history.replaceState({ db: 1, overlay: null }, '', location.href);
+    } catch (e) {}
   }
-  function openArchaeology(after) {
-    if (!archRoot) return;
-    if (!ddRoot.hidden) closeDeepDive();
-    archRoot.hidden = false;
-    document.body.style.overflow = 'hidden';
-    archRoot.scrollTop = 0;
-    updateDdTopBtn();
-    ensureDiscovery().then(function () {
-      if (discovery) renderArchaeology();
-      else $('archList').textContent = 'Couldn\u2019t load Archaeology Finds. Check your connection and try again.';
-      updateDdTopBtn();
-      if (typeof after === 'function') setTimeout(after, 40);
+  function snapshotBack(overlay, anchor, label) {
+    var root = overlay === 'archaeology' ? archRoot : ddRoot;
+    return {
+      overlay: overlay,
+      anchor: anchor || null,
+      label: label || (overlay === 'archaeology' ? ARCH_LABEL : DD_LABEL),
+      scroll: root ? root.scrollTop : 0
+    };
+  }
+  function saveCurrentOverlayScroll() {
+    var st = histState();
+    if (!st || !st.overlay || applyingHistory) return;
+    var root = st.overlay === 'archaeology' ? archRoot : ddRoot;
+    if (!root || root.hidden) return;
+    var next = {
+      db: 1,
+      overlay: st.overlay,
+      anchor: st.anchor || null,
+      scroll: root.scrollTop,
+      back: st.back || null
+    };
+    try { history.replaceState(next, '', location.href); } catch (e) {}
+  }
+  function updateBackPill(back) {
+    pendingBack = back || null;
+    [['ddBackWrap', 'ddBack'], ['archBackWrap', 'archBack']].forEach(function (pair) {
+      var wrap = $(pair[0]), btn = $(pair[1]);
+      if (!wrap || !btn) return;
+      if (!pendingBack) {
+        wrap.hidden = true;
+        btn.textContent = '';
+        return;
+      }
+      var label = pendingBack.label || (pendingBack.overlay === 'archaeology' ? ARCH_LABEL : DD_LABEL);
+      btn.textContent = '\u2190 Back to ' + label;
+      wrap.hidden = false;
     });
   }
-  function closeArchaeology() {
-    if (!archRoot) return;
-    archRoot.hidden = true;
-    if (ddRoot.hidden) document.body.style.overflow = '';
+  function hideOverlaysVisual() {
+    ddRoot.hidden = true;
+    if (archRoot) archRoot.hidden = true;
+    document.body.style.overflow = '';
+    updateBackPill(null);
     updateDdTopBtn();
   }
+  function showOverlayVisual(kind, opts) {
+    opts = opts || {};
+    var isArch = kind === 'archaeology';
+    if (isArch && !archRoot) return Promise.resolve();
+    if (isArch) {
+      ddRoot.hidden = true;
+      archRoot.hidden = false;
+    } else {
+      if (archRoot) archRoot.hidden = true;
+      ddRoot.hidden = false;
+    }
+    document.body.style.overflow = 'hidden';
+    var root = isArch ? archRoot : ddRoot;
+    if (!opts.restoreScroll) root.scrollTop = 0;
+    updateBackPill(opts.back || null);
+    updateDdTopBtn();
+    var load = isArch
+      ? ensureDiscovery().then(function () {
+          if (discovery) renderArchaeology();
+          else $('archList').textContent = 'Couldn\u2019t load Archaeology Finds. Check your connection and try again.';
+        })
+      : Promise.all([ensureDeepDive(), ensureDiscovery()]).then(function () {
+          if (deepdive) renderDeepDive();
+          else $('ddList').textContent = 'Couldn\u2019t load the Historic Writings list. Check your connection and try again.';
+        });
+    return load.then(function () {
+      updateDdTopBtn();
+      function place() {
+        if (typeof opts.scroll === 'number') {
+          root.scrollTop = opts.scroll;
+        } else if (opts.anchor) {
+          var t = document.getElementById(opts.anchor);
+          if (t) {
+            if (opts.openEvidence) {
+              var det = t.querySelector('.dd-disc-ev');
+              if (det) det.open = true;
+            }
+            t.scrollIntoView({ behavior: opts.instant ? 'auto' : 'smooth', block: 'start' });
+          }
+        }
+        updateDdTopBtn();
+        if (typeof opts.after === 'function') opts.after();
+      }
+      setTimeout(place, opts.instant ? 20 : 40);
+    });
+  }
+  // Public open helpers (header / Escape / tests): push history unless applying popstate
+  function openDeepDive(after) {
+    navigateOverlay('deepdive', { after: after, fromHeader: true });
+  }
+  function openArchaeology(after) {
+    navigateOverlay('archaeology', { after: after, fromHeader: true });
+  }
+  function navigateOverlay(kind, opts) {
+    opts = opts || {};
+    if (applyingHistory) {
+      return showOverlayVisual(kind, opts);
+    }
+    ensureHomeHist();
+    // Persist scroll on the entry we're leaving (Today or other overlay)
+    var cur = histState();
+    if (cur && cur.overlay) saveCurrentOverlayScroll();
+    else {
+      try {
+        history.replaceState({ db: 1, overlay: null }, '', location.href);
+      } catch (e) {}
+    }
+    var st = {
+      db: 1,
+      overlay: kind,
+      anchor: opts.anchor || null,
+      scroll: typeof opts.scroll === 'number' ? opts.scroll : 0,
+      back: opts.back || null
+    };
+    try { history.pushState(st, '', location.href); } catch (e) {}
+    return showOverlayVisual(kind, opts);
+  }
+  function applyHistState(st) {
+    applyingHistory = true;
+    try {
+      if (!st || !st.overlay) {
+        hideOverlaysVisual();
+        return;
+      }
+      showOverlayVisual(st.overlay, {
+        anchor: st.anchor || null,
+        scroll: typeof st.scroll === 'number' ? st.scroll : undefined,
+        back: st.back || null,
+        instant: true,
+        restoreScroll: typeof st.scroll === 'number'
+      });
+    } finally {
+      // clear flag after paint/scroll settle
+      setTimeout(function () { applyingHistory = false; }, 80);
+    }
+  }
+  function closeOverlayViaHistory() {
+    var st = histState();
+    if (st && st.overlay && !applyingHistory) {
+      try { history.back(); return; } catch (e) {}
+    }
+    hideOverlaysVisual();
+    try {
+      history.replaceState({ db: 1, overlay: null }, '', location.href);
+    } catch (e2) {}
+  }
+  function closeDeepDive() { closeOverlayViaHistory(); }
+  function closeArchaeology() { closeOverlayViaHistory(); }
+
+  window.addEventListener('popstate', function (e) {
+    var st = (e.state && e.state.db) ? e.state : { db: 1, overlay: null };
+    applyHistState(st);
+  });
+
   // ddBtn / archBtn are real links to static pages for crawlers and no-JS readers;
   // with JS, a plain click opens the overlay. Modified clicks still follow the link.
   $('ddBtn').addEventListener('click', function (e) {
@@ -1073,6 +1204,17 @@
     });
   }
   if ($('archClose')) $('archClose').addEventListener('click', closeArchaeology);
+  function wireBackPill(id) {
+    var btn = $(id);
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      if (pendingBack) {
+        try { history.back(); } catch (e) { applyHistState({ db: 1, overlay: pendingBack.overlay, anchor: pendingBack.anchor, scroll: pendingBack.scroll, back: null }); }
+      }
+    });
+  }
+  wireBackPill('ddBack');
+  wireBackPill('archBack');
   if ($('ddBtn')) $('ddBtn').textContent = DD_LABEL;
   if ($('archBtn')) $('archBtn').textContent = ARCH_LABEL;
 
@@ -1092,6 +1234,12 @@
     if (e.key === 'ArrowLeft') $('prev').click();
     if (e.key === 'ArrowRight') $('next').click();
   });
+
+  try {
+    window.DB_openDeepDive = openDeepDive;
+    window.DB_openArchaeology = openArchaeology;
+    window.DB_navigateOverlay = navigateOverlay;
+  } catch (e) {}
 
   show(isoFromHash() || todayISO());
 })();
