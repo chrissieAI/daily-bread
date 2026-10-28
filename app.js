@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261027j';
+  var APP_VERSION = '20261027k';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
