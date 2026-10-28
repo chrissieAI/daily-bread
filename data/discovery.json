@@ -1,12 +1,1161 @@
 {
-  "intro": "Real archaeological finds tied to each Deep Dive period — house churches, inscriptions, catacombs, basilicas, and everyday Christian things. Evidence shows, scholars infer, and still debated stay separate. Photo credits sit under each image.",
+  "intro": "Real archaeological finds — from ancient Israel through the early Christian centuries. Each card separates what the find shows, what scholars infer, and what is still debated. Photos stay in the repo with credit and license under each image.",
   "checked": "2026-10-27",
-  "context": {
-    "id": "gospel-world",
-    "title": "The world of the Gospels",
-    "note": "Jewish and Roman finds that set the scene for the Gospels. These are not Christian artifacts."
-  },
+  "label": "Archaeology Finds",
+  "groups": [
+    {
+      "id": "ancient-israel",
+      "title": "Ancient Israel & the Second Temple",
+      "note": "Finds from early Israel through the Second Temple — Bible book and chapter references only, never verse text. Subgroups run Early Israel → Kingdoms → Exile & return → Second Temple.",
+      "subgroups": [
+        {
+          "id": "bronze-early",
+          "title": "Bronze Age / early Israel"
+        },
+        {
+          "id": "kingdoms",
+          "title": "Kingdoms of Israel and Judah"
+        },
+        {
+          "id": "exile",
+          "title": "Exile and return"
+        },
+        {
+          "id": "second-temple",
+          "title": "Second Temple"
+        }
+      ]
+    },
+    {
+      "id": "gospel-world",
+      "title": "The world of the Gospels",
+      "note": "Jewish and Roman finds that set the scene for the Gospels. These are not Christian artifacts."
+    },
+    {
+      "id": "p30-70",
+      "title": "AD 30–70",
+      "note": "Things people made or used in the earliest Christian years."
+    },
+    {
+      "id": "p70-150",
+      "title": "AD 70–150",
+      "note": "Things people made or used as the apostolic generation passed."
+    },
+    {
+      "id": "p150-325",
+      "title": "AD 150–325",
+      "note": "Things people made or used before Constantine."
+    },
+    {
+      "id": "p325-1000",
+      "title": "AD 325–1000",
+      "note": "Things people made or used as the Church took public shape."
+    }
+  ],
   "items": [
+    {
+      "id": "merneptah-stele",
+      "name": "Merneptah Stele (Israel Stele)",
+      "type": "inscription / victory stele",
+      "period": "ancient-israel",
+      "subgroup": "bronze-early",
+      "subgroup_label": "Bronze Age / early Israel",
+      "date": "c. 1208–1207 BCE (Merneptah year 5); discovered 1896",
+      "date_note": "Egyptian Museum, Cairo (JE 31408). Traditional earliest extrabiblical mention of Israel as a people.",
+      "found": "Thebes (Egypt), in Merneptah’s mortuary temple; Flinders Petrie",
+      "now": "Egyptian Museum, Cairo",
+      "line": "A tall black granite victory stele of Pharaoh Merneptah. Near the end it lists Canaanite places and a people written with the determinative for a people-group, widely read as Israel — the earliest widely accepted extrabiblical reference.",
+      "evidence": {
+        "shows": "An Egyptian royal inscription of Merneptah’s fifth year names a people in Canaan that the majority of Egyptologists read as Israel, marked as a people rather than a city.",
+        "infer": "Israel was already an identifiable sedentary/agricultural people in Canaan by the late 13th century BCE.",
+        "debated": "Exact social shape of that early Israel; a separate Berlin pedestal fragment proposed as an earlier ‘Israel’ remains contested."
+      },
+      "bible_refs": [
+        "Exodus 1",
+        "Joshua 1",
+        "Judges 1"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://cojs.org/stelae_and_reliefs_of_pharaoh_merneptah-_c-_1207_bce/"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/Category:Merneptah_Stele"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Merenptah_stele.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/merneptah-stele.jpg",
+        "alt": "Merneptah Stele (Israel Stele)",
+        "credit": "Alyssa Bivins",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "gezer-calendar",
+      "name": "Gezer calendar",
+      "type": "inscription / limestone tablet",
+      "period": "ancient-israel",
+      "subgroup": "bronze-early",
+      "subgroup_label": "Bronze Age / early Israel",
+      "date": "Usually late 10th / early 9th century BCE (Iron Age IIA)",
+      "date_note": "Often cited as one of the earliest extended Hebrew (or closely related) inscriptions.",
+      "found": "Tel Gezer, Israel (Macalister excavations, 1908)",
+      "now": "Istanbul Archaeology Museums (Museum of the Ancient Orient)",
+      "line": "A small limestone tablet listing a yearly round of agricultural tasks in early Hebrew script — months for sowing, harvesting, and fruit. A concrete window onto farm life, not kings or battles.",
+      "evidence": {
+        "shows": "An Iron Age school-exercise or farm calendar from Gezer uses an early Canaanite/Hebrew alphabet to list seasonal farm work.",
+        "infer": "Literacy and scribal practice in the highland/lowland border zone earlier than many once assumed.",
+        "debated": "Exact language classification (Hebrew vs. related Canaanite dialect); precise century within Iron IIA."
+      },
+      "bible_refs": [
+        "1 Kings 9:15-17",
+        "Joshua 10:33",
+        "Judges 1:29"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Gezer_calendar_close_up.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/gezer-calendar.jpg",
+        "alt": "Gezer calendar",
+        "credit": "oncenawhile",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "qeiyafa-ostracon",
+      "name": "Khirbet Qeiyafa ostracon",
+      "type": "ostracon / ink inscription",
+      "period": "ancient-israel",
+      "subgroup": "bronze-early",
+      "subgroup_label": "Bronze Age / early Israel",
+      "date": "c. late 11th–early 10th century BCE (excavators); readings debated",
+      "date_note": "Ink on pottery from a fortified Judahite/early Israelite site overlooking the Elah Valley.",
+      "found": "Khirbet Qeiyafa, Israel (excavated by Garfinkel & Ganor)",
+      "now": "Israel Antiquities Authority / displayed at Bible Lands Museum / Israel Museum contexts",
+      "line": "A five-line ink text on a pottery sherd from a strong early Iron Age fortress. Scholars disagree on the exact reading, but many see an early Hebrew social or ethical text from the time of emerging Judah.",
+      "evidence": {
+        "shows": "A substantial ink inscription existed at Qeiyafa in the early Iron Age; the site was a planned fortified town.",
+        "infer": "Some level of administration and literacy in Judah’s formative period; possible links to biblical Elah Valley geography.",
+        "debated": "Full decipherment of the lines; whether the site is biblical Shaaraim; how ‘Hebrew’ the language is."
+      },
+      "bible_refs": [
+        "1 Samuel 17:1-3",
+        "Joshua 15:36"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Khirbet_Qeiyafa_Ostracon.jpg"
+        }
+      ],
+      "caution": "Text readings and the site’s link to biblical Shaaraim are still debated among epigraphers.",
+      "image": {
+        "src": "art/discovery/qeiyafa-ostracon.jpg",
+        "alt": "Khirbet Qeiyafa ostracon",
+        "credit": "MichaelNetzer",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "tel-dan-stele",
+      "name": "Tel Dan Stele (‘House of David’)",
+      "type": "inscription / basalt victory stele",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "9th century BCE (often linked to Hazael of Aram; fragments found 1993–94)",
+      "date_note": "Israel Museum / IAA. Widely accepted as earliest extrabiblical ‘House of David’.",
+      "found": "Tel Dan, northern Israel (secondary use in a wall)",
+      "now": "Israel Museum, Jerusalem (IAA collection)",
+      "line": "Broken basalt pieces of an Aramaic victory inscription. One phrase is widely read as bytdwd — ‘House of David’ — the earliest clear extrabiblical mention of David’s dynasty.",
+      "evidence": {
+        "shows": "A 9th-century Aramaic royal inscription from Dan refers to a Judahite royal house written as bytdwd.",
+        "infer": "David was remembered as a dynastic founder by neighboring kingdoms within about a century or two of the biblical United Monarchy traditions.",
+        "debated": "Whether the author is certainly Hazael; exact restoration of damaged lines; minority alternative readings of bytdwd."
+      },
+      "bible_refs": [
+        "2 Samuel 5:1-5",
+        "2 Kings 8:28-29",
+        "2 Kings 9:14-16"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://thejewishmuseum.org/exhibitions/tel-dan-stele/"
+        },
+        {
+          "label": "Israel Museum",
+          "url": "https://www.imj.org.il/"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:JRSLM_300116_Tel_Dan_Stele_02.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/tel-dan-stele.jpg",
+        "alt": "Tel Dan Stele (‘House of David’)",
+        "credit": "Oren Rozen",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "mesha-stele",
+      "name": "Mesha Stele (Moabite Stone)",
+      "type": "inscription / basalt stele",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "9th century BCE (Louvre: era of Mesha c. 830–805 BCE); found 1868",
+      "date_note": "Louvre AO 5066. Mentions Omri of Israel, YHWH, and Moab’s revolt.",
+      "found": "Dhiban (biblical Dibon), Jordan",
+      "now": "Musée du Louvre, Paris (AO 5066)",
+      "line": "King Mesha of Moab tells, in Moabite closely related to Hebrew, how he threw off Israel’s yoke after Omri’s oppression, took towns, and dragged vessels of YHWH before Chemosh. A rare enemy-king’s version of the same world as 2 Kings.",
+      "evidence": {
+        "shows": "Mesha names Omri, Israel, YHWH, and Moabite reconquest of territory east of the Dead Sea in the 9th century.",
+        "infer": "How the Moabite and biblical accounts relate (parallel conflicts vs. the same war); possible ‘House of David’ reading in a damaged line.",
+        "debated": "Reading of line 31 (House of David vs. alternatives); exact sync with 2 Kings 3."
+      },
+      "bible_refs": [
+        "2 Kings 3:4-27",
+        "1 Kings 16:21-28",
+        "Numbers 21:26-30"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Louvre",
+          "url": "https://collections.louvre.fr/en/ark:/53355/cl010120339"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066).jpg"
+        }
+      ],
+      "caution": "The stele is solid; whether line 31 names the “House of David” is still debated after new imaging.",
+      "image": {
+        "src": "art/discovery/mesha-stele.jpg",
+        "alt": "Mesha Stele (Moabite Stone)",
+        "credit": "Tangopaso",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      }
+    },
+    {
+      "id": "black-obelisk",
+      "name": "Black Obelisk of Shalmaneser III (Jehu panel)",
+      "type": "inscription / carved obelisk",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Erected c. 825 BCE; Jehu tribute scene ~841 BCE",
+      "date_note": "British Museum. Only known contemporary picture of an Israelite king.",
+      "found": "Nimrud (Kalhu), Iraq",
+      "now": "British Museum, London",
+      "line": "A black limestone Assyrian obelisk. One register labels Jehu of the ‘House of Omri’ bowing before Shalmaneser III — the only surviving ancient image of an Israelite king, caught mid-prostration with tribute.",
+      "evidence": {
+        "shows": "Assyria recorded Jehu (or his envoy) paying tribute and called his realm Bit-Humri (House of Omri).",
+        "infer": "Jehu sought Assyrian backing amid Aramean pressure; the Bible’s silence on this tribute is political, not ignorance of Assyria.",
+        "debated": "Whether the bowing figure is Jehu himself or a representative; how to sync with biblical chronology of Jehu’s coup."
+      },
+      "bible_refs": [
+        "2 Kings 9:1-13",
+        "2 Kings 10:31-36"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "British Museum",
+          "url": "https://www.britishmuseum.org/collection/object/W_1848-1104-1"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Jehu_of_the_House_of_Omri_bows_before_the_Assyrian_king_Shalmaneser_III,_The_Black_Obelisk..JPG"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/black-obelisk.jpg",
+        "alt": "Black Obelisk of Shalmaneser III (Jehu panel)",
+        "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "kuntillet-ajrud",
+      "name": "Kuntillet Ajrud inscriptions",
+      "type": "inscription / pithos drawings & blessings",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Late 9th–early 8th century BCE (radiocarbon often ~820–745 BCE)",
+      "date_note": "Sinai/Negev border site (Horvat Teman). Famous ‘YHWH and his asherah’ blessings.",
+      "found": "Kuntillet Ajrud (Horvat Teman), northeastern Sinai",
+      "now": "Israel Antiquities Authority collections (site finds)",
+      "line": "Ink blessings and drawings on large storage jars from a desert waystation. One blessing invokes ‘YHWH of Samaria and his asherah’ — a startling glimpse of popular religion beside official Judahite monotheizing traditions.",
+      "evidence": {
+        "shows": "8th-century travelers/officials wrote blessings naming YHWH (of Samaria/Teman) together with ‘his asherah’.",
+        "infer": "Diverse Yahwistic practice in the northern kingdom’s orbit; possible military/trade outpost with cultic space.",
+        "debated": "Whether ‘asherah’ means the goddess or a cult symbol/pole; whether nearby Bes-like figures belong to the blessing; site function."
+      },
+      "bible_refs": [
+        "1 Kings 16:29-33",
+        "2 Kings 17:7-12",
+        "Deuteronomy 16:21"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Pithosbfigs.jpg"
+        }
+      ],
+      "caution": "The site is real; what “YHWH and his asherah” meant in popular religion is still heavily debated.",
+      "image": {
+        "src": "art/discovery/kuntillet-ajrud.jpg",
+        "alt": "Kuntillet Ajrud inscriptions",
+        "credit": "Temerarius",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "lachish-reliefs",
+      "name": "Lachish reliefs (Sennacherib’s palace)",
+      "type": "palace relief / siege narrative",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Carved c. 700–692 BCE; depicts 701 BCE siege",
+      "date_note": "British Museum. Assyria’s own ‘war photography’ of Judah’s second city.",
+      "found": "South-West Palace of Sennacherib, Nineveh (Room 36)",
+      "now": "British Museum, London",
+      "line": "Gypsum wall panels showing Assyrian troops storming Lachish: siege ramps, deportees, and the city’s fall. Jerusalem is not shown — Sennacherib preferred to advertise the city he actually took.",
+      "evidence": {
+        "shows": "Assyria celebrated the capture of Lachish in monumental art matching archaeology at Tell ed-Duweir.",
+        "infer": "Lachish was Judah’s key fortress after Jerusalem; the reliefs propagandize a hard-won victory.",
+        "debated": "Fine points of siege sequence vs. excavation layers; how many deportees the numbers imply."
+      },
+      "bible_refs": [
+        "2 Kings 18:13-17",
+        "2 Chronicles 32:9",
+        "Isaiah 36:1-2",
+        "Jeremiah 34:7"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "British Museum",
+          "url": "https://www.britishmuseum.org/collection/object/W_1856-0909-14_1"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Lachish_Relief,_British_Museum.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/lachish-reliefs.jpg",
+        "alt": "Lachish reliefs (Sennacherib’s palace)",
+        "credit": "Photograph by Mike Peel (www.mikepeel.net).",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "taylor-prism",
+      "name": "Sennacherib Prism (Taylor Prism)",
+      "type": "clay prism / royal annals",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "c. 691 BCE (records 701 BCE campaign)",
+      "date_note": "British Museum 1855,1003.1. Hezekiah ‘like a bird in a cage’.",
+      "found": "Nineveh area (Nebi Yunus); acquired via Col. Taylor",
+      "now": "British Museum, London",
+      "line": "A six-sided clay prism of Sennacherib’s campaigns. Of Judah he boasts that he took 46 fortified cities and shut Hezekiah in Jerusalem ‘like a bird in a cage’ — without claiming he captured the capital.",
+      "evidence": {
+        "shows": "Assyrian annals name Hezekiah of Judah, list massive tribute, and stop short of saying Jerusalem fell.",
+        "infer": "Jerusalem survived 701 BCE under siege/pressure; biblical and Assyrian accounts share a core event while spinning outcomes differently.",
+        "debated": "Whether a plague, tribute, or Egyptian diversion ended the campaign; sync of biblical ‘angel’ tradition with Assyrian silence."
+      },
+      "bible_refs": [
+        "2 Kings 18:13-19:37",
+        "Isaiah 36-37",
+        "2 Chronicles 32:1-23"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "British Museum",
+          "url": "https://www.britishmuseum.org/collection/object/W_1855-1003-1"
+        },
+        {
+          "label": "Israel Museum",
+          "url": "https://www.imj.org.il/en/exhibitions/special-display-assyrian-campaign-judah-told-sennacherib-prism"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Taylor_Prism-1.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/taylor-prism.jpg",
+        "alt": "Sennacherib Prism (Taylor Prism)",
+        "credit": "This image was produced by me, David Castor (user:dcastor). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you t",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      }
+    },
+    {
+      "id": "siloam-inscription",
+      "name": "Siloam inscription",
+      "type": "inscription / rock-cut Hebrew text",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Late 8th century BCE (commonly linked to Hezekiah; removed 1890)",
+      "date_note": "Istanbul Museum of the Ancient Orient. Workers meeting in the middle of the tunnel.",
+      "found": "Hezekiah’s Tunnel / Siloam Tunnel, Jerusalem",
+      "now": "Museum of the Ancient Orient, Istanbul",
+      "line": "A Hebrew inscription celebrating how two crews digging from opposite ends of a water tunnel heard each other and broke through. Human, technical, almost diary-like — not a royal boast.",
+      "evidence": {
+        "shows": "Judahite workers cut a long water tunnel under Jerusalem and commemorated the breakthrough in classical biblical-period Hebrew.",
+        "infer": "Usually tied to Hezekiah’s water preparations before Assyria’s 701 campaign (2 Kings 20:20).",
+        "debated": "Some propose a slightly earlier or later cutting; exact engineering method of the snaking path."
+      },
+      "bible_refs": [
+        "2 Kings 20:20",
+        "2 Chronicles 32:2-4",
+        "2 Chronicles 32:30",
+        "Isaiah 22:9-11"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Siloam_inscription.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/siloam-inscription.jpg",
+        "alt": "Siloam inscription",
+        "credit": "oncenawhile",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "hezekiah-tunnel",
+      "name": "Hezekiah’s Tunnel (Siloam Tunnel)",
+      "type": "site / engineered water tunnel",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Late 8th century BCE (commonly Hezekiah); still walkable",
+      "date_note": "In situ, City of David / Silwan, Jerusalem.",
+      "found": "Jerusalem — from Gihon Spring to the Pool of Siloam",
+      "now": "In situ (archaeological park / City of David)",
+      "line": "A ~533-meter rock-cut tunnel that still carries water from the Gihon spring to Siloam. Visitors can wade it today — the same channel the Siloam inscription describes.",
+      "evidence": {
+        "shows": "An Iron Age water system re-routed Jerusalem’s spring inside the walls via a hand-cut tunnel.",
+        "infer": "Built to secure water under Assyrian threat in Hezekiah’s reign.",
+        "debated": "Precise dating within the late Iron Age; relationship of Channel II and other waterworks."
+      },
+      "bible_refs": [
+        "2 Kings 20:20",
+        "2 Chronicles 32:30"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Hezekiah%27s_Tunnel_enlightened.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/hezekiah-tunnel.jpg",
+        "alt": "Hezekiah’s Tunnel (Siloam Tunnel)",
+        "credit": "Davidbena",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "ketef-hinnom",
+      "name": "Ketef Hinnom silver amulets (priestly blessing)",
+      "type": "amulet / silver scrolls",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Late 7th / early 6th century BCE (Israel Museum: 6th century BCE)",
+      "date_note": "Oldest known biblical text fragments — centuries before the Dead Sea Scrolls.",
+      "found": "Ketef Hinnom burial caves, Jerusalem (Gabriel Barkay, 1979)",
+      "now": "Israel Museum / IAA (IAA 1980-1495, 1980-1496)",
+      "line": "Two tiny silver scrolls worn as amulets, inscribed with a blessing that matches Numbers 6:24–26. Unrolled with immense care; letters thinner than a hair. Personal piety you could wear around your neck.",
+      "evidence": {
+        "shows": "Pre-exilic Jerusalemites used a YHWH blessing text closely matching the priestly benediction later preserved in Numbers.",
+        "infer": "The blessing circulated as liturgy/amulet before (or as) its embedding in the biblical book.",
+        "debated": "Exact year within late Iron II; how much of each amulet is quotation vs. freer blessing formula."
+      },
+      "bible_refs": [
+        "Numbers 6:22-27"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Israel Museum",
+          "url": "https://www.imj.org.il/en/collections/198069-0"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Ketef_hinom_scrolls.JPG"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/ketef-hinnom.jpg",
+        "alt": "Ketef Hinnom silver amulets (priestly blessing)",
+        "credit": "Bachrach44",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "hezekiah-bulla",
+      "name": "Hezekiah royal seal impression (bulla)",
+      "type": "seal impression / clay bulla",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Late 8th century BCE (reign of Hezekiah)",
+      "date_note": "Ophel excavations produced a stratified royal bulla of Hezekiah.",
+      "found": "Ophel, Jerusalem (Eilat Mazar excavations; others known from market)",
+      "now": "IAA / displayed in Israel Museum contexts",
+      "line": "A clay seal impression reading roughly ‘Belonging to Hezekiah, son of Ahaz, king of Judah,’ with a winged sun disk. Tiny bureaucracy: the king’s office stamped papyrus documents.",
+      "evidence": {
+        "shows": "Official seals of Hezekiah son of Ahaz were used on documents in late-8th-century Jerusalem.",
+        "infer": "A royal administration matching biblical royal names and titles.",
+        "debated": "Iconography (Egyptianizing winged sun); status of earlier unprovenanced Hezekiah bullae vs. the excavated Ophel example."
+      },
+      "bible_refs": [
+        "2 Kings 18:1-3",
+        "Isaiah 36:1",
+        "2 Chronicles 29:1"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:%D7%98%D7%91%D7%99%D7%A2%D7%AA_%D7%97%D7%95%D7%AA%D7%9D_%D7%94%D7%9E%D7%9C%D7%9A_%D7%97%D7%96%D7%A7%D7%99%D7%94%D7%95.jpg"
+        }
+      ],
+      "caution": "Prefer the excavated Ophel bulla; lookalikes without a dig findspot need extra care.",
+      "image": {
+        "src": "art/discovery/hezekiah-bulla.jpg",
+        "alt": "Hezekiah royal seal impression (bulla)",
+        "credit": "Tamir Zegman",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "gemariah-bulla",
+      "name": "Gemariah son of Shaphan bulla",
+      "type": "seal impression / clay bulla",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Late 7th–early 6th century BCE (pre-586 destruction layer)",
+      "date_note": "Excavated in City of David — secure context, not market.",
+      "found": "City of David, Jerusalem (Shiloh excavations)",
+      "now": "IAA / Israel Museum display contexts",
+      "line": "A stratified bulla naming Gemariah son of Shaphan — a scribe’s family known from Jeremiah’s circle. Unlike many Bible-name seals, this one came out of the dirt of Jerusalem, not a dealer’s tray.",
+      "evidence": {
+        "shows": "A Jerusalem official named Gemariah son of Shaphan sealed documents before the Babylonian destruction.",
+        "infer": "Likely the same bureaucratic family circle reflected in Jeremiah 36.",
+        "debated": "Whether every biblical namesake is the same individual (common names); still far stronger than unprovenanced parallels."
+      },
+      "bible_refs": [
+        "Jeremiah 36:10-12",
+        "Jeremiah 36:25"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://cojs.org/six-biblical-signatures/"
+        }
+      ],
+      "caution": null,
+      "image": null
+    },
+    {
+      "id": "baruch-bulla",
+      "name": "Baruch (Berekhyahu) son of Neriah bullae",
+      "type": "seal impression / clay bulla (unprovenanced)",
+      "period": "ancient-israel",
+      "subgroup": "kingdoms",
+      "subgroup_label": "Kingdoms of Israel and Judah",
+      "date": "Claimed late 7th–early 6th century BCE; authenticity disputed",
+      "date_note": "Market bullae; Goren & Arie argued forgery; others dispute that proof. Not excavated.",
+      "found": "Antiquities market (unprovenanced)",
+      "now": "Private collections / published exemplars",
+      "line": "Bullae reading ‘Belonging to Berekhyahu son of Neriyahu the scribe’ — the name of Jeremiah’s secretary. Electrifying if genuine; tainted because they never came from a dig.",
+      "evidence": {
+        "shows": "Published objects exist with that reading; they lack archaeological findspot.",
+        "infer": "If genuine, they would name Baruch the scribe; that ‘if’ is the whole problem.",
+        "debated": "Authenticity: some lab work claimed modern forgery; rejoinders say forgery is unproven. Acquittal in related trials did not prove authenticity."
+      },
+      "bible_refs": [
+        "Jeremiah 36:4-8",
+        "Jeremiah 45:1-2"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://www.journals.uchicago.edu/doi/10.5615/bullamerschoorie.372.0147"
+        }
+      ],
+      "caution": "Unprovenanced; the forgery debate is unresolved — include tagged, not as proof.",
+      "image": null
+    },
+    {
+      "id": "babylonian-chronicle",
+      "name": "Babylonian Chronicle (Jerusalem 597 BCE)",
+      "type": "clay tablet / chronicle",
+      "period": "ancient-israel",
+      "subgroup": "exile",
+      "subgroup_label": "Exile and return",
+      "date": "Records 605–594 BCE (tablet BM 21946); Nebuchadnezzar’s 597 capture of Jerusalem",
+      "date_note": "British Museum. Dry Babylonian prose for Judah’s first fall.",
+      "found": "Babylon region; acquired by British Museum",
+      "now": "British Museum, London (BM 21946)",
+      "line": "A Babylonian chronicle tablet notes that in Nebuchadnezzar’s seventh year he marched to Hatti, besieged ‘the city of Judah,’ captured the king, appointed another, and took heavy tribute — the 597 BCE deportation that took Jehoiachin.",
+      "evidence": {
+        "shows": "Babylon dated and recorded the 597 capture of Jerusalem and replacement of its king independently of the Bible.",
+        "infer": "Sync point for biblical and Babylonian chronologies of the exile’s first wave.",
+        "debated": "Fine calendar conversions; the tablet does not name Jehoiachin explicitly (other texts do)."
+      },
+      "bible_refs": [
+        "2 Kings 24:10-17",
+        "2 Chronicles 36:9-10",
+        "Jeremiah 22:24-30"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "British Museum",
+          "url": "https://www.britishmuseum.org/collection/object/W_1896-0409-51"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim,_king_of_Judah,_in_597_BCE._From_Babylon,_Iraq.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/babylonian-chronicle.jpg",
+        "alt": "Babylonian Chronicle (Jerusalem 597 BCE)",
+        "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "jehoiachin-ration",
+      "name": "Jehoiachin ration tablets",
+      "type": "clay tablet / palace ration list",
+      "period": "ancient-israel",
+      "subgroup": "exile",
+      "subgroup_label": "Exile and return",
+      "date": "c. 592–569 BCE (Nebuchadnezzar’s palace archives)",
+      "date_note": "Vorderasiatisches Museum, Berlin (e.g. VAT 16378). King of Judah on the grocery list.",
+      "found": "Babylon (palace/administrative archives)",
+      "now": "Vorderasiatisches Museum, Berlin",
+      "line": "Cuneiform ration lists issue oil to ‘Ya’u-kīnu, king of the land of Yahudu’ and his sons — Jehoiachin living as a captive royal in Babylon, still titled king, still eating.",
+      "evidence": {
+        "shows": "Babylonian accountants issued oil rations to Jehoiachin of Judah and his household in exile.",
+        "infer": "Judah’s captive king retained recognized status; matches 2 Kings 25:27–30’s later elevation under Evil-merodach.",
+        "debated": "Exact years of each tablet; how large the Judean community around him was."
+      },
+      "bible_refs": [
+        "2 Kings 24:12-15",
+        "2 Kings 25:27-30",
+        "Jeremiah 52:31-34"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://search.smb.museum/object/obj-1743721"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Jehoiachin_Ration_Tablet.JPG"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/jehoiachin-ration.jpg",
+        "alt": "Jehoiachin ration tablets",
+        "credit": "Scallaham",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "ishtar-gate",
+      "name": "Ishtar Gate (Babylon)",
+      "type": "monumental gate / glazed brick",
+      "period": "ancient-israel",
+      "subgroup": "exile",
+      "subgroup_label": "Exile and return",
+      "date": "Reign of Nebuchadnezzar II (c. 605–562 BCE); reconstructed display 20th century",
+      "date_note": "Pergamonmuseum, Berlin. The city the exiles walked into.",
+      "found": "Babylon, Iraq (Koldewey excavations)",
+      "now": "Pergamonmuseum / Vorderasiatisches Museum, Berlin",
+      "line": "The dazzling blue-glazed processional gate of Nebuchadnezzar’s Babylon, with striding lions, dragons, and bulls. Not a ‘Bible object’ — it is the empire’s front door, the built world of the exile.",
+      "evidence": {
+        "shows": "Nebuchadnezzar built a monumental Ishtar Gate and processional way in glazed brick.",
+        "infer": "Visual scale of the capital that held Judean deportees and palace captives like Jehoiachin.",
+        "debated": "None about authenticity; modern reconstruction height/arrangement details vary by gallery."
+      },
+      "bible_refs": [
+        "2 Kings 24:10-16",
+        "Psalm 137:1",
+        "Daniel 1:1-4"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Ishtar_Gate_at_Berlin_Museum.jpg"
+        }
+      ],
+      "caution": "Babylonian imperial architecture that sets the exile scene — not an Israelite artifact.",
+      "image": {
+        "src": "art/discovery/ishtar-gate.jpg",
+        "alt": "Ishtar Gate (Babylon)",
+        "credit": "Rictor Norton",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "cyrus-cylinder",
+      "name": "Cyrus Cylinder",
+      "type": "clay cylinder / foundation inscription",
+      "period": "ancient-israel",
+      "subgroup": "exile",
+      "subgroup_label": "Exile and return",
+      "date": "After 539 BCE (Cyrus’s capture of Babylon)",
+      "date_note": "British Museum 90920. Returns of peoples/gods — Jews not named.",
+      "found": "Babylon (Amran / Esagila area), 1879 (Hormuzd Rassam)",
+      "now": "British Museum, London",
+      "line": "Cyrus presents himself (in Babylonian voice) as Marduk’s chosen restorer: temples repaired, deported gods and people sent home. It never names Judah — but it shows the imperial policy climate behind Ezra’s return story.",
+      "evidence": {
+        "shows": "Cyrus claimed a policy of restoring cults and returning deportees after taking Babylon in 539 BCE.",
+        "infer": "Judean return and temple rebuilding fit a wider Achaemenid pattern; biblical ‘decree’ language is a Judean theological framing of that climate.",
+        "debated": "How closely the Cylinder maps to Ezra 1 (parallel vs. same document); ‘human rights charter’ modern slogan is anachronistic."
+      },
+      "bible_refs": [
+        "Ezra 1:1-4",
+        "2 Chronicles 36:22-23",
+        "Isaiah 44:28",
+        "Isaiah 45:1"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "British Museum",
+          "url": "https://www.britishmuseum.org/collection/object/W_1880-0617-1941"
+        },
+        {
+          "label": "The Met",
+          "url": "https://www.metmuseum.org/perspectives/cyrus-and-the-judean-diaspora"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Cyrus_Cylinder.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/cyrus-cylinder.jpg",
+        "alt": "Cyrus Cylinder",
+        "credit": "Photograph by Mike Peel (www.mikepeel.net). Modifications by مانفی",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "elephantine-papyri",
+      "name": "Elephantine papyri (Jewish temple in Egypt)",
+      "type": "papyrus archive / legal & letters",
+      "period": "ancient-israel",
+      "subgroup": "exile",
+      "subgroup_label": "Exile and return",
+      "date": "5th century BCE (Persian period); temple destroyed 410 BCE",
+      "date_note": "Brooklyn Museum, Berlin Ägyptisches Museum, and others.",
+      "found": "Elephantine Island, Aswan, Egypt",
+      "now": "Brooklyn Museum; Ägyptisches Museum und Papyrussammlung, Berlin; others",
+      "line": "Aramaic contracts and letters from a Jewish military colony that had its own temple of YHW beside Egyptian Khnum. After locals destroyed that temple, the community wrote to Jerusalem and Samaria asking permission to rebuild — diaspora Judaism negotiating with the homeland.",
+      "evidence": {
+        "shows": "A Persian-period Jewish community in Egypt ran a YHW temple, kept contracts in Aramaic, and petitioned Judean/Samarian officials after 410 BCE.",
+        "infer": "Second Temple–era Judaism was geographically wider and ritually more diverse than Jerusalem-only models.",
+        "debated": "How ‘orthodox’ Elephantine practice was; relationship to biblical bans on other temples."
+      },
+      "bible_refs": [
+        "Ezra 4:1-24",
+        "Nehemiah 1:1-3",
+        "Isaiah 19:19"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Brooklyn Museum",
+          "url": "https://www.brooklynmuseum.org/opencollection/exhibitions/752"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Ananiah_Gives_Yehoishema_a_House,_Marh_10,_402_B.C.E,_47.218.88.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/elephantine-papyri.jpg",
+        "alt": "Elephantine papyri (Jewish temple in Egypt)",
+        "credit": "Charles Edwin Wilbour",
+        "license": "No restrictions",
+        "license_url": ""
+      }
+    },
+    {
+      "id": "nash-papyrus",
+      "name": "Nash Papyrus",
+      "type": "manuscript / papyrus",
+      "period": "ancient-israel",
+      "subgroup": "second-temple",
+      "subgroup_label": "Second Temple",
+      "date": "Usually 2nd century BCE (pre-Dead Sea Scrolls fame)",
+      "date_note": "Cambridge University Library. Once the oldest known Hebrew Bible fragment.",
+      "found": "Egypt (purchased 1902; exact findspot uncertain)",
+      "now": "Cambridge University Library",
+      "line": "A Hebrew papyrus with the Ten Commandments and the Shema. Before Qumran, this was the oldest known biblical manuscript — a reminder that scripture lived on fragile sheets long before bound Bibles.",
+      "evidence": {
+        "shows": "A Second Temple–period Hebrew sheet combined Decalogue and Shema texts for liturgical or teaching use.",
+        "infer": "Fluid textual traditions and catechetical anthologies before the later Masoretic standardization.",
+        "debated": "Exact date within Hellenistic/early Roman centuries; whether it is a liturgical leaf or school text."
+      },
+      "bible_refs": [
+        "Exodus 20:1-17",
+        "Deuteronomy 5:6-21",
+        "Deuteronomy 6:4-5"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://www.lib.cam.ac.uk/collections/departments/papyrus-collections"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Papyrus_Nash.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/nash-papyrus.jpg",
+        "alt": "Nash Papyrus",
+        "credit": "unknown, uploaded Daniel.baranek",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      }
+    },
+    {
+      "id": "isaiah-scroll",
+      "name": "Great Isaiah Scroll (1QIsaᵃ)",
+      "type": "manuscript / parchment scroll",
+      "period": "ancient-israel",
+      "subgroup": "second-temple",
+      "subgroup_label": "Second Temple",
+      "date": "c. 125–100 BCE (palaeography; Israel Museum)",
+      "date_note": "Shrine of the Book, Israel Museum. Only nearly complete biblical book from Qumran.",
+      "found": "Qumran Cave 1, Dead Sea (1947)",
+      "now": "Israel Museum, Jerusalem (Shrine of the Book)",
+      "line": "A complete (nearly) Book of Isaiah on parchment from the Dead Sea Scrolls — about a thousand years older than the medieval Hebrew Bibles previously used for comparison. You can see the columns, repairs, and scribe’s hand.",
+      "evidence": {
+        "shows": "A Second Temple Jewish community preserved Isaiah in a form remarkably close to the later medieval text, with meaningful variants.",
+        "infer": "Stability and diversity both mark the Hebrew textual tradition; Qumran’s library was not a fringe oddity alone.",
+        "debated": "Community identity (Essene vs. broader); how to weigh variants for modern Bible editions."
+      },
+      "bible_refs": [
+        "Isaiah 1:1",
+        "Isaiah 53:1-12",
+        "Luke 4:17-19"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Israel Museum",
+          "url": "https://www.imj.org.il/en/collections/198208-0"
+        },
+        {
+          "label": "Israel Museum",
+          "url": "http://dss.collections.imj.org.il/isaiah"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Great_Isaiah_Scroll_MS_A_(1QIsa)_-_Google_Art_Project.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/isaiah-scroll.jpg",
+        "alt": "Great Isaiah Scroll (1QIsaᵃ)",
+        "credit": "Unknown artistUnknown artist",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      }
+    },
+    {
+      "id": "herodian-stones",
+      "name": "Herodian Temple Mount masonry",
+      "type": "architecture / ashlars",
+      "period": "ancient-israel",
+      "subgroup": "second-temple",
+      "subgroup_label": "Second Temple",
+      "date": "Late 1st century BCE – early 1st century CE (Herod’s expansion)",
+      "date_note": "In situ around Temple Mount / Western Wall.",
+      "found": "Jerusalem — Temple Mount retaining walls",
+      "now": "In situ (Western Wall and southern/western excavations)",
+      "line": "Enormous finely cut limestone ashlars with characteristic Herodian margins — the retaining walls of the expanded Temple platform. Touchable scale for the Second Temple Jesus knew.",
+      "evidence": {
+        "shows": "Herod’s engineers built monumental ashlar retaining walls still visible around the Temple Mount.",
+        "infer": "Match Josephus’s descriptions of Herodian building ambition.",
+        "debated": "Exact phasing of some courses; later rebuilds atop Herodian stone."
+      },
+      "bible_refs": [
+        "Mark 13:1-2",
+        "John 2:20",
+        "Acts 3:1-2"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Western_Wall_(3703120008).jpg"
+        }
+      ],
+      "caution": "Jewish Second Temple masonry — context for the Temple Jesus knew, not a Christian artifact.",
+      "image": {
+        "src": "art/discovery/herodian-stones.jpg",
+        "alt": "Herodian Temple Mount masonry",
+        "credit": "Ian Scott",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "id": "trumpeting-place",
+      "name": "‘Place of Trumpeting’ inscription",
+      "type": "inscription / Hebrew stone",
+      "period": "ancient-israel",
+      "subgroup": "second-temple",
+      "subgroup_label": "Second Temple",
+      "date": "1st century CE (Herodian Temple period); found 1968/69",
+      "date_note": "Israel Museum. Fallen from the southwest corner of the Temple Mount.",
+      "found": "Southwest corner of Temple Mount / Herodian street, Jerusalem",
+      "now": "Israel Museum, Jerusalem (replica at site)",
+      "line": "A Hebrew stone reading roughly ‘to the place of trumpeting…’ — marking where priests signaled Sabbath and festival times from the Temple’s pinnacle. The stone fell onto the street below in the Roman destruction.",
+      "evidence": {
+        "shows": "The Herodian Temple had a designated trumpeting spot labeled in Hebrew on architecture.",
+        "infer": "Matches literary notices of priestly trumpet signals for sacred time.",
+        "debated": "Exact restoration of the broken last word; precise corner placement."
+      },
+      "bible_refs": [
+        "Numbers 10:1-10",
+        "Nehemiah 12:35-36",
+        "Josephus related"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://www.antiquities.org.il/t/item_en.aspx?CurrentPageKey=54_1&indicator=40"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:To_the_trumpeting_place.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/trumpeting-place.jpg",
+        "alt": "‘Place of Trumpeting’ inscription",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      }
+    },
+    {
+      "id": "magdala-stone",
+      "name": "Magdala stone",
+      "type": "carved synagogue stone",
+      "period": "ancient-israel",
+      "subgroup": "second-temple",
+      "subgroup_label": "Second Temple",
+      "date": "Early 1st century CE (pre-70); found 2009",
+      "date_note": "Magdala (Migdal), Galilee. Possible Temple imagery including a menorah.",
+      "found": "Magdala synagogue, Israel",
+      "now": "On site / Magdala archaeological park (IAA)",
+      "line": "A decorated limestone block from a Galilean synagogue destroyed around the First Revolt. Reliefs may show the Temple’s menorah and sacred furniture — a village synagogue keeping Jerusalem’s Temple before its eyes.",
+      "evidence": {
+        "shows": "A 1st-century Galilee synagogue contained a carved stone with cultic imagery including a seven-branched menorah-like form.",
+        "infer": "Strong Temple orientation in diaspora-of-the-land synagogue art before 70 CE.",
+        "debated": "Whether the carvings depict God’s chariot, Temple utensils, or a symbolic mix; liturgical function of the stone."
+      },
+      "bible_refs": [
+        "Matthew 15:39",
+        "Mark 8:10",
+        "Luke 8:2"
+      ],
+      "connects_to": [],
+      "connect_why": "",
+      "deepdive_period": null,
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Magdala_Stone.jpg"
+        }
+      ],
+      "caution": "The Magdala synagogue context is solid; readings of the stone’s symbols still vary.",
+      "image": {
+        "src": "art/discovery/magdala-stone.jpg",
+        "alt": "Magdala stone",
+        "credit": "Hanay",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "id": "arch-titus",
+      "name": "Arch of Titus — menorah panel",
+      "type": "triumphal relief",
+      "period": "ancient-israel",
+      "subgroup": "second-temple",
+      "subgroup_label": "Second Temple",
+      "date": "Dedicated AD 81 (after Titus’s death); depicts spoils of AD 70",
+      "date_note": "Roman Forum. Rome’s victory parade carrying the Temple menorah.",
+      "found": "Via Sacra, Rome (in situ arch)",
+      "now": "In situ, Roman Forum, Rome",
+      "line": "A marble relief of Roman soldiers carrying the Jerusalem Temple’s seven-branched menorah and trumpets in Titus’s triumph. The Temple’s holy things, marched through Rome — grief and proof in one panel.",
+      "evidence": {
+        "shows": "Romans depicted Temple cult objects, including a menorah, as booty from Jerusalem’s 70 CE fall.",
+        "infer": "The carved menorah shape informs later Jewish art; the arch is state propaganda, not a blueprint of every Temple detail.",
+        "debated": "How accurate the base decorations are; exact fate of the real menorah afterward."
+      },
+      "bible_refs": [
+        "Exodus 25:31-40",
+        "Josephus War 7",
+        "Luke 21:5-6"
+      ],
+      "connects_to": [
+        "josephus-james",
+        "tacitus-annals"
+      ],
+      "connect_why": "Shows the Temple vessels carried in Rome after the AD 70 destruction.",
+      "deepdive_period": "p30-70",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Arch_of_Titus_Menorah.png"
+        }
+      ],
+      "caution": "Roman propaganda after AD 70; it shows Temple vessels, not a Christian monument.",
+      "image": {
+        "src": "art/discovery/arch-titus.jpg",
+        "alt": "Arch of Titus — menorah panel",
+        "credit": "derivative work: Steerpike (talk)\nArc_de_Triumph_copy.jpg: user: בית השלום",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/"
+      }
+    },
     {
       "id": "caiaphas-ossuary",
       "name": "Caiaphas family ossuary",
@@ -41,7 +1190,10 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "commons": "https://commons.wikimedia.org/wiki/File:Kayafa's_Ossuary_3.JPG"
-      }
+      },
+      "deepdive_period": null,
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "pilate-stone",
@@ -82,7 +1234,10 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Pilate_Inscription.JPG"
-      }
+      },
+      "deepdive_period": null,
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "pool-of-siloam",
@@ -118,7 +1273,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_71717_the_siloam_pool.jpg"
-      }
+      },
+      "deepdive_period": null,
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "capernaum-house-peter",
@@ -156,7 +1314,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Holy_Land_2016_P0456_Capernaum_ruins_of_Saint_Peters_House_under_Saint_Peter_Church.jpg"
-      }
+      },
+      "deepdive_period": "p30-70",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "sator-square-pompeii",
@@ -192,7 +1353,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Sator_Square_Palestra_Pompeii_(CIL_8623_&_8622a-b).jpg"
-      }
+      },
+      "deepdive_period": "p70-150",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "p52-rylands",
@@ -234,7 +1398,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:P52_recto.jpg"
-      }
+      },
+      "deepdive_period": "p70-150",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "alexamenos-graffito",
@@ -272,7 +1439,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Alexamenos_graffito.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "bodmer-papyri",
@@ -313,7 +1483,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Papyrus_Bodmer_VIII.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "domitilla-arcosolium",
@@ -350,7 +1523,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Arcosolium_(catacombe_di_Domitilla_).jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "chester-beatty-papyri",
@@ -388,7 +1564,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:P._Chester_Beatty_I,_folio_13-14,_recto.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "chi-rho-lamp-met",
@@ -425,7 +1604,10 @@
         "license": "CC0 (Met Open Access)",
         "license_url": "https://www.metmuseum.org/openaccess",
         "commons": "https://www.metmuseum.org/art/collection/search/447036"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "christ-helios-julii",
@@ -466,7 +1648,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:ChristAsSol.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "dura-europos-house-church",
@@ -512,7 +1697,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Dura_Europos_baptistry_overview.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "priscilla-fractio-panis",
@@ -554,7 +1742,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Catacombe_di_Priscilla,_Rome_-_Fresco_of_a_Christian_Agape_feast_-_Fractio_panis_-_Greek_chapel_-_2nd_-_4th_century.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "priscilla-good-shepherd",
@@ -595,7 +1786,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Good_shepherd_01.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "callixtus-good-shepherd",
@@ -617,7 +1811,7 @@
         "cyprian-unity",
         "shepherd"
       ],
-      "connect_why": "Callixtus is the cemetery named in third-century Roman church conflicts Deep Dive already covers.",
+      "connect_why": "Callixtus is the cemetery named in third-century Roman church conflicts Historic Writings already covers.",
       "sources": [
         {
           "label": "Catacombs",
@@ -632,7 +1826,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Jesus_as_the_Good_Shepherd,_Calixtus_Catacomb,_Crypt_of_Lucina,_from_the_from_the_book_Die_Malereien_der_Katakomben_Roms,_plate_35.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "abercius-inscription",
@@ -655,7 +1852,7 @@
         "1-corinthians-11",
         "ignatius"
       ],
-      "connect_why": "Deep Dive already includes the text; the stone is the thing itself in the Vatican.",
+      "connect_why": "Historic Writings already includes the text; the stone is the thing itself in the Vatican.",
       "sources": [
         {
           "label": "Vatican",
@@ -674,7 +1871,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Cippo_di_Abercio,_fine_II_-_inizi_III_sec._-FG1.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "livia-primitiva-slab",
@@ -711,7 +1911,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Plaque_du_sarcophage_de_Livia_Primitiva.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "megiddo-prayer-hall",
@@ -753,7 +1956,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Akeptous_Inscription_2.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "priscilla-orans",
@@ -790,7 +1996,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Consecrated_Virgin,_praying_with_Orans_position,_wearing_dalmatic,_tunic,_and_veil,_from_the_Catacomb_of_Priscilla,_3rd_century_AD_cropped.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "pectorius-inscription",
@@ -827,7 +2036,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Pectorios_Inscription.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "st-peters-necropolis",
@@ -865,7 +2077,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Model_of_costantinean_basilica_of_saint_Peter_in_the_vatican.jpg"
-      }
+      },
+      "deepdive_period": "p150-325",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "aquileia-mosaics",
@@ -902,7 +2117,10 @@
         "license": "Attribution (Giovanni Dall’Orto)",
         "license_url": "https://commons.wikimedia.org/wiki/File:Aquileia,_Basilica._Foto_Giovanni_Dall'Orto4.jpg",
         "commons": "https://commons.wikimedia.org/wiki/File:Aquileia,_Basilica._Foto_Giovanni_Dall'Orto4.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "holy-sepulchre",
@@ -924,7 +2142,7 @@
         "cyril-mystagogical",
         "eusebius-constantine"
       ],
-      "connect_why": "Primary Deep Dive pilgrimage and mystagogy texts become places underfoot.",
+      "connect_why": "Primary Historic Writings pilgrimage and mystagogy texts become places underfoot.",
       "sources": [
         {
           "label": "Commons",
@@ -939,7 +2157,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Holy_Sepulchre.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "church-of-nativity",
@@ -976,7 +2197,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "codex-sinaiticus",
@@ -1017,7 +2241,10 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "commons": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "codex-vaticanus",
@@ -1054,7 +2281,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "dogmatic-sarcophagus",
@@ -1091,7 +2321,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Dogmatic_sarcophagus.JPG"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "gold-glass-christ-crowns",
@@ -1102,7 +2335,7 @@
       "date_note": "Met 11.91.4 Open Access.",
       "found": "Rome area (typical)",
       "now": "Metropolitan Museum of Art",
-      "line": "Christ hands martyr crowns to Peter and Paul. A toast to the apostles who Deep Dive readers meet in the earliest letters.",
+      "line": "Christ hands martyr crowns to Peter and Paul. A toast to the apostles who Historic Writings readers meet in the earliest letters.",
       "evidence": {
         "shows": "Mid-4th-century Roman glass pictured Christ honoring the two apostles.",
         "infer": "Cult of Peter and Paul in Rome after the Constantinian peace.",
@@ -1128,7 +2361,10 @@
         "license": "CC0 (Met Open Access)",
         "license_url": "https://www.metmuseum.org/openaccess",
         "commons": "https://www.metmuseum.org/art/collection/search/463547"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "gold-glass-peter-paul",
@@ -1151,7 +2387,7 @@
         "galatians-2",
         "leo-tome"
       ],
-      "connect_why": "Peter and Paul from the earliest Deep Dive letters, toasted on glass a few centuries later.",
+      "connect_why": "Peter and Paul from the earliest Historic Writings letters, toasted on glass a few centuries later.",
       "sources": [
         {
           "label": "The Met",
@@ -1166,7 +2402,10 @@
         "license": "CC0 (Met Open Access)",
         "license_url": "https://www.metmuseum.org/openaccess",
         "commons": "https://www.metmuseum.org/art/collection/search/463714"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "hagia-sophia",
@@ -1203,7 +2442,10 @@
         "license": "CC BY-SA 3.0",
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "hinton-st-mary",
@@ -1243,7 +2485,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Hinton_St_Mary_Mosaic.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "lullingstone-chi-rho",
@@ -1279,7 +2524,10 @@
         "license": "CC BY 2.5",
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "commons": "https://commons.wikimedia.org/wiki/File:Lullingstone_paintings2.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "old-st-peters",
@@ -1316,7 +2564,10 @@
         "license": "Public domain",
         "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Model_of_costantinean_basilica_of_saint_Peter_in_the_vatican.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "pilgrim-ampulla",
@@ -1353,7 +2604,10 @@
         "license": "CC0 (Cleveland Museum of Art)",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
         "commons": "https://commons.wikimedia.org/wiki/File:Byzantium,_Palestine,_early_Byzantine_period,_early_7th_Century_-_Pilgrim's_Ampulla_with_Scenes_of_the_Crucifixion_(front)_and_the_Ascension_-_1999.46_-_Cleveland_Museum_of_Art.tif"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "ravenna-san-vitale",
@@ -1390,7 +2644,10 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Apse_mosaic_-_Basilica_of_San_Vitale_(Ravenna).jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "santa-sabina-doors",
@@ -1427,7 +2684,10 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "commons": "https://commons.wikimedia.org/wiki/File:Crucifixion-Christ-Church-Santa-Sabina-Rome-716123.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     },
     {
       "id": "junius-bassus-sarcophagus",
@@ -1464,7 +2724,10 @@
         "license": "Attribution (Giovanni Dall’Orto)",
         "license_url": "https://commons.wikimedia.org/wiki/File:Sarcophagus_of_Junius_Bassus_-_Cast_in_Rome.jpg",
         "commons": "https://commons.wikimedia.org/wiki/File:Sarcophagus_of_Junius_Bassus_-_Cast_in_Rome.jpg"
-      }
+      },
+      "deepdive_period": "p325-1000",
+      "bible_refs": [],
+      "subgroup": null
     }
   ]
 }

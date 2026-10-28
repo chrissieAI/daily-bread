@@ -302,5 +302,197 @@
     "license_url": "https://www.metmuseum.org/openaccess",
     "credit": "The Metropolitan Museum of Art",
     "commons": "https://www.metmuseum.org/art/collection/search/463547"
+  },
+  {
+    "id": "merneptah-stele",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Merenptah_stele.jpg/960px-Merenptah_stele.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Alyssa Bivins",
+    "commons": "https://commons.wikimedia.org/wiki/File:Merenptah_stele.jpg"
+  },
+  {
+    "id": "gezer-calendar",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Gezer_calendar_close_up.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "oncenawhile",
+    "commons": "https://commons.wikimedia.org/wiki/File:Gezer_calendar_close_up.jpg"
+  },
+  {
+    "id": "qeiyafa-ostracon",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Khirbet_Qeiyafa_Ostracon.jpg/960px-Khirbet_Qeiyafa_Ostracon.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "MichaelNetzer",
+    "commons": "https://commons.wikimedia.org/wiki/File:Khirbet_Qeiyafa_Ostracon.jpg"
+  },
+  {
+    "id": "tel-dan-stele",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/JRSLM_300116_Tel_Dan_Stele_02.jpg/960px-JRSLM_300116_Tel_Dan_Stele_02.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Oren Rozen",
+    "commons": "https://commons.wikimedia.org/wiki/File:JRSLM_300116_Tel_Dan_Stele_02.jpg"
+  },
+  {
+    "id": "mesha-stele",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Mesha_stele_%28Louvre%2C_AO_5066%29.jpg/960px-Mesha_stele_%28Louvre%2C_AO_5066%29.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "credit": "Tangopaso",
+    "commons": "https://commons.wikimedia.org/wiki/File:Mesha_stele_(Louvre,_AO_5066).jpg"
+  },
+  {
+    "id": "black-obelisk",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Jehu_of_the_House_of_Omri_bows_before_the_Assyrian_king_Shalmaneser_III%2C_The_Black_Obelisk..JPG/960px-Jehu_of_the_House_of_Omri_bows_before_the_Assyrian_king_Shalmaneser_III%2C_The_Black_Obelisk..JPG",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+    "commons": "https://commons.wikimedia.org/wiki/File:Jehu_of_the_House_of_Omri_bows_before_the_Assyrian_king_Shalmaneser_III,_The_Black_Obelisk..JPG"
+  },
+  {
+    "id": "kuntillet-ajrud",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Pithosbfigs.jpg/960px-Pithosbfigs.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Temerarius",
+    "commons": "https://commons.wikimedia.org/wiki/File:Pithosbfigs.jpg"
+  },
+  {
+    "id": "lachish-reliefs",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Lachish_Relief%2C_British_Museum.jpg/960px-Lachish_Relief%2C_British_Museum.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Photograph by Mike Peel (www.mikepeel.net).",
+    "commons": "https://commons.wikimedia.org/wiki/File:Lachish_Relief,_British_Museum.jpg"
+  },
+  {
+    "id": "taylor-prism",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Taylor_Prism-1.jpg/960px-Taylor_Prism-1.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "credit": "This image was produced by me, David Castor (user:dcastor). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you t",
+    "commons": "https://commons.wikimedia.org/wiki/File:Taylor_Prism-1.jpg"
+  },
+  {
+    "id": "siloam-inscription",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Siloam_inscription.jpg/960px-Siloam_inscription.jpg",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "credit": "oncenawhile",
+    "commons": "https://commons.wikimedia.org/wiki/File:Siloam_inscription.jpg"
+  },
+  {
+    "id": "hezekiah-tunnel",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Hezekiah%27s_Tunnel_enlightened.jpg/960px-Hezekiah%27s_Tunnel_enlightened.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Davidbena",
+    "commons": "https://commons.wikimedia.org/wiki/File:Hezekiah%27s_Tunnel_enlightened.jpg"
+  },
+  {
+    "id": "ketef-hinnom",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Ketef_hinom_scrolls.JPG/960px-Ketef_hinom_scrolls.JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Bachrach44",
+    "commons": "https://commons.wikimedia.org/wiki/File:Ketef_hinom_scrolls.JPG"
+  },
+  {
+    "id": "hezekiah-bulla",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/%D7%98%D7%91%D7%99%D7%A2%D7%AA_%D7%97%D7%95%D7%AA%D7%9D_%D7%94%D7%9E%D7%9C%D7%9A_%D7%97%D7%96%D7%A7%D7%99%D7%94%D7%95.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Tamir Zegman",
+    "commons": "https://commons.wikimedia.org/wiki/File:%D7%98%D7%91%D7%99%D7%A2%D7%AA_%D7%97%D7%95%D7%AA%D7%9D_%D7%94%D7%9E%D7%9C%D7%9A_%D7%97%D7%96%D7%A7%D7%99%D7%94%D7%95.jpg"
+  },
+  {
+    "id": "babylonian-chronicle",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim%2C_king_of_Judah%2C_in_597_BCE._From_Babylon%2C_Iraq.jpg/960px-The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim%2C_king_of_Judah%2C_in_597_BCE._From_Babylon%2C_Iraq.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+    "commons": "https://commons.wikimedia.org/wiki/File:The_cuneiform_inscription_highlights_the_conquest_of_Jerusalem_and_the_surrender_of_Jehoiakim,_king_of_Judah,_in_597_BCE._From_Babylon,_Iraq.jpg"
+  },
+  {
+    "id": "jehoiachin-ration",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Jehoiachin_Ration_Tablet.JPG/960px-Jehoiachin_Ration_Tablet.JPG",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Scallaham",
+    "commons": "https://commons.wikimedia.org/wiki/File:Jehoiachin_Ration_Tablet.JPG"
+  },
+  {
+    "id": "ishtar-gate",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Ishtar_Gate_at_Berlin_Museum.jpg/960px-Ishtar_Gate_at_Berlin_Museum.jpg",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "credit": "Rictor Norton",
+    "commons": "https://commons.wikimedia.org/wiki/File:Ishtar_Gate_at_Berlin_Museum.jpg"
+  },
+  {
+    "id": "cyrus-cylinder",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Cyrus_Cylinder.jpg/960px-Cyrus_Cylinder.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Photograph by Mike Peel (www.mikepeel.net). Modifications by مانفی",
+    "commons": "https://commons.wikimedia.org/wiki/File:Cyrus_Cylinder.jpg"
+  },
+  {
+    "id": "elephantine-papyri",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Ananiah_Gives_Yehoishema_a_House%2C_Marh_10%2C_402_B.C.E%2C_47.218.88.jpg/960px-Ananiah_Gives_Yehoishema_a_House%2C_Marh_10%2C_402_B.C.E%2C_47.218.88.jpg",
+    "license": "No restrictions",
+    "license_url": "",
+    "credit": "Charles Edwin Wilbour",
+    "commons": "https://commons.wikimedia.org/wiki/File:Ananiah_Gives_Yehoishema_a_House,_Marh_10,_402_B.C.E,_47.218.88.jpg"
+  },
+  {
+    "id": "nash-papyrus",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Papyrus_Nash.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "credit": "unknown, uploaded Daniel.baranek",
+    "commons": "https://commons.wikimedia.org/wiki/File:Papyrus_Nash.jpg"
+  },
+  {
+    "id": "isaiah-scroll",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/The_Great_Isaiah_Scroll_MS_A_%281QIsa%29_-_Google_Art_Project.jpg/960px-The_Great_Isaiah_Scroll_MS_A_%281QIsa%29_-_Google_Art_Project.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "credit": "Unknown artistUnknown artist",
+    "commons": "https://commons.wikimedia.org/wiki/File:The_Great_Isaiah_Scroll_MS_A_(1QIsa)_-_Google_Art_Project.jpg"
+  },
+  {
+    "id": "herodian-stones",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/The_Western_Wall_%283703120008%29.jpg/960px-The_Western_Wall_%283703120008%29.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "credit": "Ian Scott",
+    "commons": "https://commons.wikimedia.org/wiki/File:The_Western_Wall_(3703120008).jpg"
+  },
+  {
+    "id": "trumpeting-place",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/To_the_trumpeting_place.jpg",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "credit": "Wikimedia Commons",
+    "commons": "https://commons.wikimedia.org/wiki/File:To_the_trumpeting_place.jpg"
+  },
+  {
+    "id": "magdala-stone",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Magdala_Stone.jpg/960px-Magdala_Stone.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Hanay",
+    "commons": "https://commons.wikimedia.org/wiki/File:Magdala_Stone.jpg"
+  },
+  {
+    "id": "arch-titus",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Arch_of_Titus_Menorah.png/960px-Arch_of_Titus_Menorah.png",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "credit": "derivative work: Steerpike (talk)\nArc_de_Triumph_copy.jpg: user: בית השלום",
+    "commons": "https://commons.wikimedia.org/wiki/File:Arch_of_Titus_Menorah.png"
   }
 ]

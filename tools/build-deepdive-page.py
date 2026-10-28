@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Build the static, no-JavaScript Deep Dive page from data/deepdive.json
-and data/discovery.json.
+"""Build the static, no-JavaScript Historic Writings page from data/deepdive.json
+(and data/discovery.json for cross-links into Archaeology Finds).
 
 Writes deep-dive/index.html (served at /daily-bread/deep-dive/). The page shows the same
-periods, items, Discovery finds and links as the in-app Deep Dive overlay, as plain HTML
-that crawlers and readers without JavaScript can see. Links only for writings: the 'expect'
-phrases are not included. Discovery images are local files under art/discovery/.
+periods and writings as the in-app Historic Writings overlay, as plain HTML that crawlers
+and readers without JavaScript can see. Links only for writings: the 'expect' phrases are
+not included. Archaeology finds live on /archaeology/; this page links out with
+"See what they left behind".
 
 Usage:
   python3 tools/build-deepdive-page.py           write deep-dive/index.html
@@ -324,7 +325,7 @@ def render(data, disc=None):
     w('<meta charset="utf-8">')
     w('<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">')
     w('<meta name="theme-color" content="#f7f2e8">')
-    w('<title>Deep Dive: Chronological Reading Library | Daily Bread</title>')
+    w('<title>Historic Writings: Chronological Reading Library | Daily Bread</title>')
     w('<meta name="description" content="%s">' % e(intro))
     w('<link rel="canonical" href="%s">' % CANONICAL)
     w('<link rel="manifest" href="../manifest.webmanifest">')
@@ -339,24 +340,22 @@ def render(data, disc=None):
     w('  <div class="band" aria-hidden="true"></div>')
     w('  <header>')
     w('    <a class="brand" href="../">Daily Bread</a>')
-    w('    <a class="today-link" href="../">&lsaquo; Back to Daily Bread</a>')
+    w('    <span style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">')
+    w('      <a class="today-link" href="../">&lsaquo; Back to Daily Bread</a>')
+    w('      <a class="today-link" href="../archaeology/">Archaeology Finds</a>')
+    w('    </span>')
     w('  </header>')
     w('  <main>')
-    w('  <h1>Deep Dive</h1>')
+    w('  <h1>Historic Writings</h1>')
     if intro:
         w('  <p class="dd-intro">%s</p>' % e(intro))
     if disc is None:
         disc = {'items': []}
     if data.get('groups'):
         w('  <nav class="dd-jump" aria-label="Jump to period">')
-        if any(it.get('period') == 'gospel-world' for it in (disc.get('items') or [])):
-            w('    <a class="dd-chip" href="#dd-disc-gospel-world">Gospels world</a>')
         for g in data['groups']:
             w('    <a class="dd-chip" href="#dd-%s">%s</a>' % (e(g['id']), e(chip_label(g['title']))))
         w('  </nav>')
-    ctx = (disc.get('context') or {})
-    for line in render_discovery_block(disc, 'gospel-world', ctx.get('title') or 'The world of the Gospels', ctx.get('note') or '', 'dd-disc-ctx'):
-        w(line)
     for g in data['groups']:
         w('  <section class="dd-group" id="dd-%s">' % e(g['id']))
         w('    <h2>%s</h2>' % e(g['title']))
@@ -383,8 +382,6 @@ def render(data, disc=None):
             if ev.get('unknown'):
                 w('      <p><strong>Still unknown:</strong> %s</p>' % e(ev['unknown']))
             w('    </div>')
-        for line in render_discovery_block(disc, g['id'], 'Discovery', 'Things people made or used in this period.'):
-            w(line)
         for it in g['items']:
             links = it['links']
             w('    <article class="dd-item" id="dd-%s">' % e(it['id']))
@@ -423,7 +420,7 @@ def render(data, disc=None):
                     w('      ' + link('dd-sec', ln))
             related = discovery_for_writing(disc, it['id'])
             if related:
-                w('      <a class="dd-leftbehind" href="#disc-%s">See what they left behind</a>' % e(related[0]['id']))
+                w('      <a class="dd-leftbehind" href="../archaeology/#disc-%s">See what they left behind</a>' % e(related[0]['id']))
             w('    </article>')
         w('    <p class="dd-backtop"><a href="#top">Back to top</a></p>')
         w('  </section>')
@@ -456,7 +453,7 @@ def is_fresh():
 def main(argv):
     if '--check' in argv:
         if is_fresh():
-            print('deep-dive/index.html is up to date with data/deepdive.json + data/discovery.json')
+            print('deep-dive/index.html is up to date with data/deepdive.json (+ discovery cross-links)')
             return 0
         print('FAIL  deep-dive/index.html is out of date: run python3 tools/build-deepdive-page.py')
         return 1

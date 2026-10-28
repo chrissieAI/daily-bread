@@ -1,6 +1,9 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261027h';
+  var APP_VERSION = '20261027i';
+  // User-visible section names — change here only.
+  var DD_LABEL = 'Historic Writings';
+  var ARCH_LABEL = 'Archaeology Finds';
   try { window.DB_APP_VERSION = APP_VERSION; window.DB_checkAppUpdate = null; } catch (e) {}
   var TZ = 'America/New_York';
   var COLORS = {
@@ -547,8 +550,8 @@
     .catch(function () { return {}; })
     .then(function (data) { prayers = (data && data.prayers) || []; if (current) renderPrayShort(current); });
 
-  // Deep Dive: links out only; no text from the works is stored.
-  // Discovery: archaeological finds tied to periods (data/discovery.json).
+  // Historic Writings (internal id: deepdive): links out only; no text from the works is stored.
+  // Archaeology Finds: data/discovery.json — own overlay + static /archaeology/.
   var deepdive = null;
   var discovery = null;
   function ddLink(cls, ln) {
@@ -648,7 +651,28 @@
       return (it.connects_to || []).indexOf(wid) >= 0;
     });
   }
-  function renderDiscoveryCard(it) {
+  function ensureDiscovery() {
+    if (discovery && discovery.items) return Promise.resolve(discovery);
+    return fetch('data/discovery.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (disc) {
+        if (disc && disc.items) discovery = disc;
+        return discovery;
+      });
+  }
+  function ensureDeepDive() {
+    if (deepdive && deepdive.groups) return Promise.resolve(deepdive);
+    return fetch('data/deepdive.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (data) {
+        if (data && data.groups) deepdive = data;
+        return deepdive;
+      });
+  }
+  function renderDiscoveryCard(it, opts) {
+    opts = opts || {};
     var card = el('article', 'dd-disc-card');
     card.id = 'disc-' + it.id;
     var fig = el('figure', 'dd-disc-fig');
@@ -693,6 +717,9 @@
       if (it.now) meta.appendChild(document.createTextNode('Now: ' + it.now));
       card.appendChild(meta);
     }
+    if (it.bible_refs && it.bible_refs.length) {
+      card.appendChild(el('p', 'dd-disc-refs', 'Bible: ' + it.bible_refs.join('; ')));
+    }
     if (it.evidence && (it.evidence.shows || it.evidence.infer || it.evidence.debated)) {
       var ev = document.createElement('details');
       ev.className = 'dd-disc-ev';
@@ -730,39 +757,39 @@
       });
       card.appendChild(srcRow);
     }
+    // Cross-link into Historic Writings
+    if (opts.withWriteLink) {
+      var connects = it.connects_to || [];
+      var ddPeriod = it.deepdive_period;
+      var target = connects.length ? ('dd-' + connects[0]) : (ddPeriod ? ('dd-' + ddPeriod) : null);
+      if (target) {
+        var wl = el('a', 'dd-writelink', 'Read the writings from this time');
+        wl.href = 'deep-dive/#' + target;
+        wl.addEventListener('click', function (e) {
+          if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          closeArchaeology();
+          openDeepDive(function () {
+            var t = document.getElementById(target);
+            if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+        card.appendChild(wl);
+      }
+    }
     return card;
-  }
-  function renderDiscoveryBlock(periodId, titleOverride, noteOverride, extraClass) {
-    var by = discoveryByPeriod();
-    var list = by[periodId] || [];
-    if (!list.length) return null;
-    var box = el('div', 'dd-disc' + (extraClass ? ' ' + extraClass : ''));
-    box.id = 'dd-disc-' + periodId;
-    box.appendChild(el('p', 'dd-disc-head', titleOverride || 'Discovery'));
-    if (noteOverride) box.appendChild(el('p', 'dd-disc-note', noteOverride));
-    list.forEach(function (it) { box.appendChild(renderDiscoveryCard(it)); });
-    return box;
   }
   function renderDeepDive() {
     var box = $('ddList');
     if (!deepdive) return;
     box.textContent = '';
     $('ddIntro').textContent = deepdive.intro || '';
+    var titleEl = $('ddTitle');
+    if (titleEl) titleEl.textContent = DD_LABEL;
 
-    // Period jump chips
     if (deepdive.groups && deepdive.groups.length) {
       var jump = el('nav', 'dd-jump');
       jump.setAttribute('aria-label', 'Jump to period');
-      if (discovery && (discoveryByPeriod()['gospel-world'] || []).length) {
-        var ca = el('a', 'dd-chip', 'Gospels world');
-        ca.href = '#dd-disc-gospel-world';
-        ca.addEventListener('click', function (e) {
-          e.preventDefault();
-          var t = document.getElementById('dd-disc-gospel-world');
-          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-        jump.appendChild(ca);
-      }
       deepdive.groups.forEach(function (g) {
         var a = el('a', 'dd-chip', g.title.split('\u00b7')[0].trim());
         a.href = '#dd-' + g.id;
@@ -774,17 +801,6 @@
         jump.appendChild(a);
       });
       box.appendChild(jump);
-    }
-
-    // Gospel-world context strip (not Christian artifacts)
-    if (discovery && discovery.context) {
-      var ctx = renderDiscoveryBlock(
-        'gospel-world',
-        discovery.context.title || 'The world of the Gospels',
-        discovery.context.note || '',
-        'dd-disc-ctx'
-      );
-      if (ctx) box.appendChild(ctx);
     }
 
     deepdive.groups.forEach(function (g) {
@@ -834,10 +850,6 @@
         sec.appendChild(ev);
       }
 
-      // Discovery for this Deep Dive period (after evidence, before writings)
-      var discBlock = renderDiscoveryBlock(g.id, 'Discovery', 'Things people made or used in this period.');
-      if (discBlock) sec.appendChild(discBlock);
-
       g.items.forEach(function (it) {
         var c = el('article', 'dd-item');
         c.id = 'dd-' + it.id;
@@ -872,21 +884,24 @@
         it.links.forEach(function (l) {
           if (l.kind === 'secondary') c.appendChild(ddLink('dd-sec', l));
         });
-        // Quiet Discovery jump from related writings
+        // Quiet jump into Archaeology Finds for related artifacts
         var related = discoveryLinksForWriting(it.id);
         if (related.length) {
           var first = related[0];
           var jump = el('a', 'dd-leftbehind', 'See what they left behind');
-          jump.href = '#disc-' + first.id;
+          jump.href = 'archaeology/#disc-' + first.id;
           jump.addEventListener('click', function (e) {
+            if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
             e.preventDefault();
-            var t = document.getElementById('disc-' + first.id);
-            if (t) {
-              // open evidence if present
-              var det = t.querySelector('.dd-disc-ev');
-              if (det) det.open = true;
-              t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+            closeDeepDive();
+            openArchaeology(function () {
+              var t = document.getElementById('disc-' + first.id);
+              if (t) {
+                var det = t.querySelector('.dd-disc-ev');
+                if (det) det.open = true;
+                t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
           });
           c.appendChild(jump);
         }
@@ -897,67 +912,171 @@
     var d = deepdive.checked ? new Date(deepdive.checked + 'T12:00:00') : null;
     $('ddChecked').textContent = d ? 'Links checked ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.' : '';
   }
+  function archChipLabel(title) {
+    var t = (title || '').split('\u00b7')[0].trim();
+    if (t.indexOf('Ancient Israel') === 0) return 'Ancient Israel';
+    if (t.indexOf('The world of the Gospels') === 0) return 'Gospels world';
+    return t;
+  }
+  function renderArchaeology() {
+    var box = $('archList');
+    if (!discovery) return;
+    box.textContent = '';
+    $('archIntro').textContent = discovery.intro || '';
+    var titleEl = $('archTitle');
+    if (titleEl) titleEl.textContent = (discovery.label || ARCH_LABEL);
+
+    var groups = discovery.groups || [];
+    var by = discoveryByPeriod();
+    if (groups.length) {
+      var jump = el('nav', 'dd-jump');
+      jump.setAttribute('aria-label', 'Jump to group');
+      groups.forEach(function (g) {
+        if (!(by[g.id] || []).length) return;
+        var a = el('a', 'dd-chip', archChipLabel(g.title));
+        a.href = '#arch-' + g.id;
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var t = document.getElementById('arch-' + g.id);
+          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        jump.appendChild(a);
+      });
+      box.appendChild(jump);
+    }
+    groups.forEach(function (g) {
+      var list = by[g.id] || [];
+      if (!list.length) return;
+      var sec = el('section', 'dd-group');
+      sec.id = 'arch-' + g.id;
+      sec.appendChild(el('h3', null, g.title));
+      if (g.note) sec.appendChild(el('p', 'dd-gnote', g.note));
+      var subgroups = g.subgroups || [];
+      if (subgroups.length) {
+        var bySub = {};
+        list.forEach(function (it) {
+          var sg = it.subgroup || '';
+          if (!bySub[sg]) bySub[sg] = [];
+          bySub[sg].push(it);
+        });
+        subgroups.forEach(function (sg) {
+          var subItems = bySub[sg.id] || [];
+          if (!subItems.length) return;
+          var sub = el('p', 'arch-sub', sg.title);
+          sub.id = 'arch-sub-' + sg.id;
+          sec.appendChild(sub);
+          subItems.forEach(function (it) {
+            sec.appendChild(renderDiscoveryCard(it, { withWriteLink: true }));
+          });
+        });
+      } else {
+        list.forEach(function (it) {
+          sec.appendChild(renderDiscoveryCard(it, { withWriteLink: true }));
+        });
+      }
+      box.appendChild(sec);
+    });
+    var d = discovery.checked ? new Date(discovery.checked + 'T12:00:00') : null;
+    $('archChecked').textContent = d ? 'Links checked ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.' : '';
+  }
 
   var ddRoot = $('deepdive');
+  var archRoot = $('archaeology');
   var ddTopBtn = $('ddTop');
   var DD_TOP_SHOW = 280;
   function ddPreferReducedMotion() {
     try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
   }
+  function activeOverlayRoot() {
+    if (archRoot && !archRoot.hidden) return archRoot;
+    if (ddRoot && !ddRoot.hidden) return ddRoot;
+    return null;
+  }
   function updateDdTopBtn() {
     if (!ddTopBtn) return;
-    if (ddRoot.hidden) { ddTopBtn.hidden = true; return; }
-    ddTopBtn.hidden = ddRoot.scrollTop < DD_TOP_SHOW;
+    var root = activeOverlayRoot();
+    if (!root) { ddTopBtn.hidden = true; return; }
+    ddTopBtn.hidden = root.scrollTop < DD_TOP_SHOW;
   }
-  function scrollDeepDiveTop() {
+  function scrollActiveOverlayTop() {
+    var root = activeOverlayRoot();
+    if (!root) return;
     var behavior = ddPreferReducedMotion() ? 'auto' : 'smooth';
-    if (typeof ddRoot.scrollTo === 'function') ddRoot.scrollTo({ top: 0, behavior: behavior });
-    else ddRoot.scrollTop = 0;
+    if (typeof root.scrollTo === 'function') root.scrollTo({ top: 0, behavior: behavior });
+    else root.scrollTop = 0;
   }
   if (ddTopBtn) {
-    ddTopBtn.addEventListener('click', function () { scrollDeepDiveTop(); });
+    ddTopBtn.addEventListener('click', function () { scrollActiveOverlayTop(); });
   }
   ddRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
+  if (archRoot) archRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
 
-  function openDeepDive() {
+  function openDeepDive(after) {
+    if (archRoot && !archRoot.hidden) closeArchaeology();
     ddRoot.hidden = false;
     document.body.style.overflow = 'hidden';
     ddRoot.scrollTop = 0;
     updateDdTopBtn();
-    if (deepdive && discovery) { renderDeepDive(); updateDdTopBtn(); return; }
-    var ddP = deepdive ? Promise.resolve(deepdive) : fetch('data/deepdive.json', { cache: 'no-cache' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .catch(function () { return null; });
-    var discP = discovery ? Promise.resolve(discovery) : fetch('data/discovery.json', { cache: 'no-cache' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .catch(function () { return null; });
-    Promise.all([ddP, discP]).then(function (pair) {
-      var data = pair[0], disc = pair[1];
-      if (data && data.groups) deepdive = data;
-      if (disc && disc.items) discovery = disc;
+    function done() {
       if (deepdive) renderDeepDive();
-      else $('ddList').textContent = 'Couldn\u2019t load the Deep Dive list. Check your connection and try again.';
+      else $('ddList').textContent = 'Couldn\u2019t load the Historic Writings list. Check your connection and try again.';
+      // leftbehind needs discovery for cross-links
       updateDdTopBtn();
-    });
+      if (typeof after === 'function') setTimeout(after, 40);
+    }
+    Promise.all([ensureDeepDive(), ensureDiscovery()]).then(done);
   }
   function closeDeepDive() {
     ddRoot.hidden = true;
-    document.body.style.overflow = '';
-    if (ddTopBtn) ddTopBtn.hidden = true;
+    if (!archRoot || archRoot.hidden) document.body.style.overflow = '';
+    updateDdTopBtn();
   }
-  // ddBtn is a real link to the static page (deep-dive/) for crawlers and no-JS readers;
-  // with JS, a plain click opens the overlay instead. Modified clicks (new tab etc.) still follow the link.
+  function openArchaeology(after) {
+    if (!archRoot) return;
+    if (!ddRoot.hidden) closeDeepDive();
+    archRoot.hidden = false;
+    document.body.style.overflow = 'hidden';
+    archRoot.scrollTop = 0;
+    updateDdTopBtn();
+    ensureDiscovery().then(function () {
+      if (discovery) renderArchaeology();
+      else $('archList').textContent = 'Couldn\u2019t load Archaeology Finds. Check your connection and try again.';
+      updateDdTopBtn();
+      if (typeof after === 'function') setTimeout(after, 40);
+    });
+  }
+  function closeArchaeology() {
+    if (!archRoot) return;
+    archRoot.hidden = true;
+    if (ddRoot.hidden) document.body.style.overflow = '';
+    updateDdTopBtn();
+  }
+  // ddBtn / archBtn are real links to static pages for crawlers and no-JS readers;
+  // with JS, a plain click opens the overlay. Modified clicks still follow the link.
   $('ddBtn').addEventListener('click', function (e) {
     if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     openDeepDive();
   });
   $('ddBtn').addEventListener('keydown', function (e) {
-    if (e.key === ' ') { e.preventDefault(); openDeepDive(); } // Space works like it did on the old <button>
+    if (e.key === ' ') { e.preventDefault(); openDeepDive(); }
   });
   $('ddClose').addEventListener('click', closeDeepDive);
+  if ($('archBtn')) {
+    $('archBtn').addEventListener('click', function (e) {
+      if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      openArchaeology();
+    });
+    $('archBtn').addEventListener('keydown', function (e) {
+      if (e.key === ' ') { e.preventDefault(); openArchaeology(); }
+    });
+  }
+  if ($('archClose')) $('archClose').addEventListener('click', closeArchaeology);
+  if ($('ddBtn')) $('ddBtn').textContent = DD_LABEL;
+  if ($('archBtn')) $('archBtn').textContent = ARCH_LABEL;
 
-  $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
+    $('prev').addEventListener('click', function () { location.hash = addDays(current, -1); });
   $('next').addEventListener('click', function () { location.hash = addDays(current, 1); });
   $('todayBtn').addEventListener('click', function () {
     history.replaceState(null, '', location.pathname + location.search);
@@ -968,8 +1087,8 @@
     show(isoFromHash() || current || todayISO());
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); else if (!$('prayers').hidden) closePrayers(); else if (!$('deepdive').hidden) closeDeepDive(); return; }
-    if (!$('lightbox').hidden || !$('favs').hidden || !$('prayers').hidden || !$('deepdive').hidden) return;
+    if (e.key === 'Escape') { if (!$('lightbox').hidden) closeLightbox(); else if (!$('favs').hidden) closeFavs(); else if (!$('prayers').hidden) closePrayers(); else if (archRoot && !archRoot.hidden) closeArchaeology(); else if (!$('deepdive').hidden) closeDeepDive(); return; }
+    if (!$('lightbox').hidden || !$('favs').hidden || !$('prayers').hidden || !$('deepdive').hidden || (archRoot && !archRoot.hidden)) return;
     if (e.key === 'ArrowLeft') $('prev').click();
     if (e.key === 'ArrowRight') $('next').click();
   });
