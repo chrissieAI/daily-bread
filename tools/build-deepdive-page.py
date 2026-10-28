@@ -68,6 +68,28 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
 .dd-parts a{font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;border:1px solid var(--bd);background:#fff;border-radius:999px;padding:5px 10px}
 .dd-item .dd-parts{margin-top:8px}
 .dd-sec{display:table;margin-top:10px;font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+
+.dd-fun{margin:10px 0 6px;padding:8px 12px;background:rgba(46,125,50,.05);border:1px solid var(--bd);border-radius:10px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-fun summary{cursor:pointer;font-weight:600;color:var(--accent-ink)}
+.dd-fun-list{margin:8px 0 0;padding:0;list-style:none}
+.dd-fun-list li{margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--bd)}
+.dd-fun-list li:last-child{margin:0;padding:0;border:0}
+.dd-fun-title{font:700 13px/1.35 Georgia,"Times New Roman",serif;color:var(--tx)}
+.dd-fun-detail{margin:3px 0 0;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-fun-srcs{margin:3px 0 0;font:11px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.dd-fun-srcs a{color:var(--accent-ink);text-decoration:none}
+.dd-meanwhile{margin:8px 0 6px;padding:6px 10px 8px;background:rgba(46,125,50,.04);border:1px solid var(--bd);border-radius:10px;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);max-width:100%;overflow:hidden}
+.dd-meanwhile summary{cursor:pointer;font-weight:600;color:var(--accent-ink)}
+.dd-meanwhile-scroll{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;margin:8px 0 2px;padding-bottom:4px;scroll-snap-type:x proximity;max-width:100%}
+.dd-meanwhile-card{flex:0 0 auto;width:min(220px,72vw);scroll-snap-align:start;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 10px}
+.dd-meanwhile-top{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:0 0 4px}
+.dd-meanwhile-date{font:700 11px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);letter-spacing:.02em}
+.dd-meanwhile-text{margin:0;font:12px/1.4 Georgia,"Times New Roman",serif;color:var(--tx)}
+.dd-meanwhile-src{display:inline-block;margin-top:5px;font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none}
+.dd-item-mw{margin:2px 0 8px;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-item-mw-ico{font-size:11px;opacity:.7}
+.dd-item-mw-src{font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;white-space:nowrap}
+.dd-legend{display:inline-block;font:600 10px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#5a6b5c;background:rgba(46,125,50,.08);border:1px solid rgba(46,125,50,.22);border-radius:999px;padding:2px 6px;vertical-align:middle;letter-spacing:.03em;text-transform:lowercase}
 .dd-checked{margin:22px 0 0;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-align:center}
 .back-bottom{margin:18px 0 0;text-align:center}
 """
@@ -91,6 +113,77 @@ def link(cls, ln):
 
 def chip_label(title):
     return title.split('\u00b7')[0].strip() if '\u00b7' in title else title
+
+
+def legend_badge():
+    return '<span class="dd-legend" title="Legend — not verified history">legend</span>'
+
+
+def render_fun(fun):
+    if not fun:
+        return []
+    out = []
+    w = out.append
+    w('  <details class="dd-fun" id="dd-fun-overlaps">')
+    w('    <summary>Fun overlaps</summary>')
+    w('    <ul class="dd-fun-list">')
+    for f in fun:
+        w('      <li>')
+        title = e(f.get('title') or '')
+        if f.get('legend'):
+            w('        <span class="dd-fun-title">%s</span> %s' % (title, legend_badge()))
+        else:
+            w('        <span class="dd-fun-title">%s</span>' % title)
+        if f.get('detail'):
+            w('        <p class="dd-fun-detail">%s</p>' % e(f['detail']))
+        srcs = f.get('sources') or ([f['source']] if f.get('source') else [])
+        if srcs:
+            links = ' · '.join(
+                '<a href="%s" target="_blank" rel="noopener">source</a>' % e(u) for u in srcs)
+            w('        <p class="dd-fun-srcs">%s</p>' % links)
+        w('      </li>')
+    w('    </ul>')
+    w('  </details>')
+    return out
+
+
+def render_meanwhile(entries):
+    if not entries:
+        return []
+    out = []
+    w = out.append
+    w('    <details class="dd-meanwhile">')
+    w('      <summary>Meanwhile in the world</summary>')
+    w('      <div class="dd-meanwhile-scroll">')
+    for ent in entries:
+        w('        <div class="dd-meanwhile-card">')
+        w('          <div class="dd-meanwhile-top">')
+        w('            <span class="dd-meanwhile-date">%s</span>' % e(ent.get('date') or ''))
+        if ent.get('legend'):
+            w('            ' + legend_badge())
+        w('          </div>')
+        w('          <p class="dd-meanwhile-text">%s</p>' % e(ent.get('text') or ''))
+        if ent.get('source'):
+            w('          <a class="dd-meanwhile-src" href="%s" target="_blank" rel="noopener">source</a>' % e(ent['source']))
+        w('        </div>')
+    w('      </div>')
+    w('    </details>')
+    return out
+
+
+def render_item_meanwhile(mw):
+    if not mw or not mw.get('text'):
+        return []
+    parts = ['    <p class="dd-item-mw"><span class="dd-item-mw-ico" aria-hidden="true">🌍</span> ',
+             e(mw['text'])]
+    line = ''.join(parts)
+    if mw.get('legend'):
+        line += ' ' + legend_badge()
+    if mw.get('source'):
+        line += ' <a class="dd-item-mw-src" href="%s" target="_blank" rel="noopener">source</a>' % e(mw['source'])
+    line += '</p>'
+    return [line]
+
 
 
 def render(data):
@@ -125,6 +218,8 @@ def render(data):
     w('  <h1>Deep Dive</h1>')
     if intro:
         w('  <p class="dd-intro">%s</p>' % e(intro))
+    for line in render_fun(data.get('fun_overlaps') or []):
+        w(line)
     if data.get('groups'):
         w('  <nav class="dd-jump" aria-label="Jump to period">')
         for g in data['groups']:
@@ -144,6 +239,8 @@ def render(data):
             w('    </details>')
         if g.get('note'):
             w('    <p class="dd-gnote">%s</p>' % e(g['note']))
+        for line in render_meanwhile(g.get('meanwhile') or []):
+            w(line)
         ev = g.get('evidence') or {}
         if ev:
             w('    <div class="dd-evidence">')
@@ -172,6 +269,8 @@ def render(data):
                     w('        </details>')
                 w('      </div>')
             w('      <p class="dd-line">%s</p>' % e(it['line']))
+            for line in render_item_meanwhile(it.get('meanwhile')):
+                w(line)
             if it.get('flag'):
                 w('      <p class="dd-flag">%s</p>' % e(it['flag']))
             for ln in links:

@@ -171,6 +171,27 @@ header{flex-wrap:wrap;row-gap:10px}
 .dd-parts a{font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;border:1px solid var(--bd);background:#fff;border-radius:999px;padding:5px 10px}
 .dd-item .dd-parts{margin-top:8px}
 .dd-sec{display:table;margin-top:10px;font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-fun{margin:10px 0 6px;padding:8px 12px;background:rgba(46,125,50,.05);border:1px solid var(--bd);border-radius:10px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-fun summary{cursor:pointer;font-weight:600;color:var(--accent-ink);list-style-position:inside}
+.dd-fun-list{margin:8px 0 0;padding:0;list-style:none}
+.dd-fun-list li{margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--bd)}
+.dd-fun-list li:last-child{margin:0;padding:0;border:0}
+.dd-fun-title{font:700 13px/1.35 Georgia,"Times New Roman",serif;color:var(--tx)}
+.dd-fun-detail{margin:3px 0 0;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-fun-srcs{margin:3px 0 0;font:11px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.dd-fun-srcs a{color:var(--accent-ink);text-decoration:none}
+.dd-meanwhile{margin:8px 0 6px;padding:6px 10px 8px;background:rgba(46,125,50,.04);border:1px solid var(--bd);border-radius:10px;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);max-width:100%;overflow:hidden}
+.dd-meanwhile summary{cursor:pointer;font-weight:600;color:var(--accent-ink);list-style-position:inside}
+.dd-meanwhile-scroll{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;margin:8px 0 2px;padding-bottom:4px;scroll-snap-type:x proximity;max-width:100%}
+.dd-meanwhile-card{flex:0 0 auto;width:min(220px,72vw);scroll-snap-align:start;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 10px}
+.dd-meanwhile-top{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:0 0 4px}
+.dd-meanwhile-date{font:700 11px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);letter-spacing:.02em}
+.dd-meanwhile-text{margin:0;font:12px/1.4 Georgia,"Times New Roman",serif;color:var(--tx)}
+.dd-meanwhile-src{display:inline-block;margin-top:5px;font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none}
+.dd-item-mw{margin:2px 0 8px;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-item-mw-ico{font-size:11px;opacity:.7}
+.dd-item-mw-src{font:600 11px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;white-space:nowrap}
+.dd-legend{display:inline-block;font:600 10px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#5a6b5c;background:rgba(46,125,50,.08);border:1px solid rgba(46,125,50,.22);border-radius:999px;padding:2px 6px;vertical-align:middle;letter-spacing:.03em;text-transform:lowercase}
 .dd-checked{margin:22px 0 0;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-align:center}
 </style>
 </head>
@@ -324,6 +345,6 @@ header{flex-wrap:wrap;row-gap:10px}
 </div>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js?v=20261027c"></script>
+<script src="app.js?v=20261027d"></script>
 </body>
 </html>

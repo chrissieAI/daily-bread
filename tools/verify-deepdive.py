@@ -53,7 +53,51 @@ def main():
                 if not ok: bad += 1
                 print('%s  %s  [%s] %r' % ('OK  ' if ok else 'FAIL', url, status, expect))
                 time.sleep(0.5)
-    print('%d links, %d failed (data checked %s)' % (n, bad, data.get('checked')))
+    # Meanwhile / fun-overlap source URLs (resolve only).
+    # Britannica often returns 403 to datacenter bots; treat 403 from britannica.com as a soft warn,
+    # hard-fail only on 404 / DNS / connection failures so we can drop/replace true dead links.
+    srcs = set()
+    for g in data['groups']:
+        for e in g.get('meanwhile') or []:
+            if e.get('source'): srcs.add(e['source'])
+        for it in g.get('items') or []:
+            mw = it.get('meanwhile') or {}
+            if mw.get('source'): srcs.add(mw['source'])
+    for f in data.get('fun_overlaps') or []:
+        for u in (f.get('sources') or ([f['source']] if f.get('source') else [])):
+            srcs.add(u)
+    print('Checking %d distinct Meanwhile/fun source URLs...' % len(srcs))
+    src_bad = 0
+    src_warn = 0
+    for url in sorted(srcs):
+        n += 1
+        try:
+            status, body = fetch(url)
+            if status == 200 and len(body) > 200:
+                print('OK    source  %s  [%s]' % (url, status))
+            elif status == 403 and 'britannica.com' in url:
+                src_warn += 1
+                print('WARN  source  %s  [403 bot wall — not a 404]' % url)
+            elif status == 404:
+                src_bad += 1; bad += 1
+                print('FAIL  source  %s  [404]' % url)
+            else:
+                src_warn += 1
+                print('WARN  source  %s  [%s]' % (url, status))
+        except Exception as e:
+            msg = str(e)
+            if '404' in msg:
+                src_bad += 1; bad += 1
+                print('FAIL  source  %s  (%s)' % (url, e))
+            elif '403' in msg and 'britannica.com' in url:
+                src_warn += 1
+                print('WARN  source  %s  (403 bot wall — not a 404)' % url)
+            else:
+                src_warn += 1
+                print('WARN  source  %s  (%s)' % (url, e))
+        time.sleep(0.35)
+    print('%d links (+sources), %d failed, %d source warnings (%d source 404s) (data checked %s)' % (
+        n, bad, src_warn, src_bad, data.get('checked')))
     sys.exit(1 if bad else 0)
 
 

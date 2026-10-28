@@ -518,11 +518,94 @@
     a.href = ln.url; a.target = '_blank'; a.rel = 'noopener';
     return a;
   }
+  function ddLegendBadge() {
+    var b = el('span', 'dd-legend', 'legend');
+    b.title = 'Legend — not verified history';
+    return b;
+  }
+  function ddMeanwhileStrip(entries) {
+    if (!entries || !entries.length) return null;
+    var det = document.createElement('details');
+    det.className = 'dd-meanwhile';
+    var sum = document.createElement('summary');
+    sum.textContent = 'Meanwhile in the world';
+    det.appendChild(sum);
+    var scroller = el('div', 'dd-meanwhile-scroll');
+    entries.forEach(function (e) {
+      var card = el('div', 'dd-meanwhile-card');
+      var top = el('div', 'dd-meanwhile-top');
+      top.appendChild(el('span', 'dd-meanwhile-date', e.date || ''));
+      if (e.legend) top.appendChild(ddLegendBadge());
+      card.appendChild(top);
+      card.appendChild(el('p', 'dd-meanwhile-text', e.text || ''));
+      if (e.source) {
+        var a = el('a', 'dd-meanwhile-src', 'source');
+        a.href = e.source; a.target = '_blank'; a.rel = 'noopener';
+        card.appendChild(a);
+      }
+      scroller.appendChild(card);
+    });
+    det.appendChild(scroller);
+    return det;
+  }
+  function ddItemMeanwhile(mw) {
+    if (!mw || !mw.text) return null;
+    var p = el('p', 'dd-item-mw');
+    var ico = el('span', 'dd-item-mw-ico', '\uD83C\uDF0D');
+    ico.setAttribute('aria-hidden', 'true');
+    p.appendChild(ico);
+    p.appendChild(document.createTextNode(' ' + mw.text + ' '));
+    if (mw.legend) p.appendChild(ddLegendBadge());
+    if (mw.source) {
+      var a = el('a', 'dd-item-mw-src', 'source');
+      a.href = mw.source; a.target = '_blank'; a.rel = 'noopener';
+      p.appendChild(document.createTextNode(' '));
+      p.appendChild(a);
+    }
+    return p;
+  }
+  function ddFunOverlaps(list) {
+    if (!list || !list.length) return null;
+    var det = document.createElement('details');
+    det.className = 'dd-fun';
+    det.id = 'dd-fun-overlaps';
+    var sum = document.createElement('summary');
+    sum.textContent = 'Fun overlaps';
+    det.appendChild(sum);
+    var ul = el('ul', 'dd-fun-list');
+    list.forEach(function (f) {
+      var li = document.createElement('li');
+      var t = el('span', 'dd-fun-title', f.title || '');
+      li.appendChild(t);
+      if (f.legend) {
+        li.appendChild(document.createTextNode(' '));
+        li.appendChild(ddLegendBadge());
+      }
+      li.appendChild(el('p', 'dd-fun-detail', f.detail || ''));
+      var srcs = f.sources || (f.source ? [f.source] : []);
+      if (srcs.length) {
+        var row = el('p', 'dd-fun-srcs');
+        srcs.forEach(function (u, i) {
+          if (i) row.appendChild(document.createTextNode(' · '));
+          var a = el('a', null, 'source');
+          a.href = u; a.target = '_blank'; a.rel = 'noopener';
+          row.appendChild(a);
+        });
+        li.appendChild(row);
+      }
+      ul.appendChild(li);
+    });
+    det.appendChild(ul);
+    return det;
+  }
   function renderDeepDive() {
     var box = $('ddList');
     if (!deepdive) return;
     box.textContent = '';
     $('ddIntro').textContent = deepdive.intro || '';
+
+    var fun = ddFunOverlaps(deepdive.fun_overlaps);
+    if (fun) box.appendChild(fun);
 
     // Period jump chips
     if (deepdive.groups && deepdive.groups.length) {
@@ -561,6 +644,9 @@
       }
 
       if (g.note) sec.appendChild(el('p', 'dd-gnote', g.note));
+
+      var strip = ddMeanwhileStrip(g.meanwhile);
+      if (strip) sec.appendChild(strip);
 
       if (g.evidence) {
         var ev = el('div', 'dd-evidence');
@@ -605,6 +691,8 @@
         }
         if (meta.childNodes.length) c.appendChild(meta);
         c.appendChild(el('p', 'dd-line', it.line));
+        var mwl = ddItemMeanwhile(it.meanwhile);
+        if (mwl) c.appendChild(mwl);
         if (it.flag) c.appendChild(el('p', 'dd-flag', it.flag));
         var parts = it.links.filter(function (l) { return l.kind === 'part'; });
         it.links.forEach(function (l) { if (l.kind === 'primary') c.appendChild(ddLink('review dd-primary', l)); });
