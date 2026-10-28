@@ -1,5 +1,7 @@
 (function () {
   'use strict';
+  var APP_VERSION = '20261027g';
+  try { window.DB_APP_VERSION = APP_VERSION; window.DB_checkAppUpdate = null; } catch (e) {}
   var TZ = 'America/New_York';
   var COLORS = {
     GREEN:  { swatch: '#2e7d32', accent: '#2e7d32', ink: '#2e7d32' },
@@ -16,6 +18,40 @@
   };
 
   var $ = function (id) { return document.getElementById(id); };
+
+  // Lightweight self-update for iOS standalone / sticky caches: compare live index.html's
+  // app.js?v= to APP_VERSION; one reload per target version (sessionStorage guard).
+  function checkAppUpdate() {
+    var url = 'index.html?_=' + Date.now();
+    fetch(url, { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+      .then(function (html) {
+        var m = /app\.js\?v=([0-9a-z]+)/.exec(html);
+        if (!m) return;
+        var remote = m[1];
+        if (remote === APP_VERSION) return;
+        var guard = 'db-reloaded-for-' + remote;
+        try {
+          if (sessionStorage.getItem(guard)) return;
+          sessionStorage.setItem(guard, '1');
+        } catch (e) { /* private mode etc. */ }
+        if (typeof window.DB_onReloadRequest === 'function') {
+          try { window.DB_onReloadRequest(remote); } catch (e2) {}
+          return;
+        }
+        location.reload();
+      })
+      .catch(function () { /* offline / blocked — ignore */ });
+  }
+  try { window.DB_checkAppUpdate = checkAppUpdate; } catch (e) {}
+  checkAppUpdate();
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') checkAppUpdate();
+  });
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) checkAppUpdate();
+  });
+
   var romcal = new Romcal.Romcal({ localizedCalendar: UnitedStates_En });
   var calCache = {};
   var readings = null;
