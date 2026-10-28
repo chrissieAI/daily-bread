@@ -706,22 +706,46 @@
     $('ddChecked').textContent = d ? 'Links checked ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) + '.' : '';
   }
 
+  var ddRoot = $('deepdive');
+  var ddTopBtn = $('ddTop');
+  var DD_TOP_SHOW = 280;
+  function ddPreferReducedMotion() {
+    try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
+  }
+  function updateDdTopBtn() {
+    if (!ddTopBtn) return;
+    if (ddRoot.hidden) { ddTopBtn.hidden = true; return; }
+    ddTopBtn.hidden = ddRoot.scrollTop < DD_TOP_SHOW;
+  }
+  function scrollDeepDiveTop() {
+    var behavior = ddPreferReducedMotion() ? 'auto' : 'smooth';
+    if (typeof ddRoot.scrollTo === 'function') ddRoot.scrollTo({ top: 0, behavior: behavior });
+    else ddRoot.scrollTop = 0;
+  }
+  if (ddTopBtn) {
+    ddTopBtn.addEventListener('click', function () { scrollDeepDiveTop(); });
+  }
+  ddRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
+
   function openDeepDive() {
-    $('deepdive').hidden = false;
+    ddRoot.hidden = false;
     document.body.style.overflow = 'hidden';
-    $('deepdive').scrollTop = 0;
-    if (deepdive) { renderDeepDive(); return; }
+    ddRoot.scrollTop = 0;
+    updateDdTopBtn();
+    if (deepdive) { renderDeepDive(); updateDdTopBtn(); return; }
     fetch('data/deepdive.json', { cache: 'no-cache' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .catch(function () { return null; })
       .then(function (data) {
         if (data && data.groups) { deepdive = data; renderDeepDive(); }
         else $('ddList').textContent = 'Couldn\u2019t load the Deep Dive list. Check your connection and try again.';
+        updateDdTopBtn();
       });
   }
   function closeDeepDive() {
-    $('deepdive').hidden = true;
+    ddRoot.hidden = true;
     document.body.style.overflow = '';
+    if (ddTopBtn) ddTopBtn.hidden = true;
   }
   // ddBtn is a real link to the static page (deep-dive/) for crawlers and no-JS readers;
   // with JS, a plain click opens the overlay instead. Modified clicks (new tab etc.) still follow the link.

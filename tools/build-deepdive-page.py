@@ -92,6 +92,8 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
 .dd-legend{display:inline-block;font:600 10px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#5a6b5c;background:rgba(46,125,50,.08);border:1px solid rgba(46,125,50,.22);border-radius:999px;padding:2px 6px;vertical-align:middle;letter-spacing:.03em;text-transform:lowercase}
 .dd-checked{margin:22px 0 0;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-align:center}
 .back-bottom{margin:18px 0 0;text-align:center}
+.dd-backtop{margin:10px 0 0;text-align:right;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.dd-backtop a{color:var(--accent-ink);text-decoration:none;border:1px solid var(--bd);background:var(--card);border-radius:999px;padding:5px 11px}
 """
 
 
@@ -202,7 +204,7 @@ def render(data):
     w('</style>')
     w('</head>')
     w('<body>')
-    w('<div class="wrap">')
+    w('<div class="wrap" id="top">')
     w('  <div class="band" aria-hidden="true"></div>')
     w('  <header>')
     w('    <a class="brand" href="../">Daily Bread</a>')
@@ -280,6 +282,7 @@ def render(data):
                 if ln['kind'] == 'secondary':
                     w('      ' + link('dd-sec', ln))
             w('    </article>')
+        w('    <p class="dd-backtop"><a href="#top">Back to top</a></p>')
         w('  </section>')
     ct = checked_text(data.get('checked'))
     if ct:
