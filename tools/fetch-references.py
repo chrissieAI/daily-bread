@@ -85,13 +85,49 @@ def parse_title(page):
     return clean(m.group(1)).replace("| USCCB", "").strip() if m else ""
 
 
+# USCCB sometimes glues a non-verse reference onto the heading when the
+# address block is empty, e.g. <h3>Alleluia See Te Deum</h3><div class="address">…</div>.
+# Split those so the row stays label + reference.
+_HEADING_BASE = (
+    r"Reading\s+\d+"
+    r"|Responsorial Psalm"
+    r"|Alleluia"
+    r"|Gospel"
+    r"|Sequence"
+    r"|Verse [Bb]efore the Gospel"
+)
+_HEADING_SPLIT = re.compile(r"^(" + _HEADING_BASE + r")\s+(.+)$", re.I)
+
+
+def normalize_citation(citation):
+    """Drop empty/junk address leftovers (broken USCCB <a> tags leave stray quotes)."""
+    citation = (citation or "").strip()
+    if not citation or re.fullmatch(r'[\s"\'>/\\]*', citation):
+        return ""
+    return citation
+
+
+def split_heading_citation(heading, citation):
+    """If USCCB put the reference in the heading, peel it into citation."""
+    heading = (heading or "").strip()
+    citation = normalize_citation(citation)
+    m = _HEADING_SPLIT.match(heading)
+    if not m:
+        return heading, citation
+    base, rest = m.group(1).strip(), m.group(2).strip()
+    if not citation and rest:
+        return base, rest
+    # Prefer a real address citation; still restore the clean label.
+    return base, citation or rest
+
+
 def parse_readings(page):
     """Return [{heading, citation}] from the page's reading blocks (no text)."""
     out = []
     for m in re.finditer(
         r'<h3 class="name">(.*?)</h3>\s*<div class="address">(.*?)</div>', page, re.S
     ):
-        heading, citation = clean(m.group(1)), clean(m.group(2))
+        heading, citation = split_heading_citation(clean(m.group(1)), clean(m.group(2)))
         if heading:
             # citation may be "" when USCCB lists none (e.g. some Alleluia verses)
             out.append({"heading": heading, "citation": citation})

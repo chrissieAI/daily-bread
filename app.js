@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261027k';
+  var APP_VERSION = '20261028a';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -163,9 +163,24 @@
     });
   }
 
+  // USCCB sometimes glues a non-verse ref onto the heading (e.g. "Alleluia See Te Deum")
+  // when the address block is empty. Split so the row stays label + reference.
+  var REF_HEADING_SPLIT = /^(Reading\s+\d+|Responsorial Psalm|Alleluia|Gospel|Sequence|Verse [Bb]efore the Gospel)\s+(.+)$/;
+  function normalizeRef(r) {
+    var h = (r && r.heading) || '';
+    var c = ((r && r.citation) || '').trim();
+    if (/^[\s"'>/\\]*$/.test(c)) c = '';
+    var m = REF_HEADING_SPLIT.exec(h);
+    if (m) {
+      h = m[1];
+      if (!c && m[2]) c = m[2].trim();
+    }
+    return { heading: h, citation: c };
+  }
   function refsList(list) {
     var ul = el('ul', 'refs');
     list.forEach(function (r) {
+      r = normalizeRef(r);
       var li = el('li');
       li.appendChild(el('span', 'h', r.heading));
       li.appendChild(el('span', 'c', r.citation || '\u2014'));
