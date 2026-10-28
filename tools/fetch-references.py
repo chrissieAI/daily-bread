@@ -107,18 +107,31 @@ def normalize_citation(citation):
     return citation
 
 
+_INCOMPLETE_REF = re.compile(r"^(See|Cf\.?)$", re.I)
+
+
+def finalize_citation(citation):
+    """Bare 'See' / 'Cf.' (USCCB truncated the heading) → 'See USCCB'. Keep 'See Te Deum' etc."""
+    citation = normalize_citation(citation)
+    if citation and _INCOMPLETE_REF.fullmatch(citation):
+        return "See USCCB"
+    return citation
+
+
 def split_heading_citation(heading, citation):
     """If USCCB put the reference in the heading, peel it into citation."""
     heading = (heading or "").strip()
     citation = normalize_citation(citation)
     m = _HEADING_SPLIT.match(heading)
     if not m:
-        return heading, citation
+        return heading, finalize_citation(citation)
     base, rest = m.group(1).strip(), m.group(2).strip()
     if not citation and rest:
-        return base, rest
+        citation = rest
+    else:
+        citation = citation or rest
     # Prefer a real address citation; still restore the clean label.
-    return base, citation or rest
+    return base, finalize_citation(citation)
 
 
 def parse_readings(page):

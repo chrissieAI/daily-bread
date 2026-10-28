@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261028a';
+  var APP_VERSION = '20261028b';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -165,7 +165,9 @@
 
   // USCCB sometimes glues a non-verse ref onto the heading (e.g. "Alleluia See Te Deum")
   // when the address block is empty. Split so the row stays label + reference.
+  // Bare "See" / "Cf." (truncated heading) → "See USCCB"; keep "See Te Deum" etc.
   var REF_HEADING_SPLIT = /^(Reading\s+\d+|Responsorial Psalm|Alleluia|Gospel|Sequence|Verse [Bb]efore the Gospel)\s+(.+)$/;
+  var REF_INCOMPLETE = /^(See|Cf\.?)$/i;
   function normalizeRef(r) {
     var h = (r && r.heading) || '';
     var c = ((r && r.citation) || '').trim();
@@ -175,15 +177,22 @@
       h = m[1];
       if (!c && m[2]) c = m[2].trim();
     }
+    if (c && REF_INCOMPLETE.test(c)) c = 'See USCCB';
     return { heading: h, citation: c };
   }
-  function refsList(list) {
+  function refsList(list, usccb) {
     var ul = el('ul', 'refs');
     list.forEach(function (r) {
       r = normalizeRef(r);
       var li = el('li');
       li.appendChild(el('span', 'h', r.heading));
-      li.appendChild(el('span', 'c', r.citation || '\u2014'));
+      if (r.citation === 'See USCCB' && usccb) {
+        var a = el('a', 'c', r.citation);
+        a.href = usccb; a.target = '_blank'; a.rel = 'noopener';
+        li.appendChild(a);
+      } else {
+        li.appendChild(el('span', 'c', r.citation || '\u2014'));
+      }
       ul.appendChild(li);
     });
     return ul;
@@ -198,10 +207,11 @@
       body.appendChild(el('p', 'note', 'References for this date aren\u2019t saved in the app yet. Use the button above to open the readings at USCCB.'));
       return;
     }
+    var dayUrl = (day.url) || usccbUrl(iso);
     if (day.title) body.appendChild(el('h2', null, day.title));
     day.masses.forEach(function (m) {
       if (m.name) body.appendChild(el('h3', null, m.name));
-      if (m.readings && m.readings.length) body.appendChild(refsList(m.readings));
+      if (m.readings && m.readings.length) body.appendChild(refsList(m.readings, (m.url) || dayUrl));
     });
   }
 
