@@ -1,0 +1,1470 @@
+{
+  "intro": "Real archaeological finds tied to each Deep Dive period — house churches, inscriptions, catacombs, basilicas, and everyday Christian things. Evidence shows, scholars infer, and still debated stay separate. Photo credits sit under each image.",
+  "checked": "2026-10-27",
+  "context": {
+    "id": "gospel-world",
+    "title": "The world of the Gospels",
+    "note": "Jewish and Roman finds that set the scene for the Gospels. These are not Christian artifacts."
+  },
+  "items": [
+    {
+      "id": "caiaphas-ossuary",
+      "name": "Caiaphas family ossuary",
+      "type": "everyday object / burial (Jewish context)",
+      "period": "gospel-world",
+      "date": "1st century AD (ossuary use); tomb found 1990",
+      "date_note": "Inscribed “Joseph son of Caiaphas”; identification with the high priest is widely accepted but not certain.",
+      "found": "Peace Forest, Jerusalem",
+      "now": "Israel Museum, Jerusalem",
+      "line": "A limestone bone box inscribed with a name matching the high-priestly family in the Gospels. It belongs to Jewish burial practice of the Second Temple period.",
+      "evidence": {
+        "shows": "A Jerusalem ossuary of the period bears the name Joseph son of Caiaphas.",
+        "infer": "Likely the high priest Joseph Caiaphas known from Josephus and the New Testament.",
+        "debated": "Whether this exact box held the high priest himself (vs. a relative of the same name)."
+      },
+      "connects_to": [
+        "luke-22",
+        "josephus-james"
+      ],
+      "connect_why": "Places Gospel-era Jerusalem priesthood in the material world of names and burial customs.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Kayafa%27s_Ossuary_3.JPG"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/caiaphas-ossuary.jpg",
+        "alt": "Caiaphas family ossuary",
+        "credit": "BRBurton",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons": "https://commons.wikimedia.org/wiki/File:Kayafa's_Ossuary_3.JPG"
+      }
+    },
+    {
+      "id": "pilate-stone",
+      "name": "Pilate Stone (Caesarea inscription)",
+      "type": "inscription (Jewish/Roman context)",
+      "period": "gospel-world",
+      "date": "AD 26–36 (Pilate’s prefecture); stone found 1961",
+      "date_note": "Date of the dedication is within Pilate’s term; the block was reused later in Caesarea’s theater.",
+      "found": "Caesarea Maritima, Israel",
+      "now": "Israel Museum, Jerusalem (copy often displayed at Caesarea)",
+      "line": "A Latin building dedication naming “[Pon]tius Pilatus, Prefect of Judea.” It is independent Roman evidence for the prefect named in the Gospels.",
+      "evidence": {
+        "shows": "A Roman official named Pontius Pilatus held the title prefect of Judea and dedicated a Tiberieum at Caesarea.",
+        "infer": "Usual reconstruction of the damaged lines; that this is the same Pilate as in the passion narratives.",
+        "debated": "Exact wording of some restored letters; the stone is not a Christian artifact."
+      },
+      "connects_to": [
+        "luke-22",
+        "tacitus-annals",
+        "josephus-testimonium"
+      ],
+      "connect_why": "Gives solid Roman-world footing for the prefect named in the passion accounts and later Roman notices.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Pilate_Inscription.JPG"
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/biography/Pontius-Pilate"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/pilate-stone.jpg",
+        "alt": "Pilate Stone (Caesarea inscription)",
+        "credit": "Marion Doss",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Pilate_Inscription.JPG"
+      }
+    },
+    {
+      "id": "pool-of-siloam",
+      "name": "Pool of Siloam",
+      "type": "site (Jewish / Gospel-world context)",
+      "period": "gospel-world",
+      "date": "Second Temple period pool; stepped pool excavated 2004 onward",
+      "date_note": "The large stepped pool south of the Temple Mount is widely identified with the Siloam pool of John 9; work and interpretation continue.",
+      "found": "City of David / Silwan, Jerusalem",
+      "now": "In situ (archaeological park area)",
+      "line": "A large stepped pool fed by the Gihon spring via Hezekiah’s Tunnel. John’s Gospel places a healing of a blind man here.",
+      "evidence": {
+        "shows": "A monumental Second Temple–period pool exists at the traditional Siloam location.",
+        "infer": "This is the pool known to first-century Jerusalem and to the Johannine narrative setting.",
+        "debated": "Full extent and phases of the complex; how visitors should picture the Gospel scene."
+      },
+      "connects_to": [
+        "acts-1",
+        "acts-2"
+      ],
+      "connect_why": "Grounds Gospel and early-Jerusalem geography in a real water system people still walk today.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_71717_the_siloam_pool.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/pool-of-siloam.jpg",
+        "alt": "Pool of Siloam",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_71717_the_siloam_pool.jpg"
+      }
+    },
+    {
+      "id": "capernaum-house-peter",
+      "name": "Capernaum “House of Peter”",
+      "type": "house church / memorial site",
+      "period": "p30-70",
+      "date": "1st-century house remains; Christian meeting use by ~late 1st–4th c.; octagonal memorial church later",
+      "date_note": "Identification with Peter’s house is traditional and debated; archaeology shows a house later treated as sacred.",
+      "found": "Capernaum (Kfar Nahum), Sea of Galilee, Israel",
+      "now": "Under the modern memorial church; Franciscan Custody / IAA oversight of excavations",
+      "line": "Excavators found a first-century house whose main room was later plastered, inscribed, and set apart, then covered by an octagonal church. Pilgrims remembered it as Peter’s home.",
+      "evidence": {
+        "shows": "A Capernaum house was adapted for Christian gathering and later monumentalized.",
+        "infer": "Early local memory linked the house to Peter and to Jesus’ Capernaum ministry.",
+        "debated": "Whether the house actually belonged to Peter; how early the Christian use began."
+      },
+      "connects_to": [
+        "acts-1",
+        "acts-2",
+        "galatians-1",
+        "galatians-2"
+      ],
+      "connect_why": "Puts Peter’s Galilean world and later Christian memory of place side by side with the earliest narrative texts.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Holy_Land_2016_P0456_Capernaum_ruins_of_Saint_Peters_House_under_Saint_Peter_Church.jpg"
+        }
+      ],
+      "caution": "Tradition links this house to Peter; archaeology shows a house later treated as sacred, but the identification with Peter himself is debated.",
+      "image": {
+        "src": "art/discovery/capernaum-house-peter.jpg",
+        "alt": "Capernaum “House of Peter”",
+        "credit": "Fallaner",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Holy_Land_2016_P0456_Capernaum_ruins_of_Saint_Peters_House_under_Saint_Peter_Church.jpg"
+      }
+    },
+    {
+      "id": "sator-square-pompeii",
+      "name": "Rotas–Sator square (Pompeii)",
+      "type": "graffito / word square",
+      "period": "p70-150",
+      "date": "Before AD 79 (Pompeii burial under Vesuvius)",
+      "date_note": "Christian reading (Pater Noster cross, etc.) is heavily debated; the square also appears in later clearly Christian contexts.",
+      "found": "Pompeii (Palaestra / related finds)",
+      "now": "In situ / Pompeii archaeological site documentation; casts and photos widely published",
+      "line": "A five-word Latin palindrome square (ROTAS OPERA TENET AREPO SATOR). Some read a hidden Christian prayer; others see a pagan word-play or magic square.",
+      "evidence": {
+        "shows": "The square existed in the Vesuvian cities before 79.",
+        "infer": "Possible early Christian presence — or none.",
+        "debated": "Whether the Pompeii squares are Christian at all."
+      },
+      "connects_to": [
+        "1-clement",
+        "didache"
+      ],
+      "connect_why": "If Christian, it would be startlingly early Italian evidence; if not, it still shows why caution labels matter.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sator_Square_Palestra_Pompeii_(CIL_8623_&_8622a-b).jpg"
+        }
+      ],
+      "caution": "The square is real and early; whether it is Christian at all is still debated.",
+      "image": {
+        "src": "art/discovery/sator-square-pompeii.jpg",
+        "alt": "Rotas–Sator square (Pompeii)",
+        "credit": "Matteo Della Corte",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Sator_Square_Palestra_Pompeii_(CIL_8623_&_8622a-b).jpg"
+      }
+    },
+    {
+      "id": "p52-rylands",
+      "name": "Rylands Papyrus P52 (John)",
+      "type": "manuscript / papyrus",
+      "period": "p70-150",
+      "date": "Often placed early–mid 2nd century; some scholars prefer later 2nd / ~200",
+      "date_note": "Palaeographic dating only; no secure archaeological find-spot date.",
+      "found": "Egypt (acquired early 20th c.; exact find-spot uncertain)",
+      "now": "John Rylands Library, University of Manchester",
+      "line": "A tiny scrap of a papyrus codex with John 18 on both sides. It is among the earliest surviving pieces of any New Testament book.",
+      "evidence": {
+        "shows": "A Greek copy of John’s Gospel circulated in Egypt in a codex format by roughly the 2nd century.",
+        "infer": "How early John was composed and how fast it spread; that Christians preferred the codex early.",
+        "debated": "Exact date within the 2nd century (or slightly later)."
+      },
+      "connects_to": [
+        "papias",
+        "irenaeus",
+        "muratorian",
+        "justin-dialogue"
+      ],
+      "connect_why": "Physical remnant of the Gospel texts early Christians were already quoting and circulating.",
+      "sources": [
+        {
+          "label": "Rylands",
+          "url": "https://www.digitalcollections.manchester.ac.uk/view/MS-GREEK-P-00457"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:P52_recto.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/p52-rylands.jpg",
+        "alt": "Rylands Papyrus P52 (John)",
+        "credit": "John Rylands Library",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:P52_recto.jpg"
+      }
+    },
+    {
+      "id": "alexamenos-graffito",
+      "name": "Alexamenos graffito",
+      "type": "graffito",
+      "period": "p150-325",
+      "date": "Usually late 1st–early 3rd century (often ~AD 200)",
+      "date_note": "Dating from context of the Palatine paedagogium; exact year unknown.",
+      "found": "Palatine Hill, Rome (paedagogium)",
+      "now": "Palatine Museum, Rome",
+      "line": "A scratched cartoon of a person raising a hand toward a crucified figure with a donkey’s head, with Greek words mocking “Alexamenos” for worshipping his god. One of the earliest pictures of a crucifixion scene.",
+      "evidence": {
+        "shows": "Someone in Rome mocked a person named Alexamenos for worshipping a crucified god.",
+        "infer": "The mocked figure is Jesus; the joke reflects pagan contempt for the cross.",
+        "debated": "Exact date; whether the donkey-head is a specific anti-Jewish/anti-Christian slur tradition."
+      },
+      "connects_to": [
+        "justin-first-apology",
+        "minucius-felix",
+        "origen-celsus",
+        "tertullian-apology"
+      ],
+      "connect_why": "Matches the tone of pagan mockery the apologists answer when they defend the crucified Christ.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Alexamenos_graffito.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/alexamenos-graffito.jpg",
+        "alt": "Alexamenos graffito",
+        "credit": "Justin Benttinen",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Alexamenos_graffito.jpg"
+      }
+    },
+    {
+      "id": "bodmer-papyri",
+      "name": "Bodmer papyri (incl. P75 / Hanna Papyrus)",
+      "type": "manuscript / papyrus",
+      "period": "p150-325",
+      "date": "Roughly late 2nd–early 3rd century for key NT leaves (debated)",
+      "date_note": "P75 (Luke/John) now in the Vatican Library as Hanna Papyrus 1.",
+      "found": "Egypt",
+      "now": "Bodmer Foundation, Cologny; Vatican Apostolic Library (P75)",
+      "line": "Early, carefully written Gospel papyri. P75 is famous for its close kinship to later great parchment Bibles.",
+      "evidence": {
+        "shows": "High-quality Gospel copies existed in Egypt before Constantine’s parchment pandects.",
+        "infer": "Pathways from early papyri to Codex Vaticanus-type text.",
+        "debated": "Precise dates; relationship details between P75 and Vaticanus."
+      },
+      "connects_to": [
+        "origen-principles",
+        "athanasius-festal-39",
+        "irenaeus"
+      ],
+      "connect_why": "Bridges the world of Origen to the great 4th-century Bibles.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Papyrus_Bodmer_VIII.jpg"
+        },
+        {
+          "label": "Source",
+          "url": "https://digi.vatlib.it/view/MSS_Vat.gr.1209"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/bodmer-papyri.jpg",
+        "alt": "Bodmer papyri (incl. P75 / Hanna Papyrus)",
+        "credit": "Bodmer Foundation / Vatican Library",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Papyrus_Bodmer_VIII.jpg"
+      }
+    },
+    {
+      "id": "domitilla-arcosolium",
+      "name": "Catacomb of Domitilla (arcosolium)",
+      "type": "catacomb",
+      "period": "p150-325",
+      "date": "2nd–4th centuries (complex grows over time)",
+      "date_note": "One of Rome’s largest Christian catacombs; individual paintings vary in date.",
+      "found": "Via Ardeatina, Rome",
+      "now": "In situ; open to visitors under Pontifical Commission / site management",
+      "line": "Vast underground galleries and painted arcosolia. Domitilla preserves the scale of Christian burial networks under Rome before and after Constantine.",
+      "evidence": {
+        "shows": "Large organized Christian cemeteries existed beneath Rome.",
+        "infer": "Links to Flavian-era Christian households in tradition; growth patterns of the community.",
+        "debated": "Which earliest nuclei are securely Christian vs. mixed."
+      },
+      "connects_to": [
+        "1-clement",
+        "shepherd",
+        "perpetua"
+      ],
+      "connect_why": "Makes “the church in Rome” feel like tunnels, names, and painted tombs — not an abstraction.",
+      "sources": [
+        {
+          "label": "Catacombs",
+          "url": "https://www.catacombeditalia.va/content/archeologiasacra/en/catacombs/by-provinces/rome/catacomb-of-domitilla.html"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/domitilla-arcosolium.jpg",
+        "alt": "Catacomb of Domitilla (arcosolium)",
+        "credit": "Anonymous Unknown",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Arcosolium_(catacombe_di_Domitilla_).jpg"
+      }
+    },
+    {
+      "id": "chester-beatty-papyri",
+      "name": "Chester Beatty biblical papyri",
+      "type": "manuscript / papyrus",
+      "period": "p150-325",
+      "date": "Mostly 3rd century (some leaves earlier/later)",
+      "date_note": "Includes early Pauline and Gospels codices (e.g. P45, P46, P47).",
+      "found": "Egypt (exact find circumstances partly obscure; acquired 1930s)",
+      "now": "Chester Beatty Library, Dublin",
+      "line": "A group of early papyrus codices of Scripture — Gospels, Paul, Revelation — showing how third-century Christians copied and carried their books.",
+      "evidence": {
+        "shows": "Substantial New Testament texts circulated in codex form in 3rd-century Egypt.",
+        "infer": "Scribal habits, early canon clusters, and textual variants.",
+        "debated": "Exact find-spot history for some lots."
+      },
+      "connects_to": [
+        "origen-principles",
+        "origen-celsus",
+        "muratorian",
+        "irenaeus"
+      ],
+      "connect_why": "Origen’s Egypt is suddenly full of real Bible pages you can photograph.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:P._Chester_Beatty_I,_folio_13-14,_recto.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/chester-beatty-papyri.jpg",
+        "alt": "Chester Beatty biblical papyri",
+        "credit": "Chester Beatty Library",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:P._Chester_Beatty_I,_folio_13-14,_recto.jpg"
+      }
+    },
+    {
+      "id": "chi-rho-lamp-met",
+      "name": "Chi-Rho oil lamp (Met)",
+      "type": "everyday object",
+      "period": "p150-325",
+      "date": "Met: 3rd–7th century (broad)",
+      "date_note": "Wide date range; symbol is Christian chi-rho on a household lamp from Egypt.",
+      "found": "Egypt",
+      "now": "Metropolitan Museum of Art, New York (17.194.1813) — Public Domain / CC0 image policy",
+      "line": "A small clay lamp stamped with the chi-rho. Someone lit their evening room with Christ’s monogram — faith in the furniture of ordinary life.",
+      "evidence": {
+        "shows": "Christian symbols appeared on mass-produced household lamps.",
+        "infer": "Protective and identity use of the christogram in daily settings.",
+        "debated": "Where within the long date range any one lamp falls."
+      },
+      "connects_to": [
+        "lactantius-persecutors",
+        "eusebius-constantine",
+        "nicaea-325"
+      ],
+      "connect_why": "After the chi-rho enters imperial story under Constantine, you can also hold it as a cheap clay light.",
+      "sources": [
+        {
+          "label": "The Met",
+          "url": "https://www.metmuseum.org/art/collection/search/447036"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/chi-rho-lamp-met.jpg",
+        "alt": "Chi-Rho oil lamp (Met)",
+        "credit": "The Metropolitan Museum of Art",
+        "license": "CC0 (Met Open Access)",
+        "license_url": "https://www.metmuseum.org/openaccess",
+        "commons": "https://www.metmuseum.org/art/collection/search/447036"
+      }
+    },
+    {
+      "id": "christ-helios-julii",
+      "name": "Christ-Helios mosaic (Tomb of the Julii)",
+      "type": "mosaic / tomb",
+      "period": "p150-325",
+      "date": "Late 3rd / early 4th century (typical)",
+      "date_note": "Mausoleum M under St Peter’s; Christian reading of solar Christ is standard but the blend with Sol imagery is striking.",
+      "found": "Vatican Necropolis (scavi), under St Peter’s Basilica",
+      "now": "In situ (scavi); access by Vatican guided tour",
+      "line": "A ceiling mosaic of a chariot-riding figure with a rayed nimbus among vines — widely read as Christ using the visual language of Sol Invictus.",
+      "evidence": {
+        "shows": "A Vatican necropolis tomb mixed Christian and solar imagery before or around Constantine’s time.",
+        "infer": "Christ as true “sun” of salvation; deliberate reuse of imperial solar art.",
+        "debated": "Exact date; how consciously “anti-Sol” vs. simply shared artistic vocabulary."
+      },
+      "connects_to": [
+        "eusebius-he",
+        "lactantius-persecutors",
+        "origen-celsus"
+      ],
+      "connect_why": "Shows Christians speaking in the visual dialect of the late Roman world just as the empire turns.",
+      "sources": [
+        {
+          "label": "St Peter’s",
+          "url": "https://www.basilicasanpietro.va/en/san-pietro/the-necropolis"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:ChristAsSol.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/christ-helios-julii.jpg",
+        "alt": "Christ-Helios mosaic (Tomb of the Julii)",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:ChristAsSol.jpg"
+      }
+    },
+    {
+      "id": "dura-europos-house-church",
+      "name": "Dura-Europos house church & baptistery",
+      "type": "house church",
+      "period": "p150-325",
+      "date": "Converted ~AD 232–256 (city fell to the Sasanians c. 256)",
+      "date_note": "Yale dates baptistery paintings ca. 232–245; building history refined in ongoing scholarship.",
+      "found": "Dura-Europos, Syria (block M8)",
+      "now": "Wall paintings at Yale University Art Gallery (CC0); site in Syria",
+      "line": "The earliest securely dated Christian house church. A domestic building was adapted with a meeting hall and a painted baptistery (Good Shepherd, healing scenes, women at the tomb).",
+      "evidence": {
+        "shows": "Third-century Christians at Dura baptized in a decorated room and met in a remodeled house.",
+        "infer": "How typical this arrangement was; exact reading of some painted scenes.",
+        "debated": "Degree of “church” vs. continuing domestic use; some iconographic identifications."
+      },
+      "connects_to": [
+        "tertullian-baptism",
+        "didascalia",
+        "justin-first-apology",
+        "cyprian-unity"
+      ],
+      "connect_why": "Reading On Baptism or Justin’s worship description, you can look at an actual baptistery from the same century.",
+      "sources": [
+        {
+          "label": "Yale",
+          "url": "https://duraeuropos.artgallery.yale.edu/christian-building"
+        },
+        {
+          "label": "Source",
+          "url": "https://duraeuroposarchive.org/image-rights/"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Dura_Europos_baptistry_overview.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/dura-europos-house-church.jpg",
+        "alt": "Dura-Europos house church & baptistery",
+        "credit": "Yale University Art Gallery",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Dura_Europos_baptistry_overview.jpg"
+      }
+    },
+    {
+      "id": "priscilla-fractio-panis",
+      "name": "Fractio Panis (breaking of the bread) — Priscilla",
+      "type": "catacomb fresco",
+      "period": "p150-325",
+      "date": "Often placed 2nd–4th century (Greek Chapel)",
+      "date_note": "Dating varies by scholar; the scene is among the earliest banquet/Eucharist images.",
+      "found": "Greek Chapel, Catacomb of Priscilla, Rome",
+      "now": "In situ; Pontifical Commission for Sacred Archaeology",
+      "line": "A banquet scene with a figure breaking bread at a table — long read as an early image of the Eucharist or agape meal.",
+      "evidence": {
+        "shows": "Christians painted communal meal imagery in a Roman catacomb chapel.",
+        "infer": "Eucharistic meaning (fractio panis); some see a funerary banquet more broadly.",
+        "debated": "How specifically “Mass-like” vs. funerary meal the scene is."
+      },
+      "connects_to": [
+        "1-corinthians-11",
+        "didache",
+        "justin-first-apology",
+        "ignatius"
+      ],
+      "connect_why": "Paul and Justin describe a shared loaf; here is a loaf being broken on a wall.",
+      "sources": [
+        {
+          "label": "Catacombs",
+          "url": "https://www.catacombeditalia.va/content/archeologiasacra/en/catacombs/by-provinces/rome/catacomb-of-priscilla.html"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Catacombe_di_Priscilla,_Rome_-_Fresco_of_a_Christian_Agape_feast_-_Fractio_panis_-_Greek_chapel_-_2nd_-_4th_century.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/priscilla-fractio-panis.jpg",
+        "alt": "Fractio Panis (breaking of the bread) — Priscilla",
+        "credit": "Unknown. Photographer: André Held, akg-images.",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Catacombe_di_Priscilla,_Rome_-_Fresco_of_a_Christian_Agape_feast_-_Fractio_panis_-_Greek_chapel_-_2nd_-_4th_century.jpg"
+      }
+    },
+    {
+      "id": "priscilla-good-shepherd",
+      "name": "Good Shepherd fresco (Catacomb of Priscilla)",
+      "type": "catacomb fresco",
+      "period": "p150-325",
+      "date": "Usually late 2nd–3rd century",
+      "date_note": "Catacomb painting chronology is approximate.",
+      "found": "Catacomb of Priscilla, Rome",
+      "now": "In situ; under Pontifical Commission for Sacred Archaeology",
+      "line": "Christ as a young shepherd carrying a sheep — tender, everyday imagery in a burial place. Among the best-known early Christian paintings.",
+      "evidence": {
+        "shows": "Roman Christians used shepherd imagery in funerary art well before Constantine.",
+        "infer": "Link to John 10 / Luke 15 and to pagan shepherd motifs reused for Christ.",
+        "debated": "Exact chapel date within the catacomb’s long use."
+      },
+      "connects_to": [
+        "shepherd",
+        "justin-dialogue",
+        "irenaeus"
+      ],
+      "connect_why": "The Shepherd of Hermas and Gospel shepherd language meet a picture on a tomb wall.",
+      "sources": [
+        {
+          "label": "Catacombs",
+          "url": "https://www.catacombeditalia.va/content/archeologiasacra/en/catacombs/by-provinces/rome/catacomb-of-priscilla.html"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Good_shepherd_01.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/priscilla-good-shepherd.jpg",
+        "alt": "Good Shepherd fresco (Catacomb of Priscilla)",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Good_shepherd_01.jpg"
+      }
+    },
+    {
+      "id": "callixtus-good-shepherd",
+      "name": "Good Shepherd — Catacomb of Callixtus (Lucina)",
+      "type": "catacomb fresco",
+      "period": "p150-325",
+      "date": "3rd century (Crypt of Lucina area)",
+      "date_note": "Published in Wilpert’s early-20th-century plates; site managed by the Pontifical Commission.",
+      "found": "Catacomb of Callixtus, Rome",
+      "now": "In situ; Pontifical Commission for Sacred Archaeology",
+      "line": "Another early Good Shepherd in the papal cemetery of Callixtus — the same image language as Priscilla, in the burial ground of many early popes and martyrs.",
+      "evidence": {
+        "shows": "Shepherd Christ imagery was shared across major Roman Christian cemeteries.",
+        "infer": "Continuity of hope-for-the-dead imagery before public basilicas.",
+        "debated": "Fine-grained dating of individual cubicula."
+      },
+      "connects_to": [
+        "cornelius-fabius",
+        "cyprian-unity",
+        "shepherd"
+      ],
+      "connect_why": "Callixtus is the cemetery named in third-century Roman church conflicts Deep Dive already covers.",
+      "sources": [
+        {
+          "label": "Catacombs",
+          "url": "https://www.catacombeditalia.va/content/archeologiasacra/en/catacombs/by-provinces/rome/catacomb-of-st-calixtus.html"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/callixtus-good-shepherd.jpg",
+        "alt": "Good Shepherd — Catacomb of Callixtus (Lucina)",
+        "credit": "Wilpert plate (public domain)",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Jesus_as_the_Good_Shepherd,_Calixtus_Catacomb,_Crypt_of_Lucina,_from_the_from_the_book_Die_Malereien_der_Katakomben_Roms,_plate_35.jpg"
+      }
+    },
+    {
+      "id": "abercius-inscription",
+      "name": "Inscription of Abercius",
+      "type": "inscription",
+      "period": "p150-325",
+      "date": "Late 2nd / early 3rd century (Vatican Museums)",
+      "date_note": "Partly known from a later copy dated 216 (Alexander of Hierapolis); original fragments recovered 1883.",
+      "found": "Hieropolis (Hierapolis area), Phrygia, Turkey — reused in a bath building",
+      "now": "Vatican Museums, Museo Pio Cristiano",
+      "line": "A Greek verse epitaph in coded Christian language: a “holy Shepherd,” travel to Rome, “pure fish,” bread and wine. The Vatican calls it the most ancient known Christian inscription.",
+      "evidence": {
+        "shows": "A late-2nd/early-3rd-century Phrygian Christian used cryptic Eucharistic and ecclesial imagery on his tomb.",
+        "infer": "Abercius was a bishop of Hierapolis; the “queen” is the Roman church.",
+        "debated": "How much of the later Life of Abercius can be trusted beyond the stone."
+      },
+      "connects_to": [
+        "abercius",
+        "justin-first-apology",
+        "1-corinthians-11",
+        "ignatius"
+      ],
+      "connect_why": "Deep Dive already includes the text; the stone is the thing itself in the Vatican.",
+      "sources": [
+        {
+          "label": "Vatican",
+          "url": "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/lapidario-cristiano/abercio/cippo-di-albercio.html"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Cippo_di_Abercio,_fine_II_-_inizi_III_sec._-FG1.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/abercius-inscription.jpg",
+        "alt": "Inscription of Abercius",
+        "credit": "Fabrizio Garrisi",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Cippo_di_Abercio,_fine_II_-_inizi_III_sec._-FG1.jpg"
+      }
+    },
+    {
+      "id": "livia-primitiva-slab",
+      "name": "Livia Primitiva funerary slab (fish & anchor)",
+      "type": "inscription / everyday Christian symbol",
+      "period": "p150-325",
+      "date": "Usually 3rd century",
+      "date_note": "Classic example of fish + anchor Christian funerary symbols.",
+      "found": "Rome (catacomb context; now in museum collections — Louvre often cited for the plaque)",
+      "now": "Musée du Louvre, Paris (commonly referenced)",
+      "line": "A simple tomb slab with fish and an anchor — quiet symbols of hope and of Christ the fish (ICHTHYS) that ordinary believers could carve without a long inscription.",
+      "evidence": {
+        "shows": "Fish and anchor were used as Christian funerary signs in Rome.",
+        "infer": "Anchor as hope (Hebrews 6:19); fish as Christ acronym.",
+        "debated": "Whether every fish/anchor plaque is certainly Christian (most with clear Christian context are)."
+      },
+      "connects_to": [
+        "shepherd",
+        "1-clement",
+        "diognetus"
+      ],
+      "connect_why": "Shows the small symbolic language everyday Christians used alongside the big literary texts.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Plaque_du_sarcophage_de_Livia_Primitiva.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/livia-primitiva-slab.jpg",
+        "alt": "Livia Primitiva funerary slab (fish & anchor)",
+        "credit": "Tangopaso",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Plaque_du_sarcophage_de_Livia_Primitiva.jpg"
+      }
+    },
+    {
+      "id": "megiddo-prayer-hall",
+      "name": "Megiddo (Kefar ‘Othnay) prayer hall mosaic",
+      "type": "house church / prayer hall",
+      "period": "p150-325",
+      "date": "IAA: 3rd century (often ~AD 230); some scholars argue later 3rd/4th",
+      "date_note": "Date rests on coins, pottery, and paleography; not universally agreed.",
+      "found": "Megiddo Prison / Kefar ‘Othnay, Israel",
+      "now": "Israel Antiquities Authority; mosaic conserved for display (site relocation/preservation ongoing)",
+      "line": "A mosaic floor with fish and three Greek inscriptions, including a woman Akeptous who “offered the table to God Jesus Christ.” A rare pre-Constantinian worship room.",
+      "evidence": {
+        "shows": "A Christian assembly room with a donated “table” and an inscription naming God Jesus Christ.",
+        "infer": "Eucharistic use of the table; significant Christian presence among Roman military personnel at Legio.",
+        "debated": "Precise date within the 3rd–early 4th century; how “church-like” the building was."
+      },
+      "connects_to": [
+        "1-corinthians-11",
+        "justin-first-apology",
+        "tertullian-apology",
+        "pliny-trajan"
+      ],
+      "connect_why": "Lets a reader of Justin or Paul suddenly see a real table dedication and fish mosaic from the same world.",
+      "sources": [
+        {
+          "label": "IAA",
+          "url": "https://antiquities.org.il/article_eng.aspx?id=932&module_id=&sec_id=25&subj_id=240"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Akeptous_Inscription_2.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/megiddo-prayer-hall.jpg",
+        "alt": "Megiddo (Kefar ‘Othnay) prayer hall mosaic",
+        "credit": "Vesafis Tzferris",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Akeptous_Inscription_2.jpg"
+      }
+    },
+    {
+      "id": "priscilla-orans",
+      "name": "Orans (praying figure) — Priscilla",
+      "type": "catacomb fresco",
+      "period": "p150-325",
+      "date": "3rd century (typical dating)",
+      "date_note": "Orans figures are common across Roman catacombs.",
+      "found": "Catacomb of Priscilla, Rome",
+      "now": "In situ; Pontifical Commission for Sacred Archaeology",
+      "line": "A veiled woman with arms raised in prayer — the classic orans posture. A quiet, human glimpse of how early Christians pictured prayer.",
+      "evidence": {
+        "shows": "Prayer with raised arms was a valued image in Christian burial art.",
+        "infer": "Often read as the soul of the deceased, or the Church at prayer.",
+        "debated": "Identity of particular orans figures (portrait vs. type)."
+      },
+      "connects_to": [
+        "1-clement",
+        "shepherd",
+        "tertullian-apology"
+      ],
+      "connect_why": "Matches the praying Church described in early letters and visions.",
+      "sources": [
+        {
+          "label": "Catacombs",
+          "url": "https://www.catacombeditalia.va/content/archeologiasacra/en/catacombs/by-provinces/rome/catacomb-of-priscilla.html"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/priscilla-orans.jpg",
+        "alt": "Orans (praying figure) — Priscilla",
+        "credit": "Painting, unknown artist, 3rd century A.D., Rome photo by Joseph…",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Consecrated_Virgin,_praying_with_Orans_position,_wearing_dalmatic,_tunic,_and_veil,_from_the_Catacomb_of_Priscilla,_3rd_century_AD_cropped.jpg"
+      }
+    },
+    {
+      "id": "pectorius-inscription",
+      "name": "Pectorius (Autun) inscription",
+      "type": "inscription",
+      "period": "p150-325",
+      "date": "Often 3rd–4th century (dates vary)",
+      "date_note": "Acrostic ICHTHYS poem; scholarly dating not unanimous.",
+      "found": "Autun (Augustodunum), France",
+      "now": "Musée Rolin, Autun (commonly cited)",
+      "line": "A Greek epitaph that plays on ICHTHYS (fish) and speaks of the “fish” from the spring, heavenly food, and baptismal washing — poetry thick with Eucharistic and baptismal hints.",
+      "evidence": {
+        "shows": "Gallic Christians used Greek fish symbolism in funerary verse.",
+        "infer": "Strong sacramental reading of the lines.",
+        "debated": "Precise century."
+      },
+      "connects_to": [
+        "abercius",
+        "tertullian-baptism",
+        "1-corinthians-11"
+      ],
+      "connect_why": "Pairs beautifully with Abercius: two coded fish/Eucharist inscriptions at opposite ends of the Christian map.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Pectorios_Inscription.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/pectorius-inscription.jpg",
+        "alt": "Pectorius (Autun) inscription",
+        "credit": "Nicolas8241",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Pectorios_Inscription.jpg"
+      }
+    },
+    {
+      "id": "st-peters-necropolis",
+      "name": "St Peter’s tomb area (Vatican necropolis / scavi)",
+      "type": "basilica / tomb site",
+      "period": "p150-325",
+      "date": "2nd-century shrine (“Trophy of Gaius”); Constantinian basilica above; excavations 1939–",
+      "date_note": "A 2nd-century memorial on the site is widely accepted; whether particular bones are Peter’s remains debated.",
+      "found": "Under St Peter’s Basilica, Vatican City",
+      "now": "Vatican scavi (guided access)",
+      "line": "Excavations under the high altar revealed a pagan necropolis and a second-century memorial traditionally linked to Peter’s grave, later enclosed by Constantine’s basilica.",
+      "evidence": {
+        "shows": "A carefully marked memorial stood on this spot by the 2nd century; Constantine built directly over it.",
+        "infer": "Early Roman Christian memory of Peter’s burial here (cf. Gaius in Eusebius).",
+        "debated": "Identification of specific bones as Peter’s; reading of some graffiti (“Petros eni”)."
+      },
+      "connects_to": [
+        "1-clement",
+        "eusebius-he",
+        "ignatius",
+        "galatians-2"
+      ],
+      "connect_why": "1 Clement and Eusebius talk about Peter in Rome; the scavi show the place Rome remembered.",
+      "sources": [
+        {
+          "label": "St Peter’s",
+          "url": "https://www.basilicasanpietro.va/en/san-pietro/the-necropolis"
+        }
+      ],
+      "caution": "A second-century memorial on this spot is well established; whether particular bones are Peter’s remains is still debated.",
+      "image": {
+        "src": "art/discovery/st-peters-necropolis.jpg",
+        "alt": "St Peter’s tomb area (Vatican necropolis / scavi)",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Model_of_costantinean_basilica_of_saint_Peter_in_the_vatican.jpg"
+      }
+    },
+    {
+      "id": "aquileia-mosaics",
+      "name": "Aquileia basilica mosaics",
+      "type": "basilica / mosaic",
+      "period": "p325-1000",
+      "date": "4th century (Theodorian halls)",
+      "date_note": "UNESCO site; huge mosaic carpets with Jonah, donors, and daily life.",
+      "found": "Aquileia, Italy",
+      "now": "In situ under the later medieval basilica floor (viewable)",
+      "line": "Ocean-floor mosaics of a 4th-century church: fish, Jonah, portraits of donors — a whole congregation’s floor still under glass.",
+      "evidence": {
+        "shows": "Northern Italian Christians paved worship halls with narrative and donor mosaics in the 300s.",
+        "infer": "Wealth, patronage, and teaching-through-floor-art.",
+        "debated": "Exact sequence of the Theodorian building phases."
+      },
+      "connects_to": [
+        "egeria",
+        "cyril-mystagogical",
+        "nicaea-325"
+      ],
+      "connect_why": "Shows post-Constantinian worship space outside Rome and the Holy Land.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Aquileia,_Basilica._Foto_Giovanni_Dall%27Orto4.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/aquileia-mosaics.jpg",
+        "alt": "Aquileia basilica mosaics",
+        "credit": "No machine-readable author provided. G.dallorto assumed (based on…",
+        "license": "Attribution (Giovanni Dall’Orto)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Aquileia,_Basilica._Foto_Giovanni_Dall'Orto4.jpg",
+        "commons": "https://commons.wikimedia.org/wiki/File:Aquileia,_Basilica._Foto_Giovanni_Dall'Orto4.jpg"
+      }
+    },
+    {
+      "id": "holy-sepulchre",
+      "name": "Church of the Holy Sepulchre, Jerusalem",
+      "type": "basilica",
+      "period": "p325-1000",
+      "date": "Dedicated AD 335 (Constantinian); repeatedly rebuilt",
+      "date_note": "Present structure is largely Crusader and later; Constantinian plan known from texts and archaeology.",
+      "found": "Jerusalem",
+      "now": "In use; shared Christian custody",
+      "line": "The complex over Golgotha and the tomb. Whatever one makes of every stone, it is the pilgrimage heart Egeria walked and Cyril explained.",
+      "evidence": {
+        "shows": "Constantine’s architects monumentalized a tomb site in 4th-century Jerusalem; worship continues.",
+        "infer": "Continuity with pre-Constantinian local memory of the tomb.",
+        "debated": "How much of the present fabric maps to the first church; details of the tomb aedicule’s earlier forms."
+      },
+      "connects_to": [
+        "egeria",
+        "cyril-mystagogical",
+        "eusebius-constantine"
+      ],
+      "connect_why": "Primary Deep Dive pilgrimage and mystagogy texts become places underfoot.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Holy_Sepulchre.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/holy-sepulchre.jpg",
+        "alt": "Church of the Holy Sepulchre, Jerusalem",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Holy_Sepulchre.jpg"
+      }
+    },
+    {
+      "id": "church-of-nativity",
+      "name": "Church of the Nativity, Bethlehem",
+      "type": "basilica",
+      "period": "p325-1000",
+      "date": "Constantinian foundation 4th c.; major Justinianic rebuild 6th c.",
+      "date_note": "UNESCO World Heritage; still a living church.",
+      "found": "Bethlehem",
+      "now": "In use; shared custody; UNESCO site",
+      "line": "The cave Christians remembered as Jesus’ birth place, roofed by imperial church architecture. Pilgrims have come for seventeen centuries.",
+      "evidence": {
+        "shows": "A continuous church complex stands over the traditional nativity cave from late antiquity.",
+        "infer": "Constantine/Helena’s Holy Land program (as in Eusebius).",
+        "debated": "Exact Constantinian vs. later fabric in every wall."
+      },
+      "connects_to": [
+        "eusebius-constantine",
+        "egeria",
+        "cyril-mystagogical"
+      ],
+      "connect_why": "Egeria’s travel diary and Cyril’s Jerusalem preaching sit next to a church you can still enter.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/church-of-nativity.jpg",
+        "alt": "Church of the Nativity, Bethlehem",
+        "credit": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity.jpg"
+      }
+    },
+    {
+      "id": "codex-sinaiticus",
+      "name": "Codex Sinaiticus (א)",
+      "type": "manuscript / parchment",
+      "period": "p325-1000",
+      "date": "Mid-4th century",
+      "date_note": "Leaves now split among British Library, Leipzig, St Catherine’s, and the National Library of Russia.",
+      "found": "St Catherine’s Monastery, Sinai (modern rediscovery 19th c.)",
+      "now": "Primarily British Library (major portion); other leaves in Leipzig, Sinai, St Petersburg",
+      "line": "The other great 4th-century Greek Bible, including the New Testament complete. A mountain monastery kept what empire-wide Christianity had come to treasure as Scripture.",
+      "evidence": {
+        "shows": "A mid-4th-century complete NT (+ OT portions) survives.",
+        "infer": "Scribal collaboration, corrections, and early canon edges (extra books present).",
+        "debated": "Production center; relationship to Constantine’s orders for fifty Bibles."
+      },
+      "connects_to": [
+        "athanasius-festal-39",
+        "jerome-letter-53",
+        "eusebius-constantine"
+      ],
+      "connect_why": "Same story as Vaticanus: the Bible as a physical library object after persecution ends.",
+      "sources": [
+        {
+          "label": "British Library",
+          "url": "https://www.bl.uk/collection-items/codex-sinaiticus"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/codex-sinaiticus.jpg",
+        "alt": "Codex Sinaiticus (א)",
+        "credit": "PotatoCow25",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "commons": "https://commons.wikimedia.org/wiki/File:Codex_Sinaiticus.jpg"
+      }
+    },
+    {
+      "id": "codex-vaticanus",
+      "name": "Codex Vaticanus (B)",
+      "type": "manuscript / parchment",
+      "period": "p325-1000",
+      "date": "Mid-4th century",
+      "date_note": "One of the two great early pandect Bibles.",
+      "found": "In Vatican Library by at least the 15th century (earlier provenance debated)",
+      "now": "Vatican Apostolic Library (Vat. gr. 1209)",
+      "line": "A nearly complete Greek Bible in neat parchment quires — the kind of monumental Christian book the fourth-century church could finally produce and preserve.",
+      "evidence": {
+        "shows": "A carefully corrected 4th-century Greek Bible survives intact.",
+        "infer": "Links to Egyptian text-types and to imperial-era book culture.",
+        "debated": "Exact place of production; relationship to Constantine’s Bible commissions."
+      },
+      "connects_to": [
+        "athanasius-festal-39",
+        "jerome-letter-53",
+        "nicaea-325"
+      ],
+      "connect_why": "Athanasius’s canon list and Jerome’s biblical world meet an actual 4th-century Bible.",
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://digi.vatlib.it/view/MSS_Vat.gr.1209"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/codex-vaticanus.jpg",
+        "alt": "Codex Vaticanus (B)",
+        "credit": "Unknown source Unknown source ; file originally uploaded to the…",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_B.jpg"
+      }
+    },
+    {
+      "id": "dogmatic-sarcophagus",
+      "name": "Dogmatic (Two Testaments) sarcophagus",
+      "type": "sarcophagus",
+      "period": "p325-1000",
+      "date": "c. 325–350",
+      "date_note": "From St Paul Outside the Walls context; now Vatican Museums.",
+      "found": "Rome (associated with St Paul Outside the Walls)",
+      "now": "Vatican Museums",
+      "line": "A marble coffin crowded with scenes of creation, miracles, and Christ — theology carved in stone in the generation after Nicaea.",
+      "evidence": {
+        "shows": "Mid-4th-century Roman Christians commissioned dense biblical narrative sculpture.",
+        "infer": "Visual teaching of creed-like themes (“dogmatic” nickname).",
+        "debated": "Exact workshop date within the mid-4th century."
+      },
+      "connects_to": [
+        "nicaea-325",
+        "athanasius-incarnation",
+        "eusebius-constantine"
+      ],
+      "connect_why": "Same decades as the Nicene settlement — belief you can run your hand across.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Dogmatic_sarcophagus.JPG"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/dogmatic-sarcophagus.jpg",
+        "alt": "Dogmatic (Two Testaments) sarcophagus",
+        "credit": "Gx872op",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Dogmatic_sarcophagus.JPG"
+      }
+    },
+    {
+      "id": "gold-glass-christ-crowns",
+      "name": "Gold glass: Christ crowning Peter and Paul",
+      "type": "everyday object / gold glass",
+      "period": "p325-1000",
+      "date": "c. 350 (Met)",
+      "date_note": "Met 11.91.4 Open Access.",
+      "found": "Rome area (typical)",
+      "now": "Metropolitan Museum of Art",
+      "line": "Christ hands martyr crowns to Peter and Paul. A toast to the apostles who Deep Dive readers meet in the earliest letters.",
+      "evidence": {
+        "shows": "Mid-4th-century Roman glass pictured Christ honoring the two apostles.",
+        "infer": "Cult of Peter and Paul in Rome after the Constantinian peace.",
+        "debated": "Cup vs. tomb-marker primary use."
+      },
+      "connects_to": [
+        "1-clement",
+        "ignatius",
+        "leo-tome"
+      ],
+      "connect_why": "Same apostolic pair as 1 Clement — now in gold leaf.",
+      "sources": [
+        {
+          "label": "The Met",
+          "url": "https://www.metmuseum.org/art/collection/search/463547"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/gold-glass-christ-crowns.jpg",
+        "alt": "Gold glass: Christ crowning Peter and Paul",
+        "credit": "The Metropolitan Museum of Art",
+        "license": "CC0 (Met Open Access)",
+        "license_url": "https://www.metmuseum.org/openaccess",
+        "commons": "https://www.metmuseum.org/art/collection/search/463547"
+      }
+    },
+    {
+      "id": "gold-glass-peter-paul",
+      "name": "Gold-glass bowl base: Peter & Paul with christogram",
+      "type": "everyday object / gold glass",
+      "period": "p325-1000",
+      "date": "Late 4th century (Met)",
+      "date_note": "Met 16.174.3; Open Access public domain.",
+      "found": "Rome (typical of Roman catacomb gold glasses)",
+      "now": "Metropolitan Museum of Art, New York",
+      "line": "A sandwich of gold leaf in glass showing Peter and Paul beside Christ’s monogram — likely the base of a drinking cup later pressed into wet plaster on a tomb.",
+      "evidence": {
+        "shows": "Roman Christians pictured the two apostles with the christogram on luxury glass.",
+        "infer": "Funerary reuse of feast vessels; devotion to Peter and Paul as twin pillars of Rome.",
+        "debated": "Whether every piece began as a tomb gift or a household cup."
+      },
+      "connects_to": [
+        "1-clement",
+        "ignatius",
+        "galatians-2",
+        "leo-tome"
+      ],
+      "connect_why": "Peter and Paul from the earliest Deep Dive letters, toasted on glass a few centuries later.",
+      "sources": [
+        {
+          "label": "The Met",
+          "url": "https://www.metmuseum.org/art/collection/search/463714"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/gold-glass-peter-paul.jpg",
+        "alt": "Gold-glass bowl base: Peter & Paul with christogram",
+        "credit": "The Metropolitan Museum of Art",
+        "license": "CC0 (Met Open Access)",
+        "license_url": "https://www.metmuseum.org/openaccess",
+        "commons": "https://www.metmuseum.org/art/collection/search/463714"
+      }
+    },
+    {
+      "id": "hagia-sophia",
+      "name": "Hagia Sophia (Justinian)",
+      "type": "basilica",
+      "period": "p325-1000",
+      "date": "Dedicated AD 537 (present structure)",
+      "date_note": "Later mosque/museum/mosque history; still the great dome of Christian late antiquity.",
+      "found": "Constantinople (Istanbul)",
+      "now": "Istanbul; standing building",
+      "line": "Justinian’s Great Church — a dome that made pilgrims say the building seemed to hang from heaven. The architectural climax of the first Christian millennium.",
+      "evidence": {
+        "shows": "A 6th-century imperial cathedral of unprecedented scale was built and still stands.",
+        "infer": "Liturgical and political meaning of the dome and nave.",
+        "debated": "Details of original decoration lost or covered in later centuries."
+      },
+      "connects_to": [
+        "chalcedon-451",
+        "nicaea-787",
+        "gregory-pastoral"
+      ],
+      "connect_why": "The empire’s church after the councils — and before iconoclasm’s fights over images.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/hagia-sophia.jpg",
+        "alt": "Hagia Sophia (Justinian)",
+        "credit": "Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia.jpg"
+      }
+    },
+    {
+      "id": "hinton-st-mary",
+      "name": "Hinton St Mary mosaic (Christ roundel)",
+      "type": "mosaic",
+      "period": "p325-1000",
+      "date": "4th century",
+      "date_note": "British Museum object 1965,0409.1; one of the earliest definite mosaic portraits of Christ in Britain.",
+      "found": "Hinton St Mary, Dorset, England",
+      "now": "British Museum, London",
+      "line": "A floor mosaic with a clean-shaven Christ and chi-rho behind him — surprising, local, and intimate.",
+      "evidence": {
+        "shows": "A Romano-British floor featured Christ’s bust and the chi-rho.",
+        "infer": "Christian ownership of the villa; possible catechetical or dining-room setting.",
+        "debated": "Room function; whether Bellerophon panel on the same floor is Christian allegory."
+      },
+      "connects_to": [
+        "eusebius-constantine",
+        "nicaea-325"
+      ],
+      "connect_why": "Chi-rho leaves the labarum and lands in a British dining floor.",
+      "sources": [
+        {
+          "label": "Source",
+          "url": "https://www.britishmuseum.org/collection/object/H_1965-0409-1"
+        },
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Hinton_St_Mary_Mosaic.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/hinton-st-mary.jpg",
+        "alt": "Hinton St Mary mosaic (Christ roundel)",
+        "credit": "User:Fransars",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Hinton_St_Mary_Mosaic.jpg"
+      }
+    },
+    {
+      "id": "lullingstone-chi-rho",
+      "name": "Lullingstone villa Christian wall paintings",
+      "type": "house church / fresco",
+      "period": "p325-1000",
+      "date": "Late 4th century",
+      "date_note": "Roman villa in Britain with chi-rho and orantes.",
+      "found": "Lullingstone, Kent, England",
+      "now": "English Heritage site; paintings conserved/displayed in connection with the villa",
+      "line": "Orantes and chi-rho in a villa room in Roman Britain — Christianity at the far edge of the empire, in a family house.",
+      "evidence": {
+        "shows": "Late Roman Christians in Britain decorated a domestic cult room with clear Christian signs.",
+        "infer": "House-church practice among villa elites.",
+        "debated": "Exact liturgical use of the room."
+      },
+      "connects_to": [
+        "augustine-confessions",
+        "gregory-pastoral"
+      ],
+      "connect_why": "A reminder that the post-Constantinian church was also a household faith on the frontier.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Lullingstone_paintings2.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/lullingstone-chi-rho.jpg",
+        "alt": "Lullingstone villa Christian wall paintings",
+        "credit": "Unknown ancient artist; photographer User:Udimu",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "commons": "https://commons.wikimedia.org/wiki/File:Lullingstone_paintings2.jpg"
+      }
+    },
+    {
+      "id": "old-st-peters",
+      "name": "Old St Peter’s (Constantinian basilica)",
+      "type": "basilica",
+      "period": "p325-1000",
+      "date": "Begun under Constantine (c. 320s–349 consecration traditions)",
+      "date_note": "Replaced in the Renaissance by the present basilica; known from texts, drawings, and excavations.",
+      "found": "Vatican Hill, Rome",
+      "now": "Succeeded by the current St Peter’s; foundations and scavi remain",
+      "line": "The emperor’s vast shrine-church over the memorial of Peter. It set the pattern for pilgrimage basilicas across the Christian empire.",
+      "evidence": {
+        "shows": "Constantine built a monumental basilica on the Vatican necropolis site.",
+        "infer": "Liturgical layout, atriums, and relic focus of early pilgrimage.",
+        "debated": "Exact construction phases and financing details."
+      },
+      "connects_to": [
+        "eusebius-constantine",
+        "eusebius-he10",
+        "egeria"
+      ],
+      "connect_why": "Eusebius’s Constantine and Egeria’s pilgrim world suddenly have a roof and a floor plan.",
+      "sources": [
+        {
+          "label": "Vatican",
+          "url": "https://commons.wikimedia.org/wiki/File:Model_of_costantinean_basilica_of_saint_Peter_in_the_vatican.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/old-st-peters.jpg",
+        "alt": "Old St Peter’s (Constantinian basilica)",
+        "credit": "Wikimedia Commons",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Model_of_costantinean_basilica_of_saint_Peter_in_the_vatican.jpg"
+      }
+    },
+    {
+      "id": "pilgrim-ampulla",
+      "name": "Pilgrim ampulla (Holy Land souvenir)",
+      "type": "everyday object / pilgrim flask",
+      "period": "p325-1000",
+      "date": "Early 7th century (Cleveland example); Monza collection earlier/related",
+      "date_note": "Cleveland Museum of Art open-access example used for free image; Monza treasure is the classic Catholic reference set.",
+      "found": "Eastern Mediterranean / Palestine production; collections in Monza, Cleveland, etc.",
+      "now": "Cleveland Museum of Art 1999.46 (image CC0); comparable ampullae in Monza Cathedral Treasury",
+      "line": "Tiny metal flasks pilgrims filled with oil from lamps at holy sites, stamped with crucifixion and other scenes — pocket-sized Holy Land.",
+      "evidence": {
+        "shows": "Devotional souvenirs circulated from Palestinian shrines in late antiquity.",
+        "infer": "How ordinary pilgrims carried sacred contact home (cf. Egeria’s world).",
+        "debated": "Exact shrine for each stamp type."
+      },
+      "connects_to": [
+        "egeria",
+        "cyril-mystagogical",
+        "gregory-pastoral"
+      ],
+      "connect_why": "Egeria describes pilgrims; ampullae are what they brought home.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Byzantium,_Palestine,_early_Byzantine_period,_early_7th_Century_-_Pilgrim%27s_Ampulla_with_Scenes_of_the_Crucifixion_(front)_and_the_Ascension_-_1999.46_-_Cleveland_Museum_of_Art.tif"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/pilgrim-ampulla.jpg",
+        "alt": "Pilgrim ampulla (Holy Land souvenir)",
+        "credit": "https://clevelandart.org/art/1999.46",
+        "license": "CC0 (Cleveland Museum of Art)",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commons": "https://commons.wikimedia.org/wiki/File:Byzantium,_Palestine,_early_Byzantine_period,_early_7th_Century_-_Pilgrim's_Ampulla_with_Scenes_of_the_Crucifixion_(front)_and_the_Ascension_-_1999.46_-_Cleveland_Museum_of_Art.tif"
+      }
+    },
+    {
+      "id": "ravenna-san-vitale",
+      "name": "San Vitale apse mosaic (Ravenna)",
+      "type": "basilica / mosaic",
+      "period": "p325-1000",
+      "date": "Mid-6th century (consecrated 547)",
+      "date_note": "Justinianic Ravenna; UNESCO.",
+      "found": "Ravenna, Italy",
+      "now": "In situ",
+      "line": "Christ enthroned in a glittering apse, with imperial panels of Justinian and Theodora nearby — theology and empire in glass cubes.",
+      "evidence": {
+        "shows": "6th-century imperial Christianity sponsored complex mosaic programs in Italy.",
+        "infer": "Political theology of Justinian’s rule in the West.",
+        "debated": "Workshop origins and some portrait identities."
+      },
+      "connects_to": [
+        "chalcedon-451",
+        "benedict-rule",
+        "gregory-pastoral"
+      ],
+      "connect_why": "The settled doctrinal empire after Chalcedon, visible in color.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Apse_mosaic_-_Basilica_of_San_Vitale_(Ravenna).jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/ravenna-san-vitale.jpg",
+        "alt": "San Vitale apse mosaic (Ravenna)",
+        "credit": "Petar Milošević",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Apse_mosaic_-_Basilica_of_San_Vitale_(Ravenna).jpg"
+      }
+    },
+    {
+      "id": "santa-sabina-doors",
+      "name": "Santa Sabina doors (crucifixion panel)",
+      "type": "basilica / carved doors",
+      "period": "p325-1000",
+      "date": "Early 5th century (church dedicated 422–432)",
+      "date_note": "Among the earliest surviving public images of the crucifixion.",
+      "found": "Santa Sabina, Aventine Hill, Rome",
+      "now": "In situ on the church doors",
+      "line": "Cypress doors with biblical panels, including a spare, early crucifixion: three figures on crosses, without later medieval agony style.",
+      "evidence": {
+        "shows": "Christians in papal Rome of the 420s could show the crucifixion on a church entrance.",
+        "infer": "How late antique art approached the cross after centuries of reluctance.",
+        "debated": "Whether every panel is original to the first installation."
+      },
+      "connects_to": [
+        "leo-tome",
+        "augustine-city",
+        "ephesus-431"
+      ],
+      "connect_why": "Same generation as Leo and the Christological debates — the cross now on the church door.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Crucifixion-Christ-Church-Santa-Sabina-Rome-716123.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/santa-sabina-doors.jpg",
+        "alt": "Santa Sabina doors (crucifixion panel)",
+        "credit": "The image of Jesus on the cross has been invented by commissioned…",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "commons": "https://commons.wikimedia.org/wiki/File:Crucifixion-Christ-Church-Santa-Sabina-Rome-716123.jpg"
+      }
+    },
+    {
+      "id": "junius-bassus-sarcophagus",
+      "name": "Sarcophagus of Junius Bassus",
+      "type": "sarcophagus",
+      "period": "p325-1000",
+      "date": "AD 359 (inscription)",
+      "date_note": "Dated by the deceased’s epitaph; prefect of Rome, newly baptized.",
+      "found": "St Peter’s, Rome",
+      "now": "Museum of St Peter’s / Treasury area (Vatican); casts elsewhere",
+      "line": "Junius Bassus, a top Roman official, was baptized late in life and buried in a masterpiece of early Christian relief — Abraham, Daniel, Christ’s entry, and more.",
+      "evidence": {
+        "shows": "Elite Romans openly chose Christian burial art by 359.",
+        "infer": "How classical style served new biblical subjects.",
+        "debated": "Some panel identifications / program readings."
+      },
+      "connects_to": [
+        "eusebius-constantine",
+        "augustine-confessions",
+        "cyril-mystagogical"
+      ],
+      "connect_why": "A convert of rank, like the world Augustine later describes — carved in marble.",
+      "sources": [
+        {
+          "label": "Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Sarcophagus_of_Junius_Bassus_-_Cast_in_Rome.jpg"
+        }
+      ],
+      "caution": null,
+      "image": {
+        "src": "art/discovery/junius-bassus-sarcophagus.jpg",
+        "alt": "Sarcophagus of Junius Bassus",
+        "credit": "No machine-readable author provided. Tetraktys assumed (based on…",
+        "license": "Attribution (Giovanni Dall’Orto)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Sarcophagus_of_Junius_Bassus_-_Cast_in_Rome.jpg",
+        "commons": "https://commons.wikimedia.org/wiki/File:Sarcophagus_of_Junius_Bassus_-_Cast_in_Rome.jpg"
+      }
+    }
+  ]
+}

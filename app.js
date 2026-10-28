@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261027g';
+  var APP_VERSION = '20261027h';
   try { window.DB_APP_VERSION = APP_VERSION; window.DB_checkAppUpdate = null; } catch (e) {}
   var TZ = 'America/New_York';
   var COLORS = {
@@ -548,7 +548,9 @@
     .then(function (data) { prayers = (data && data.prayers) || []; if (current) renderPrayShort(current); });
 
   // Deep Dive: links out only; no text from the works is stored.
+  // Discovery: archaeological finds tied to periods (data/discovery.json).
   var deepdive = null;
+  var discovery = null;
   function ddLink(cls, ln) {
     var a = el('a', cls, ln.label + ' \u2197');
     a.href = ln.url; a.target = '_blank'; a.rel = 'noopener';
@@ -630,6 +632,117 @@
     }
     return p;
   }
+  function discoveryByPeriod() {
+    var map = {};
+    if (!discovery || !discovery.items) return map;
+    discovery.items.forEach(function (it) {
+      var p = it.period || '';
+      if (!map[p]) map[p] = [];
+      map[p].push(it);
+    });
+    return map;
+  }
+  function discoveryLinksForWriting(wid) {
+    if (!discovery || !discovery.items) return [];
+    return discovery.items.filter(function (it) {
+      return (it.connects_to || []).indexOf(wid) >= 0;
+    });
+  }
+  function renderDiscoveryCard(it) {
+    var card = el('article', 'dd-disc-card');
+    card.id = 'disc-' + it.id;
+    var fig = el('figure', 'dd-disc-fig');
+    if (it.image && it.image.src) {
+      var img = document.createElement('img');
+      img.src = it.image.src;
+      img.alt = it.image.alt || it.name || '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      fig.appendChild(img);
+      var credit = el('figcaption', 'dd-disc-credit', '');
+      var bits = [];
+      if (it.image.credit) bits.push(it.image.credit);
+      if (it.image.license) bits.push(it.image.license);
+      credit.appendChild(document.createTextNode(bits.join(' \u00b7 ')));
+      if (it.image.license_url) {
+        credit.appendChild(document.createTextNode(' \u00b7 '));
+        var la = el('a', null, 'license');
+        la.href = it.image.license_url; la.target = '_blank'; la.rel = 'noopener';
+        credit.appendChild(la);
+      }
+      fig.appendChild(credit);
+    }
+    card.appendChild(fig);
+    card.appendChild(el('h4', 'dd-disc-name', it.name || ''));
+    if (it.type) card.appendChild(el('p', 'dd-disc-type', it.type));
+    if (it.date) card.appendChild(el('p', 'dd-disc-date', it.date));
+    if (it.caution) {
+      var caut = document.createElement('details');
+      caut.className = 'dd-caution';
+      var csum = document.createElement('summary');
+      csum.textContent = '\u24d8 Read with care';
+      caut.appendChild(csum);
+      caut.appendChild(el('p', 'dd-caution-body', it.caution));
+      card.appendChild(caut);
+    }
+    if (it.line) card.appendChild(el('p', 'dd-disc-line', it.line));
+    if (it.found || it.now) {
+      var meta = el('p', 'dd-disc-meta', '');
+      if (it.found) meta.appendChild(document.createTextNode('Found: ' + it.found));
+      if (it.found && it.now) meta.appendChild(document.createTextNode(' \u00b7 '));
+      if (it.now) meta.appendChild(document.createTextNode('Now: ' + it.now));
+      card.appendChild(meta);
+    }
+    if (it.evidence && (it.evidence.shows || it.evidence.infer || it.evidence.debated)) {
+      var ev = document.createElement('details');
+      ev.className = 'dd-disc-ev';
+      var es = document.createElement('summary');
+      es.textContent = 'Evidence shows / Scholars infer / Still debated';
+      ev.appendChild(es);
+      var body = el('div', 'dd-disc-ev-body');
+      if (it.evidence.shows) {
+        var p1 = el('p', null, '');
+        p1.appendChild(el('strong', null, 'Evidence shows: '));
+        p1.appendChild(document.createTextNode(it.evidence.shows));
+        body.appendChild(p1);
+      }
+      if (it.evidence.infer) {
+        var p2 = el('p', null, '');
+        p2.appendChild(el('strong', null, 'Scholars infer: '));
+        p2.appendChild(document.createTextNode(it.evidence.infer));
+        body.appendChild(p2);
+      }
+      if (it.evidence.debated) {
+        var p3 = el('p', null, '');
+        p3.appendChild(el('strong', null, 'Still debated: '));
+        p3.appendChild(document.createTextNode(it.evidence.debated));
+        body.appendChild(p3);
+      }
+      ev.appendChild(body);
+      card.appendChild(ev);
+    }
+    if (it.sources && it.sources.length) {
+      var srcRow = el('p', 'dd-disc-srcs');
+      it.sources.forEach(function (s) {
+        var a = el('a', null, (s.label || 'Source') + ' \u2197');
+        a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+        srcRow.appendChild(a);
+      });
+      card.appendChild(srcRow);
+    }
+    return card;
+  }
+  function renderDiscoveryBlock(periodId, titleOverride, noteOverride, extraClass) {
+    var by = discoveryByPeriod();
+    var list = by[periodId] || [];
+    if (!list.length) return null;
+    var box = el('div', 'dd-disc' + (extraClass ? ' ' + extraClass : ''));
+    box.id = 'dd-disc-' + periodId;
+    box.appendChild(el('p', 'dd-disc-head', titleOverride || 'Discovery'));
+    if (noteOverride) box.appendChild(el('p', 'dd-disc-note', noteOverride));
+    list.forEach(function (it) { box.appendChild(renderDiscoveryCard(it)); });
+    return box;
+  }
   function renderDeepDive() {
     var box = $('ddList');
     if (!deepdive) return;
@@ -640,8 +753,18 @@
     if (deepdive.groups && deepdive.groups.length) {
       var jump = el('nav', 'dd-jump');
       jump.setAttribute('aria-label', 'Jump to period');
+      if (discovery && (discoveryByPeriod()['gospel-world'] || []).length) {
+        var ca = el('a', 'dd-chip', 'Gospels world');
+        ca.href = '#dd-disc-gospel-world';
+        ca.addEventListener('click', function (e) {
+          e.preventDefault();
+          var t = document.getElementById('dd-disc-gospel-world');
+          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        jump.appendChild(ca);
+      }
       deepdive.groups.forEach(function (g) {
-        var a = el('a', 'dd-chip', g.title.split('·')[0].trim());
+        var a = el('a', 'dd-chip', g.title.split('\u00b7')[0].trim());
         a.href = '#dd-' + g.id;
         a.addEventListener('click', function (e) {
           e.preventDefault();
@@ -651,6 +774,17 @@
         jump.appendChild(a);
       });
       box.appendChild(jump);
+    }
+
+    // Gospel-world context strip (not Christian artifacts)
+    if (discovery && discovery.context) {
+      var ctx = renderDiscoveryBlock(
+        'gospel-world',
+        discovery.context.title || 'The world of the Gospels',
+        discovery.context.note || '',
+        'dd-disc-ctx'
+      );
+      if (ctx) box.appendChild(ctx);
     }
 
     deepdive.groups.forEach(function (g) {
@@ -700,6 +834,10 @@
         sec.appendChild(ev);
       }
 
+      // Discovery for this Deep Dive period (after evidence, before writings)
+      var discBlock = renderDiscoveryBlock(g.id, 'Discovery', 'Things people made or used in this period.');
+      if (discBlock) sec.appendChild(discBlock);
+
       g.items.forEach(function (it) {
         var c = el('article', 'dd-item');
         c.id = 'dd-' + it.id;
@@ -713,7 +851,7 @@
           var caut = document.createElement('details');
           caut.className = 'dd-caution';
           var csum = document.createElement('summary');
-          csum.textContent = 'ⓘ Read with care';
+          csum.textContent = '\u24d8 Read with care';
           caut.appendChild(csum);
           caut.appendChild(el('p', 'dd-caution-body', it.caution));
           meta.appendChild(caut);
@@ -734,6 +872,24 @@
         it.links.forEach(function (l) {
           if (l.kind === 'secondary') c.appendChild(ddLink('dd-sec', l));
         });
+        // Quiet Discovery jump from related writings
+        var related = discoveryLinksForWriting(it.id);
+        if (related.length) {
+          var first = related[0];
+          var jump = el('a', 'dd-leftbehind', 'See what they left behind');
+          jump.href = '#disc-' + first.id;
+          jump.addEventListener('click', function (e) {
+            e.preventDefault();
+            var t = document.getElementById('disc-' + first.id);
+            if (t) {
+              // open evidence if present
+              var det = t.querySelector('.dd-disc-ev');
+              if (det) det.open = true;
+              t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+          c.appendChild(jump);
+        }
         sec.appendChild(c);
       });
       box.appendChild(sec);
@@ -768,15 +924,21 @@
     document.body.style.overflow = 'hidden';
     ddRoot.scrollTop = 0;
     updateDdTopBtn();
-    if (deepdive) { renderDeepDive(); updateDdTopBtn(); return; }
-    fetch('data/deepdive.json', { cache: 'no-cache' })
+    if (deepdive && discovery) { renderDeepDive(); updateDdTopBtn(); return; }
+    var ddP = deepdive ? Promise.resolve(deepdive) : fetch('data/deepdive.json', { cache: 'no-cache' })
       .then(function (r) { return r.ok ? r.json() : null; })
-      .catch(function () { return null; })
-      .then(function (data) {
-        if (data && data.groups) { deepdive = data; renderDeepDive(); }
-        else $('ddList').textContent = 'Couldn\u2019t load the Deep Dive list. Check your connection and try again.';
-        updateDdTopBtn();
-      });
+      .catch(function () { return null; });
+    var discP = discovery ? Promise.resolve(discovery) : fetch('data/discovery.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; });
+    Promise.all([ddP, discP]).then(function (pair) {
+      var data = pair[0], disc = pair[1];
+      if (data && data.groups) deepdive = data;
+      if (disc && disc.items) discovery = disc;
+      if (deepdive) renderDeepDive();
+      else $('ddList').textContent = 'Couldn\u2019t load the Deep Dive list. Check your connection and try again.';
+      updateDdTopBtn();
+    });
   }
   function closeDeepDive() {
     ddRoot.hidden = true;

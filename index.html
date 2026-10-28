@@ -198,6 +198,33 @@ header{flex-wrap:wrap;row-gap:10px}
 .dd-top[hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.dd-top{transition:none}}
 .dd-checked{margin:22px 0 0;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu);text-align:center}
+
+/* Discovery (archaeology) inside Deep Dive */
+.dd-disc{margin:14px 0 8px;padding:10px 12px 12px;background:rgba(46,125,50,.04);border:1px solid var(--bd);border-radius:12px}
+.dd-disc-head{margin:0 0 8px;font:700 14px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-disc-note{margin:0 0 10px;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-card{margin:0 0 10px;padding:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px}
+.dd-disc-card:last-child{margin-bottom:0}
+.dd-disc-fig{margin:0 0 6px}
+.dd-disc-fig img{display:block;width:100%;max-width:100%;height:auto;border-radius:8px;background:#eee}
+.dd-disc-credit{margin:4px 0 0;font:11px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-credit a{color:var(--accent-ink);text-decoration:none;font-weight:600}
+.dd-disc-name{margin:0;font:700 16px/1.25 Georgia,"Times New Roman",serif;color:var(--tx)}
+.dd-disc-type{margin:2px 0 0;font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-disc-date{margin:2px 0 0;font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-line{margin:6px 0 0;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-ev{margin:8px 0 0}
+.dd-disc-ev summary{cursor:pointer;font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-disc-ev-body{margin:6px 0 0;padding:8px 10px;background:rgba(46,125,50,.06);border:1px solid var(--bd);border-radius:8px;font:12px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-ev-body p{margin:0 0 5px}
+.dd-disc-ev-body p:last-child{margin:0}
+.dd-disc-ev-body strong{color:var(--tx);font-weight:700}
+.dd-disc-meta{margin:6px 0 0;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-srcs{margin:6px 0 0;font:12px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.dd-disc-srcs a{color:var(--accent-ink);text-decoration:none;font-weight:600;margin-right:8px}
+.dd-leftbehind{display:inline-block;margin:8px 0 0;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;border-bottom:1px dotted rgba(46,125,50,.45)}
+.dd-disc-ctx .dd-disc-head{color:#6b6058}
+
 </style>
 </head>
 <body>
@@ -351,6 +378,6 @@ header{flex-wrap:wrap;row-gap:10px}
 <button type="button" class="dd-top" id="ddTop" hidden aria-label="Back to top">↑</button>
 <script src="vendor/romcal/romcal.js"></script>
 <script src="vendor/romcal/calendar.united-states.en.js"></script>
-<script src="app.js?v=20261027g"></script>
+<script src="app.js?v=20261027h"></script>
 </body>
 </html>

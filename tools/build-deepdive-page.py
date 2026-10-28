@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Build the static, no-JavaScript Deep Dive page from data/deepdive.json.
+"""Build the static, no-JavaScript Deep Dive page from data/deepdive.json
+and data/discovery.json.
 
 Writes deep-dive/index.html (served at /daily-bread/deep-dive/). The page shows the same
-periods, items and links as the in-app Deep Dive overlay, as plain HTML that crawlers and
-readers without JavaScript can see. Links only: the 'expect' phrases are not included.
+periods, items, Discovery finds and links as the in-app Deep Dive overlay, as plain HTML
+that crawlers and readers without JavaScript can see. Links only for writings: the 'expect'
+phrases are not included. Discovery images are local files under art/discovery/.
 
 Usage:
   python3 tools/build-deepdive-page.py           write deep-dive/index.html
@@ -13,6 +15,7 @@ import html, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'data', 'deepdive.json')
+DISCOVERY = os.path.join(ROOT, 'data', 'discovery.json')
 OUT = os.path.join(ROOT, 'deep-dive', 'index.html')
 CANONICAL = 'https://chrissieai.github.io/daily-bread/deep-dive/'
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
@@ -94,6 +97,31 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
 .back-bottom{margin:18px 0 0;text-align:center}
 .dd-backtop{margin:10px 0 0;text-align:right;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 .dd-backtop a{color:var(--accent-ink);text-decoration:none;border:1px solid var(--bd);background:var(--card);border-radius:999px;padding:5px 11px}
+
+.dd-disc{margin:14px 0 8px;padding:10px 12px 12px;background:rgba(46,125,50,.04);border:1px solid var(--bd);border-radius:12px}
+.dd-disc-head{margin:0 0 8px;font:700 14px/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-disc-note{margin:0 0 10px;font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-card{margin:0 0 10px;padding:10px;background:var(--card);border:1px solid var(--bd);border-radius:12px}
+.dd-disc-card:last-child{margin-bottom:0}
+.dd-disc-fig{margin:0 0 6px}
+.dd-disc-fig img{display:block;width:100%;max-width:100%;height:auto;border-radius:8px;background:#eee}
+.dd-disc-credit{margin:4px 0 0;font:11px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-credit a{color:var(--accent-ink);text-decoration:none;font-weight:600}
+.dd-disc-name{margin:0;font:700 16px/1.25 Georgia,"Times New Roman",serif;color:var(--tx)}
+.dd-disc-type{margin:2px 0 0;font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-disc-date{margin:2px 0 0;font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-line{margin:6px 0 0;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-ev{margin:8px 0 0}
+.dd-disc-ev summary{cursor:pointer;font:600 12px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink)}
+.dd-disc-ev-body{margin:6px 0 0;padding:8px 10px;background:rgba(46,125,50,.06);border:1px solid var(--bd);border-radius:8px;font:12px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-ev-body p{margin:0 0 5px}
+.dd-disc-ev-body p:last-child{margin:0}
+.dd-disc-ev-body strong{color:var(--tx);font-weight:700}
+.dd-disc-meta{margin:6px 0 0;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--mu)}
+.dd-disc-srcs{margin:6px 0 0;font:12px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.dd-disc-srcs a{color:var(--accent-ink);text-decoration:none;font-weight:600;margin-right:8px}
+.dd-leftbehind{display:inline-block;margin:8px 0 0;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none;border-bottom:1px dotted rgba(46,125,50,.45)}
+.dd-disc-ctx .dd-disc-head{color:#6b6058}
 """
 
 
@@ -182,7 +210,110 @@ def render_item_meanwhile(mw):
 
 
 
-def render(data):
+def load_discovery():
+    try:
+        with open(DISCOVERY, encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {'items': []}
+
+
+def discovery_by_period(disc):
+    out = {}
+    for it in disc.get('items') or []:
+        out.setdefault(it.get('period') or '', []).append(it)
+    return out
+
+
+def discovery_for_writing(disc, wid):
+    return [it for it in (disc.get('items') or []) if wid in (it.get('connects_to') or [])]
+
+
+def render_discovery_card(it):
+    lines = []
+    w = lines.append
+    w('    <article class="dd-disc-card" id="disc-%s">' % e(it['id']))
+    im = it.get('image') or {}
+    if im.get('src'):
+        # Static page is under deep-dive/; art lives at ../art/discovery/
+        src = im['src']
+        if src.startswith('art/'):
+            src = '../' + src
+        w('      <figure class="dd-disc-fig">')
+        w('        <img src="%s" alt="%s" loading="lazy" decoding="async">' % (e(src), e(im.get('alt') or it.get('name') or '')))
+        credit_bits = []
+        if im.get('credit'):
+            credit_bits.append(im['credit'])
+        if im.get('license'):
+            credit_bits.append(im['license'])
+        credit = ' · '.join(credit_bits)
+        if im.get('license_url'):
+            w('        <figcaption class="dd-disc-credit">%s · <a href="%s" target="_blank" rel="noopener">license</a></figcaption>' % (e(credit), e(im['license_url'])))
+        else:
+            w('        <figcaption class="dd-disc-credit">%s</figcaption>' % e(credit))
+        w('      </figure>')
+    w('      <h3 class="dd-disc-name">%s</h3>' % e(it.get('name') or ''))
+    if it.get('type'):
+        w('      <p class="dd-disc-type">%s</p>' % e(it['type']))
+    if it.get('date'):
+        w('      <p class="dd-disc-date">%s</p>' % e(it['date']))
+    if it.get('caution'):
+        w('      <details class="dd-caution">')
+        w('        <summary>ⓘ Read with care</summary>')
+        w('        <p class="dd-caution-body">%s</p>' % e(it['caution']))
+        w('      </details>')
+    if it.get('line'):
+        w('      <p class="dd-disc-line">%s</p>' % e(it['line']))
+    if it.get('found') or it.get('now'):
+        meta = []
+        if it.get('found'):
+            meta.append('Found: ' + it['found'])
+        if it.get('now'):
+            meta.append('Now: ' + it['now'])
+        w('      <p class="dd-disc-meta">%s</p>' % e(' · '.join(meta)))
+    ev = it.get('evidence') or {}
+    if ev.get('shows') or ev.get('infer') or ev.get('debated'):
+        w('      <details class="dd-disc-ev">')
+        w('        <summary>Evidence shows / Scholars infer / Still debated</summary>')
+        w('        <div class="dd-disc-ev-body">')
+        if ev.get('shows'):
+            w('          <p><strong>Evidence shows:</strong> %s</p>' % e(ev['shows']))
+        if ev.get('infer'):
+            w('          <p><strong>Scholars infer:</strong> %s</p>' % e(ev['infer']))
+        if ev.get('debated'):
+            w('          <p><strong>Still debated:</strong> %s</p>' % e(ev['debated']))
+        w('        </div>')
+        w('      </details>')
+    srcs = it.get('sources') or []
+    if srcs:
+        w('      <p class="dd-disc-srcs">')
+        for s in srcs:
+            w('        <a href="%s" target="_blank" rel="noopener">%s ↗</a>' % (e(s['url']), e(s.get('label') or 'Source')))
+        w('      </p>')
+    w('    </article>')
+    return lines
+
+
+def render_discovery_block(disc, period_id, title, note, extra_class=''):
+    by = discovery_by_period(disc)
+    items = by.get(period_id) or []
+    if not items:
+        return []
+    lines = []
+    w = lines.append
+    cls = 'dd-disc' + ((' ' + extra_class) if extra_class else '')
+    w('  <div class="%s" id="dd-disc-%s">' % (cls, e(period_id)))
+    w('    <p class="dd-disc-head">%s</p>' % e(title))
+    if note:
+        w('    <p class="dd-disc-note">%s</p>' % e(note))
+    for it in items:
+        lines.extend(render_discovery_card(it))
+    w('  </div>')
+    return lines
+
+
+
+def render(data, disc=None):
     intro = data.get('intro') or ''
     out = []
     w = out.append
@@ -214,11 +345,18 @@ def render(data):
     w('  <h1>Deep Dive</h1>')
     if intro:
         w('  <p class="dd-intro">%s</p>' % e(intro))
+    if disc is None:
+        disc = {'items': []}
     if data.get('groups'):
         w('  <nav class="dd-jump" aria-label="Jump to period">')
+        if any(it.get('period') == 'gospel-world' for it in (disc.get('items') or [])):
+            w('    <a class="dd-chip" href="#dd-disc-gospel-world">Gospels world</a>')
         for g in data['groups']:
             w('    <a class="dd-chip" href="#dd-%s">%s</a>' % (e(g['id']), e(chip_label(g['title']))))
         w('  </nav>')
+    ctx = (disc.get('context') or {})
+    for line in render_discovery_block(disc, 'gospel-world', ctx.get('title') or 'The world of the Gospels', ctx.get('note') or '', 'dd-disc-ctx'):
+        w(line)
     for g in data['groups']:
         w('  <section class="dd-group" id="dd-%s">' % e(g['id']))
         w('    <h2>%s</h2>' % e(g['title']))
@@ -245,6 +383,8 @@ def render(data):
             if ev.get('unknown'):
                 w('      <p><strong>Still unknown:</strong> %s</p>' % e(ev['unknown']))
             w('    </div>')
+        for line in render_discovery_block(disc, g['id'], 'Discovery', 'Things people made or used in this period.'):
+            w(line)
         for it in g['items']:
             links = it['links']
             w('    <article class="dd-item" id="dd-%s">' % e(it['id']))
@@ -281,6 +421,9 @@ def render(data):
             for ln in links:
                 if ln['kind'] == 'secondary':
                     w('      ' + link('dd-sec', ln))
+            related = discovery_for_writing(disc, it['id'])
+            if related:
+                w('      <a class="dd-leftbehind" href="#disc-%s">See what they left behind</a>' % e(related[0]['id']))
             w('    </article>')
         w('    <p class="dd-backtop"><a href="#top">Back to top</a></p>')
         w('  </section>')
@@ -297,7 +440,8 @@ def render(data):
 
 def build():
     with open(SRC, encoding='utf-8') as f:
-        return render(json.load(f))
+        data = json.load(f)
+    return render(data, load_discovery())
 
 
 def is_fresh():
@@ -312,7 +456,7 @@ def is_fresh():
 def main(argv):
     if '--check' in argv:
         if is_fresh():
-            print('deep-dive/index.html is up to date with data/deepdive.json')
+            print('deep-dive/index.html is up to date with data/deepdive.json + data/discovery.json')
             return 0
         print('FAIL  deep-dive/index.html is out of date: run python3 tools/build-deepdive-page.py')
         return 1
