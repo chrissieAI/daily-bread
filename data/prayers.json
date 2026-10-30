@@ -165,6 +165,101 @@
    ]
   },
   {
+   "id": "beatitudes",
+   "title": "The Beatitudes (Matthew 5:3–12)",
+   "source_url": "https://www.drbo.org/chapter/47005.htm",
+   "cross_check_url": "https://en.wikisource.org/wiki/Bible_(Douay-Rheims,_Challoner)/Matthew",
+   "usccb_url": "https://bible.usccb.org/bible/matthew/5",
+   "copied": "2026-10-30",
+   "translation": "Douay-Rheims Bible (Challoner)",
+   "credit": "Douay-Rheims Bible (Challoner), public domain",
+   "credit_link_label": "Read in the NABRE at USCCB →",
+   "paragraphs": [
+    [
+     [
+      {
+       "v": 3
+      },
+      {
+       "t": " Blessed are the poor in spirit: for theirs is the kingdom of heaven."
+      }
+     ],
+     [
+      {
+       "v": 4
+      },
+      {
+       "t": " Blessed are the meek: for they shall possess the land."
+      }
+     ],
+     [
+      {
+       "v": 5
+      },
+      {
+       "t": " Blessed are they that mourn: for they shall be comforted."
+      }
+     ],
+     [
+      {
+       "v": 6
+      },
+      {
+       "t": " Blessed are they that hunger and thirst after justice: for they shall have their fill."
+      }
+     ],
+     [
+      {
+       "v": 7
+      },
+      {
+       "t": " Blessed are the merciful: for they shall obtain mercy."
+      }
+     ],
+     [
+      {
+       "v": 8
+      },
+      {
+       "t": " Blessed are the clean of heart: for they shall see God."
+      }
+     ],
+     [
+      {
+       "v": 9
+      },
+      {
+       "t": " Blessed are the peacemakers: for they shall be called children of God."
+      }
+     ],
+     [
+      {
+       "v": 10
+      },
+      {
+       "t": " Blessed are they that suffer persecution for justice' sake: for theirs is the kingdom of heaven."
+      }
+     ],
+     [
+      {
+       "v": 11
+      },
+      {
+       "t": " Blessed are ye when they shall revile you, and persecute you, and speak all that is evil against you, untruly, for my sake:"
+      }
+     ],
+     [
+      {
+       "v": 12
+      },
+      {
+       "t": " Be glad and rejoice, for your reward is very great in heaven. For so they persecuted the prophets that were before you."
+      }
+     ]
+    ]
+   ]
+  },
+  {
    "id": "hail-mary",
    "title": "Hail Mary",
    "source_url": "https://www.usccb.org/prayers/hail-mary",

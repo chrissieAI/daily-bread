@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261028b';
+  var APP_VERSION = '20261030a';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -507,6 +507,10 @@
   function marianId(iso) { return isEaster(iso) ? 'regina-caeli' : 'angelus'; }
   function segs(parent, list) {
     list.forEach(function (sg) {
+      if (sg.v != null) {
+        parent.appendChild(el('span', 'vn', String(sg.v)));
+        return;
+      }
       var n = sg.b ? el('strong', null, sg.t) : sg.i ? el('em', null, sg.t) : document.createTextNode(sg.t);
       parent.appendChild(n);
     });
@@ -540,9 +544,18 @@
       d.appendChild(tx);
       if (p.notice) { var nt = el('p', 'pnotice'); segs(nt, p.notice); d.appendChild(nt); }
       if (p.note) d.appendChild(el('p', 'pnotice psrcnote', p.note));
-      var a = el('a', 'psrc', 'Source: USCCB \u2197');
-      a.href = p.source_url; a.target = '_blank'; a.rel = 'noopener';
-      d.appendChild(a);
+      if (p.credit) {
+        var cr = el('p', 'pnotice pcredit');
+        cr.appendChild(document.createTextNode(p.credit + ' \u00b7 '));
+        var ca = el('a', 'pcredit-link', p.credit_link_label || 'Read in the NABRE at USCCB \u2192');
+        ca.href = p.usccb_url || p.source_url; ca.target = '_blank'; ca.rel = 'noopener';
+        cr.appendChild(ca);
+        d.appendChild(cr);
+      } else {
+        var a = el('a', 'psrc', 'Source: USCCB \u2197');
+        a.href = p.source_url; a.target = '_blank'; a.rel = 'noopener';
+        d.appendChild(a);
+      }
       box.appendChild(d);
     });
   }
