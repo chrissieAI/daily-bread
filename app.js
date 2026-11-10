@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261030a';
+  var APP_VERSION = '20261110a';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -124,6 +124,7 @@
       if (current !== iso) return;
       renderDay(cal[iso] || []);
       dayInfo[iso] = cal[iso] || [];
+      renderHours(iso, cal[iso] || []);
       renderParish(iso);
       renderPrayShort(iso);
       if (!$('prayers').hidden) renderPrayers();
@@ -162,6 +163,96 @@
       opt.appendChild(el('li', null, (RANK_LABEL[d.rank] || cap(d.rankName)) + ': ' + d.name));
     });
   }
+
+
+  // Liturgy of the Hours (facts only; no ICEL text is stored).
+  // Time windows are local America/New_York civic hours.
+  var LOTH_HOURS = [
+    { id: 'oor', name: 'Office of Readings', slug: 'ufficio_delle_letture', start: 0, end: 6 },
+    { id: 'lauds', name: 'Morning Prayer', slug: 'lodi', start: 6, end: 9 },
+    { id: 'daytime', name: 'Daytime Prayer', slug: 'ora_media', start: 9, end: 17 },
+    { id: 'vespers', name: 'Evening Prayer', slug: 'vespri', start: 17, end: 21 },
+    { id: 'compline', name: 'Night Prayer', slug: 'compieta', start: 21, end: 24 }
+  ];
+  var PSALTER_NUM = { WEEK_1: 1, WEEK_2: 2, WEEK_3: 3, WEEK_4: 4 };
+  var PSALTER_ROMAN = ['', 'I', 'II', 'III', 'IV'];
+
+  function hourInNY(now) {
+    var p = new Intl.DateTimeFormat('en-US', { timeZone: TZ, hour: 'numeric', hourCycle: 'h23' })
+      .formatToParts(now || new Date());
+    var h = +p.filter(function (x) { return x.type === 'hour'; })[0].value;
+    if (h === 24) h = 0;
+    return h;
+  }
+  function currentLothHour(now) {
+    var h = hourInNY(now);
+    for (var i = 0; i < LOTH_HOURS.length; i++) {
+      if (h >= LOTH_HOURS[i].start && h < LOTH_HOURS[i].end) return LOTH_HOURS[i];
+    }
+    return LOTH_HOURS[0];
+  }
+  function ibreviaryUrl(slug, iso) {
+    return 'https://www.ibreviary.com/m2/breviario.php?lang=en&s=' + encodeURIComponent(slug) + '&date=' + iso;
+  }
+  // GILH 133: Week I begins on Advent I, the first Ordinary Sunday (or the Monday
+  // after the Baptism of the Lord when that Sunday is displaced), Lent I, and
+  // Easter Sunday. Ash Wednesday–Saturday use Week IV. During Christmas the
+  // four-week count continues; it restarts with Ordinary Time. Palm Sunday is
+  // always Lent week 6 (Week II). Romcal's cycles.psalterWeek follows this,
+  // except it flips to Week I on Good Friday/Holy Saturday because it treats
+  // the Triduum as a new season — GILH starts Week I on Easter Sunday, so
+  // those two days stay Week II (Holy Week). Triduum offices are otherwise proper.
+  function psalterWeekNumber(main) {
+    var seasons = (main && main.seasons) || [];
+    if (seasons.indexOf('PASCHAL_TRIDUUM') >= 0 && seasons.indexOf('EASTER_TIME') < 0) return 2;
+    return PSALTER_NUM[(main && main.cycles && main.cycles.psalterWeek) || ''] || null;
+  }
+  function psalterWeekLabel(n) {
+    return n ? ('Psalter Week ' + PSALTER_ROMAN[n]) : '';
+  }
+
+  function renderHours(iso, days) {
+    var box = $('hours');
+    if (!box) return;
+    var main = (days || []).filter(function (d) { return !d.isOptional; })[0] || (days || [])[0];
+    if (!main) {
+      $('hoursFeast').textContent = '—';
+      $('hoursSeason').textContent = '';
+      $('hoursPsalter').textContent = '';
+      $('hoursNow').hidden = true;
+      return;
+    }
+    $('hoursFeast').textContent = main.name;
+    var season = (main.seasonNames || []).filter(Boolean).join(' / ');
+    $('hoursSeason').textContent = season;
+    $('hoursSeasonChip').style.display = season ? '' : 'none';
+    var pw = psalterWeekLabel(psalterWeekNumber(main));
+    $('hoursPsalter').textContent = pw;
+    $('hoursPsalterChip').style.display = pw ? '' : 'none';
+    var isToday = iso === todayISO();
+    var nowHour = isToday ? currentLothHour() : null;
+    var nowEl = $('hoursNow');
+    if (nowHour) {
+      nowEl.hidden = false;
+      nowEl.textContent = 'Now: ' + nowHour.name;
+    } else {
+      nowEl.hidden = true;
+      nowEl.textContent = '';
+    }
+    var btns = $('hoursBtns');
+    btns.textContent = '';
+    LOTH_HOURS.forEach(function (h) {
+      var a = el('a', 'hours-btn' + (nowHour && nowHour.id === h.id ? ' now' : ''), h.name);
+      a.href = ibreviaryUrl(h.slug, iso);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      if (nowHour && nowHour.id === h.id) a.setAttribute('aria-current', 'true');
+      btns.appendChild(a);
+    });
+  }
+  try {
+    window.DB_loth = { hours: LOTH_HOURS, current: currentLothHour, psalterWeekNumber: psalterWeekNumber, url: ibreviaryUrl };
+  } catch (e) {}
 
   // USCCB sometimes glues a non-verse ref onto the heading (e.g. "Alleluia See Te Deum")
   // when the address block is empty. Split so the row stays label + reference.
