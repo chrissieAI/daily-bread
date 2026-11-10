@@ -312,6 +312,53 @@
    ]
   },
   {
+   "id": "glory-be",
+   "title": "Glory Be (Doxology)",
+   "source_url": "https://www.usccb.org/prayers/glory-be-doxology",
+   "copied": "2026-11-10",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Glory be to the Father"
+      }
+     ],
+     [
+      {
+       "t": "and to the Son"
+      }
+     ],
+     [
+      {
+       "t": "and to the Holy Spirit,"
+      }
+     ],
+     [
+      {
+       "t": "as it was in the beginning"
+      }
+     ],
+     [
+      {
+       "t": "is now, and ever shall be"
+      }
+     ],
+     [
+      {
+       "t": "world without end."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Amen."
+      }
+     ]
+    ]
+   ]
+  },
+  {
    "id": "apostles-creed",
    "title": "Apostles' Creed",
    "source_url": "https://www.usccb.org/prayers/apostles-creed",
@@ -609,6 +656,90 @@
    ]
   },
   {
+   "id": "morning-offering",
+   "title": "Morning Offering",
+   "source_url": "https://www.usccb.org/prayers/morning-offering-0",
+   "copied": "2026-11-10",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "O Jesus, through the Immaculate Heart of Mary,"
+      }
+     ],
+     [
+      {
+       "t": "I offer you my prayers, works, joys and sufferings of this day"
+      }
+     ],
+     [
+      {
+       "t": "for all the intentions of your Sacred Heart,"
+      }
+     ],
+     [
+      {
+       "t": "in union with the Holy Sacrifice of the Mass throughout the world,"
+      }
+     ],
+     [
+      {
+       "t": "for the salvation of souls, the reparation for sins, the reunion of all Christians,"
+      }
+     ],
+     [
+      {
+       "t": "and in particular for the intentions of the Holy Father this month."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Amen"
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "guardian-angel",
+   "title": "Prayer to Your Guardian Angel",
+   "source_url": "https://www.usccb.org/prayers/prayer-your-guardian-angel",
+   "copied": "2026-11-10",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Angel of God, my guardian dear,"
+      }
+     ],
+     [
+      {
+       "t": "to whom God’s love commits me here,"
+      }
+     ],
+     [
+      {
+       "t": "ever this day be at my side,"
+      }
+     ],
+     [
+      {
+       "t": "to light and guard, to rule and guide."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Amen."
+      }
+     ]
+    ]
+   ]
+  },
+  {
    "id": "act-contrition",
    "title": "Act of Contrition",
    "link_only": true,
@@ -687,6 +818,177 @@
      [
       {
        "t": "O sweet Virgin Mary."
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "memorare",
+   "title": "Memorare",
+   "source_url": "https://www.usccb.org/prayers/memorare",
+   "copied": "2026-11-10",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession, was left unaided."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Inspired by this confidence I fly unto thee, O Virgin of virgins, my Mother."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "To thee do I come, before thee I stand, sinful and sorrowful. "
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Amen."
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "our-lady-of-guadalupe",
+   "title": "A Prayer to Our Lady of Guadalupe",
+   "source_url": "https://www.usccb.org/prayers/prayer-our-lady-guadalupe",
+   "copied": "2026-11-10",
+   "paragraphs": [
+    [
+     [
+      {
+       "t": "Virgin of Guadalupe,"
+      }
+     ],
+     [
+      {
+       "t": "Patroness of unborn children,"
+      }
+     ],
+     [
+      {
+       "t": "we implore your intercession"
+      }
+     ],
+     [
+      {
+       "t": "for every child at risk of abortion."
+      }
+     ],
+     [
+      {
+       "t": "Help expectant parents to welcome from God"
+      }
+     ],
+     [
+      {
+       "t": "the priceless gift of their child’s life."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Console parents who have lost that gift"
+      }
+     ],
+     [
+      {
+       "t": "through abortion,"
+      }
+     ],
+     [
+      {
+       "t": "and lead them to forgiveness and healing"
+      }
+     ],
+     [
+      {
+       "t": "through the Divine Mercy of your Son."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Teach us to cherish"
+      }
+     ],
+     [
+      {
+       "t": "and to care for family and friends"
+      }
+     ],
+     [
+      {
+       "t": "until God calls them home."
+      }
+     ],
+     [
+      {
+       "t": "Help us never to see others as burdens."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "Guide our public officials"
+      }
+     ],
+     [
+      {
+       "t": "to defend each and every human life"
+      }
+     ],
+     [
+      {
+       "t": "through just laws."
+      }
+     ],
+     [
+      {
+       "t": "Inspire us all to bring our faith into public life,"
+      }
+     ],
+     [
+      {
+       "t": "to speak for those who have no voice."
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "t": "We ask this in the name of your Son,"
+      }
+     ],
+     [
+      {
+       "t": "Jesus Christ, who is Love and Mercy itself."
+      }
+     ],
+     [
+      {
+       "t": "Amen."
       }
      ]
     ]

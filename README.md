@@ -90,10 +90,13 @@ link card with no text stored:
 |---|---|---|
 | Angelus (Regina Caeli in Easter season) | link | usccb.org/prayers/angelus: "Excerpted from Catholic Household Blessings and Prayers ... All rights reserved." |
 | Regina Caeli | text | usccb.org/prayers/regina-caeli (site footer only) |
-| Our Father, Hail Mary, Apostles' Creed, Nicene Creed | text | their usccb.org/prayers pages (site footer only) |
+| Our Father, Hail Mary, Glory Be (Doxology), Apostles' Creed, Nicene Creed | text | their usccb.org/prayers pages (site footer only) |
+| The Beatitudes (Matthew 5:3–12) | text | Douay-Rheims (Challoner), public domain, plus a USCCB NABRE link |
+| Morning Offering, Prayer to Your Guardian Angel | text | usccb.org/prayers/morning-offering-0 and prayer-your-guardian-angel (site footer only) |
 | Act of Contrition | link | usccb.org/prayers/act-contrition cites the *Order of Penance* |
 | Act of Spiritual Communion | link | USCCB *Catechism for Adults* p. 562 (no USCCB prayer page) |
-| Hail, Holy Queen | text | usccb.org/prayers/hail-holy-queen-salve-regina (site footer only) |
+| Hail, Holy Queen, Memorare | text | usccb.org/prayers/hail-holy-queen-salve-regina and memorare (site footer only) |
+| A Prayer to Our Lady of Guadalupe | text (extract) | prayer body only from usccb.org/prayers/prayer-our-lady-guadalupe (site footer only) |
 | Prayer of St. Michael | link | Archdiocese of Toronto page: "©2020 Archdiocese of Toronto. All rights reserved." |
 | Prayer of St. Francis | text (extract) | only the St. Francis prayer from usccb.org/prayers/prayer-new-year |
 

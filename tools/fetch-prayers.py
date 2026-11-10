@@ -22,17 +22,26 @@ UA = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, 
 # In display order.
 #   text:    copy the whole prayer from the page (no restrictive notice on it).
 #   extract: copy only the paragraphs from the one starting `first` through the one
-#            equal to `last` (a prayer printed inside a longer page).
+#            equal to `last` (a prayer printed inside a longer page). `last` may be
+#            a full paragraph, or a prefix; lines may be joined with newlines or not.
 #   link:    the page restricts copying, so store no text: title, button, label, URL.
+#   keep:    leave an already-stored record unchanged (non-USCCB sources such as
+#            the Douay-Rheims Beatitudes).
 PRAYERS = [
     # "Excerpted from Catholic Household Blessings and Prayers ... All rights reserved."
     {'kind': 'link', 'id': 'angelus', 'title': 'Angelus', 'label': 'Opens usccb.org',
      'url': 'https://www.usccb.org/prayers/angelus'},
     {'kind': 'text', 'id': 'regina-caeli', 'url': 'https://www.usccb.org/prayers/regina-caeli'},
     {'kind': 'text', 'id': 'our-father', 'url': 'https://www.usccb.org/prayers/our-father'},
+    # Douay-Rheims (Challoner), not a USCCB prayer-text copy; leave the stored record alone.
+    {'kind': 'keep', 'id': 'beatitudes'},
     {'kind': 'text', 'id': 'hail-mary', 'url': 'https://www.usccb.org/prayers/hail-mary'},
+    {'kind': 'text', 'id': 'glory-be', 'url': 'https://www.usccb.org/prayers/glory-be-doxology'},
     {'kind': 'text', 'id': 'apostles-creed', 'url': 'https://www.usccb.org/prayers/apostles-creed'},
     {'kind': 'text', 'id': 'nicene-creed', 'url': 'https://www.usccb.org/prayers/nicene-creed'},
+    # Linked from USCCB Basic Prayers (not /prayers/morning-offering, a slightly different text).
+    {'kind': 'text', 'id': 'morning-offering', 'url': 'https://www.usccb.org/prayers/morning-offering-0'},
+    {'kind': 'text', 'id': 'guardian-angel', 'url': 'https://www.usccb.org/prayers/prayer-your-guardian-angel'},
     # cites "*From the Order of Penance, nos. 45 and 92." (ICEL ritual book)
     {'kind': 'link', 'id': 'act-contrition', 'title': 'Act of Contrition', 'label': 'Opens usccb.org',
      'url': 'https://www.usccb.org/prayers/act-contrition'},
@@ -41,6 +50,12 @@ PRAYERS = [
      'label': 'Opens usccb.org (Catechism for Adults)', 'expect': 'An Act of Spiritual Communion',
      'url': 'https://www.usccb.org/sites/default/files/flipbooks/uscca/files/assets/basic-html/page-562.html'},
     {'kind': 'text', 'id': 'hail-holy-queen-salve-regina', 'url': 'https://www.usccb.org/prayers/hail-holy-queen-salve-regina'},
+    {'kind': 'text', 'id': 'memorare', 'url': 'https://www.usccb.org/prayers/memorare'},
+    # Prayer text starts after PDF / language / image chrome on the USCCB page.
+    {'kind': 'extract', 'id': 'our-lady-of-guadalupe', 'title': 'A Prayer to Our Lady of Guadalupe',
+     'url': 'https://www.usccb.org/prayers/prayer-our-lady-guadalupe',
+     'first': 'Virgin of Guadalupe,',
+     'last': 'We ask this in the name of your Son,\nJesus Christ, who is Love and Mercy itself.\nAmen.'},
     # page footer: "\u00a92020 Archdiocese of Toronto. All rights reserved." -> link only
     {'kind': 'link', 'id': 'st-michael', 'title': 'Prayer of St. Michael',
      'button': 'Pray the St. Michael prayer at the Archdiocese of Toronto', 'label': 'Opens archtoronto.org',
@@ -105,6 +120,18 @@ def main():
     out, bad = {'source': 'United States Conference of Catholic Bishops, usccb.org prayer pages', 'prayers': []}, 0
     for item in PRAYERS:
         pid, url = item['id'], item['url']
+        if item['kind'] == 'keep':
+            rec = next((p for p in prev.get('prayers', []) if p['id'] == pid), None)
+            if rec is None:
+                sys.exit('keep %s is missing from %s' % (pid, OUT))
+            out['prayers'].append(rec)
+            if check:
+                s = next(p for p in stored['prayers'] if p['id'] == pid)
+                print(('KEEP  ' if s == rec else 'DIFF  ') + pid)
+                bad += 0 if s == rec else 1
+            else:
+                print('KEEP  ', pid)
+            continue
         if item['kind'] == 'link':
             rec = {'id': pid, 'title': item['title'], 'link_only': True, 'label': item['label'], 'source_url': url}
             if item.get('button'):
@@ -120,9 +147,13 @@ def main():
             continue
         title, paras, notice = parse(fetch(url))
         if item['kind'] == 'extract':
-            texts = [''.join(sg['t'] for sg in p[0]) for p in paras]
-            i = next(n for n, t in enumerate(texts) if t.startswith(item['first']))
-            j = next(n for n, t in enumerate(texts) if n >= i and ''.join(''.join(sg['t'] for sg in ln) for ln in paras[n]) == item['last'])
+            def para_plain(p, sep=''):
+                return sep.join(''.join(sg['t'] for sg in ln) for ln in p)
+            def matches(p, needle):
+                flat, lined = para_plain(p), para_plain(p, '\n')
+                return needle in (flat, lined) or flat.startswith(needle) or lined.startswith(needle)
+            i = next(n for n, p in enumerate(paras) if matches(p, item['first']))
+            j = next(n for n, p in enumerate(paras) if n >= i and matches(p, item['last']))
             paras, notice, title = paras[i:j + 1], None, item['title']
         if check:
             s = next(p for p in stored['prayers'] if p['id'] == pid)
