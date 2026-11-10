@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261110c';
+  var APP_VERSION = '20261110d';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -255,8 +255,9 @@
     window.DB_loth = { hours: LOTH_HOURS, current: currentLothHour, psalterWeekNumber: psalterWeekNumber, url: ibreviaryUrl };
   } catch (e) {}
 
-  // The Rosary: today's mystery set + the five USCCB titles, and a link to that
-  // section of usccb.org/how-to-pray-the-rosary. No how-to, verses, or fruits.
+  // The Rosary (Today page, after Hours): today's mystery set + the five USCCB
+  // titles, and a link to that section of usccb.org/how-to-pray-the-rosary.
+  // No how-to, verses, or fruits. Not shown in the Prayers overlay.
   // Schedule (USCCB wording, America/New_York liturgical date):
   //   Joyful: Mondays, Saturdays, and Sundays during Advent
   //   Sorrowful: Tuesdays, Fridays, and Sundays during Lent
@@ -319,7 +320,6 @@
   function renderRosary(iso, days) {
     var set = rosarySetById(pickRosarySetId(iso, days));
     fillRosaryCard($('rosarySet'), $('rosaryMysteries'), $('rosaryLink'), set);
-    fillRosaryCard($('prayRosarySet'), $('prayRosaryMysteries'), $('prayRosaryLink'), set);
   }
   fetch('data/rosary.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : null; })

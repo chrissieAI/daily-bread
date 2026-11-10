@@ -111,8 +111,8 @@ against a fresh fetch (and that each link still shows its prayer) with
 
 ## The Rosary
 
-A "The Rosary" card appears in two places with the same content: on the Today page,
-just after Liturgy of the Hours, and at the top of the Prayers overlay. It shows
+A "The Rosary" card appears on the Today page, just after Liturgy of the Hours.
+It is not repeated in the Prayers overlay. It shows
 today's mystery set name, the five mystery titles, and a button that opens that
 set's section of USCCB's [How to Pray the Rosary](https://www.usccb.org/how-to-pray-the-rosary)
 page. Only those titles are stored (`data/rosary.json`); the how-to steps, Fatima
