@@ -109,6 +109,29 @@ Data: `data/prayers.json`. The list (order, text/extract/link) is `PRAYERS` in
 against a fresh fetch (and that each link still shows its prayer) with
 `python3 tools/fetch-prayers.py --check`.
 
+## The Rosary
+
+A "The Rosary" card appears in two places with the same content: on the Today page,
+just after Liturgy of the Hours, and at the top of the Prayers overlay. It shows
+today's mystery set name, the five mystery titles, and a button that opens that
+set's section of USCCB's [How to Pray the Rosary](https://www.usccb.org/how-to-pray-the-rosary)
+page. Only those titles are stored (`data/rosary.json`); the how-to steps, Fatima
+prayer, closing prayers, scripture verses, and "fruit of the mystery" text stay
+on the USCCB page and are not copied. The card does not link to USCCB's Rosary
+for Life pages.
+
+The day's set follows USCCB's schedule in America/New_York, using the same romcal
+season already computed for the liturgical day:
+
+- Joyful Mysteries: Mondays, Saturdays, and Sundays during Advent
+- Sorrowful Mysteries: Tuesdays, Fridays, and Sundays during Lent
+- Glorious Mysteries: Wednesdays, and Sundays outside Advent and Lent (including
+  Christmas-season and Easter-season Sundays)
+- Luminous Mysteries: Thursdays
+
+Rebuild or check the stored titles with `python3 tools/fetch-rosary.py` and
+`python3 tools/fetch-rosary.py --check`.
+
 ## Deep Dive
 
 The header "Deep Dive" pill opens a full-screen chronological library of free English texts from

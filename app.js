@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261110b';
+  var APP_VERSION = '20261110c';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -125,6 +125,7 @@
       renderDay(cal[iso] || []);
       dayInfo[iso] = cal[iso] || [];
       renderHours(iso, cal[iso] || []);
+      renderRosary(iso, cal[iso] || []);
       renderParish(iso);
       renderPrayShort(iso);
       if (!$('prayers').hidden) renderPrayers();
@@ -253,6 +254,84 @@
   try {
     window.DB_loth = { hours: LOTH_HOURS, current: currentLothHour, psalterWeekNumber: psalterWeekNumber, url: ibreviaryUrl };
   } catch (e) {}
+
+  // The Rosary: today's mystery set + the five USCCB titles, and a link to that
+  // section of usccb.org/how-to-pray-the-rosary. No how-to, verses, or fruits.
+  // Schedule (USCCB wording, America/New_York liturgical date):
+  //   Joyful: Mondays, Saturdays, and Sundays during Advent
+  //   Sorrowful: Tuesdays, Fridays, and Sundays during Lent
+  //   Glorious: Wednesdays, and Sundays outside Advent and Lent
+  //             (including Christmas-season and Easter-season Sundays)
+  //   Luminous: Thursdays
+  var rosaryData = null;
+  var ROSARY_PAGE = 'https://www.usccb.org/how-to-pray-the-rosary';
+  function weekdaySun0(iso) {
+    return new Date(iso + 'T12:00:00Z').getUTCDay();
+  }
+  function rosarySeason(days) {
+    var main = (days || []).filter(function (d) { return !d.isOptional; })[0] || (days || [])[0];
+    var seasons = (main && main.seasons) || [];
+    return {
+      advent: seasons.indexOf('ADVENT') >= 0,
+      lent: seasons.indexOf('LENT') >= 0,
+      seasons: seasons
+    };
+  }
+  function pickRosarySetId(iso, days) {
+    var wd = weekdaySun0(iso);
+    if (wd === 1 || wd === 6) return 'joyful';
+    if (wd === 2 || wd === 5) return 'sorrowful';
+    if (wd === 3) return 'glorious';
+    if (wd === 4) return 'luminous';
+    // Sunday: season decides. Do not guess if Advent and Lent are both flagged.
+    var s = rosarySeason(days);
+    if (s.advent && s.lent) return null;
+    if (s.advent) return 'joyful';
+    if (s.lent) return 'sorrowful';
+    if (!days || !days.length) return null;
+    return 'glorious';
+  }
+  function rosarySetById(id) {
+    if (!rosaryData || !id) return null;
+    for (var i = 0; i < rosaryData.sets.length; i++) {
+      if (rosaryData.sets[i].id === id) return rosaryData.sets[i];
+    }
+    return null;
+  }
+  function fillRosaryCard(setEl, listEl, linkEl, set) {
+    if (!setEl || !listEl || !linkEl) return;
+    listEl.textContent = '';
+    if (!set) {
+      setEl.textContent = 'The Rosary';
+      linkEl.href = ROSARY_PAGE;
+      linkEl.textContent = 'How to Pray the Rosary at USCCB';
+      return;
+    }
+    setEl.textContent = set.name;
+    set.mysteries.forEach(function (title) {
+      listEl.appendChild(el('li', null, title));
+    });
+    linkEl.href = set.url;
+    linkEl.textContent = 'Pray the ' + set.name + ' at USCCB';
+    linkEl.target = '_blank';
+    linkEl.rel = 'noopener';
+  }
+  function renderRosary(iso, days) {
+    var set = rosarySetById(pickRosarySetId(iso, days));
+    fillRosaryCard($('rosarySet'), $('rosaryMysteries'), $('rosaryLink'), set);
+    fillRosaryCard($('prayRosarySet'), $('prayRosaryMysteries'), $('prayRosaryLink'), set);
+  }
+  fetch('data/rosary.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (data) {
+      rosaryData = data;
+      if (current) renderRosary(current, dayInfo[current] || []);
+    });
+  try {
+    window.DB_rosary = { pick: pickRosarySetId, weekday: weekdaySun0, page: ROSARY_PAGE };
+  } catch (e) {}
+
 
   // USCCB sometimes glues a non-verse ref onto the heading (e.g. "Alleluia See Te Deum")
   // when the address block is empty. Split so the row stays label + reference.

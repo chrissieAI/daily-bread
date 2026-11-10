@@ -1,0 +1,59 @@
+{
+  "source": "United States Conference of Catholic Bishops, How to Pray the Rosary",
+  "source_url": "https://www.usccb.org/how-to-pray-the-rosary",
+  "copied": "2026-11-10",
+  "sets": [
+    {
+      "id": "joyful",
+      "name": "Joyful Mysteries",
+      "anchor": "joyful-mysteries",
+      "url": "https://www.usccb.org/how-to-pray-the-rosary#joyful-mysteries",
+      "mysteries": [
+        "The Annunciation",
+        "The Visitation",
+        "The Nativity",
+        "The Presentation in the Temple",
+        "The Finding in the Temple"
+      ]
+    },
+    {
+      "id": "sorrowful",
+      "name": "Sorrowful Mysteries",
+      "anchor": "sorrowful-mysteries",
+      "url": "https://www.usccb.org/how-to-pray-the-rosary#sorrowful-mysteries",
+      "mysteries": [
+        "The Agony in the Garden",
+        "The Scourging at the Pillar",
+        "The Crowning with Thorns",
+        "The Carrying of the Cross",
+        "The Crucifixion and Death"
+      ]
+    },
+    {
+      "id": "glorious",
+      "name": "Glorious Mysteries",
+      "anchor": "glorious-mysteries",
+      "url": "https://www.usccb.org/how-to-pray-the-rosary#glorious-mysteries",
+      "mysteries": [
+        "The Resurrection",
+        "The Ascension",
+        "The Descent of the Holy Spirit",
+        "The Assumption",
+        "The Coronation of Mary"
+      ]
+    },
+    {
+      "id": "luminous",
+      "name": "Luminous Mysteries",
+      "anchor": "luminous-mysteries",
+      "url": "https://www.usccb.org/how-to-pray-the-rosary#luminous-mysteries",
+      "mysteries": [
+        "The Baptism of Christ in the Jordan",
+        "The Wedding Feast at Cana",
+        "Jesus' Proclamation of the Coming of the Kingdom of God",
+        "The Transfiguration",
+        "The Institution of the Eucharist"
+      ]
+    }
+  ]
+}
