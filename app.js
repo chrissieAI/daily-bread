@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261110d';
+  var APP_VERSION = '20261110e';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -59,6 +59,7 @@
   var romcal = new Romcal.Romcal({ localizedCalendar: UnitedStates_En });
   var calCache = {};
   var readings = null;
+  var readingNotes = null;
   var movies = null;
   var parish = null;
   var dayInfo = {};
@@ -116,6 +117,7 @@
     cta.firstChild.nodeValue = (dd === 0 ? "Read today's readings at USCCB" : 'Read this day\u2019s readings at USCCB') + '\n';
     document.querySelector('#readings .label').textContent = dd === 0 ? "Today's reading references" : 'Reading references';
     renderReadings(iso);
+    renderReadingNotes(iso);
     renderMovie(iso);
     renderParish(iso);
     if (typeof renderArt === 'function' && art) renderArt(iso);
@@ -385,6 +387,140 @@
     });
   }
 
+
+  function gospelCitation(mass) {
+    var list = (mass && mass.readings) || [];
+    for (var i = 0; i < list.length; i++) {
+      var h = (list[i].heading || '').replace(/\s+/g, ' ').trim();
+      if (/^gospel$/i.test(h)) return (list[i].citation || '').trim();
+    }
+    return '';
+  }
+
+  // On days with more than one Mass, home-page notes follow the Mass the
+  // readings card already features first among these: Mass during the Day,
+  // then Thanksgiving Day, then the first listed Mass. Other Masses stay
+  // listed in the reading-references card; their notes are not piled on.
+  function pickMassForNotes(day) {
+    var masses = (day && day.masses) || [];
+    if (!masses.length) return null;
+    var i, m;
+    for (i = 0; i < masses.length; i++) {
+      m = masses[i];
+      if (/mass during the day/i.test(m.name || '')) return m;
+    }
+    for (i = 0; i < masses.length; i++) {
+      m = masses[i];
+      if (/thanksgiving/i.test(m.name || '')) return m;
+    }
+    return masses[0];
+  }
+
+  function appendNoteSources(parent, sources) {
+    if (!sources || !sources.length) return;
+    var p = el('p', 'note-src');
+    p.appendChild(document.createTextNode('Source: '));
+    sources.forEach(function (s, i) {
+      if (i) p.appendChild(document.createTextNode(' \u00b7 '));
+      if (s.url) {
+        var a = el('a', null, s.title || s.url);
+        a.href = s.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        p.appendChild(a);
+      } else {
+        p.appendChild(document.createTextNode(s.title || ''));
+      }
+    });
+    parent.appendChild(p);
+  }
+
+  function appendNoteLinks(parent, links) {
+    if (!links || !links.length) return;
+    var wrap = el('div', 'note-chips');
+    links.forEach(function (L) {
+      var kind = L.kind === 'archaeology' ? ARCH_LABEL : DD_LABEL;
+      var a = el('a', 'chip', kind + ': ' + (L.title || ''));
+      a.href = L.path || L.url || '#';
+      wrap.appendChild(a);
+    });
+    parent.appendChild(wrap);
+  }
+
+  function clearNoteCard(card) {
+    card.open = false;
+    card.hidden = true;
+    var body = card.querySelector('.note-body');
+    if (body) body.textContent = '';
+  }
+
+  function renderReadingNotes(iso) {
+    var ctxCard = $('readingContext');
+    var fathCard = $('readingFather');
+    if (!ctxCard || !fathCard) return;
+    if (readingNotes === null || readings === null) return;
+    var day = readings.days && readings.days[iso];
+    var mass = pickMassForNotes(day);
+    var cit = gospelCitation(mass);
+    var note = (readingNotes.notes && cit && readingNotes.notes[cit]) || null;
+    var masses = (day && day.masses) || [];
+    var massLabel = (masses.length > 1 && mass && mass.name) ? ('Notes for ' + mass.name) : null;
+
+    var ctx = note && note.context;
+    if (!ctx || !(ctx.text || '').trim()) {
+      clearNoteCard(ctxCard);
+    } else {
+      var cbody = ctxCard.querySelector('.note-body');
+      cbody.textContent = '';
+      if (massLabel) cbody.appendChild(el('p', 'note-mass', massLabel));
+      cbody.appendChild(el('p', 'note-text', ctx.text));
+      appendNoteSources(cbody, ctx.sources);
+      appendNoteLinks(cbody, ctx.links);
+      ctxCard.open = false;
+      ctxCard.hidden = false;
+    }
+
+    var fath = note && note.father;
+    if (!fath || !(fath.excerpt || '').trim()) {
+      clearNoteCard(fathCard);
+    } else {
+      var fbody = fathCard.querySelector('.note-body');
+      fbody.textContent = '';
+      if (massLabel) fbody.appendChild(el('p', 'note-mass', massLabel));
+      var by = el('p', 'note-by');
+      by.appendChild(el('strong', null, fath.author || ''));
+      if (fath.work) {
+        by.appendChild(document.createElement('br'));
+        by.appendChild(document.createTextNode(fath.work));
+      }
+      fbody.appendChild(by);
+      fbody.appendChild(el('blockquote', 'note-excerpt', fath.excerpt));
+      if (fath.source_url) {
+        var sp = el('p', 'note-src');
+        var a = el('a', null, 'Read the full writing');
+        a.href = fath.source_url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        sp.appendChild(a);
+        if (fath.source_edition) {
+          sp.appendChild(document.createTextNode(' \u00b7 ' + fath.source_edition));
+        }
+        fbody.appendChild(sp);
+      }
+      if (fath.historic_writings_id) {
+        var chips = el('div', 'note-chips');
+        var a2 = el('a', 'chip', 'In ' + DD_LABEL);
+        a2.href = 'deep-dive/#dd-' + fath.historic_writings_id;
+        chips.appendChild(a2);
+        fbody.appendChild(chips);
+      } else if (fath.historic_writings_note) {
+        fbody.appendChild(el('p', 'note-lib', fath.historic_writings_note));
+      }
+      fathCard.open = false;
+      fathCard.hidden = false;
+    }
+  }
+
   function weekStart(iso) {
     var d = new Date(iso + 'T12:00:00Z');
     return addDays(iso, -d.getUTCDay());
@@ -490,8 +626,14 @@
   fetch('readings.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : {}; })
     .catch(function () { return {}; })
-    .then(function (data) { readings = data || {}; if (current) renderReadings(current); });
+    .then(function (data) { readings = data || {}; if (current) { renderReadings(current); renderReadingNotes(current); } });
 
+
+
+  fetch('data/reading-notes.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; })
+    .then(function (data) { readingNotes = data || {}; if (current) renderReadingNotes(current); });
 
   // ---- Art for today ----
   var art = null;

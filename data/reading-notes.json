@@ -1,0 +1,1330 @@
+{
+  "meta": {
+    "version": "20261110e",
+    "keying": "Lectionary Gospel citation as stored in readings.json",
+    "note": "Approved first batch for Daily Bread. Father entries flagged as not recommended in the review are omitted."
+  },
+  "notes": {
+    "Luke 17:11-19": {
+      "context": {
+        "text": "This lection is set as Jesus passes between Samaria and Galilee. The 1913 Catholic Encyclopedia describes Galilee as the northern division of western Palestine, with Samaria on its southern border. The same Encyclopedia’s article on Samaria recounts the origin of the Samaritans after the Assyrian settlement of foreign peoples in the region, and the long breach with Jerusalem worship.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Samaria”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Samaria"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Leprosy”, on the Mosaic inspection and isolation of the leper (Lev. 13–14)",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Leprosy"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, on 17:12",
+        "excerpt": "Again the Saviour manifests unto us His glory, and by working godlike miracles, endeavours to win senseless Israel unto faith, obdurate though he was, and unbelieving. What argument then will avail him at the day of judgment for refusing to accept salvation through Christ? Especially when they themselves heard His words, and were eyewitnesses of His ineffable miracles?",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_11_sermons_110_123.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "Luke 18:1-8": {
+      "context": {
+        "text": "The 1913 Catholic Encyclopedia’s article “Widow” notes that under the Law, widows were commended to Israel’s charity: they were to have the gleanings of field, olive, and vineyard, a share in the third-year tithe, and a place at the chief pilgrim feasts. It also records that in Maccabean times money and provisions were kept in the Temple at Jerusalem for widows’ subsistence. The same article says the widow’s lot in Old Testament times was generally a hard one.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Widow”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Widow"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Matthew 25:14-30": {
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 78, on Matt. 25:1-30",
+        "excerpt": "These parables are like the former parable of the faithful servant, and of him that was ungrateful and devoured his Lord's goods. For there are four in all, in different ways admonishing us about the same things, I mean about diligence in almsgiving, and about helping our neighbor by all means which we are able.",
+        "source_url": "https://www.newadvent.org/fathers/200178.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Luke 18:35-43": {
+      "context": {
+        "text": "The 1913 Catholic Encyclopedia distinguishes three Jerichos in the same neighborhood. The Canaanite and Israelite city lay at Tell es-Sultan, by the Fountain of Elisha. That town “had entirely disappeared when Herod founded a new Jericho” where the brook of the Kelt (Wadi Qelt) and the Jerusalem road emerge from the mountains. Protected by the fort of Cypros, it had royal palaces, reservoirs, a hippodrome, and an amphitheatre (the Encyclopedia cites Josephus). “It was at the gates of this Jericho,” the article says, “that Christ cured two blind men (Matt., xx, 29-34), only one—Bartimeus—according to Mark (x, 46) and Luke (xviii, 35), and saw the publican Zacheus (Luke, xix, 1-5).” Herod died there.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Jericho”, §II",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Jericho"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 19:1-10": {
+      "context": {
+        "text": "This meeting is set as Jesus enters Jericho. The 1913 CE places it at Herod’s Jericho, the city of palaces at the mouth of the Wadi Qelt (see the note on Luke 18:35-43). In the Gospels “publican” comes from Latin publicanus: a member or employee of the Roman companies that farmed provincial taxes, the highest bidder being authorized “to extort the sum from the province.” The Encyclopedia says the system “afforded ample opportunity for rapacious exactions,” and that Jews who served the Roman rulers in this way “were objects of execration to their countrymen,” habitually coupled in the Gospel narrative with “sinners” and the “heathen.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Jericho”, §II",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Jericho"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Publican”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Publican"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, on 19:2",
+        "excerpt": "Zacchaeus was chief of the publicans, a man entirely abandoned to covetousness, and whose sole object was the increase of his gains: for such was the practice of the publicans, though Paul calls it “idolatry,” possibly as being fit only for those who have no knowledge of God. And as they shamelessly made open profession of this vice, the Lord very justly joined them with the harlots, thus saying to the chiefs of the Jews, “The harlots and the publicans go before you into the kingdom of God.” But Zacchaeus continued not among their number, but was counted worthy of mercy at Christ’s hands: for He it is Who calls near those who are afar off, and gives light to those who are in darkness.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_12_sermons_124_134.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "Luke 19:11-28": {
+      "context": {
+        "text": "The parable is told as Jesus nears Jerusalem, having just passed through Jericho. The 1913 CE, citing Josephus, records that Herod the Great died at this Herodian Jericho, and that “his son Archelaus further embellished the palaces and caused new aqueducts to be built to bring water to the palm gardens.” We do not claim that the “nobleman who went to receive a kingdom” is Archelaus; some commentators make that link, but we have not treated it as a fact.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Jericho”, §II",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Jericho"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 19:41-44": {
+      "context": {
+        "text": "The 1913 Catholic Encyclopedia records that in the eighteenth year of his reign (19 B.C.) Herod began replacing Zerubbabel’s Temple with a far more splendid house. Among the visible remains of that Herodian platform are the great drafted stones of the Temple Mount, and a Hebrew inscription marking the “place of trumpeting.” The Arch of Titus in Rome shows spoils of the Temple carried in the triumph after the city fell to Titus in A.D. 70—the destruction the CE, following Josephus, also records.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          },
+          {
+            "kind": "archaeology",
+            "id": "arch-titus",
+            "title": "Arch of Titus — menorah panel",
+            "path": "archaeology/#disc-arch-titus"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, Sermon CXXXI, on 19:41-44",
+        "excerpt": "For it even says, that “when He saw the city, He wept;” that we hereby might learn that He feels grief, if we may so speak of God, Who transcends all. But we could not have known that He pitied them, wicked as they were, had He not made manifest by some human action that sorrow which we could not see. For the tear which drops from the eye is a symbol of grief, or rather, a plain demonstration of it. So He wept also over Lazarus, that we again might understand that it grieved Him that the nature of man had fallen under the power of death.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_12_sermons_124_134.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "Luke 19:45-48": {
+      "context": {
+        "text": "This scene is set in Herod’s Temple, the house begun in 19 B.C. (see the Temple note on Luke 19:41-44). The 1913 CE, following Josephus, describes an outer Court of the Gentiles, which non-Jews were permitted to enter, and, further in, the Court of the Women, which contained a “hall of the treasury.” We did not find, in the fetched Temple article, a separate discussion of the money-changers’ stalls, so that custom is not claimed here.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          }
+        ]
+      }
+    },
+    "Luke 20:27-40": {
+      "context": {
+        "text": "The 1913 Catholic Encyclopedia describes the Sadducees as a politico-religious party of the late post-exilic and New Testament period, the dominant priestly group in the Greek and Roman age, their name generally derived from Zadok the high priest rather than from the word for “righteous.” “Among the religious difference between the two parties,” the article says, “may be mentioned the denial on the part of the Sadducees of the resurrection, the immortality of the soul and the existence of angels (Matt., xxii, 23; Mark xii, 18; Acts, xxiii, 8).” They also rejected the oral traditions emphasized by the Pharisees. After Jerusalem’s destruction their influence “vanished completely as soon as the Jews ceased to be a nation.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Sadducees”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Sadducees"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Matthew 25:31-46": {
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 79, on Matt. 25:31-41",
+        "excerpt": "And everything will help to render that day fearful. Then, “shall be gathered together,” He says, “all nations,” that is, the whole race of men. “And He shall separate them one from another, as the shepherd his sheep.” For now they are not separated, but all mingled together, but the division then shall be made with all exactness. And for a while it is by their place that He divides them, and makes them manifest; afterwards by the names He indicates the dispositions of each, calling the one kids, the other sheep, that He might indicate the unfruitfulness of the one, for no fruit will come from kids; and the great profit from the other, for indeed from sheep great is the profit, as well from the milk, as from the wool, and from the young, of all which things the kid is destitute. But while the brutes have from nature their unfruitfulness, and fruitfulness, these have it from choice, wherefore some are punished, and the others crowned.",
+        "source_url": "https://www.newadvent.org/fathers/200179.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Luke 21:1-4": {
+      "context": {
+        "text": "The 1913 CE, citing Josephus (Antiquities 19.6.1), places a “hall of the treasury” in the Court of the Women of Herod’s Temple. The same Encyclopedia’s article “Widow” says the lot of the widow in Old Testament times was generally a hard one, and that “Christ refers to the widow's mite as an offering from the poorest of the poor (Mark, xii, 44).” Provisions for widows had even been kept in the Temple in Maccabean times (2 Maccabees 3:10, as cited there).",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Widow”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Widow"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          }
+        ]
+      }
+    },
+    "Luke 21:5-11": {
+      "context": {
+        "text": "The 1913 CE states that in 19 B.C. Herod destroyed Zerubbabel’s Temple “to replace it by another which would equal, if not surpass in splendour, that of Solomon.” The app already documents the scale of that rebuilding in the Herodian ashlars of the Temple Mount and the “Place of Trumpeting” inscription from the southwest corner. The Arch of Titus preserves a Roman record of the Temple spoils after A.D. 70.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          },
+          {
+            "kind": "archaeology",
+            "id": "arch-titus",
+            "title": "Arch of Titus — menorah panel",
+            "path": "archaeology/#disc-arch-titus"
+          }
+        ]
+      }
+    },
+    "Luke 21:20-28": {
+      "context": {
+        "text": "The 1913 CE, following Josephus, records the fall of Jerusalem and the Temple to Titus, and notes that sacred utensils from the Temple “escaped the destruction of the Temple by Titus and with other sacred utensils figures in the conqueror's triumphal procession at Rome (Bell. Jud., VII, v, 4-6).” That procession is the scene carved on the Arch of Titus, already in Archaeology Finds.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "arch-titus",
+            "title": "Arch of Titus — menorah panel",
+            "path": "archaeology/#disc-arch-titus"
+          },
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          }
+        ]
+      }
+    },
+    "Matthew 4:18-22": {
+      "context": {
+        "text": "The 1913 CE places this call beside the Sea of Galilee, and treats Capernaum, on the north shore of the lake, as the town Jesus made “His new abode” after being refused at Nazareth. The Encyclopedia identifies Capernaum with Tell-Houm, while recording that “according to some archaeologists” the site was instead at nearby Khan-Minieh or Aïn-Tabigah. Archaeology Finds already includes the “House of Peter” remains at Capernaum. Bethsaida, named elsewhere as the home of Peter, Andrew, and Philip, is a separate debate (one city or two); it is not required for this lection.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Capharnaum”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Capharnaum"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethsaida”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethsaida"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "capernaum-house-peter",
+            "title": "Capernaum “House of Peter”",
+            "path": "archaeology/#disc-capernaum-house-peter"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 14, on Matt. 4:12 and 4:18-19",
+        "excerpt": "And walking by the sea of Galilee, He saw two brethren, Simon that was surnamed Peter, and Andrew his brother, casting a net into the sea; for they were fishers. And He says unto them, Come ye after me, and I will make you fishers of men. And they left their nets, and followed Him. And yet John says that they were called in another manner. Whence it is evident that this was a second call; and from many things one may perceive this. For there it is said, that they came to Him when John was not yet cast into prison; but here, after he was in confinement. And there Andrew calls Peter, but here Jesus calls both.",
+        "source_url": "https://www.newadvent.org/fathers/200114.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 15:29-37": {
+      "context": {
+        "text": "The lection is set beside the Sea of Galilee. The 1913 CE describes Galilee as “the native land of Jesus Christ, where He began His ministry and performed many of His works,” bounded on the east by the Jordan valley and the lake. We do not move this scene into the Decapolis; Matthew 15:29 names the Sea of Galilee, and the Decapolis is a separate geographic term.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 53, on Matt. 15:32",
+        "excerpt": "Both above, when going to do this miracle, He first healed them that were maimed in body, and here He does the self-same thing; from the healing of the blind and the lame, He goes on to this again. But why might it be, that then His disciples said, Send away the multitude, but now they said not so; and this, though three days had past? Either being themselves improved by this time, or seeing that the people had no great sense of hunger; for they were glorifying God for the things that were done. But see how in this instance too He does not proceed at once to the miracle, but calls them forth thereunto.",
+        "source_url": "https://www.newadvent.org/fathers/200153.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 7:21, 24-27": {
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 24, on Matt. 7:21",
+        "excerpt": "Wherefore said He not, but he that does my will? Because for the time it was a great gain for them to receive even this first; yea it was very great, considering their weakness. And moreover He intimated the one also by the other. And withal this may be mentioned, that in fact there is no other will of the Son besides that of the Father. And here He seems to me to be censuring the Jews chiefly, laying as they did the whole stress upon the doctrines, and taking no care of practice.",
+        "source_url": "https://www.newadvent.org/fathers/200124.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 9:27-31": {
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 32, on Matt. 9:27-30",
+        "excerpt": "Wherefore can it be that He puts them off, and they crying out? Here again teaching us utterly to repel the glory that comes from the multitude. For because the house was near, He leads them there to heal them in private. And this is evident from the fact, that He charged them moreover to tell no man. But this is no light charge against the Jews; when these men, though their eyes were struck out, receive the faith by hearing alone, but they beholding the miracles, and having their sight to witness what was happening, do all just contrary.",
+        "source_url": "https://www.newadvent.org/fathers/200132.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 9:35–10:1, 5a, 6-8": {
+      "context": {
+        "text": "The 1913 CE notes that the New Testament speaks of the synagogue fifty-five times, and that from the outset of Christianity “the synagogue was in full power of its various functions,” both as a meeting-house and, in some passages, as a name for the Jewish community. Galilee, the same Encyclopedia says, was the land where Jesus “began His ministry and performed many of His works, and whence He drew His Apostles.” Ruins of early Galilean synagogues are mentioned there; the app’s Magdala stone is a first-century Galilean synagogue artifact (not, however, from a town named in this lection).",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Synagogue”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Synagogue"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "magdala-stone",
+            "title": "Magdala stone",
+            "path": "archaeology/#disc-magdala-stone"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 32, on Matt. 9:35 and the sending of the disciples",
+        "excerpt": "He went about, it is said, all the cities and villages, teaching in their synagogues, and preaching the gospel of the kingdom, and healing every sickness and every disease. And so far from punishing them for their insensibility, He did not even simply rebuke them; at once both evincing His meekness, and so refuting the calumny; and at the same time minded also by the signs which followed to exhibit His proof more completely.",
+        "source_url": "https://www.newadvent.org/fathers/200132.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Mark 1:1-8": {
+      "context": {
+        "text": "The 1913 CE says John “had led in the desert the life of an anchorite” and then “came into all the country about the Jordan, preaching,” clothed in camel’s hair with a leather girdle. It locates his ministry in the desert part of the Jordan valley. A tradition traced to A.D. 333 associates the Baptist’s work, and especially the Baptism of the Lord, with the neighborhood of Deir Mar-Yuhanna (Qasr el-Yehud). The article on the Jordan also notes that “the scene of the ministrations of St. John the Baptist… has been very plausibly placed at the ford of the Ghôranieh, which has always been more frequented.” We do not choose between those two proposals.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “The Jordan”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Jordan"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 5:17-26": {
+      "context": {
+        "text": "Luke’s lection does not name the town (Mark’s parallel places a similar scene in Capernaum; we do not import that name here). The 1913 CE describes the Pharisees as a party that “came into existence as a class about the third century B.C.,” the name meaning those who separated themselves from heathenizing influences, and who in the time of Jesus “sat and taught in Moses’ seat.” Their work, the article says, was chiefly connected with the synagogues.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Pharisees”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Pharisees"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, on 5:17",
+        "excerpt": "Around Him verily was a company of the envious, scribes, that is, and pharisees, who were spectators of His wonderful works, and listened as He taught: “and the power of God was present, it says, to heal him.” Is this spoken as though God gave Him the ability to perform the miracles? Did He borrow of another the power? But who would venture to affirm this? Rather it was He Himself, working by His own power, as God and Lord, and not as partaker of some divine grace.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_02_sermons_12_25.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "Luke 1:26-38": {
+      "context": {
+        "text": "The 1913 CE calls Nazareth “the town of Galilee where the Blessed Virgin dwelt when the Archangel announced to her the Incarnation of the Word, and where Christ lived until the age of thirty years.” It gives the name in Eusebius and Jerome as Nazara (modern en-Nasirah). On the Virgin’s state at the Annunciation the Encyclopedia records disagreement: “When the marriage took place, whether before or after the Incarnation, is no easy matter to settle.” Most modern commentators, it says, following St. Thomas, take her as only affianced at that moment. The same article on the Annunciation notes that the local tradition of a greeting at the fountain, and the claim that Joseph was an aged widower and Mary twelve or fifteen, “is founded only upon apocryphal documents.” We do not repeat those as facts. The year and day, the CE says, “cannot be determined.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Nazareth”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Nazareth"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Annunciation of the Blessed Virgin Mary”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Annunciation_of_the_Blessed_Virgin_Mary"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. Joseph”, on betrothal / marriage",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._Joseph"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. Irenaeus",
+        "work": "Against Heresies, Book III, chapter 21, §4",
+        "excerpt": "To this effect they testify, [saying,] that before Joseph had come together with Mary, while she therefore remained in virginity, she was found with child of the Holy Ghost; and that the angel Gabriel said to her, The Holy Ghost shall come upon you, and the power of the Highest shall overshadow you; therefore also that holy thing which shall be born of you shall be called the Son of God.",
+        "source_url": "https://www.newadvent.org/fathers/0103321.htm",
+        "source_edition": "Ante-Nicene Fathers, vol. 1, tr. Alexander Roberts and William Rambaut, public domain (New Advent text). Mid-sentence editorial verse tags on the New Advent page have been omitted; the wording is otherwise that of the fetched page.",
+        "historic_writings_id": "irenaeus",
+        "historic_writings_note": null
+      }
+    },
+    "Matthew 11:28-30": {
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 38, on Matt. 11:28-30",
+        "excerpt": "Not this or that person, but all that are in anxiety, in sorrows, in sins. Come, not that I may call you to account, but that I may do away your sins; come, not that I want your honor, but that I want your salvation. For I, says He, will give you rest. He said not, I will save you, only; but what was much more, I will place you in all security. Thus, be not afraid, says He, hearing of a yoke, for it is easy: fear not, because I said, a burden, for it is light.",
+        "source_url": "https://www.newadvent.org/fathers/200138.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 11:11-15": {
+      "context": {
+        "text": "The 1913 CE article on St. John the Baptist, drawing on the Gospels, describes his public appearing “in the fifteenth year of the reign of Tiberius Caesar,” after years in the desert, “clothed not in the soft garments of a courtier, but in those of camel’s hair, and a leather girdle about his loins.” His baptizing in the Jordan, the article says, is what “attracted public attention to such an extent that he was surnamed ‘the Baptist’ even during his lifetime.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 37, on Matt. 11:7-9",
+        "excerpt": "For the matter indeed of John's disciples had been ordered well, and they had gone away assured by the miracles which had just been performed; but there was need after that of remedy as regarded the people. For although they could not suspect anything of the kind of their own master, the common people might from the inquiry of John's disciples form many strange suspicions, not knowing the mind with which he sent his disciples.",
+        "source_url": "https://www.newadvent.org/fathers/200137.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 11:16-19": {
+      "context": {
+        "text": "The 1913 CE explains that Gospel “publicans” were members or employees of the Roman tax-farming companies, “objects of execration to their countrymen,” and “as a class habitually coupled with ‘sinners’ and the ‘heathen.’” That is the social world behind the charge that Jesus was “a friend of publicans and sinners.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Publican”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Publican"
+          }
+        ],
+        "links": []
+      }
+    },
+    "John 1:6-8, 19-28": {
+      "context": {
+        "text": "The 1913 CE discusses the place named in John 1:28. “As to Bethania, the reading Bethabara, first given by Origen, should be discarded,” it says; “at any rate, the site in question must be looked for ‘beyond the Jordan.’” We do not attempt a modern identification beyond that. The same articles describe John’s work in the Jordan valley (see the note on Mark 1:1-8), including the disagreement over the traditional site.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “The Jordan”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Jordan"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on the Gospel of John, Homily 16, on John 1:19",
+        "excerpt": "A dreadful thing is envy, beloved, a dreadful thing and a pernicious, to the enviers, not to the envied. For it harms and wastes them first, like some mortal venom deeply seated in their souls; and if by chance it injure its objects, the harm it does is small and trifling, and such as brings greater gain than loss. All this I have said, by reason of the envy of the Jews. Because those who had flocked from the cities to John, and had condemned their own sins, and caused themselves to be baptized, repenting as it were after Baptism, send to ask him, Who are you?",
+        "source_url": "https://www.newadvent.org/fathers/240116.htm",
+        "source_edition": "NPNF first series, vol. 14, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on John are not in Historic Writings. Augustine’s Tractates on John (Tractates 4–5) also treat this passage and are public domain at New Advent, but the Tractates are not in the library either."
+      }
+    },
+    "Matthew 21:23-27": {
+      "context": {
+        "text": "The question is asked in the Temple. The 1913 CE dates Herod’s rebuilding from 19 B.C. and, following Josephus, describes the courts of that house, including the Court of the Gentiles. See also the Temple notes on Luke 19–21.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 67, on Matt. 21:23",
+        "excerpt": "But the boastful and arrogant Jews, wishing to interrupt His teaching, came unto Him, and asked, By what authority doest thou these things? For since they could not object against the miracles, they bring forward against Him the correction of the traffickers in the temple. And this in John also they appear to ask, although not in these words, but with the same intent. For there too they say, What sign do you show unto us? Seeing that you do these things.",
+        "source_url": "https://www.newadvent.org/fathers/200167.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 21:28-32": {
+      "context": {
+        "text": "On “publicans,” see the 1913 CE article already used for Zacchaeus: they were employees of the Roman tax-farming companies, “objects of execration to their countrymen,” and habitually named with “sinners.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Publican”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Publican"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 7:18b-23": {
+      "context": {
+        "text": "This is a question from the disciples of John, then in the period of his public ministry in the Jordan valley. For the sourced description of that ministry and the two proposed sites, see the note on Mark 1:1-8.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “The Jordan”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Jordan"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Matthew 1:1-17": {
+      "context": {
+        "text": "The 1913 CE article “Genealogy of Christ” sets out, without hiding them, the differences between Matthew’s list and Luke’s (Matthew descends from David through Solomon and is placed at the opening of the Gospel; Luke ascends from Joseph through Nathan, and is placed at the beginning of the public life). The article on St. Joseph adds that “most modern writers readily admit that in both documents we possess the genealogy of Joseph, and that it is quite possible to reconcile their data,” but it does not pretend the harmonizations are agreed. We report the disagreement and do not adopt a theory.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Genealogy of Christ”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Genealogy_of_Christ"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. Joseph”, Genealogy",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._Joseph"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Matthew 1:18-25": {
+      "context": {
+        "text": "The 1913 CE says that when the Gospel history opens, Joseph was settled at Nazareth, though “Bethlehem, the city of David and his descendants, appears to have been the birth-place of Joseph.” He is called a tekton, “both mechanic in general and carpenter in particular”; “St. Justin vouches for the latter sense… and tradition has accepted this interpretation.” On whether, at this moment, Mary was already married or only affianced, the Encyclopedia records that “the masters of exegesis have at all times been at variance,” and that most modern writers, following St. Thomas, take her as affianced. We do not choose a side, and we do not use the apocryphal stories of Joseph as a ninety-year-old widower, which the CE (citing Jerome) sets aside as without authority.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. Joseph”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._Joseph"
+          }
+        ],
+        "links": [
+          {
+            "kind": "writings",
+            "id": "justin-dialogue",
+            "title": "St. Justin Martyr, Dialogue with Trypho (cited by the 1913 CE for Joseph as carpenter)",
+            "path": "deep-dive/#dd-justin-dialogue"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Irenaeus",
+        "work": "Against Heresies, Book III, chapter 21, §4",
+        "excerpt": "To this effect they testify, [saying,] that before Joseph had come together with Mary, while she therefore remained in virginity, she was found with child of the Holy Ghost; and that the angel Gabriel said to her, The Holy Ghost shall come upon you, and the power of the Highest shall overshadow you; therefore also that holy thing which shall be born of you shall be called the Son of God; and that the angel said to Joseph in a dream, Now this was done, that it might be fulfilled which was spoken by Isaiah the prophet, Behold, a virgin shall be with child.",
+        "source_url": "https://www.newadvent.org/fathers/0103321.htm",
+        "source_edition": "Ante-Nicene Fathers, vol. 1, public domain (New Advent text). Editorial verse tags omitted.",
+        "historic_writings_id": "irenaeus",
+        "historic_writings_note": null
+      }
+    },
+    "Luke 1:5-25": {
+      "context": {
+        "text": "The scene is the offering of incense in the Temple, in the “course of Abia.” The 1913 CE discusses that priestly course but warns that “no calculations can be based upon the time of the year when the course of Abia was serving in the Temple” for fixing John’s birthday. The house itself is Herod’s Temple, begun in 19 B.C. (see the Temple notes above). We therefore describe the setting, and we do not use the course of Abia to date the event.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          }
+        ]
+      }
+    },
+    "Luke 1:39-45": {
+      "context": {
+        "text": "Luke places the visit in “the hill country” of Judah. The 1913 CE articles we fetched do not give a certain town. Later tradition names Ein Kerem; we do not, because we have not fetched and checked a source that would support putting that name on the card.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Annunciation of the Blessed Virgin Mary”, mentions Elizabeth in connection with the same narrative",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Annunciation_of_the_Blessed_Virgin_Mary"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 1:57-66": {
+      "context": {
+        "text": "The 1913 CE article “Circumcision” states that, as Isaac was circumcised, “so their children were circumcised on the eighth day, according to the law.” It adds that “the eighth day was prescribed, even should it be the Sabbath,” and that “a name was given, as in Luke, i, 59, ii, 21, to commemorate the change of the patriarch's name from Abram to Abraham, when God made the covenant with him and made circumcision the sign of it.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Circumcision”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Circumcision"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 1:67-79": {
+      "context": {
+        "text": "This canticle is spoken by Zechariah, a priest of the course of Abia, on the day his son is named (see the circumcision-and-naming note on Luke 1:57-66, and the Temple setting of Luke 1:5-25).",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Circumcision”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Circumcision"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, on 1:79",
+        "excerpt": "For those under the law, and dwelling in Judea, the Baptist was, as it were, a lamp, preceding Christ: and God so spake before of him; “I have prepared a lamp for My Christ.” And the law also typified him in the lamp, which in the first tabernacle it commanded should be ever kept alight.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_01_sermons_01_11.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings. The fetched Luke 1 file is fragmentary; this comment is clearly on 1:79, which is inside this lection."
+      }
+    },
+    "Matthew 1:1-25": {
+      "context": {
+        "text": "This Vigil Gospel joins Matthew’s genealogy to the account of Joseph’s dream. On the two genealogies (Matthew through Solomon, Luke through Nathan) the 1913 CE records real differences and does not treat any one harmonization as settled. On Joseph, the same Encyclopedia says he was a tekton, “mechanic in general and carpenter in particular,” a sense for which it cites St. Justin, and that at the opening of the Gospel he was settled at Nazareth, Bethlehem appearing to have been his birth-place. Whether Mary was already married or only affianced at this moment is, the CE says, a point “the masters of exegesis have at all times been at variance” about.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Genealogy of Christ”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Genealogy_of_Christ"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. Joseph”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._Joseph"
+          }
+        ],
+        "links": [
+          {
+            "kind": "writings",
+            "id": "justin-dialogue",
+            "title": "St. Justin Martyr, Dialogue with Trypho",
+            "path": "deep-dive/#dd-justin-dialogue"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Irenaeus",
+        "work": "Against Heresies, Book III, chapter 21, §4",
+        "excerpt": "To this effect they testify, [saying,] that before Joseph had come together with Mary, while she therefore remained in virginity, she was found with child of the Holy Ghost; and that the angel Gabriel said to her, The Holy Ghost shall come upon you, and the power of the Highest shall overshadow you; therefore also that holy thing which shall be born of you shall be called the Son of God; and that the angel said to Joseph in a dream, Now this was done, that it might be fulfilled which was spoken by Isaiah the prophet, Behold, a virgin shall be with child.",
+        "source_url": "https://www.newadvent.org/fathers/0103321.htm",
+        "source_edition": "Ante-Nicene Fathers, vol. 1, public domain (New Advent text). Editorial verse tags omitted.",
+        "historic_writings_id": "irenaeus",
+        "historic_writings_note": null
+      }
+    },
+    "Luke 2:1-14": {
+      "context": {
+        "text": "The 1913 CE (Bethlehem) places “Bethlehem of Judea,” the city of David, about five miles south of Jerusalem, and notes that as early as the second century St. Justin Martyr indicated it as the place of the Nativity. Constantine built a basilica on the site about A.D. 330; the present Church of the Nativity, already in Archaeology Finds, is the later building on that spot. On the enrolment, the Encyclopedia itself records a serious difficulty: Luke says the first census was taken when Quirinius (Cyrinus) was governor of Syria, yet the well-known census of Quirinius falls in A.D. 7, after Herod’s death, while Matthew places the birth “in the days of King Herod.” Proposed explanations in the 1913 articles include an earlier term of office for Quirinius, a census begun under Sentius Saturninus and later associated with Quirinius, or even the suggestion of a copyist’s error. Other scholars, the CE notes, have called Luke inaccurate. We do not choose a side. The CE also records that the Gospels “give no help” on the day of the year, and that even whether shepherds would have been in the fields in winter has been argued both ways.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (1)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(1)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (2)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(2)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Biblical Chronology”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Biblical_Chronology"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Gospel of Saint Luke”, §IX. The Census of Quirinius",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Gospel_of_Saint_Luke"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Chronology of the Life of Jesus Christ”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Chronology_of_the_Life_of_Jesus_Christ"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Christmas”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Christmas"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "church-of-nativity",
+            "title": "Church of the Nativity, Bethlehem",
+            "path": "archaeology/#disc-church-of-nativity"
+          },
+          {
+            "kind": "writings",
+            "id": "justin-first-apology",
+            "title": "St. Justin Martyr, First Apology",
+            "path": "deep-dive/#dd-justin-first-apology"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, Sermon I, on Luke 2:1",
+        "excerpt": "Christ therefore was born in Bethlehem at the time when Augustus Caesar gave orders that the first enrolment should be made. But what necessity was there, some one may perhaps say, for the very wise Evangelist to make special mention of this? Yes, I answer: it was both useful and necessary for him to mark the period when our Saviour was born: for it was said by the voice of the Patriarch: “The head shall not depart from Judah, nor a governor from his thighs until He come, for Whom it is laid up: and He is the expectation of the Gentiles.” That we therefore might learn that the Israelites had then no king of the tribe of David, and that their own native governors had failed, with good reason he makes mention of the decrees of Caesar, as now having beneath his sceptre Judaea as well as the rest of the nations: for it was as their ruler that he commanded the census to be made.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_01_sermons_01_11.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings. Leo the Great’s Christmas sermons (e.g. Sermon 21) are also public domain at New Advent, but those sermons are not in the library (only the Tome is)."
+      }
+    },
+    "Luke 2:15-20": {
+      "context": {
+        "text": "The shepherds go to Bethlehem, the city of David five miles south of Jerusalem (1913 CE). Justin Martyr, already in Historic Writings, indicated this town as the place of the Nativity in the second century; Constantine’s basilica stood on the site by about A.D. 330, and the Church of the Nativity remains there. The CE records disagreement about whether shepherds would have kept flocks exposed in winter; we do not settle the season.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (1)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(1)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (2)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(2)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Christmas”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Christmas"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "church-of-nativity",
+            "title": "Church of the Nativity, Bethlehem",
+            "path": "archaeology/#disc-church-of-nativity"
+          },
+          {
+            "kind": "writings",
+            "id": "justin-first-apology",
+            "title": "St. Justin Martyr, First Apology",
+            "path": "deep-dive/#dd-justin-first-apology"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, Sermon II, on Luke 2:8-18",
+        "excerpt": "The company of the holy prophets had before proclaimed both His birth in the flesh, and His assumption of our likeness as about in due time to come to pass: and inasmuch as this hope had now reached its fulfilment, the rational powers of heaven bring the glad tidings of His manifestation and appearance in this world, to shepherds first of all at Bethlehem, who were thus the earliest to receive the knowledge of the mystery. And the type answers to the truth: for Christ reveals Himself to the spiritual shepherds, that they may preach Him to the rest, just as the shepherds also then were taught His mystery by the holy angels, and ran to bear the glad tidings to their fellows.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_01_sermons_01_11.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "John 1:1-18": {
+      "context": {
+        "text": "This prologue is the Church’s Gospel for Christmas Mass during the Day (and again on 31 December). It is a statement of the Incarnation rather than a scene in a named town. The 1913 CE article “The Incarnation” treats the Word’s becoming flesh as the central mystery of this Gospel opening. We do not add a Bethlehem place-note here, because this lection does not name Bethlehem; that belongs to the Night and Dawn Masses.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “The Incarnation”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Incarnation"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Christmas”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Christmas"
+          }
+        ],
+        "links": [
+          {
+            "kind": "writings",
+            "id": "athanasius-incarnation",
+            "title": "St. Athanasius, On the Incarnation",
+            "path": "deep-dive/#dd-athanasius-incarnation"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Athanasius",
+        "work": "On the Incarnation, chapter 54, §3",
+        "excerpt": "For He was made man that we might be made God; and He manifested Himself by a body that we might receive the idea of the unseen Father; and He endured the insolence of men that we might inherit immortality.",
+        "source_url": "https://www.newadvent.org/fathers/2802.htm",
+        "source_edition": "NPNF second series (New Advent text), public domain — the same edition already linked from Historic Writings",
+        "historic_writings_id": "athanasius-incarnation",
+        "historic_writings_note": null
+      }
+    },
+    "Matthew 10:17-22": {
+      "context": {
+        "text": "The 1913 CE notes that the New Testament speaks of the synagogue fifty-five times, both as a meeting-house and, in some passages, as a name for the Jewish community. This lection warns of being handed over to councils and scourged in synagogues, and of being led before governors and kings.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Synagogue”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Synagogue"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 33, on Matt. 10:16 (the same discourse as 10:17-22)",
+        "excerpt": "Having I say, in this way cast out their anxiety, and armed them with the display of miracles, and made them as it were all iron and adamant, by delivering them from all worldly things, and enfranchising them from all temporal care: He speaks in what follows of the evils also that were to befall them; not only those that were to happen soon after, but those too that were to be in long course of time; from the first, even long beforehand, preparing them for the war against the devil.",
+        "source_url": "https://www.newadvent.org/fathers/200133.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Luke 2:22-40": {
+      "context": {
+        "text": "The 1913 CE article “Candlemas” summarizes the Mosaic law behind this scene: a mother who had borne a son was, after forty days, to “bring to the temple a lamb for a holocaust and a young pigeon or turtle dove for sin”; “if she was not able to offer a lamb, she was to take two turtle doves or two pigeons.” The first-born son was also to be redeemed (Numbers 18:15). The same article says the Jerusalem church already kept “the fortieth day” in the first half of the fourth century, as attested by the pilgrim Egeria — a writing already in Historic Writings. The house is Herod’s Temple (begun 19 B.C.).",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Candlemas”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Candlemas"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "archaeology",
+            "id": "trumpeting-place",
+            "title": "“Place of Trumpeting” inscription",
+            "path": "archaeology/#disc-trumpeting-place"
+          },
+          {
+            "kind": "writings",
+            "id": "egeria",
+            "title": "Egeria, Travels (Pilgrimage)",
+            "path": "deep-dive/#dd-egeria"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, Sermon III, on Luke 2:21-24, and Sermon IV, on 2:25-35",
+        "excerpt": "And to-day too we have seen Him obedient to the laws of Moses, or rather we have seen Him Who as God is the Legislator, subject to His own decrees. And the reason of this the most wise Paul teaches us, saying, “When we were babes we were enslaved under the elements of the world; but when the fulness of the time came, God sent forth His Son, born of a woman, born under the law, to redeem them that were under the law.”",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_01_sermons_01_11.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings. Egeria, already in the library, describes the Jerusalem feast of this Gospel but is a pilgrim narrative, not a commentary; she is cross-linked from the context card rather than used as the excerpt."
+      }
+    },
+    "Matthew 2:13-18": {
+      "context": {
+        "text": "The 1913 CE describes Herod the Great as an Idumaean, son of Antipater, made king of Judea by the Roman senate, who secured his throne by removing Hasmonean rivals and who died at Jericho. Of the children killed at Bethlehem, the Encyclopedia records later liturgical numbers (14,000, 64,000, even 144,000) and then says modern writers reduce the number considerably, “since Bethlehem was a rather small town,” with estimates such as fifteen or twenty, ten or twelve, or about six. “This cruel deed of Herod is not mentioned by the Jewish historian Flavius Josephus,” it adds, suggesting that among Herod’s other late atrocities the number of children “was so small that this crime appeared insignificant.” We do not guess a number. A story in Macrobius about Augustus’s joke, the CE explains, refers to Herod’s adult son Antipater, not to a murdered infant. The flight is into Egypt; we do not add a later holy-family shrine there, because the fetched Egypt article did not yield a checked paragraph on that tradition.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Herod”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Herod"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Holy Innocents”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Holy_Innocents"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. Joseph”, The Nativity and the Flight to Egypt",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._Joseph"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (2)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(2)"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "church-of-nativity",
+            "title": "Church of the Nativity, Bethlehem",
+            "path": "archaeology/#disc-church-of-nativity"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 9, on Matt. 2:16",
+        "excerpt": "Yet surely it was a case not for anger, but for fear and awe: he ought to have perceived that he was attempting impossible things. But he is not refrained. For when a soul is insensible and incurable, it yields to none of the medicines given by God. See for example this man following up his former efforts, and adding many murders to one, and hurried down the steep any whither. For driven wild by this anger, and envy, as by some demon, he takes account of nothing, but rages even against nature herself, and his anger against the wise men who had mocked him he vents upon the children that had done no wrong.",
+        "source_url": "https://www.newadvent.org/fathers/200109.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Luke 2:22-35": {
+      "context": {
+        "text": "This shorter Presentation lection is the same event as Luke 2:22-40: the forty days of purification under the Mosaic law, the offering of a lamb or, for the poor, two turtledoves or pigeons, and the redemption of the first-born, in Herod’s Temple. Egeria already attests the Jerusalem feast of the fortieth day. See the fuller note on Luke 2:22-40.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Candlemas”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Candlemas"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          },
+          {
+            "kind": "writings",
+            "id": "egeria",
+            "title": "Egeria, Travels (Pilgrimage)",
+            "path": "deep-dive/#dd-egeria"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, Sermon IV, on Luke 2:25-35",
+        "excerpt": "The prophet Isaiah says, “Beautiful are the feet of them that bring good tidings of good:” and what could there be so sweet to learn as that God has saved the world by the mediation of the Son, in that He was made like unto us? For it is written, “that there is one God, and one Mediator of God and men, the Man Jesus Christ, Who gave Himself a ransom for us.” For of His own accord He descended to our poverty, that He might make us rich by our gaining what is His. Behold Him therefore as one in our estate presented unto the Father, and obedient to the shadows of the law, offering sacrifice moreover according to what was customary, true though it be that these things were done by the instrumentality of His mother according to the flesh.",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_01_sermons_01_11.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "Luke 2:36-40": {
+      "context": {
+        "text": "The 1913 CE article “Widow” points to Anna as an example of widows who, under the old law, “devoted themselves to a life of special religious observance… ‘who departed not from the temple by fastings and prayers serving night and day’ (Luke ii, 37).” The setting is again Herod’s Temple; see the Presentation notes.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Widow”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Widow"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Temple of Jerusalem”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Temple_of_Jerusalem"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "herodian-stones",
+            "title": "Herodian Temple Mount masonry",
+            "path": "archaeology/#disc-herodian-stones"
+          }
+        ]
+      }
+    },
+    "Luke 2:16-21": {
+      "context": {
+        "text": "The lection joins the shepherds’ visit to Bethlehem with the circumcision and naming of Jesus on the eighth day. Bethlehem, the 1913 CE says, is about five miles south of Jerusalem, the city of David, already pointed out by Justin in the second century; the Church of the Nativity stands on the Constantinian site. On the eighth-day rite, the same Encyclopedia states that Jewish children “were circumcised on the eighth day, according to the law,” and that “a name was given, as in Luke, i, 59, ii, 21,” in memory of Abram’s being named Abraham when circumcision was made the sign of the covenant.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (1)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(1)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (2)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(2)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Circumcision”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Circumcision"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "church-of-nativity",
+            "title": "Church of the Nativity, Bethlehem",
+            "path": "archaeology/#disc-church-of-nativity"
+          },
+          {
+            "kind": "writings",
+            "id": "justin-first-apology",
+            "title": "St. Justin Martyr, First Apology",
+            "path": "deep-dive/#dd-justin-first-apology"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, Sermon III, on Luke 2:21-24",
+        "excerpt": "And to-day too we have seen Him obedient to the laws of Moses, or rather we have seen Him Who as God is the Legislator, subject to His own decrees. And the reason of this the most wise Paul teaches us, saying, “When we were babes we were enslaved under the elements of the world; but when the fulness of the time came, God sent forth His Son, born of a woman, born under the law, to redeem them that were under the law.”",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_01_sermons_01_11.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "John 1:19-28": {
+      "context": {
+        "text": "This is the same Baptist interrogation, and the same “Bethany beyond the Jordan,” as in the longer Advent lection John 1:6-8, 19-28. See that note for the 1913 CE’s rejection of Origen’s “Bethabara” and its caution that the site is to be sought “beyond the Jordan,” without a precise modern pin.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “The Jordan”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Jordan"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on the Gospel of John, Homily 16, on John 1:19",
+        "excerpt": "A dreadful thing is envy, beloved, a dreadful thing and a pernicious, to the enviers, not to the envied. For it harms and wastes them first, like some mortal venom deeply seated in their souls; and if by chance it injure its objects, the harm it does is small and trifling, and such as brings greater gain than loss. All this I have said, by reason of the envy of the Jews. Because those who had flocked from the cities to John, and had condemned their own sins, and caused themselves to be baptized, repenting as it were after Baptism, send to ask him, Who are you?",
+        "source_url": "https://www.newadvent.org/fathers/240116.htm",
+        "source_edition": "NPNF first series, vol. 14, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on John are not in Historic Writings."
+      }
+    },
+    "Matthew 2:1-12": {
+      "context": {
+        "text": "The 1913 CE, following Herodotus, treats the Magi as the sacred priestly caste of the Medes, who “provided priests for Persia” and whose influence, the article says, “is not unlikely” still to have been flourishing under the Parthian dominion at the time of Christ’s birth. “The Gospel narrative omits to mention the number of the Magi, and there is no certain tradition in this matter. Some Fathers speak of three Magi; they are very likely influenced by the number of gifts. In the Orient, tradition favours twelve.” The names Gaspar, Melchior, and Balthasar appear among the Latins only from the seventh century; “the names of the Magi are as uncertain as is their number.” We therefore do not put “three kings” or those names on the card as facts. The visit is to Bethlehem in the days of Herod the Great (see the Innocents note for Herod).",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Magi”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Magi"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Herod”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Herod"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethlehem (2)”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethlehem_(2)"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Epiphany”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Epiphany"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "church-of-nativity",
+            "title": "Church of the Nativity, Bethlehem",
+            "path": "archaeology/#disc-church-of-nativity"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 6, on Matt. 2:1-2",
+        "excerpt": "But these were neither present with the mother in her pangs, nor did they know the time when He was born, neither did they, beginning at that moment, from the motion of the stars compute what was to happen: but conversely, having a long time before seen a star appear in their own country, they come to see Him that was born.",
+        "source_url": "https://www.newadvent.org/fathers/200106.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom's Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Matthew 4:12-17, 23-25": {
+      "context": {
+        "text": "The 1913 CE says that when Jesus was “repelled by the Nazarenes, [He] made [Capernaum] His new abode,” on the north bank of the Lake of Tiberias. It identifies the site with Tell-Houm, while recording that some archaeologists then preferred Khan-Minieh or Aïn-Tabigah. Isaiah’s name “Galilee of the Nations” (or “of the Gentiles”), the Galilee article explains, was given “on account of the large Gentile population in that region.” The Decapolis, mentioned at the close of this lection, was, the CE says, a league of Greek cities east and south of the Sea of Galilee, formed after Pompey’s conquest of 64–63 B.C., the earliest list appearing in Pliny. The app’s “House of Peter” is at Capernaum.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Capharnaum”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Capharnaum"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Decapolis”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Decapolis"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "capernaum-house-peter",
+            "title": "Capernaum “House of Peter”",
+            "path": "archaeology/#disc-capernaum-house-peter"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 14, on Matt. 4:12",
+        "excerpt": "Wherefore does He depart? Again instructing us not to go to meet temptations, but to give place and withdraw ourselves. For it is no reproach, the not casting one's self into danger, but the failing to stand manfully when fallen into it. To teach us this accordingly, and to soothe the envy of the Jews, He retires to Capernaum; at once fulfilling the prophecy, and making haste to catch the teachers of the world: for they, as you know, were abiding there, following their craft.",
+        "source_url": "https://www.newadvent.org/fathers/200114.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Chrysostom’s Homilies on Matthew are not in Historic Writings."
+      }
+    },
+    "Mark 6:34-44": {
+      "context": {
+        "text": "The 1913 CE article “Bethsaida” says: “Near this Bethsaida took place the feeding of the five thousand (Luke, ix, 10) and the healing of the blind man (Mark, viii, 22).” That Bethsaida is the city Philip enlarged and named Julias, east of the Jordan near where it enters the lake. Whether there was also a second, western Bethsaida “has been a much debated question”; “the negative view seems to be gaining ground.” We report the debate and do not decide it.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethsaida”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethsaida"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Mark 6:45-52": {
+      "context": {
+        "text": "After the feeding, this lection has the disciples go by boat toward Bethsaida, on the Lake of Galilee. For the 1913 CE’s account of Bethsaida Julias, and the unresolved question whether there were one or two towns of that name, see the note on Mark 6:34-44.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Bethsaida”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Bethsaida"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Galilee”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Galilee"
+          }
+        ],
+        "links": []
+      }
+    },
+    "Luke 4:14-22": {
+      "context": {
+        "text": "The 1913 CE calls Nazareth the town “where Christ lived until the age of thirty years,” and its synagogue article notes that the New Testament already shows the synagogue “in full power of its various functions.” In this lection Jesus reads from Isaiah in the Nazareth synagogue. Archaeology Finds includes the Great Isaiah Scroll from Qumran, a Second Temple witness to the book of Isaiah, and the Magdala stone, from a first-century Galilean synagogue. Neither object is from Nazareth itself; they are offered only as carefully limited cross-links to the book and to the furniture of a Galilean synagogue of the period.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Nazareth”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Nazareth"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “Synagogue”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Synagogue"
+          }
+        ],
+        "links": [
+          {
+            "kind": "archaeology",
+            "id": "isaiah-scroll",
+            "title": "Great Isaiah Scroll (1QIsaᵃ)",
+            "path": "archaeology/#disc-isaiah-scroll"
+          },
+          {
+            "kind": "archaeology",
+            "id": "magdala-stone",
+            "title": "Magdala stone",
+            "path": "archaeology/#disc-magdala-stone"
+          }
+        ]
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, on 4:16",
+        "excerpt": "Since therefore it was now necessary that He should manifest Himself to the Israelites, and that the mystery of His incarnation should now shine forth to those who knew Him not, and inasmuch as He was now anointed of God the Father for the salvation of the world, He very wisely orders this also, [viz. that His fame should now spread abroad.] And this favour He grants first to the people of Nazareth, because, humanly speaking, He had been brought up among them. Having entered, therefore, the synagogue, He takes the book to read:",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_02_sermons_12_25.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "Luke 5:12-16": {
+      "context": {
+        "text": "The 1913 CE, summarizing Leviticus 13–14, says that under the Mosaic law the priest judged suspected leprosy: if the signs were clear, “isolation was pronounced at once”; in doubtful cases a seven-days’ quarantine, sometimes repeated, was imposed. While the disease lasted, the leper “had to ‘dwell alone without the camp’ (or the city),” and a priest’s sentence plus an elaborate ritual was required before return to the community.",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “Leprosy”, on the Mosaic law of inspection and isolation",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/Leprosy"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. Cyril of Alexandria",
+        "work": "Commentary on Luke, on 5:12",
+        "excerpt": "The faith, however, of him who drew near is worthy of all praise: for he testifies that the Emmanuel can successfully accomplish all things, and seeks deliverance by His godlike commands, although his malady was incurable: for leprosy will not yield to the skill of physicians. I see, however, he says, the unclean demons expelled by a godlike authority: I see others set free from many diseases: I recognise that such things are wrought by some divine and resistless force: I see, further, that He is good, and most ready to pity those who draw near unto Him: what therefore forbids His taking pity on me also?",
+        "source_url": "https://www.tertullian.org/fathers/cyril_on_luke_02_sermons_12_25.htm",
+        "source_edition": "R. Payne Smith (Oxford, 1859), public domain",
+        "historic_writings_id": null,
+        "historic_writings_note": "Cyril’s Commentary on Luke is not in Historic Writings."
+      }
+    },
+    "John 3:22-30": {
+      "context": {
+        "text": "The 1913 CE, on both the Jordan and St. John the Baptist, identifies “Ennon near Salim” (John 3:23) with a site “described in Eusebius’s Onomasticon as being eight miles south of Scythopolis (Beisan), and [which] should be sought probably at Ed-Deir or El-Ftur, a short distance from the Jordan.” The Jordan article likewise places “Ain esh Shemsieh, where the first Christian tradition placed Ennon,” near Tell es-Sarem (Salim) and Pella. We report that traditional identification, including the “probably.”",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “The Jordan”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Jordan"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. Augustine",
+        "work": "Tractates on the Gospel of John, Tractate 14",
+        "excerpt": "This lesson from the holy Gospel shows us the excellency of our Lord Jesus Christ's divinity, and the humility of the man who earned the title of the Bridegroom's friend; that we may distinguish between the man who is man, and the Man who is God. For the Man who is God is our Lord Jesus Christ, God before all ages, Man in the age of our world: God of the Father, man of the Virgin, yet one and the same Lord and Saviour Jesus Christ, Son of God, God and man. But John, a man of distinguished grace, was sent before Him, a man enlightened by Him who is the Light. For of John it is said, He was not the Light, but that he should bear witness of the Light.",
+        "source_url": "https://www.newadvent.org/fathers/1701014.htm",
+        "source_edition": "NPNF first series, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "Augustine is in Historic Writings (Confessions; City of God), but the Tractates on John are not in the library."
+      }
+    },
+    "Mark 1:7-11": {
+      "context": {
+        "text": "The 1913 CE traces to A.D. 333 a tradition associating “the activity of the Precursor, particularly the Baptism of the Lord, with the neighbourhood of Deir Mar-Yuhanna (Qasr el-Yehud).” The Jordan article adds that John’s ministry “has been very plausibly placed at the ford of the Ghôranieh, which has always been more frequented.” The Greek monastery of Qasr el-Yehud, “two and a half miles farther down the river,” marks the traditional scene of the Baptism. We report both proposals and do not choose. The same Baptist article records Josephus’s remark that John baptized people in the Jordan, “saying that baptism was good, not so much to free one from certain sins… as to purify the body, the soul being already cleansed from its defilements by justice” (Antiquities 18).",
+        "sources": [
+          {
+            "title": "Catholic Encyclopedia (1913), “The Jordan”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/The_Jordan"
+          },
+          {
+            "title": "Catholic Encyclopedia (1913), “St. John the Baptist”",
+            "url": "https://en.wikisource.org/wiki/Catholic_Encyclopedia_(1913)/St._John_the_Baptist"
+          }
+        ],
+        "links": []
+      },
+      "father": {
+        "author": "St. John Chrysostom",
+        "work": "Homilies on Matthew, Homily 12, on Matt. 3:13 (the Baptism of the Lord; Matthean parallel to this Gospel)",
+        "excerpt": "With the servants the Lord, with the criminals the Judge, comes to be baptized. But be not troubled; for in these humiliations His exaltation does most shine forth. For He who vouchsafed to be borne so long in a Virgin's womb, and to come forth thence with our nature, and to be smitten with rods, and crucified, and to suffer all the rest which He suffered — why do you marvel if He vouchsafed also to be baptized, and to come with the rest to His servant. For the amazement lay in that one thing, that being God, He would be made Man; but the rest after this all follows in course of reason.",
+        "source_url": "https://www.newadvent.org/fathers/200112.htm",
+        "source_edition": "NPNF first series, vol. 10, public domain (New Advent text)",
+        "historic_writings_id": null,
+        "historic_writings_note": "This is a homily on the Matthean parallel, not on Mark’s wording. Historic Writings includes Tertullian, On Baptism, and Cyril of Jerusalem’s Mystagogical Catecheses, which treat Christian baptism rather than this Gospel scene; they are not used as the excerpt. The specific Chrysostom work is not in the library."
+      }
+    }
+  }
+}

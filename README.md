@@ -14,6 +14,8 @@ Live site: https://chrissieai.github.io/daily-bread/
   the site has no CDN dependency. Computes season, color, celebration and rank in the browser.
 - `readings.json` — reading headings + citations only (e.g. "Gospel — Matthew 22:34-40")
   and the USCCB day title, scraped from bible.usccb.org page headings.
+- `data/reading-notes.json` — short sourced context notes and public-domain Church Father
+  excerpts keyed by Gospel citation; see "Context and Church Fathers" below.
 - `tools/fetch-references.py` — refreshes `readings.json` (Python 3 stdlib only).
 - `data/movies.json` — "Movie of the week" (weeks start Sunday): title, year, type, rating exactly
   as the source states it, source name and review URL. Picks come only from films featured or
@@ -43,9 +45,11 @@ Live site: https://chrissieai.github.io/daily-bread/
 
 ## Content rule
 
-No scripture, prayer, or reflection text is stored or generated here. The Lectionary
-text is © USCCB and may not be reproduced, so the app shows only citations and links out
-to https://bible.usccb.org/bible/readings/MMDDYY.cfm .
+The Lectionary text is © USCCB and may not be reproduced, so the app shows only citations
+and links out to https://bible.usccb.org/bible/readings/MMDDYY.cfm . No scripture is copied
+into the app, and no generated reflections are stored. Short public-domain excerpts from
+early Catholic writers, and sourced historical notes on the day's reading, are stored
+separately (see below).
 
 ## Refreshing reading references
 
@@ -58,6 +62,26 @@ git add readings.json && git commit -m "Refresh reading references" && git push
 ```
 
 The "Read at USCCB" button works for any date even when `readings.json` has no entry.
+
+
+## Context and Church Fathers
+
+Two optional cards sit under "Today's reading references" and above Liturgy of the Hours:
+"Context for today's reading" and "From the Church Fathers". Both start collapsed and
+open only when tapped. A card is omitted entirely when that day has no approved note.
+
+- **Context** is one or two sourced historical facts about the place, custom, or world of
+  that day's Gospel. It is not a spiritual reflection. Sources are linked. When an
+  Archaeology Finds or Historic Writings item already covers that place, people, or custom,
+  the card links to it.
+- **From the Church Fathers** quotes a short, word-for-word public-domain English excerpt
+  on that Gospel (or a clearly labelled parallel), with a link to the full writing. If the
+  work is already in Historic Writings, the card links there. Nothing is paraphrased.
+
+Notes are keyed by the Gospel citation in `readings.json`. Data: `data/reading-notes.json`.
+On days with more than one Mass (Christmas, Thanksgiving), the home-page cards follow the
+Mass the readings card already features: Mass during the Day on Christmas, and Thanksgiving
+Day on Thanksgiving; they do not list every Mass's notes at once.
 
 ## Saint of the day
 
