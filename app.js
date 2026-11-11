@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261110e';
+  var APP_VERSION = '20261110f';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -699,10 +699,12 @@
     $('lbImg').src = src; $('lbImg').alt = alt || '';
     $('lightbox').hidden = false;
     document.body.style.overflow = 'hidden';
+    updateDdTopBtn();
   }
   function closeLightbox() {
     $('lightbox').hidden = true;
     if ($('favs').hidden) document.body.style.overflow = '';
+    updateDdTopBtn();
   }
   var favSel = null;
   function renderFavs() {
@@ -743,10 +745,12 @@
     renderFavs();
     $('favs').hidden = false;
     document.body.style.overflow = 'hidden';
+    updateDdTopBtn();
   }
   function closeFavs() {
     $('favs').hidden = true;
     document.body.style.overflow = '';
+    updateDdTopBtn();
   }
   $('artOpen').addEventListener('click', function () {
     var a = artFor(current); if (a) openLightbox(a.image, a.title);
@@ -884,10 +888,12 @@
     document.body.style.overflow = 'hidden';
     $('prayers').scrollTop = 0;
     if (focusId) { var d = $('prayer-' + focusId); if (d) d.open = true; }
+    updateDdTopBtn();
   }
   function closePrayers() {
     $('prayers').hidden = true;
     document.body.style.overflow = '';
+    updateDdTopBtn();
   }
   $('prayBtn').addEventListener('click', function () { openPrayers(); });
   $('prayShort').addEventListener('click', function () {
@@ -1335,21 +1341,53 @@
   function ddPreferReducedMotion() {
     try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
   }
-  function activeOverlayRoot() {
+  function isWindowScrollRoot(root) {
+    return !root || root === window || root === document || root === document.documentElement || root === document.body;
+  }
+  function scrollTopOf(root) {
+    if (isWindowScrollRoot(root)) {
+      return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    }
+    return root.scrollTop;
+  }
+  // The single #ddTop button follows whichever view is in front: a scrollable
+  // overlay if one is open, otherwise the Today page. Lightbox is not a
+  // scrolling view, so the button hides while it is open. Only one button
+  // exists, so it cannot stack over home when an overlay is up.
+  function activeScrollRoot() {
+    var lb = $('lightbox');
+    if (lb && !lb.hidden) return null;
+    var favs = $('favs');
+    if (favs && !favs.hidden) return favs;
+    var prayers = $('prayers');
+    if (prayers && !prayers.hidden) return prayers;
     if (archRoot && !archRoot.hidden) return archRoot;
     if (ddRoot && !ddRoot.hidden) return ddRoot;
-    return null;
+    return window;
+  }
+  function activeOverlayRoot() {
+    var root = activeScrollRoot();
+    if (!root || isWindowScrollRoot(root)) return null;
+    return root;
   }
   function updateDdTopBtn() {
     if (!ddTopBtn) return;
-    var root = activeOverlayRoot();
+    var root = activeScrollRoot();
     if (!root) { ddTopBtn.hidden = true; return; }
-    ddTopBtn.hidden = root.scrollTop < DD_TOP_SHOW;
+    ddTopBtn.hidden = scrollTopOf(root) < DD_TOP_SHOW;
   }
   function scrollActiveOverlayTop() {
-    var root = activeOverlayRoot();
+    var root = activeScrollRoot();
     if (!root) return;
     var behavior = ddPreferReducedMotion() ? 'auto' : 'smooth';
+    if (isWindowScrollRoot(root)) {
+      if (typeof window.scrollTo === 'function') window.scrollTo({ top: 0, behavior: behavior });
+      else {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+      return;
+    }
     if (typeof root.scrollTo === 'function') root.scrollTo({ top: 0, behavior: behavior });
     else root.scrollTop = 0;
   }
@@ -1358,6 +1396,11 @@
   }
   ddRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
   if (archRoot) archRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
+  var prayersRoot = $('prayers');
+  if (prayersRoot) prayersRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
+  var favsRoot = $('favs');
+  if (favsRoot) favsRoot.addEventListener('scroll', updateDdTopBtn, { passive: true });
+  window.addEventListener('scroll', updateDdTopBtn, { passive: true });
 
   // --- History-aware overlay navigation (browser back + in-app Back pill) ---
   var applyingHistory = false;

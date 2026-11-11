@@ -66,6 +66,8 @@ h1{margin:18px 0 0;font-size:24px;line-height:1.25}
 .dd-backtop{margin:14px 0 0;text-align:center}
 .dd-backtop a{font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none}
 .back-bottom{margin:28px 0 0;text-align:center}
+.dd-pagetop{margin:10px 0 0;text-align:center}
+.dd-pagetop a{font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--accent-ink);text-decoration:none}
 """
 
 
@@ -250,6 +252,7 @@ def render(data):
         w('  <p class="dd-checked">%s</p>' % e(ct))
     w('  </main>')
     w('  <p class="back-bottom"><a class="today-link" href="../">&lsaquo; Back to Daily Bread</a></p>')
+    w('  <p class="dd-pagetop"><a href="#top">↑ Top</a></p>')
     w('</div>')
     w('</body>')
     w('</html>')
