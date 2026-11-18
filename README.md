@@ -123,6 +123,7 @@ link card with no text stored:
 | A Prayer to Our Lady of Guadalupe | text (extract) | prayer body only from usccb.org/prayers/prayer-our-lady-guadalupe (site footer only) |
 | Prayer of St. Michael | link | Archdiocese of Toronto page: "©2020 Archdiocese of Toronto. All rights reserved." |
 | Prayer of St. Francis | text (extract) | only the St. Francis prayer from usccb.org/prayers/prayer-new-year |
+| Prayer of St. Gertrude | text | midletonparish.ie prayer-of-st-gertrude-for-all-the-holy-souls-in-purgatory-2 (prayer only; no 1,000-souls claim) |
 
 The Regina Caeli replaces the Angelus during romcal's Easter season (Easter Sunday through
 Pentecost). The shortcut below the parish card reads "Pray the Angelus at USCCB" or, in the

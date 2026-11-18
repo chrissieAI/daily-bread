@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261110f';
+  var APP_VERSION = '20261110g';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -868,7 +868,7 @@
         cr.appendChild(ca);
         d.appendChild(cr);
       } else {
-        var a = el('a', 'psrc', 'Source: USCCB \u2197');
+        var a = el('a', 'psrc', 'Source: ' + (p.source_label || 'USCCB') + ' \u2197');
         a.href = p.source_url; a.target = '_blank'; a.rel = 'noopener';
         d.appendChild(a);
       }

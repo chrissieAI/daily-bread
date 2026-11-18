@@ -64,6 +64,8 @@ PRAYERS = [
     {'kind': 'extract', 'id': 'st-francis', 'title': 'Prayer of St. Francis',
      'note': "From USCCB\u2019s Prayer for the New Year", 'url': 'https://www.usccb.org/prayers/prayer-new-year',
      'first': 'Lord, make me an instrument of your peace', 'last': '\u2014Attributed to St. Francis of Assisi'},
+    # Midleton Parish (non-USCCB); leave the stored word-for-word copy unchanged.
+    {'kind': 'keep', 'id': 'st-gertrude'},
 ]
 
 def fetch(url):
