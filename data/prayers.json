@@ -703,6 +703,399 @@
    ]
   },
   {
+   "id": "night-prayers",
+   "title": "Night Prayers",
+   "copied": "2026-11-23",
+   "sections": [
+    {
+     "id": "before-ending",
+     "title": "Before the Ending of the Day",
+     "subtitle": "Te lucis ante terminum · tr. John Mason Neale, 1851",
+     "source_url": "https://stpeters.ch/hymns/before-the-ending-the-day/",
+     "source_label": "St. Peter's, Château-d'Oex",
+     "paragraphs": [
+      [
+       [
+        {
+         "t": "Before the ending of the day,"
+        }
+       ],
+       [
+        {
+         "t": "Creator of the world, we pray,"
+        }
+       ],
+       [
+        {
+         "t": "that with thy wonted favour thou"
+        }
+       ],
+       [
+        {
+         "t": "wouldst be our guard and keeper now."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "From all ill dreams defend our eyes,"
+        }
+       ],
+       [
+        {
+         "t": "from nightly fears and fantasies;"
+        }
+       ],
+       [
+        {
+         "t": "tread under foot our ghostly foe,"
+        }
+       ],
+       [
+        {
+         "t": "that no pollution we may know."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "O Father, that we ask be done,"
+        }
+       ],
+       [
+        {
+         "t": "through Jesus Christ thine only Son,"
+        }
+       ],
+       [
+        {
+         "t": "who, with the Holy Ghost and thee,"
+        }
+       ],
+       [
+        {
+         "t": "doth live and reign eternally. Amen."
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "christ-light",
+     "title": "O Christ, Who Art the Light and Day",
+     "subtitle": "Christe, qui lux es et dies · tr. William John Copeland, 1848",
+     "source_url": "https://hymnary.org/hymn/LH1941/559",
+     "source_label": "Hymnary.org",
+     "paragraphs": [
+      [
+       [
+        {
+         "t": "O Christ, who art the Light and Day,"
+        }
+       ],
+       [
+        {
+         "t": "Thou drivest night and gloom away;"
+        }
+       ],
+       [
+        {
+         "t": "O Light of light, whose Word doth show"
+        }
+       ],
+       [
+        {
+         "t": "The light of heav'n to us below."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "All-holy Lord, in humble prayer,"
+        }
+       ],
+       [
+        {
+         "t": "We ask tonight Thy watchful care."
+        }
+       ],
+       [
+        {
+         "t": "Oh, grant us calm repose in Thee,"
+        }
+       ],
+       [
+        {
+         "t": "A quiet night, from perils free."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Our sleep be pure from sinful stain;"
+        }
+       ],
+       [
+        {
+         "t": "Let not the Tempter vantage gain"
+        }
+       ],
+       [
+        {
+         "t": "Or our unguarded flesh surprise"
+        }
+       ],
+       [
+        {
+         "t": "And make us guilty in Thine eyes."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Asleep though wearied eyes may be,"
+        }
+       ],
+       [
+        {
+         "t": "Still keep the heart awake to Thee;"
+        }
+       ],
+       [
+        {
+         "t": "Let Thy right hand outstretched above"
+        }
+       ],
+       [
+        {
+         "t": "Guard those who serve the Lord they love."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Behold, O God, our Shield, and quell"
+        }
+       ],
+       [
+        {
+         "t": "The crafts and subtleties of hell;"
+        }
+       ],
+       [
+        {
+         "t": "Direct Thy servants in all good,"
+        }
+       ],
+       [
+        {
+         "t": "Who Thou hast purchased with Thy blood."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "O Lord, remember us who bear"
+        }
+       ],
+       [
+        {
+         "t": "The burden of the flesh we wear;"
+        }
+       ],
+       [
+        {
+         "t": "Thou who dost e'er our souls defend,"
+        }
+       ],
+       [
+        {
+         "t": "Be with us even to the end."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "All praise to God the Father be,"
+        }
+       ],
+       [
+        {
+         "t": "All praise, eternal Son, to Thee,"
+        }
+       ],
+       [
+        {
+         "t": "Whom with the Spirit we adore"
+        }
+       ],
+       [
+        {
+         "t": "Forever and forevermore."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Amen."
+        }
+       ]
+      ]
+     ]
+    },
+    {
+     "id": "now-god-be-with-us",
+     "title": "Now, God Be With Us",
+     "subtitle": "Die Nacht ist kommen · Petrus Herbert, 1566 · tr. Catherine Winkworth, 1863",
+     "source_url": "https://hymnary.org/hymn/CBE/170",
+     "source_label": "Hymnary.org",
+     "paragraphs": [
+      [
+       [
+        {
+         "t": "Now God be with us, for the night is closing;"
+        }
+       ],
+       [
+        {
+         "t": "The light and darkness are of His disposing,"
+        }
+       ],
+       [
+        {
+         "t": "And 'neath His shadow here to rest we yield us,"
+        }
+       ],
+       [
+        {
+         "t": "For he will shield us."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Let evil thoughts and spirits flee before us;"
+        }
+       ],
+       [
+        {
+         "t": "Till morning cometh, watch, O Master, o'er us;"
+        }
+       ],
+       [
+        {
+         "t": "In soul and body Thou from harm defend us,"
+        }
+       ],
+       [
+        {
+         "t": "Thine angels send us."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Let pious thoughts be ours when sleep o'ertakes us,"
+        }
+       ],
+       [
+        {
+         "t": "Our earliest thoughts be Thine when morning wakes us;"
+        }
+       ],
+       [
+        {
+         "t": "All day serve Thee, in all that we are doing"
+        }
+       ],
+       [
+        {
+         "t": "Thy praise pursuing."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "As Thy beloved soothe the sick and weeping,"
+        }
+       ],
+       [
+        {
+         "t": "And bid the captive lose his griefs in sleeping;"
+        }
+       ],
+       [
+        {
+         "t": "Widows and orphans, we to Thee commend them,"
+        }
+       ],
+       [
+        {
+         "t": "Do Thou befriend them."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "We have no refuge; none on earth to aid us,"
+        }
+       ],
+       [
+        {
+         "t": "Save Thee, O Father, who Thine own hast made us;"
+        }
+       ],
+       [
+        {
+         "t": "But Thy dear presence will not leave them lonely,"
+        }
+       ],
+       [
+        {
+         "t": "Who seek Thee only."
+        }
+       ]
+      ],
+      [
+       [
+        {
+         "t": "Father, Thy name be praised, Thy kingdom given,"
+        }
+       ],
+       [
+        {
+         "t": "Thy will be done on earth as 'tis in heaven"
+        }
+       ],
+       [
+        {
+         "t": "Keep us in life, forgive our sins, deliver"
+        }
+       ],
+       [
+        {
+         "t": "Us now and ever.--Amen."
+        }
+       ]
+      ]
+     ]
+    }
+   ]
+  },
+  {
    "id": "guardian-angel",
    "title": "Prayer to Your Guardian Angel",
    "source_url": "https://www.usccb.org/prayers/prayer-your-guardian-angel",

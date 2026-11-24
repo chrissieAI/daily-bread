@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var APP_VERSION = '20261110g';
+  var APP_VERSION = '20261110h';
   // User-visible section names — change here only.
   var DD_LABEL = 'Historic Writings';
   var ARCH_LABEL = 'Archaeology Finds';
@@ -848,6 +848,37 @@
         lb.href = p.source_url; lb.target = '_blank'; lb.rel = 'noopener';
         d.appendChild(lb);
         d.appendChild(el('p', 'pnotice plabel', p.label || ''));
+        box.appendChild(d);
+        return;
+      }
+      if (p.sections && p.sections.length) {
+        var wrap = el('div', 'psecs');
+        p.sections.forEach(function (sec) {
+          var sd = el('details', 'prayer-section');
+          if (sec.id) sd.id = 'hymn-' + sec.id;
+          var sm = el('summary', null);
+          var head = el('span', 'psec-head');
+          head.appendChild(el('span', 'psec-title', sec.title));
+          if (sec.subtitle) head.appendChild(el('span', 'psec-sub', sec.subtitle));
+          sm.appendChild(head);
+          sd.appendChild(sm);
+          var stx = el('div', 'ptext psec-text');
+          (sec.paragraphs || []).forEach(function (para) {
+            var pe = el('p');
+            para.forEach(function (line) { var ln = el('span', 'ln'); segs(ln, line); pe.appendChild(ln); });
+            stx.appendChild(pe);
+          });
+          sd.appendChild(stx);
+          if (sec.source_url) {
+            var sa = el('a', 'psrc', 'Source: ' + (sec.source_label || 'Hymnary.org') + ' \u2197');
+            sa.href = sec.source_url; sa.target = '_blank'; sa.rel = 'noopener';
+            sd.appendChild(sa);
+          }
+          wrap.appendChild(sd);
+        });
+        d.appendChild(wrap);
+        if (p.notice) { var nt0 = el('p', 'pnotice'); segs(nt0, p.notice); d.appendChild(nt0); }
+        if (p.note) d.appendChild(el('p', 'pnotice psrcnote', p.note));
         box.appendChild(d);
         return;
       }
